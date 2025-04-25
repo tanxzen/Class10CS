@@ -14,7 +14,7 @@ on **Manipur Board Computer Science**
 
 ## [`CH02 : Introduction to C Language`](https://github.com/tanxzen/Class10CS/tree/main/CH02)
 - What is C ?
-- How it works ?
-- How to write a C program
+- Variable, Constant, Library, Preprocessor Directives 
+- How to write a C program , Structure of a C program
 - Data Types
 - Different Opetators
