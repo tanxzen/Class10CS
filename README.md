@@ -12,7 +12,7 @@ on **Manipur Board Computer Science**
 ## [`CH01 : Algorithm For Problem Solving`](https://github.com/tanxzen/Class10CS/tree/main/CH01)
 - Some common and important algorithm
 
-## CH02 : Introduction to C Language 
+## [`CH02 : Introduction to C Language`](https://github.com/tanxzen/Class10CS/tree/main/CH02)
 - What is C ?
 - How it works ?
 - How to write a C program
