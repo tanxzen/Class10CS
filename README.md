@@ -1,3 +1,9 @@
+<p align="center">
+  
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDk2dGpobWFvcTZjNHB3dmEybnFveDg5b2F5OHRvZnk2MHo1cmFxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/owQJ2yEhoC1NxCncBi/giphy.gif" width="300" />
+
+</p>
+
 # Class 10 Computer Science Manipur Board 
 
 This github repo is based on my personal project / guide 
