@@ -50,17 +50,25 @@
   </summary>
 
 - `Constant : Any unchanged value in a program during program execution is called a constant .`
+  
 - `Different Types of Constant `:
+  
     - `Numeric Constants` :
+      
         - 1.`Interger Constant `: *An interger constant is a signed or unsigned whole number.*
           - e.g `-24, 52, 102`
+            
         - 2.`Real or Floating Point Constant` : *Any signed or unsigned number with fractional part is called real or floating point constant*
             - e.g `3.14, 0.234, 0.42e-32`
+              
     - `String or Character constant` :
+      
         - 1.`Single character string constant` : *Any letter or character enclosed in single apostrophe is called single character sting constant*
             - e.g `'h', 'a' , '+'`
+              
         - 2.`String of characters constant` : *Any string of characters consisting of letters, digits, and symbols enclosed in double quotes is called string of characters constant*
             - e.g `"letters", "number02" , "person+name+$`
+              
 </details>
 
 <details>
@@ -70,14 +78,54 @@
 </summary>
 
 - `Library` :  *A library in C is a collection of pre-compiled functions and routines that can be used in programs to perform common tasks, such as input/output, string handling, or math operations.*
-- `Common Librarys`:
-    - `stdio.h` : *provides function and others assets for input/output*
-    - `conio.h` : *short for console input output , is a library used by some older compilers like TURBOC++ compiler, that provide functions like getch,clrscr,etc but it's a outdated library*
-    - `math.h` : *provides mathematical funtions to perform mathematical calculations , funcitons include sqrt, pow,etc*
-    - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
-    - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
+
+-  `Common Librarys`:
+
+      - `stdio.h` : *provides function and others assets for input/output*
+
+      - `conio.h` : *short for console input output , is a library used by some older compilers like TURBOC++ compiler, that provide functions like getch,clrscr,etc but it's a outdated library*
+    
+      - `math.h` : *provides mathematical funtions to perform mathematical calculations , funcitons include sqrt, pow,etc*
+    
+      - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
+
+       - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
  
 > Sometimes Programmers write their own librarys for their specific needs
 
+</details>
+
+<details>
+<summary>Preprocessor Directives</summary>
+
+- `Preprocessor directives in C are instructions that are processed by the C preprocessor before the actual compilation of the program begins. These directives begin with the symbol # and are used to include files, define constants or macros, and control the compilation process conditionally.`
+  
+- `Types of Preprocessor directives` :
+  - 1. `File Inclusion` :  *Used to include contents of another file , `syntax : #include <file>`*
+
+  - 2. `Macro Definition` : *Used to define symbolic constant or macro , `example : #define MONTH 30`*
+
+  - [more are available here](https://www.geeksforgeeks.org/cc-preprocessors/) 
+  
+</details>
+
+<details>
+  <summary>
+    C Keywords 
+  </summary>
+
+`There are 32 available Keywords in C (version C98/C90)`
+
+```c
+auto        break       case        char        const
+continue    default     do          double      else
+enum        extern      float       for         goto
+if          int         long        register    return
+short       signed      sizeof      static      struct
+switch      typedef     union       unsigned    void
+volatile    while
+```
+
+  
 </details>
 
