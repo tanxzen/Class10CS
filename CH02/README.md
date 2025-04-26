@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> All documentation will be on this readme no sperate files
+
 # CH02 : Introduction to C language 
 
 `C is a general-purpose programming language developed by Dennis Ritchie at Bell Labs in the early 1970s. Ritchie created C as a low-level language that could be used to write efficient and portable system software.`
