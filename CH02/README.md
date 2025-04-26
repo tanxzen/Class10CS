@@ -89,7 +89,7 @@
     
       - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
 
-       - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
+      - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
  
 > Sometimes Programmers write their own librarys for their specific needs
 
@@ -130,6 +130,8 @@ volatile    while
 </details>
 
 
+#
+
 
 ### Structure of C program :
 ```c
@@ -158,6 +160,163 @@ main()
 - *Local declaration of variable means that the variable is declared inside the main block and cannot be used in other sub blocks.*
 - *The statements which are written inside the main function will only execute other statements which are written outside the main block will not be executed*
 - *functions are just like another main block which will not be executed but which can be call in the main block to do certain actions, work, etc.*
+
+##
+
+### Basic Data types :
+
+- `int` : *refers to interger. It can hold a signed or unsigned whole number within specific range.*
+  
+- `char` : *refers to characte. It can hold one letter/symbol. In fact, char in C language is associated with integers refers to a letter/symbol as per ASCII which has assigned integer value for all letters/symbol used in programming.*
+  
+- `float` : refers to floating point or real number. It can hold a real numeber like 3.174813 or 4.53e6 with six decimal digits in decimal or exponential form.,
+
+- `double` : also refers to floating or real number. It can hold a real number in double precision. A double precision number uses 12 decimal digit like 3.42134421232 or 4.2324452423e12.
+
+- [more are available here](https://www.geeksforgeeks.org/data-types-in-c/)
+
+## 
+
+### Operators 
+
+<details>
+  <summary>
+    Arithmethic Operators 
+  </summary>
+  
+- `+ : addition` , *1 + 1 = 2* 
+- `- : substraction`, *2 - 1 = 1*
+- `* : multiplication`, *2 * 3 = 6*
+- `/ : division`, *8 / 2 = 4*
+
+</details>
+
+<details>
+  <summary>
+    Relational Operator
+  </summary>
+
+- `< : less than` : *5 < 2 : FALSE*
+
+- `> : greater than` : *5 > 2 : TRUE*
+
+- `<= : less than or equal to` : *5 <= 2 : FALSE*
+
+- `>= : greater than or equal to` : *5 >= 2 : TRUE*
+
+- `== : equal to` : *5 == 2 : FALSE* or *5 == 5 : TRUE*
+
+- `!= : not equal to` : *5 != 2 : TRUE*
+
+</details>
+
+<details>
+  <summary>
+    Logical operators
+  </summary>
+
+
+-`&& : AND` : Returns TRUE if all the given condition or statement are true , if any statement is false , it will always return FALSE <br> *e.g (5<2) && (5>2) : FALSE*
+
+-`|| : OR` : Return TRUE if any of the given condition or statement are true, if none of the condition is TRUE , it will always return FALSE <br> *e.g (5<2) || (5>3) : TRUE*  
+
+-`! : NOT` : Return TRUE if the condition is FALSE , if the condtion is TRUE , it will always return FALSE <br> *e.g !(5<2) : TRUE*
+
+
+`TRUTH TABLE FOR AND(&&)`
+
+
+| `OPERAND 1` | `OPERAND 2` | `RESULT` |
+| -- | -- | -- |
+| `true` | `true` | `true` |
+| `true` | `false` | `false` | 
+| `false` | `true` | `false` |
+| `false` | `false` | `false` |
+
+
+`TRUTH TABLE FOR OR(||)`
+
+
+| `OPERAND 1` | `OPERAND 2` | `RESULT` |
+| -- | -- | -- |
+| `true` | `true` | `true` |
+| `true` | `false` | `true` | 
+| `false` | `true` | `true` |
+| `false` | `false` | `false` |
+
+
+`TRUTH TABLE FOR NOT(!)`
+
+| `OPERAND` | `RESULT` |
+| -- | -- |
+| `true` |  `false` |
+| `false` | `true` | 
+
+</details>
+
+<details>
+  <summary>
+    Increment and decrement 
+  </summary>
+
+
+### In the C programming language, increment and decrement are operators that are used to increase or decrease the value of a variable by 1, respectively.
+
+## Increment
+
+The increment operator in C is represented by the `++` symbol. It can be used in two ways:
+
+1. **Pre-increment**: `++variable`
+   - The value of the variable is incremented by 1 before it is used in the expression.
+   - Example: `x = ++y;` (first increments `y` by 1, then assigns the new value of `y` to `x`)
+
+2. **Post-increment**: `variable++`
+   - The value of the variable is used in the expression first, and then it is incremented by 1.
+   - Example: `x = y++;` (first assigns the current value of `y` to `x`, then increments `y` by 1)
+
+## Decrement
+
+The decrement operator in C is represented by the `--` symbol. It can also be used in two ways:
+
+1. **Pre-decrement**: `--variable`
+   - The value of the variable is decremented by 1 before it is used in the expression.
+   - Example: `x = --y;` (first decrements `y` by 1, then assigns the new value of `y` to `x`)
+
+2. **Post-decrement**: `variable--`
+   - The value of the variable is used in the expression first, and then it is decremented by 1.
+   - Example: `x = y--;` (first assigns the current value of `y` to `x`, then decrements `y` by 1)
+
+Here's an example to illustrate the difference between pre-increment/decrement and post-increment/decrement:
+
+```c
+int x = 5;
+int y = 10;
+
+// Pre-increment
+x = ++y; // x = 11, y = 11
+
+// Post-increment
+x = y++; // x = 11, y = 12
+
+// Pre-decrement
+x = --y; // x = 11, y = 11
+
+// Post-decrement
+x = y--; // x = 12, y = 11
+```
+  
+</details>
+
+<details>
+  <summary>
+    Assigment
+  </summary>
+
+
+  
+</details>
+
+  
 
 
 
