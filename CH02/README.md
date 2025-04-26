@@ -76,8 +76,7 @@
     - `math.h` : *provides mathematical funtions to perform mathematical calculations , funcitons include sqrt, pow,etc*
     - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
     - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
-
->[!NOTE]
+ 
 > Sometimes Programmers write their own librarys for their specific needs
 
 </details>
