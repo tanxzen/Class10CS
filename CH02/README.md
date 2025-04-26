@@ -44,3 +44,26 @@
         ```
 </details>
 
+<details>
+  <summary>
+    Constants
+  </summary>
+
+- `Constant : Any unchanged value in a program during program execution is called a constant .`
+- `Different Types of Constant `:
+    - `Numeric Constants` :
+        - 1.`Interger Constant `: *An interger constant is a signed or unsigned whole number.*
+          - e.g `-24, 52, 102`
+        - 2.`Real or Floating Point Constant` : *Any signed or unsigned number with fractional part is called real or floating point constant*
+            - e.g `3.14, 0.234, 0.42e-32`
+    - `String or Character constant` :
+        - 1.`Single character string constant` : *Any letter or character enclosed in single apostrophe is called single character sting constant*
+            - e.g `'h', 'a' , '+'`
+        - 2.`String of characters constant` : *Any string of characters consisting of letters, digits, and symbols enclosed in double quotes is called string of characters constant*
+            - e.g `"letters", "number02" , "person+name+$`
+</details>
+
+
+  
+</details>
+
