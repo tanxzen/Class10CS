@@ -63,7 +63,22 @@
             - e.g `"letters", "number02" , "person+name+$`
 </details>
 
+<details>
 
-  
+<summary>
+  Library
+</summary>
+
+- `Library` :  *A library in C is a collection of pre-compiled functions and routines that can be used in programs to perform common tasks, such as input/output, string handling, or math operations.*
+- `Common Librarys`:
+    - `stdio.h` : *provides function and others assets for input/output*
+    - `conio.h` : *short for console input output , is a library used by some older compilers like TURBOC++ compiler, that provide functions like getch,clrscr,etc but it's a outdated library*
+    - `math.h` : *provides mathematical funtions to perform mathematical calculations , funcitons include sqrt, pow,etc*
+    - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
+    - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
+
+>[!NOTE]
+> Sometimes Programmers write their own librarys for their specific needs
+
 </details>
 
