@@ -4,7 +4,11 @@
 
 ##
 
-## Variable : 
+<details>
+  <summary>
+    Variable  
+  </summary>
+  
 - `A variable is an identifier or a name which is used to refer a value and this value varies or changes during the program execution.`<br>
 *example* : *name = tomba , surname = laisharam, age=25*
 - `How to declare a variable in C ?`
@@ -35,7 +39,5 @@
         int age;     // Declaration without initialization
         age = 30;    // Assignment after declaration
         ```
-
-## Constants 
-- 
+</details>
 
