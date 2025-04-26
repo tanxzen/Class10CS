@@ -129,3 +129,40 @@ volatile    while
   
 </details>
 
+
+
+### Structure of C program :
+```c
+<Header files>
+
+<Global declaration of variables>
+
+main()
+{
+
+  <Local declaration of variables>
+
+  --------------
+
+  <Statements>
+
+  --------------
+
+}
+
+<Sub programs - function blocks>
+```
+
+- *The header files tell compiler to include required files to run the program, define maros substitution etc.*
+- *Global declaration of variable declares the variable outside the main block meaning the declared variable can be use by any function or also by the main function.*
+- *Local declaration of variable means that the variable is declared inside the main block and cannot be used in other sub blocks.*
+- *The statements which are written inside the main function will only execute other statements which are written outside the main block will not be executed*
+- *functions are just like another main block which will not be executed but which can be call in the main block to do certain actions, work, etc.*
+
+
+
+
+
+
+
+
