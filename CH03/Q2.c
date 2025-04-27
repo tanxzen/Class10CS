@@ -6,7 +6,7 @@ Q. Write a C program to convert temperature in °C to °F using the relation °F
 */
 
 #include <stdio.h>
-// #include <conio.h>
+#include <conio.h>
 
 int main() {
   float cel, far;
