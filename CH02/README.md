@@ -313,6 +313,85 @@ x = y--; // x = 12, y = 11
   </summary>
 
 
+Assignment Operators in C
+In C programming, assignment operators are used to assign values to variables. The most common assignment operator is the equal sign (=), but there are several compound assignment operators that combine an arithmetic operation with assignment. Here's a brief explanation of some of these operators, along with examples in C code format.
+
+Simple Assignment (=)
+Assigns the value on the right to the variable on the left.
+
+```c
+int x = 10;  // x is now 10
+```
+
+Addition Assignment (+=)
+Adds the right operand to the left operand and assigns the result to the left operand.
+
+```c
+int x = 10;
+x += 5;  // x is now 15 (10 + 5)
+```
+
+Subtraction Assignment (-=)
+Subtracts the right operand from the left operand and assigns the result to the left operand.
+
+```c
+int x = 10;
+x -= 3;  // x is now 7 (10 - 3)
+```
+
+Multiplication Assignment (*=)
+Multiplies the left operand by the right operand and assigns the result to the left operand.
+
+```c
+int x = 10;
+x *= 2;  // x is now 20 (10 * 2)
+```
+
+Division Assignment (/=)
+Divides the left operand by the right operand and assigns the result to the left operand.
+
+```c
+int x = 10;
+x /= 2;  // x is now 5 (10 / 2)
+```
+
+Modulus Assignment (%=)
+Takes the modulus using the left operand and the right operand and assigns the result to the left operand.
+
+```c
+int x = 10;
+x %= 3;  // x is now 1 (10 % 3)
+```
+
+Bitwise AND Assignment (&=)
+Performs a bitwise AND operation on the left operand and the right operand and assigns the result to the left operand.
+
+```c
+
+int x = 0b1010;
+x &= 0b1100;  // x is now 0b1000 (0b1010 & 0b1100)
+```
+
+Bitwise OR Assignment (|=)
+Performs a bitwise OR operation on the left operand and the right operand and assigns the result to the left operand.
+
+```c
+
+int x = 0b1010;
+x |= 0b0011;  // x is now 0b1011 (0b1010 | 0b0011)
+```
+
+Bitwise XOR Assignment (^=)
+Performs a bitwise XOR operation on the left operand and the right operand and assigns the result to the left operand.
+
+
+```c
+
+int x = 0b1010;
+x ^= 0b0101;  // x is now 0b1111 (0b1010 ^ 0b0101)
+```
+
+These compound assignment operators provide a shorthand way to update the value of a variable based on its current value. They are widely used in C programming to make code more concise and readable.
   
 </details>
 
