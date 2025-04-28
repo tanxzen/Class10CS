@@ -68,13 +68,9 @@ Some format specifier are :
   
 </details>
 
-<details>
-  
-<summary>
-  printf function
-</summary>
-
 ---
+
+## printf() function
 
 `printf() function is used to print/display values of variables using the standart input/output device(monitor).`
 <br>
@@ -98,5 +94,35 @@ Consider value s = 2.8, k = 5 and kfact = 120.
 sum = 2.80
 5 factorial is 120
 ```
-  
-</details>
+
+---
+
+## scanf() function
+
+`scanf() function is used to read/input values of variables using the standard input device(keyboard).`
+<br>
+
+*syntax* : `scanf("format string",&V1,&V2 ... &Vn);`
+
+Where V1, V2 ... Vn are variable whose values are to be read form the keyboard.<br>"format string" is the control string which represents the format specification (refer to format specifier ).<br>
+The symbol `&`(ampersand) represents the memory address where the variable value is to be stored.
+
+
+### Example
+```c
+scanf("%d %d", &a, &b); // to read value of int variables a and b.
+scanf("%f %d", &x, &n); // to read float value of x and int value of n.
+scanf("%c",&gender); // to read char value for the variable gender.
+scanf("%s",sname); // to read a string of char variable sname.
+```
+
+When these functions are executed, the computer will wait for the values of the variable listed in scanf which are to be entered using keyboard.
+<br>
+
+```
+12 13
+4.03 10
+m
+tomba
+```
+
