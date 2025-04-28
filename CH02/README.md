@@ -524,7 +524,7 @@ a >> 1 = 00000010 = 2
 ---
 
 
-# HOW TO WRITE A C PROGRAM | NEED TO UNDERSTAND 
+# HOW TO WRITE A C PROGRAM | WRITING A C PROGRAM 
 
 ### To write a program , you need to understand the language properly i will try to make you understand some concepts and rule .
 
@@ -548,7 +548,44 @@ a >> 1 = 00000010 = 2
 `We include header file to use pre-define functions , macros so if we do not include them we need to make the funtions ourself`
 
 
-  
+</details>
+
+<details>
+
+<summary>
+  why int/void main() funtion ?
+</summary>
+
+### Why most of the time main() has int/void next to it like int/void main() ? 
+
+> using void is also discourage for large projects
+
+`Main function is the only function which is executed by the program. So a funtion need a type right ? so we are specifying the type of our main funtion int meaning it was a integer return type and void means no return type and the OS also checks for return type to determine what happen to the program running ?`
+
+- *For every funtion there should be a type and the types can be our choice wheather int/void it totally depends on us*<br>
+- *if we want to debug our code we specify the return type to `int`  to main because when the main program executes successfully it return 0 and when it had error it return 1*<br>
+- *if we dont want to debug or bother with returns we specify `void` to main because when it executes it will not return anything*<br>
+- *the OS or the system check the program running so it check via the return type if return was 1 it knows the program has ran into an error and will notify you*
+
+### TL;DR
+
+`We use int/void to main because main is also a funtion and every funtion needs its type to determine return type and we use int when we need to debug code because it returns 0 when it works and 1 when it gives error and we use void to specify no return type meaning nothing will return and bother and the os also check the program condition using return values`.
+
+--- 
+
+### 🙃 After this did i just sense another question XD ? if not 😳 i will try to list it 
+
+### Q. Then why can't we use char main() or float main() ?
+
+`We can use char or float type with main but it is highly discourage because the OS or the system checking the program condition via the return value
+will not be able to understand char return and float return as said in the above that 0 and 1 are used for success and error and there are no know values for char and float return.`
+
+### TL;DR 
+
+`We can use char or float main but it is highly discourage as the OS will not know the return values because the OS does not have any idea what a char or float return means as it works on 0 and 1 for return`
+
+
+
 </details>
 
 
