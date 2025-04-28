@@ -523,17 +523,12 @@ a >> 1 = 00000010 = 2
 
 ---
 
-
-# HOW TO WRITE A C PROGRAM | WRITING A C PROGRAM 
-
-### To write a program , you need to understand the language properly i will try to make you understand some concepts and rule .
-
-`These part is based on my current knowledge and experience , i too am a student of class 10 learning c , right now 2025 , so any questions and issues are requested to post on issue page, thanks`
+## FAQ :
 
 <details>
 
 <summary>
-  Why do we need to include header files ? 
+Why do we need to include header files ? 
 </summary>
 
 
@@ -543,7 +538,7 @@ a >> 1 = 00000010 = 2
 
 *We can also write a program without including a header file but we need to write our own functions like example we do not want to include the stdio.h header file but this header file give us the required functions for input/output like printf and scanf so if we do not include the stdio.h header file we need to make a custom funtion for printing and getting user input like printf and scanf by ourself*
 
-### TL;DR
+### TL;DR 
 
 `We include header file to use pre-define functions , macros so if we do not include them we need to make the funtions ourself`
 
@@ -586,6 +581,11 @@ will not be able to understand char return and float return as said in the above
 
 </details>
 
+
+### Examples :
+
+`Variable Declaration : `
+
 ```c
 
 // Declaring a variable 
@@ -600,6 +600,31 @@ float pi = 3.14 ; // we are using float for decimal numbers
 
 
 
+`Simple hello world structure : `
+
+```c
+#include <stdio.h>
+
+int main(){
+  printf("Hello world\n");
+  return 0;
+}
+```
+
+`Output` :
+  ```
+Hello world
+
+```
+
+
+- *here the code starts with the include <stdio.h>  which inlcude the standart input/output header file which gives printf funtion and we use int main as the return type and we use printf function , printf prints the words inside the double quotes and \n means move to new line and we give a return value 0 which tell the OS that the program ran sucessfully.*
+
+---
+
+<p align="center">
+  💌 suggestions are always welcome.
+</p>
 
 
 
