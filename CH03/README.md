@@ -5,6 +5,25 @@
 ---
 
 <details>
+  <summary>
+    Textual Question 
+  </summary>
+
+  ### Q1. Write a C program to find the sum and average of three given numbers . 
+  ### Q2. Write a C program to convert temperature in °C to °F using the relation °F = 1.8°C + 32.
+  ### Q3. Write a C program to find the area and circumference of a circle of radius r.
+  ### Q4. Write a C program to find the value of y using the relation y = x^2 + 2x - 1.
+  ### Q5. Write a C program to find the ASCII character of a given integer.
+  ### Q6. Write a C program to calculate simple interest using formula I = PNR/100.
+  ### Q7. Write a C program to swap (exchange) the values of a variables A and B without using temporary variable. [Hint : A = A + B ; B = A - B ; A = A - B]
+  ### Q8. Earth takes a period of revolution of 31558150 seconds. Write a C program to convert this into number of days, hours and minutes.
+  ### Q9. Write a C program to calculate the cut-off mark of a student using the formula CM = M/2 + P/2 +  // continue later
+
+  
+</details>
+
+
+<details>
 
 <summary>escape sequences</summary>
 
