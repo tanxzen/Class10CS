@@ -313,7 +313,6 @@ x = y--; // x = 12, y = 11
   </summary>
 
 
-Assignment Operators in C
 In C programming, assignment operators are used to assign values to variables. The most common assignment operator is the equal sign (=), but there are several compound assignment operators that combine an arithmetic operation with assignment. Here's a brief explanation of some of these operators, along with examples in C code format.
 
 Simple Assignment (=)
@@ -395,7 +394,16 @@ These compound assignment operators provide a shorthand way to update the value 
   
 </details>
 
+
+<details>
+
+<summary>
+  Conditional Operators
+</summary>
+
+Conditional Operators
   
+</details>
 
 
 
