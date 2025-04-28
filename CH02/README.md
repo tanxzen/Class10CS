@@ -521,6 +521,37 @@ a >> 1 = 00000010 = 2
 
 </details>
 
+---
+
+
+# HOW TO WRITE A C PROGRAM | NEED TO UNDERSTAND 
+
+### To write a program , you need to understand the language properly i will try to make you understand some concepts and rule .
+
+`These part is based on my current knowledge and experience , i too am a student of class 10 learning c , right now 2025 , so any questions and issues are requested to post on issue page, thanks`
+
+<details>
+
+<summary>
+  Why do we need to include header files ? 
+</summary>
+
+
+### Why do we need to include header files ?
+
+`We include header file because they contain pre-define functions , macros which will help us write a program without making complex functions .`
+
+*We can also write a program without including a header file but we need to write our own functions like example we do not want to include the stdio.h header file but this header file give us the required functions for input/output like printf and scanf so if we do not include the stdio.h header file we need to make a custom funtion for printing and getting user input like printf and scanf by ourself*
+
+### TL;DR
+
+`We include header file to use pre-define functions , macros so if we do not include them we need to make the funtions ourself`
+
+
+  
+</details>
+
+
 
 
 
