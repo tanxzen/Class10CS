@@ -20,7 +20,7 @@ on **Manipur Board Computer Science**
 
 `Compiler : TURBOC++ is recommended to use, as it's used in book but you can also use gcc, clang or any other compiler.`
 
-#
+---
 
 ## [`CH01 : Algorithm For Problem Solving`](https://github.com/tanxzen/Class10CS/tree/main/CH01)
 - Some common and important algorithm
@@ -31,3 +31,11 @@ on **Manipur Board Computer Science**
 - How to write a C program , Structure of a C program
 - Data Types
 - Different Opetators
+
+## [`CH03 : Input/Output Functions and statements`](https://github.com/tanxzen/Class10CS/tree/main/CH03)
+- Use of printf, scanf and other funtions
+- escape sequences
+- Format specifiers
+- Textbook questions
+
+## 
