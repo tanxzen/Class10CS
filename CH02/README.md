@@ -581,6 +581,7 @@ will not be able to understand char return and float return as said in the above
 
 </details>
 
+---
 
 ### Examples :
 
