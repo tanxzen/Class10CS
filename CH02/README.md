@@ -473,7 +473,7 @@ They are useful for:
 | Operator | Name         | Description                                                |
 |----------|--------------|------------------------------------------------------------|
 | `&`      | AND          | 1 if **both bits** are 1                                   |
-| `|`      | OR           | 1 if **at least one** bit is 1                             |
+| `\|`      | OR           | 1 if **at least one** bit is 1                             |
 | `^`      | XOR          | 1 if **only one** of the bits is 1                         |
 | `~`      | NOT          | **Flips** all bits (0 becomes 1, and 1 becomes 0)          |
 | `<<`     | Left Shift   | Shifts bits **left**, fills 0s on the right                |
@@ -518,12 +518,6 @@ a >> 1 = 00000010 = 2
 ```
 
 ---
-
-## ✅ Summary
-
-- Bitwise operators allow direct manipulation of bits.
-- Very useful in system programming, flags, compression, and more.
-
 
 </details>
 
