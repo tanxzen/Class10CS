@@ -68,3 +68,35 @@ Some format specifier are :
   
 </details>
 
+<details>
+  
+<summary>
+  printf function
+</summary>
+
+---
+
+`printf() function is used to print/display values of variables using the standart input/output device(monitor).`
+<br>
+
+
+*syntax* : `printf("format string",V1,V2,Vn);`
+
+where V1,V2 ... Vn are variables whose values are to be displayed in the monitor. "format string" is the control string which represents the format specification (refer to format specifiers).
+
+### Example 
+```c
+printf(" %f ",s);
+printf("\n sum = %6.2f ",s);
+printf("\n %d factorial is %d",k,kfact);
+```
+When these functions are executed, the computer prints/display the values of the variables listed in printf().<br>
+Consider value s = 2.8, k = 5 and kfact = 120.
+
+```
+2.800000
+sum = 2.80
+5 factorial is 120
+```
+  
+</details>
