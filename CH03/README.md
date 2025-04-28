@@ -37,3 +37,34 @@ Some escape sequence are :
 </details>
 
 
+<details>
+
+<summary>
+  format specifiers
+</summary>
+
+---
+
+`Format specifier are used to specify the format of a variable or other while using input or output functions`
+<br>
+
+Some format specifier are :
+<br>
+
+| Format Specifier | Description                                                  | Function                                                    |
+| ---------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `%d` or `%i`     | Signed integer                                            | Prints or reads a signed integer value.                     |
+| `%u`             | Unsigned integer                                          | Prints or reads an unsigned integer value.                  |
+| `%f`             | Floating-point number                                     | Prints or reads a floating-point number.                    |
+| `%e` or `%E`     | Floating-point number in scientific notation             | Prints or reads a floating-point number in scientific notation. |
+| `%g` or `%G`     | Floating-point number in the more compact of `%f` or `%e` | Prints or reads a floating-point number in the more compact of `%f` or `%e`. |
+| `%c`             | Single character                                          | Prints or reads a single character.                         |
+| `%s`             | String                                                    | Prints or reads a string.                                   |
+| `%p`             | Pointer                                                   | Prints the address of a pointer.                            |
+| `%x` or `%X`     | Hexadecimal integer                                       | Prints or reads a hexadecimal integer value.               |
+| `%o`             | Octal integer                                             | Prints or reads an octal integer value.                     |
+| `%%`             | Literal percent sign                                      | Prints a literal percent sign. 
+
+  
+</details>
+
