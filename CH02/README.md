@@ -584,10 +584,19 @@ will not be able to understand char return and float return as said in the above
 
 `We can use char or float main but it is highly discourage as the OS will not know the return values because the OS does not have any idea what a char or float return means as it works on 0 and 1 for return`
 
-
-
 </details>
 
+```c
+
+// Declaring a variable 
+// we use a type specifier to declare a variable [ int , char , float , double] choose the required type
+
+int age = 25 ; // int for age as it is interger ;
+
+char name[20] = "tomba" ; // we are using array it's just a collection of many char
+
+float pi = 3.14 ; // we are using float for decimal numbers 
+```
 
 
 
