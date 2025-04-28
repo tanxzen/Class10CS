@@ -400,9 +400,131 @@ These compound assignment operators provide a shorthand way to update the value 
 <summary>
   Conditional Operators
 </summary>
+<br>
 
-Conditional Operators
-  
+Conditional Operator or Ternary operator is used to check a condition and select a value of the condition depending on the value of the condition.
+It's just a shorter version of if-else statement completed in one line. 
+
+- `Ternary operator in c` : *syntax :* `(condition)? value 1 : value 2 ;`,
+- If the condition is *TRUE* it will execute the `value 1` and if the condition is *FALSE* it will execute the `value 2`.
+
+<br>
+
+`Comparision Ternary and if-else operator :`
+
+<br>
+
+`Ternary`
+
+```c
+int a = 10 ;
+int b = 15 ;
+int big;
+
+big = (a>b)? a : b ; 
+```
+
+<br>
+
+`If-else`
+
+```c
+int a = 10;
+int b = 15;
+int big;
+
+if (a>b){
+big = a;
+}
+else {
+big = b;
+}
+```
+
+</details>
+
+
+<details>
+<summary>
+  Bitwise Operator
+</summary>
+
+>Recommanded not to focus much on these as they are for advance programmers who manages data at bit level<br>
+>Some Research on Binary numbers and Base 2 number system will help understand these better ! 
+
+## 🔹 What Are Bitwise Operators?
+
+Bitwise operators work on **individual bits** (0s and 1s) of integer values.  
+They perform operations at the binary level.
+
+---
+
+## 🔹 Why Use Bitwise Operators?
+
+They are useful for:
+- Low-level hardware programming
+- Efficient memory or flag manipulation
+- Performance optimization
+
+---
+
+## 🔹 Bitwise Operators in C
+
+| Operator | Name         | Description                                                |
+|----------|--------------|------------------------------------------------------------|
+| `&`      | AND          | 1 if **both bits** are 1                                   |
+| `|`      | OR           | 1 if **at least one** bit is 1                             |
+| `^`      | XOR          | 1 if **only one** of the bits is 1                         |
+| `~`      | NOT          | **Flips** all bits (0 becomes 1, and 1 becomes 0)          |
+| `<<`     | Left Shift   | Shifts bits **left**, fills 0s on the right                |
+| `>>`     | Right Shift  | Shifts bits **right**, removes bits from the end           |
+
+---
+
+## 🔹 Example in C
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5;   // Binary: 00000101
+    int b = 3;   // Binary: 00000011
+
+    printf("a & b = %d\n", a & b);  // 00000001 -> 1
+    printf("a | b = %d\n", a | b);  // 00000111 -> 7
+    printf("a ^ b = %d\n", a ^ b);  // 00000110 -> 6
+    printf("~a = %d\n", ~a);        // In 8-bit: 11111010 -> -6 (2's complement)
+    printf("a << 1 = %d\n", a << 1); // 00001010 -> 10
+    printf("a >> 1 = %d\n", a >> 1); // 00000010 -> 2
+
+    return 0;
+}
+```
+
+---
+
+## 🔹 Quick Bit Reference
+
+```text
+a = 5  = 00000101
+b = 3  = 00000011
+
+a & b  = 00000001 = 1
+a | b  = 00000111 = 7
+a ^ b  = 00000110 = 6
+~a     = 11111010 = -6 (in 2's complement)
+a << 1 = 00001010 = 10
+a >> 1 = 00000010 = 2
+```
+
+---
+
+## ✅ Summary
+
+- Bitwise operators allow direct manipulation of bits.
+- Very useful in system programming, flags, compression, and more.
+
+
 </details>
 
 
