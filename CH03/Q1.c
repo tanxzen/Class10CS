@@ -1,6 +1,6 @@
 /*
 
-Q. Write a C program to find the sum and average of given three numbers .
+Q1. Write a C program to find the sum and average of given three numbers .
 
 */
 
