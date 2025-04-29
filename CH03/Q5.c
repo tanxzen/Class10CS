@@ -16,9 +16,10 @@ int main() {
   printf("Enter number : ");
   scanf("%d", &n);
 
-  printf("Character : %c\n",
-         n); // we are converting the interger to charcter with the format
-             // specifier %c which represent charcter ;
+  printf("Character : %c\n",n);
+             // we are converting the interger to charcter with the format
+             // specifier %c which represent character ;
+ 
   getch();   // remove if not using turboc++;
   return 0;
 }
