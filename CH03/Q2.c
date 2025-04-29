@@ -1,6 +1,6 @@
 /*
 
-Q. Write a C program to convert temperature in °C to °F using the relation °F
+Q2. Write a C program to convert temperature in °C to °F using the relation °F
 = 1.8°C + 32 .
 
 */
