@@ -1,7 +1,6 @@
 /*
 
-Q4. Write a C program to find the value of y using the relation y = x^2 + 2x
-- 1.
+Q4. Write a C program to find the value of y using the relation y = x^2 + 2x - 1.
 
 */
 
@@ -20,6 +19,7 @@ int main() {
   y = x * x + 2 * x - 1;
 
   printf("The value of y : %6.2f\n", y);
+  
   getch(); // remove if not using turboc++;
   return 0;
 }
