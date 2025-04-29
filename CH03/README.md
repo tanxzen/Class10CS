@@ -9,6 +9,8 @@
     Textual Question 
   </summary>
 
+  ---
+
    `Q1. Write a C program to find the sum and average of three given numbers .` <br>
    
   `Q2. Write a C program to convert temperature in °C to °F using the relation °F = 1.8°C + 32.`<br>
