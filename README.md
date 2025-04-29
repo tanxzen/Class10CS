@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDk2dGpobWFvcTZjNHB3dmEybnFveDg5b2F5OHRvZnk2MHo1cmFxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/owQJ2yEhoC1NxCncBi/giphy.gif" width="300" />
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDk2dGpobWFvcTZjNHB3dmEybnFveDg5b2F5OHRvZnk2MHo1cmFxayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/owQJ2yEhoC1NxCncBi/giphy.gif" width="300" />  
 </p>
+
 
 # Class 10 Computer Science Manipur Board
 
@@ -14,7 +15,10 @@ This GitHub repository is based on my personal project/guide on **Manipur Board 
 - **ISBN**: 978-93-5674-534-6
 - **Copyright**: © Vikas Publishing House Private Limited, 2023 | All rights reserved.
 
-### Disclaimer:
+### Disclaimer:  
+
+![License](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
+
 This project is maintained by a student (Class 10, 2025–26 batch) and is based on the *Computer Science - 10 (Manipuri Edition 2023)* textbook. Most of the definitions, explanations, and questions in this guide have been paraphrased or derived from the textbook. Credit is given to the original authors and publisher of the textbook.
 
 You may use this guide for educational purposes, but please note that the content is based on the aforementioned textbook, which is copyrighted.
