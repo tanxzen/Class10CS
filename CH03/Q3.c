@@ -1,7 +1,6 @@
 /*
 
-Q3. Write a C program to find the area and circumference of a circle of radius
-r.
+Q3. Write a C program to find the area and circumference of a circle of radius r.
 
 */
 
@@ -14,7 +13,7 @@ int main() {
 
   clrscr() // remove if not using turboc++ compiler;
 
-      printf("Enter radius of circle : ");
+  printf("Enter radius of circle : ");
   scanf("%f", &r);
 
   area = 22.0 / 7.0 * r * r;
@@ -24,5 +23,5 @@ int main() {
   printf("circumference : %6.2f\n", circumference);
 
   getch() // remove if not using turboc++ compiler ;
-      return 0;
+  return 0;
 }
