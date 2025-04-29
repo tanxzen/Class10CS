@@ -29,6 +29,9 @@
    
    `Q9. Write a C program to calculate the cut-off mark of a student using the formula CM = M/2 + P/2 +  // continue later
 
+
+   ---
+
   
 </details>
 
