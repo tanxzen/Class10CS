@@ -1,5 +1,7 @@
 # CH01 : Algorithm for Problem Solving 
 
+### MORE ALGORITHM ARE COMING SOON ...
+
 `RECOMMANDED TO READ THE Algorithm.txt AS IT HAS EXPLAINATION WITH SOME DETAILS`
 
 ## Overview 
