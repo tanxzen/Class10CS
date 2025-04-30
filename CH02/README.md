@@ -89,7 +89,7 @@
     
       - `string.h` : *provide funtions for manipilating strings in c , functions include strcpy,strcmp,strlen ,etc*
 
-      - `stdlib.h` : *provides system related functions , like malloc,calloc,free for dynaminc memory allocation*
+      - `stdlib.h` : *provides system related functions , like system,malloc,calloc,free for dynaminc memory allocation*
  
 > Sometimes Programmers write their own librarys for their specific needs
 
