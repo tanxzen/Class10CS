@@ -19,7 +19,7 @@ This GitHub repository is based on my personal project/guide on **Manipur Board 
 
 ![License](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)
 
-This project is maintained by a student (Class 10, 2025–26 batch) and is based on the *Computer Science - 10 (Manipuri Edition 2023)* textbook. Most of the definitions, explanations, and questions in this guide have been paraphrased or derived from the textbook. Credit is given to the original authors and publisher of the textbook.
+This project is maintained by a two students (Class 10, 2025–26 batch) and is based on the *Computer Science - 10 (Manipuri Edition 2023)* textbook. Most of the definitions, explanations, and questions in this guide have been paraphrased or derived from the textbook. Credit is given to the original authors and publisher of the textbook.
 
 You may use this guide for educational purposes, but please note that the content is based on the aforementioned textbook, which is copyrighted.
 
