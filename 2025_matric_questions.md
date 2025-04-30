@@ -85,22 +85,26 @@ printf("Sum = %d\n", sum);
 27. Write HTML code to create a web page that replicates the specified layout and style, ensuring your code accurately reflects the described structure and appearance. **(5 marks)** 
 ---
 <div align="center">
+    
 ## Scheme of Studies
 </div>
+
 ### • Subjects of Studies
 
 **C. First language**  
-- Manipuri  
-- Assamese  
+      
+  - Manipuri  
+  - Assamese  
 
 **D. Second language**  
 - English  
 
 **Science**  
-1. —  
+
 2. Chemistry  
-3. Biology  
-   - i. Botany  
-   - ii. Zoology  
+3. Biology <br>
+
+    i. Botany <br>
+    ii. Zoology
 
 ---
