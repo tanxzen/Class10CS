@@ -27,7 +27,9 @@
    
    `Q8. Earth takes a period of revolution of 31558150 seconds. Write a C program to convert this into number of days, hours and minutes.`<br>
    
-   `Q9. Write a C program to calculate the cut-off mark of a student using the formula CM = M/2 + P/2 +  // continue later
+   `Q9. Write a C program to calculate the cut-off mark of a student using the formula CM = M/2 + P/2 - C/2 + E where CM = Cut-off Mark , M = Marks in mathematics out of 200 , P = Mark in Physics out of 200 ,C = Marks in Chemestry out of 200 , E = Marks in entrance examination out of 100.`
+
+   ---
 
 
    ---
