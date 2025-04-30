@@ -64,7 +64,7 @@ Attempt all questions.
 ```C
 int a = 5, b = 10; 
 int *p1 = &a, *p2 = &b; 
-int sum *p1 + *p2; 
+int sum = *p1 + *p2; 
 printf("Sum = %d\n", sum);
 ```
 18. What are the attributes of the `<img>` tag, and what do they represent? **(3 marks)** 
