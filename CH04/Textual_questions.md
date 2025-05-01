@@ -526,14 +526,60 @@ int main(){
 
 # SECTION B: SHORT QUESTIONS
 
-1. Give the general syntax of **if-else** statement in C.
+1. Give the general syntax of **if-else** statement in C.<br>
 
-2. Give the general syntax of **switch** statement in C.
+Ans: 
+```c
+if (condition)
+    {
+        True block
+    }
+    else 
+    {
+        False Block
+    }
+```
 
-3. A **break** statement is used to exit from a ___.
+2. Give the general syntax of **switch** statement in C.<br>
 
-4. What is the purpose of a **switch** statement?
+Ans: 
+```c
+switch ( <expression>)
+{
+case <label 1>: {
+                  -------------
+                  <statement block 1>
+                  -------------
+                  break;
+                }
+case <label 2>: {
+                  -------------
+                  <statement block 1>
+                  -------------
+                  break;
+                }
+case <label n>: {
+                  -------------
+                  <statement block n>
+                  -------------
+                  break;
+                }
+default:        {
+                  -------------
+                  <default statement block>
+                  -------------
+                  break;
+                }
+}
+```
 
-5. In what ways does a switch statement differ from an **if** statement?
+3. A **break** statement is used to exit from a <u>switch statement</u>
 
-6. Using what other statement can you avoid multiple nested **if** conditions?
+4. What is the purpose of a **switch** statement?<br>
+Ans : To execute a block of statement depending on the value of a variable or expression.
+
+5. In what ways does a switch statement differ from an **if** statement?<br>
+Ans : It has case statement which is easier to use when their are multiple values.
+
+6. Using what other statement can you avoid multiple nested **if** conditions?<br>
+Ans : By using switch statement.
