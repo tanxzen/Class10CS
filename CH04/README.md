@@ -57,4 +57,44 @@ if (condition 1)
         -------------
     }
 }
+```
 
+### switch statement
+
+<p>
+  switch statement is used to create a block of statements depending on the value of a variable or an expression.
+</p>
+
+**syntax** :
+```c
+switch ( <expression>)
+{
+case <label 1>: {
+                  -------------
+                  <statement block 1>
+                  -------------
+                  break;
+                }
+case <label 2>: {
+                  -------------
+                  <statement block 1>
+                  -------------
+                  break;
+                }
+case <label n>: {
+                  -------------
+                  <statement block n>
+                  -------------
+                  break;
+                }
+default:        {
+                  -------------
+                  <default statement block>
+                  -------------
+                  break;
+                }
+}
+```
+where `<expression>` refers to any `int` or `char` expression or variable. <br>
+      `<label 1>`, `<label 2>`...`<label n>` are values which will match with the value of the expression. <br>
+      **break** is a statement which will transfer the control to the end of **switch** statement.
