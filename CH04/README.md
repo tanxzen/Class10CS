@@ -57,6 +57,21 @@ if (condition 1)
         -------------
     }
 }
+else
+{
+  if (condition 3)
+    {
+      --------------
+      <true block 2>
+      --------------
+    }
+  else
+    {
+      ---------------
+      <false block 2>
+      ---------------
+    }
+}
 ```
 
 ### switch statement
