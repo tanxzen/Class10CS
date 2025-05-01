@@ -121,63 +121,63 @@ Ans :
 #include <stdio.h>
 
 int main(){
-   int a, b, big;
+   int a, b, small;
 
    clrscr() //remove if not using turboc++
 
    printf("Enter two numbers : ");
    scanf("%d %d",&a,&b);
 
-   if (a>b){
-   big = a;
+   if (a<b){
+   small = a;
    }
    else {
-   big = b;
+   small = b;
    }
-   printf("Biggest number : %d\n",big);
+   printf("Smallest number : %d\n",small);
    getch() // remove if not using turboc++
    return 0;
 }
 ```
 
-7. Write a C program to find the smallest of given three numbers. <br>
+6. Write a C program to find the smallest of given three numbers. <br>
 Ans :
 ```c
 #include <conio.h> //remove if not using turboc++
 #include <stdio.h>
 
 int main(){
-  int a, b, c, big;
+  int a, b, c, small;
 
    clrscr() //remove if not using turboc++
 
    printf("Enter three numbers : ");
    scanf("%d %d %d",&a,&b,&c);
 
-   if (a>b){
-      if (a>c){
-            big = a;
+   if (a<b){
+      if (a<c){
+            small = a;
          }
       else{
-         big = c;
+         small = c;
          }
    }
    else {
-      if (b>c){
-            big = b;
+      if (b<c){
+            small = b;
             }
       else {
-            big = c;
+            small = c;
          }
    }
-   printf("Biggest number : %d\n",big);
+   printf("Smallest number : %d\n",small);
    getch() // remove if not using turboc++
    return 0;
 }
 ```
 
 
-9. Write a C program to find the average of best three marks from the given four test marks.
+7. Write a C program to find the average of best three marks from the given four test marks.
 
 [Hint: Find the smallest of given four test marks. Subtract it from the sum of four test marks. You will now get the sum of best three marks. Take the average
 
@@ -254,11 +254,35 @@ int main() {
 
 ```
 
+9. A company pays salary to an employee at the normal hourly rate, if the number of hours worked does not exceed 40. If the number of hours worked exceeds 40, the salary for the excess number of hours is calculated as 1.5 times the normal hourly rate. Write a C program to implement this to calculate the salary.<br>
 
+Ans : 
+```c
 
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
 
+int main(){
 
-9. A company pays salary to an employee at the normal hourly rate, if the number of hours worked does not exceed 40. If the number of hours worked exceeds 40, the salary for the excess number of hours is calculated as 1.5 times the normal hourly rate. Write a C program to implement this to calculate the salary.
+   float salary , workHours ;
+
+   clrscr(); //remove if not using turboc++
+
+   printf("Enter Salary : $ ");
+   scanf("%f",&salary);
+
+   printf("Enter Work hours : ");
+   scanf("%f",&workHours);
+
+   if (workHours > 40){
+      salary = salary + (workHours - 40) * 1.5;
+   }
+
+   printf("Calculated Salary : %.2f\n",salary);
+   getch(); //remove if not using turboc++
+   return 0;
+}
+```
 
 10. Write a C program to read the marks scored by a student in an examination and print the percentage of marks along with the grade obtained using the following conditions.
 
