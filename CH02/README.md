@@ -1,5 +1,5 @@
 > [!IMPORTANT]
-> All documentation will be on this readme no sperate files
+> All documentation will be on this readme no separate files
 
 # CH02 : Introduction to C language 
 
