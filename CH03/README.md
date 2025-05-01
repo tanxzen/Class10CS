@@ -148,8 +148,63 @@ float x;
 char gender;
 char sname[20];
 
+
 scanf("%d %d", &a, &b);    // User enters two integers
 scanf("%f", &x);           // User enters a float number
 scanf("%c", &gender);      // User enters a character
 scanf("%s", sname);        // User enters a string (one word)
 ```
+
+
+## MORE FUNCTIONS : 
+
+This guide covers common I/O functions in C from `stdio.h` and `conio.h`, with syntax and explanations.
+
+---
+
+### Standard I/O Functions (`<stdio.h>`)
+
+| Function     | Syntax                    | Explanation |
+|--------------|---------------------------|-------------|
+| `getchar()`  | `char c = getchar();`     | Can take input of a character by reading **one character** from the keyboard when the user presses Enter. The character is stored in the variable (e.g., `c`). |
+| `putchar()`  | `putchar(c);`             | Prints a **single character** to the screen. The character `c` must be provided. |
+| `gets()`     | `gets(buffer);`           | Can take input of the user by reading a **whole line of text** (until Enter) from the keyboard and stores it in the variable `buffer`. |
+| `puts()`     | `puts(string);`           | Prints the **string** to the screen and automatically moves the cursor to the next line. |
+
+---
+
+### Console I/O Functions (`<conio.h>` - Non-standard)
+
+| Function     | Syntax                    | Explanation |
+|--------------|---------------------------|-------------|
+| `getch()`    | `char c = getch();`       | Reads a **single character** from the keyboard **without waiting for Enter**. The character is **not shown on the screen** as it's typed (useful for passwords). |
+| `getche()`   | `char c = getche();`      | Same as `getch()`, **but echoes/print the character** on the screen as the user types it. |
+| `putch()`    | `putch(c);`               | Prints a **single character** to the screen, just like `putchar()`, but it's from `<conio.h>`. |
+| `clrscr()`   | `clrscr();`               | Clears the console screen. Only works in **old compilers** like Turbo C/C++, not supported in modern IDEs like Code::Blocks or GCC. |
+
+---
+
+### Summary Table
+
+| Function   | What It Does                                     | Header File   |
+|------------|--------------------------------------------------|---------------|
+| `getchar()`| Reads one char from user                         | `stdio.h`     |
+| `putchar()`| Outputs one char to screen                       | `stdio.h`     |
+| `gets()`   | Reads a line of text                             | `stdio.h`     |
+| `puts()`   | Prints a string with newline                     | `stdio.h`     |
+| `getch()`  | Reads char instantly without showing it          | `conio.h`     |
+| `getche()` | Reads char instantly and shows it on screen      | `conio.h`     |
+| `putch()`  | Outputs one char (same as `putchar()`)           | `conio.h`     |
+| `clrscr()` | Clears screen (console window)                   | `conio.h`     |
+
+
+---
+
+
+
+
+
+
+
+
+
