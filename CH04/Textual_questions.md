@@ -262,26 +262,29 @@ Ans :
 #include <conio.h> //remove if not using turboc++
 #include <stdio.h>
 
-int main(){
+int main() {
+    float hourRate, workHours, totalSalary;
 
-   float salary , workHours ;
+    clrscr(); //remove if not using turboc++
 
-   clrscr(); //remove if not using turboc++
+    printf("Enter work hours: ");
+    scanf("%f", &workHours);
 
-   printf("Enter Salary : $ ");
-   scanf("%f",&salary);
+    printf("Enter the normal hourly rate: ");
+    scanf("%f", &hourRate);
 
-   printf("Enter Work hours : ");
-   scanf("%f",&workHours);
+    if (workHours <= 40) {
+        totalSalary = workHours * hourRate;
+    } 
+    else {
+        totalSalary = (40 * hourRate) + (workHours - 40) * hourRate * 1.5;
+    }
 
-   if (workHours > 40){
-      salary = salary + (workHours - 40) * 1.5;
-   }
-
-   printf("Calculated Salary : %.2f\n",salary);
-   getch(); //remove if not using turboc++
-   return 0;
+    printf("Calculated Salary: %.2f\n", totalSalary);
+    getch();//remove if not using turboc++
+    return 0;
 }
+
 ```
 
 10. Write a C program to read the marks scored by a student in an examination and print the percentage of marks along with the grade obtained using the following conditions.
@@ -346,7 +349,41 @@ int main(){
 
 (iv) if purchase amount > 5000 then 15% discount.
 
-Write a C program using nested if statement to compute the amount to be paid by the customer after discount.
+Write a C program using nested if statement to compute the amount to be paid by the customer after discount.<br>
+
+Ans: 
+```c
+
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    float amount, totalAmount;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter amount: ");
+    scanf("%f", &amount);
+
+    if (amount < 5000) {
+        if (amount < 3000) {
+            if (amount < 1000) {
+                totalAmount = amount - (amount * 5 / 100.0);
+            } else {
+                totalAmount = amount - (amount * 10 / 100.0);
+            }
+        } else {
+            totalAmount = amount - (amount * 12 / 100.0);
+        }
+    } else {
+        totalAmount = amount - (amount * 15 / 100.0);
+    }
+
+    printf("Final Price: %.2f\n", totalAmount);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
 
 12. Write a C program to calculate the commission of a salesman considering three regions X, Y and Z depending on the sales amount as follows.
 
@@ -371,6 +408,16 @@ Write a C program using nested if statement to compute the amount to be paid by 
 |:------|:---|
 |<6500  | 12%|
 |>=6500 | 15%|
+
+<br>
+
+Ans : 
+```c
+
+
+
+
+```
 
 13. The commission on a salesman's total SALES is as follows:
 
