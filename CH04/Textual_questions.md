@@ -181,7 +181,7 @@ int main(){
 
 [Hint: Find the smallest of given four test marks. Subtract it from the sum of four test marks. You will now get the sum of best three marks. Take the average
 
-i.e., average = $(T1 + T2 + T3 + T3 - smallest)/ 3$ <br>
+i.e., average = $(T1 + T2 + T3 + T4 - smallest)/ 3$ <br>
 
 Ans : 
 ```c
@@ -190,7 +190,31 @@ Ans :
 
 int main(){
 
-   Will Continue later !!
+   int t1, t2, t3, t4, smallNum; 
+   float avr;
+
+   clrscr() ; //remove if not using turboc++
+
+   printf("Enter the four marks : ");
+   scanf("%d %d %d %d",&t1, &t2, &t3, &t4);
+
+   smallNum = t1 ; // setting the small number is t1
+
+   if (t2 < smallNum){
+      smallNum = t2; // if t2 was less than smallNum then the value of smallNum is set to the value of t2
+   }
+   if (t3 < smallNum){
+      smallNum = t3; // if t3 was less than smallNum then the value of smallNum is set to the value of t3
+   }
+   if (t4 < smallNum){
+      smallNum = t4; // if t4 was less than smallNum then the value of smallNum is set to the value of t4
+   }
+
+   avr = (t1 + t2 + t3 + t4 - smallNum) / 3.0 ;
+
+   printf("Average of best three marks : %.2f\n",avr);
+   getch(); //remove if not using turboc++
+   return 0;
 
 }
 ```
