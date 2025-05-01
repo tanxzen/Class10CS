@@ -488,7 +488,41 @@ SALES < Rs.100            -no commission
 Rs.100 <= SALES < Rs.1000 -commission 10% of SALES.
 SALES >= Rs.1,000         -commission Rs. 100+8% of SALES above Rs. 1000
 
-Write a program that reads SALES and prints the salesman's commission.
+Write a program that reads SALES and prints the salesman's commission.<br>
+
+Ans : 
+```c
+
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    
+    float amount, commission ;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter sales amount : ");
+    scanf("%f",&amount);
+    
+    if (amount < 1000){
+        if (amount < 100){
+            commission = 0;
+        }
+        else{
+            commission = amount * 10 / 100.0;
+        }
+    }
+    else{
+        commission = 100 + (amount - 1000)*8.0/100; 
+    }
+    
+    printf("Commission : %.2f\n",commission);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
 
 # SECTION B: SHORT QUESTIONS
 
