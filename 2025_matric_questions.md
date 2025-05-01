@@ -108,3 +108,26 @@ printf("Sum = %d\n", sum);
     ii. Zoology
 
 ---
+28. Write HTML code to create a webpage that includes a table displaying the schedule of classes and links to relevant resources. **(5 marks)**
+
+# Class Schedule
+
+| **Class**     | **Time**               | **Resources**                                                                 |
+|---------------|------------------------|-------------------------------------------------------------------------------|
+| Mathematics   | 09:00 AM - 10:30 AM    | [Math Resources](https://example.com/math-resources)                         |
+| Science       | 11:00 AM - 12:30 PM    | [Science Resources](https://example.com/science-resources)                   |
+| History       | 01:00 PM - 02:30 PM    | [History Resources](https://example.com/history-resources)                   |
+
+---
+
+### Instructions:
+
+1. Set the title of the HTML page to **“Class Schedule.”**
+2. Include a main heading with the text **“Class Schedule”** at the top of the page.
+3. Ensure the table has visible borders for all cells and add padding of **10** to all table cells.
+4. Set **‘Class’, ‘Time’,** and **‘Resources’** as table headers.
+5. Set **green color** for the table headers.
+6. Create clickable links for:
+   - **Math Resources** → [https://example.com/math-resources](https://example.com/math-resources)
+   - **Science Resources** → [https://example.com/science-resources](https://example.com/science-resources)
+   - **History Resources** → [https://example.com/history-resources](https://example.com/history-resources)
