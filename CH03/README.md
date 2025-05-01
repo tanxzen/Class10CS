@@ -208,5 +208,3 @@ This guide covers common I/O functions in C from `stdio.h` and `conio.h`, with s
 
 
 
-
-
