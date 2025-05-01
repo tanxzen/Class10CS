@@ -108,3 +108,50 @@ printf("Sum = %d\n", sum);
     ii. Zoology
 
 ---
+28. Write HTML code to create a webpage that includes a table displaying the schedule of classes and links to relevant resources. **(5 marks)**
+
+<h1 align="center">Class Schedule</h1>
+
+<div align="center">
+  <table border="1" cellpadding="10">
+    <thead>
+      <tr style="background-color: #d4f4dd;">
+        <th align="center">Class</th>
+        <th align="center">Time</th>
+        <th align="center">Resources</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Mathematics</td>
+        <td align="center">09:00 AM – 10:30 AM</td>
+        <td align="center"><a href="https://example.com/math-resources">Math Resources</a></td>
+      </tr>
+      <tr>
+        <td align="center">Science</td>
+        <td align="center">11:00 AM – 12:30 PM</td>
+        <td><a href="https://example.com/science-resources">Science Resources</a></td>
+      </tr>
+      <tr>
+        <td align="center">History</td>
+        <td align="center">01:00 PM – 02:30 PM</td>
+        <td><a href="https://example.com/history-resources">History Resources</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+---
+
+### Instructions:
+
+1. Set the title of the HTML page to **“Class Schedule.”**
+2. Include a main heading with the text **“Class Schedule”** at the top of the page.
+3. Ensure the table has visible borders for all cells and add padding of **10** to all table cells.
+4. Set **‘Class’, ‘Time’,** and **‘Resources’** as table headers.
+5. Set **green color** for the table headers.
+6. Create clickable links for:
+   - **Math Resources** → [https://example.com/math-resources](https://example.com/math-resources)
+   - **Science Resources** → [https://example.com/science-resources](https://example.com/science-resources)
+   - **History Resources** → [https://example.com/history-resources](https://example.com/history-resources)
