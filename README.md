@@ -45,6 +45,20 @@ You may use this guide for educational purposes, but please note that the conten
 - Format specifiers
 - Textbook questions
 
+## [`CH04 : Control Statement in C`](https://github.com/tanxzen/Class10CS/tree/main/CH04)
+- If-else Statement
+- Nested If-else Statement
+- Switch Statement
+- Textual Questions
+
+## [`CH05 : Loop Control Structures in C`](https://github.com/tanxzen/Class10CS/tree/main/CH05)
+- For Loop
+- While loop
+- Do-While Loop
+- Textual Questions
+
+
+
 ---
 
 ### **Credits and Acknowledgements**:
