@@ -277,20 +277,38 @@ Ans :
 
 int main(){
    
-   int mark , fullMark;
-   float per;
+   int mark ;
+   float fullmark, per;
 
+   clrscr(); //remove if not using turboc++
+   
    printf("Enter mark : ");
    scanf("%d",&mark);
 
-   printf("Enter Full mark : ");
-   scanf("%d",&fullMark);
+   printf("Enter full mark : ");
+   scanf("%f",&fullmark);
 
-   per = mark/fullMark * 100 ;
+   per = mark/fullmark * 100 ;
 
-   switch (per) {
-   // will continue later 
+   if (per >= 50 ){ // if per is geater than 50 then the next if statements is executed
+       if (per >= 60){ //if per is greater than 75 then the next if statement is executed
+           if (per >= 75 && per <= 100){ //if per is greater than 75 and less than 100 it prints distinction
+               printf("DISTINCTION\n");
+           }
+           else { 
+               printf("FIRST CLASS\n"); // if per is less than 75 its prints first class
+           }
+       }
+       else{ 
+         printf("SECOND CLASS\n"); // if per is less then 60 prints second class
+       }
    }
+    else {
+        printf("FAIL\n"); // if per is less than 50 it prints fail
+    }
+
+   getch(); //remove if not using turboc++
+   return 0;
 }
 ```
 
