@@ -222,7 +222,41 @@ int main(){
 8. Write a C program that will read the value of x and evaluate the function <br>
 y(x) = x² + 2x - 10 if x < 10 <br>
 = |x|               if x < 0
-using a **if** statement.
+using a **if** statement.<br>
+
+Ans : 
+```c
+
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+#include <math.h> // for absolute value of x or for fabs() func 
+
+int main() {
+
+   float x, y;
+
+   clrscr() //remove if not using turboc++
+
+   printf("Enter value of x : ");
+   scanf("%f",&x);
+
+   if (x>10){
+      y = x*x + 2*x - 10; // set the value of y to the value of this expression if x is less than 10;  
+   }
+   if (x<0){
+      y = fabs(x); // set the absolute value of x to y if x is less than 0 meaning negative numbers;
+   }
+
+   printf("Value of y : %.2f\n",y);
+   getch(); //remove if not using turboc++
+   return 0;
+}
+
+```
+
+
+
+
 
 9. A company pays salary to an employee at the normal hourly rate, if the number of hours worked does not exceed 40. If the number of hours worked exceeds 40, the salary for the excess number of hours is calculated as 1.5 times the normal hourly rate. Write a C program to implement this to calculate the salary.
 
