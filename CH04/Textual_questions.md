@@ -62,15 +62,92 @@ else
 
 2. Write notes on (i) conditional statement (ii) **switch** statement
 
-3. Discuss the difference between **if...else** and **switch** structures.
+Ans : 
+```
+i. Conditional Statement : Conditional Statement are used to execute/transfer the control from one part of the program to another depending on a condition.
+   There are two types of conditional statement used in C language : 
+      a. if-else statement. 
+      b. switch statement.
+ii. Switch Statement : The switch statement are substitude for a long if-else statement. Switch statment is used to
+    execute a block of statement depending on the value of a variable or expression.
+```
+
+3. Discuss the difference between **if...else** and **switch** structures.<br>
+
+Ans : 
+| If-else | Switch |
+| ------- | ------ |
+| i. if else statement uses condition to execute a block of statement. | i. Switch statement uses a single expression or value of a variable to execute a block of statement | 
+| ii. It's keywords are if, else and else if | ii. It's keywords are switch, case and default |
+| iii. It can contain multiple condition using logical operators | Each case can contain only one value | 
+
 
 4. Explain with example the if statement and nested if statement in C.
 
-5. Write a C program to find the smallest of given two numbers.
+5. Write a C program to find the smallest of given two numbers.<br>
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++ compiler
+#include <stdio.h>
 
-6. Write a C program to find the smallest of given three numbers.
+int main(){
+   int a, b, big;
 
-7. Write a C program to find the average of best three marks from the given four test marks.
+   clrscr() //remove if not using turboc++
+
+   printf("Enter two numbers : ");
+   scanf("%d %d",&a,&b);
+
+   if (a>b){
+   big = a;
+   }
+   else {
+   big = b;
+   }
+   printf("Biggest number : %d\n",big);
+   getch() // remove if not using turboc++
+   return 0;
+}
+```
+
+7. Write a C program to find the smallest of given three numbers. <br>
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+  int a, b, c, big;
+
+   clrscr() //remove if not using turboc++
+
+   printf("Enter three numbers : ");
+   scanf("%d %d %d",&a,&b,&c);
+
+   if (a>b){
+      if (a>c){
+            big = a;
+         }
+      else{
+         big = c;
+         }
+   }
+   else {
+      if (b>c){
+            big = b;
+            }
+      else {
+            big = c;
+         }
+   }
+   printf("Biggest number : %d\n",big);
+   getch() // remove if not using turboc++
+   return 0;
+}
+```
+
+
+9. Write a C program to find the average of best three marks from the given four test marks.
 
 [Hint: Find the smallest of given four test marks. Subtract it from the sum of four test marks. You will now get the sum of best three marks. Take the average
 
