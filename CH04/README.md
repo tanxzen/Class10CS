@@ -9,6 +9,10 @@
 
 <br>
 
+<details>
+
+<summary>If-else statement</summary>
+
 ### `If-else` : 
 
 <p>
@@ -31,6 +35,13 @@ else
 }
 ```
 Where `conditon` is a logical expression which will have the value of true or false.
+
+</details>
+
+
+<details>
+
+<summary>Nested if-else statement</summary>
 
 ### nested if-else statement 
 
@@ -74,6 +85,14 @@ else
 }
 ```
 
+</details>
+
+
+<details>
+
+<summary>Switch Statement</summary>
+
+
 ### switch statement
 
 <p>
@@ -113,3 +132,15 @@ default:        {
 where `<expression>` refers to any `int` or `char` expression or variable. <br>
       `<label 1>`, `<label 2>`...`<label n>` are values which will match with the value of the expression. <br>
       **break** is a statement which will transfer the control to the end of **switch** statement.
+
+
+</details>
+
+<details>
+
+<summary>Textual Questions</summary>
+
+
+  
+</details>
+
