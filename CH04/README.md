@@ -136,11 +136,3 @@ where `<expression>` refers to any `int` or `char` expression or variable. <br>
 
 </details>
 
-<details>
-
-<summary>Textual Questions</summary>
-
-
-  
-</details>
-
