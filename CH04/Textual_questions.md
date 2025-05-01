@@ -414,7 +414,70 @@ int main() {
 Ans : 
 ```c
 
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
 
+int main(){
+    
+    char region ;
+    float amount, commission ;
+
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter Region (x,y,z) : ");
+    scanf("%c",&region);
+    
+    
+    printf("Enter Sale Amount : $ ");
+    scanf("%f",&amount);
+    
+    
+    if (region == 'x' || region == 'X'){
+        if (amount < 5000){
+            if (amount < 1000){
+                commission = amount * 10/100.0;
+            }
+            else{
+                commission = amount * 12/100.0;
+            }
+        }
+        else {
+            commission = amount * 15/100.0; 
+        }
+    }
+    
+    if (region == 'y' || region == 'Y'){
+        if (amount < 7000){
+            if (amount < 1500){
+                commission = amount * 10/100.0;
+            }
+            else{
+                commission = amount * 12/100.0;
+            }
+        }
+        else {
+            commission = amount * 15/100.0; 
+        }
+    }
+    
+    if (region == 'z' || region == 'Z'){
+        if (amount < 6500){
+            if (amount < 1200){
+                commission = amount * 10/100.0;
+            }
+            else{
+                commission = amount * 12/100.0;
+            }
+        }
+        else {
+            commission = amount * 15/100.0; 
+        }
+    }
+    
+   printf("Calculated Commission : %.2f\n",commission);
+   getch(); //remove if not using turboc++
+   return 0;
+}
 
 
 ```
