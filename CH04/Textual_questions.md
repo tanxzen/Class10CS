@@ -573,7 +573,7 @@ default:        {
 }
 ```
 
-3. A **break** statement is used to exit from a <u>switch statement</u>
+3. A **break** statement is used to exit from a <ins>switch statement</ins>
 
 4. What is the purpose of a **switch** statement?<br>
 Ans : To execute a block of statement depending on the value of a variable or expression.
