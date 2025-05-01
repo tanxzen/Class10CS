@@ -110,7 +110,7 @@ printf("Sum = %d\n", sum);
 ---
 28. Write HTML code to create a webpage that includes a table displaying the schedule of classes and links to relevant resources. **(5 marks)**
 
-# Class Schedule
+<h1 align="center">Class Schedule</h1>
 
 | **Class**     | **Time**               | **Resources**                                                                 |
 |---------------|------------------------|-------------------------------------------------------------------------------|
