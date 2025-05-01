@@ -151,10 +151,10 @@ int main(){
 
 [Hint: Find the smallest of given four test marks. Subtract it from the sum of four test marks. You will now get the sum of best three marks. Take the average
 
-i.e., average = (T1 + T2 + T3 + T3 - smallest)/ 3
+i.e., average = $(T1 + T2 + T3 + T3 - smallest)/ 3$
 
-8. Write a C program that will read the value of x and evaluate the function
-y(x) = x² + 2x - 10 if x < 10
+8. Write a C program that will read the value of x and evaluate the function <br>
+y(x) = x² + 2x - 10 if x < 10 <br>
 = |x|               if x < 0
 using a **if** statement.
 
