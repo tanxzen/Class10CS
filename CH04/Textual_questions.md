@@ -240,7 +240,7 @@ int main() {
    printf("Enter value of x : ");
    scanf("%f",&x);
 
-   if (x>10){
+   if (x<10){
       y = x*x + 2*x - 10; // set the value of y to the value of this expression if x is less than 10;  
    }
    if (x<0){
@@ -315,7 +315,7 @@ int main(){
    printf("Enter full mark : ");
    scanf("%f",&fullmark);
 
-   per = mark/fullmark * 100 ;
+   per = mark/fullmark * 100.0 ;
 
    if (per >= 50 ){ // if per is geater than 50 then the next if statements is executed
        if (per >= 60){ //if per is greater than 75 then the next if statement is executed
