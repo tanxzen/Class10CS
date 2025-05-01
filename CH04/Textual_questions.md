@@ -82,9 +82,39 @@ Ans :
 | iii. It can contain multiple condition using logical operators | Each case can contain only one value | 
 
 
-4. Explain with example the if statement and nested if statement in C.
+4. Explain with example the if statement and nested if statement in C.<br>
+
+Ans : 
+```
+i. If statement : if statement is used to execute a statement block or a single statement depending on the value of a condition
+   Example :
+         int mark = 50;
+         if (mark < 40){
+            printf("Failed\n");
+         }
+         else {
+            printf("Passed")
+         }
+   In the following code the else part will be executed because mark is more than 40.
+
+ii. Nested if-else statement : An if statement may have another if statement in the <true block> and <false block>.This compound statement is called nested if statement.
+    Example :
+      int mark = 95;
+      if (mark > 40 ) {
+         if (mark > 90)
+               printf("Grade : A");
+            else {
+                  printf("Grade : B");
+               }
+      }
+      else {
+         printf("Grade : F");
+      }
+      In the following code the grade will be printed as A because the grade is greater than 40 and 90.
+```
 
 5. Write a C program to find the smallest of given two numbers.<br>
+
 Ans :
 ```c
 #include <conio.h> //remove if not using turboc++ compiler
@@ -151,7 +181,19 @@ int main(){
 
 [Hint: Find the smallest of given four test marks. Subtract it from the sum of four test marks. You will now get the sum of best three marks. Take the average
 
-i.e., average = $(T1 + T2 + T3 + T3 - smallest)/ 3$
+i.e., average = $(T1 + T2 + T3 + T3 - smallest)/ 3$ <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++ compiler
+#include <stdio.h>
+
+int main(){
+
+   Will Continue later !!
+
+}
+```
 
 8. Write a C program that will read the value of x and evaluate the function <br>
 y(x) = x² + 2x - 10 if x < 10 <br>
@@ -168,7 +210,31 @@ using a **if** statement.
 
 (iii) percentage >=50 and percentage <60, "SECOND CLASS"
 
-(iv) If the marks obtained by the student in any subject is <50, "FAIL".
+(iv) If the marks obtained by the student in any subject is <50, "FAIL".<br>
+
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+   
+   int mark , fullMark;
+   float per;
+
+   printf("Enter mark : ");
+   scanf("%d",&mark);
+
+   printf("Enter Full mark : ");
+   scanf("%d",&fullMark);
+
+   per = mark/fullMark * 100 ;
+
+   switch (per) {
+   // will continue later 
+   }
+}
+```
 
 11. A company gives festival discount on purchase of their products in the following percentages:
 
