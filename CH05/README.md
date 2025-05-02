@@ -193,9 +193,9 @@ break;
 
 ### Example :
 ```c
-char n = 'a';
+char ch = 'a';
 
-switch(n){
+switch(ch){
   case 'a' : printf("a is for apple");
              break;
   case 'b' : printf("b is for ball");
