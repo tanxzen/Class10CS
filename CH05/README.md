@@ -146,3 +146,27 @@ is `true` the statement block is executed again and is repeated until the condit
 
   
 </details>
+
+<details>
+
+<summary>Goto Statement</summary>
+
+<p>
+
+  The `goto` statement is an unconditional transfer of control statement. It is used to transfer the control from one part to another.
+</p>
+
+**syntax**: 
+```c
+goto label ;
+------------
+------------
+label:
+------------
+```
+<p>
+
+  Where `label` is the statement label which is available anywhere in the program . Its the identifier which is used to mark the beginning of the another part of the program which will be transfer by the `goto` statement.
+</p>
+  
+</details>
