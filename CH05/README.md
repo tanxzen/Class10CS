@@ -110,11 +110,39 @@ while (i<=10){
 ```
 <p>
 
-  In the following code the initial value of the i is 0 but when we use while statement the while condition will be true because the value of i, which is 0 is less than 10 so it will continue untill the value of i reached 10 and giving the result of printing 0 to 10.
+  In the following code the initial value of the i is 0 but when we use while statement the while condition will be true because the value of i, which is 0 is less than 10 so it will continue until the value of i reached 10 and giving the result of printing 0 to 10.
 </p>
 </details>
 
 
+
+<details>
+
+
+<summary>Do-While Loop</summary>
+
+<p>
+
+  A do-while statement is also used to execute and repeat a block of statements depending on a condition.
+</p>
+
+**syntax**: 
+```c
+do
+{
+  -----------------
+  <statement block>
+  ----------------
+}
+while (<condition>)
+```
+<p>
+
+  Where `conditon` is a relational or logical expression which will have the value `true` and `false`.
+</p>
+
+When this statement is executed the computer will execute the statement block irrespective of the value of the condition. At the end of statement block, the condition is evaluated. If the value of the condition
+is `true` the statement block is executed again and is repeated until the condition is `false`.
 
   
 </details>
