@@ -170,3 +170,61 @@ label:
 </p>
   
 </details>
+
+
+<details>
+
+<summary>Break statement</summary>
+
+<p>
+
+  The break statement is use to transfer the control to the end of a statement block in a loop. 
+</p>
+
+**syntax**:
+```c
+break;
+```
+
+<p>
+
+  Break is frequently used in the `case` block of `switch` statement. 
+</p>
+
+### Example :
+```c
+char n = 'a';
+
+switch(n){
+  case 'a' : printf("a is for apple");
+             break;
+  case 'b' : printf("b is for ball");
+             break;
+  case 'c' : printf("c is for cat");
+             break;
+  case 'd' : printf("d is for dog");
+             break;
+  default : printf("Invalid input ! please enter a,b,c and d only.";
+             break; 
+}
+```
+
+<p>
+
+  In the given example `break` statement is used after every end of the case because if break statement is not present , then if any of the condition is match it will execute all the case meaning it will activate all case and cause error in the program.
+</p>
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
