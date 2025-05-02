@@ -44,7 +44,7 @@ Explain the working of the program.
 23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission. 
 24. Explain the loop control structures used in C language.
 25. Differentiate `while` loop and `do-while` loop.
-SECTION B: SHORT QUESTIONS 
+# SECTION B: SHORT QUESTIONS 
 1. Give differences between `while` and `do-while` statement.
 2. Write a C program to find the sum of numbers between 1 and n.
 3. Write a C program to find the square root of a given number. 
