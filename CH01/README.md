@@ -16,25 +16,3 @@
 
 
 ---
-
-# FLOWCHART 
-
-<br>
-
-`Q1. Write the algorithm and draw the flowchart to find the average of given 3 numbers.`<br>
-Ans :  
-```
-1. Read n1,n2 and n3 , where n repesent number.
-2. avr = n1+n2+n3 / 3
-3. print avr  
-```
-FLOWCHART : <br>
-
-```mermaid
-flowchart TD
-  A([Start]) --> B[Read n1,n2 and n3]
-  B --> C[avr = n1+n2+n3 / 3]
-  C --> D[Print avr]
-  D --> E([Stop])
-```
-
