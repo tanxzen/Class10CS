@@ -109,8 +109,42 @@ int main(){
 }
 ```
 
-7. Write a C program to print the individual digits of a 6-digit number. 
-8. Write a C program to find the sum of the individual digits of a N digit number and check whether it is odd or even. 
+7. Write a C program to print the individual digits of a 6-digit number. <br>
+
+Ans:
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    int n, j;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter 6 digit number : ");
+    scanf("%d",&n);
+ 
+    printf("Individual Digits are : ");
+   for (int i = 100000; i>0;i=i/10){
+       j = n/i;
+       n = n%i;
+       printf("%d\n",j);
+    }
+    getch(); //remove if not using turboc++ 
+    return 0;
+}
+
+```
+
+8. Write a C program to find the sum of the individual digits of a N digit number and check whether it is odd or even. <br>
+
+Ans : 
+```c
+
+
+
+```
+
 9. Write a C program to print Armstrong numbers from 100 to 999.
 10. Write a C program to test whether a given number is a palindrome nuniber. Explain the working of the program. 
 (An integer is said to be a palindrome if it doesn must change when the order of digits in the integer is reversed. For example 321454123, 536635 are palindromes) 
