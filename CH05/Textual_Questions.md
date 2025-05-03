@@ -148,16 +148,100 @@ Ans :
 9. Write a C program to print Armstrong numbers from 100 to 999.
 10. Write a C program to test whether a given number is a palindrome nuniber. Explain the working of the program. 
 (An integer is said to be a palindrome if it doesn must change when the order of digits in the integer is reversed. For example 321454123, 536635 are palindromes) 
-11. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. 
-12. Write a C program to print the prime numbers between 100 and 1000. 
-13. Write a C program to check if the given number is a perfect number. 
+11. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. <br>
+Ans :
+```c
+#include <conio.h>
+#include <stdio.h>
+
+int main(){
+    int n;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter Number from 1 to 9 : ");
+    scanf("%d",&n);
+
+    switch(n){
+        case 1: printf("One\n");
+                break;
+
+        case 2: printf("Two\n");
+                break;
+
+        case 3: printf("Three\n");
+                break;
+
+        case 4: printf("Four\n");
+                break;
+
+        case 5: printf("Five\n");
+                break;
+
+        case 6: printf("Six\n");
+                break;
+
+        case 7: printf("Seven\n");
+                break;
+
+        case 8: printf("Eight\n");
+                break;
+
+        case 9: printf("Nine\n");
+                break;
+        default: printf("Invalid\n");
+                 break;   
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
+
+13. Write a C program to print the prime numbers between 100 and 1000. <br>
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int n, i;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Prime numbers between 100 and 1000 are:\n");
+
+    for (n = 100; n <= 1000; n++) {
+        for (i = 2; i * i <= n; i++) {
+            if (n % i == 0)
+                break; 
+        }
+        if (i * i > n)  
+            printf("%d ", n);
+    }
+
+    printf("\n");
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
+
+15. Write a C program to check if the given number is a perfect number. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+
+```
+
 (A number is said to be a perfect number if the sum of its factors is equal to the given number. For example, 6 is a perfect number (factors of 6 are 12 and 3: adding the factors we get 1+2+3=6). 
-14. Write a C program which will print the factorial of all numbers from 1 to 15.
-15. The numbers in the sequence 1 1 2 3 5 8 are called fibonacci numbers. Write a program in C using a `do-while` loop to calculate and print the first 50 Fibonacci numbers.
-16. Write a C program to evaluate the series <br>
+16. Write a C program which will print the factorial of all numbers from 1 to 15.
+17. The numbers in the sequence 1 1 2 3 5 8 are called fibonacci numbers. Write a program in C using a `do-while` loop to calculate and print the first 50 Fibonacci numbers.
+18. Write a C program to evaluate the series <br>
 $1 + \frac{1}{3} + \frac{1}{5} + \ldots$
 up to 15 terms.
-17. Write a C program to generate and print the pyramid of numbers as follows. <br>
+19. Write a C program to generate and print the pyramid of numbers as follows. <br>
 <pre>
                          1 
                      2       2                                                              
