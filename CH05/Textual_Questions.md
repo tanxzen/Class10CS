@@ -36,7 +36,8 @@ up to 15 terms.
             1 2 3
               1
 </pre>
-Explain the working of the program.
+Explain the working of the program. <br>
+
 19. Write a C program to print multiplication tables for 6 upto 20 numbers. 
 20. Write a C program to convert an octal number into a decimal number. 
 21. Write a C program to convert a decimal number into its equivalent octal number. 
