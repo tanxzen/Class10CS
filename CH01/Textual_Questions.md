@@ -80,8 +80,8 @@ flowchart TD
 ``` 
 
 
-6. Draw the flowchart to solve the following series which is the summation of cosine series <br>
-$s = x - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \infty$ neglecting the terms which are less that $10^{-4}$ in magnitude.
+5. Draw the flowchart to solve the following series which is the summation of cosine series <br>
+$s = x - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \infty$ neglecting the terms which are less that 10^-4 in magnitude.
 <br>
 Ans :
 
@@ -90,7 +90,7 @@ flowchart TD
     A[Start] --> B[Input x]
     B --> C[Set term = x, sum = x, n = 1]
     C --> D{Is absolute value of term >= 0.0001?}
-    D -- Yes --> E[Compute next term using: -1^n * x^2n / 2n!]
+    D -- Yes --> E[Compute next term using: -1^n \* x^2n / 2n!]
     E --> F[Add term to sum]
     F --> G[Increment n]
     G --> D
@@ -103,30 +103,82 @@ flowchart TD
 6. Draw the flowchart to find the sum of natural numbers upto N.
 
 [Hint: The method discussed in Example 10 can be used to solve the series, i.e. $s = 1 + 2+ 3 + 4 + ... + N$.]
+<br>
+Ans : 
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Read N and set S = 0]
+    B --> C[Set i = 1]
+    C --> D{Is i <= N?}
+    D -- Yes --> E[S = S + i]
+    E --> F[i = i + 1]
+    F --> D
+    D -- No --> G[Display S]
+    G --> H[End]
+```
 
 7. Draw a flowchart to solve the following series:
 
-$$s = 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \cdots + \frac{1}{N!}$$
+$$s = 1 + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \cdots + \frac{1}{N!}$$<br>
+
+Ans : 
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Read N, set S = 1 and i = 2]
+    B --> C{Is i <= N?}
+    C -- Yes --> D[Set fact = 1]
+    D --> E[Set j = 1]
+    E --> F{Is j <= i?}
+    F -- Yes --> G[fact = fact \* j]
+    G --> H[j = j + 1]
+    H --> F
+    F -- No --> I[S = S + 1 / fact]
+    I --> J[i = i + 1]
+    J --> C
+    C -- No --> K[Display S]
+    K --> L[End]
+
+```
 
 8. Draw a flowchart to solve the following series: <br>
 $$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots$$ ∞ <br>
-Neglect the terms which are less than 10 in magnitude. 
+Neglect the terms which are less than 10 in magnitude. <br>
+
+Ans : 
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Read x, set term = 1 and sum = 1, i = 1]
+    B --> C{Is term >= 10?}
+    C -- Yes --> D[term = term \* x / i]
+    D --> E[sum = sum + term]
+    E --> F[i = i + 1]
+    F --> C
+    C -- No --> G[Display sum]
+    G --> H[End]
+```
 
 # SHORT QUESTIONS
 
-1. What is an algorithm?
+1. What is an algorithm?<br>
 
-2. What is a flowchart?
+Ans : An algorithm presents step-by-step instructions required to solve any problem.<br>
 
-3. ______ programming method is followed in C language.
+2. What is a flowchart?<br>
 
-4. ______programming method is followed in C++.
+Ans : Flowchart is a symbolic or diagrammatic  representation of an algorithm.<br> 
 
-5. Procedural programming method is commonly used for writing small programs which produce discrete results. (True/False)
+3. <ins>Procedural</ins> programming method is followed in C language.
 
-6. Object-oriented programming method is commonly used to develop software packages to perform a task. (True/False)
+4. <ins>Object-Oriented</ins> programming method is followed in C++.
 
-7. Algorithms and flowcharts may be omitted after getting experience in writing program. (True/False)
+5. Procedural programming method is commonly used for writing small programs which produce discrete results. (True/False) : `True`
+
+6. Object-oriented programming method is commonly used to develop software packages to perform a task. (True/False) : `True`
+
+7. Algorithms and flowcharts may be omitted after getting experience in writing program. (True/False) : `False`
 
 
 
