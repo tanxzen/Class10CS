@@ -81,7 +81,7 @@ flowchart TD
 
 
 6. Draw the flowchart to solve the following series which is the summation of cosine series <br>
-$s = x - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \infty$ neglecting the terms which are less that 10^-4 in magnitude.
+$s = x - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \infty$ neglecting the terms which are less that $10^{-4}$ in magnitude.
 <br>
 Ans :
 
