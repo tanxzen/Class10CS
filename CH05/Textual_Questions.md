@@ -1,12 +1,114 @@
 # SECTION A: REVIEW QUESTIONS AND EXERCISES 
-1. Explain with an example a `for` loop used in C 
-2. Write a C program to find the sum of natural numbers from 1 to `n`.
-3. Write a C program to find the sum of all even integers between 2 and `n`. 
-4. Write a C program to print integers from 1 to 50, five integers per line. Explain the working of the program. 
+1. Explain with an example a `for` loop used in C.
+2. Write a C program to find the sum of natural numbers from 1 to `n`.<br>
+
+Ans : 
+
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    int n, i, sum = 0;
+  
+    clrscr(); //remove if not using turboc++
+     
+    printf("Enter Number : ");
+    scanf("%d",&n);
+    
+    for (i = 0;i<=n;i++){
+        sum = sum + i;
+    }
+    printf("Sum of natural number upto %d : %d\n",n,sum);
+    getch();
+    return 0;
+}
+```
+
+3. Write a C program to find the sum of all even integers between 2 and `n`.<br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    int n, i, sum=0;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter number : ");
+    scanf("%d",&n);
+    
+    for (i = 3; i<=n; i++){
+        if (i % 2 == 0){
+            sum = sum + i;
+        }
+    }
+    printf("The sum of all even integer between 2 and %d : %d\n",n,sum);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
+4. Write a C program to print integers from 1 to 50, five integers per line. Explain the working of the program.<br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    
+    int i ;
+
+    clrscr(); //remove if not using turboc++
+
+    for(i = 1; i<=50;i++){
+        printf("%d ",i);
+        
+        if (i % 5 == 0){
+            printf("\n");
+        }
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
+<p>
+  
+  In the following code, we first delcare `i = 1` setting the variable i as 1 then we apply `clrscr()` to clear any previous text from screen then we apply for loop with the condition `i<=50` , saying `i` is less than or equal to 50, which will run the loop for 50 times while running, inside the loop we print the value of `i` and we use a condition `i % 5 == 0` meaning if the value of i reach any number divisible by 5 then it should print new line, which solves the problem of displaying 5 values per line.   
+</p>
+
+
 5. The frequency `n` of a vibrating string which depends on length. 1, tension T. and linear density is given by <br>
 $n = \frac{k}{l} \sqrt{\frac{T}{m}}$
-where is a constant. Write a C program to find `n` when 1=50, 60, 70 and 80 cm. 
-6. Write a C program to generate and print the numbers between 100 and 200 which are divisible by 3. but not divisible by 4.
+where is a constant. Write a C program to find `n` when 1=50, 60, 70 and 80 cm. <br>
+
+6. Write a C program to generate and print the numbers between 100 and 200 which are divisible by 3. but not divisible by 4.<br>
+
+Ans : 
+```c
+#include <conio.h>
+#include <stdio.h>
+
+int main(){
+    int i;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("The number which are divisible by 3 but not by 4 between 100 and 200 are : \n");
+    for (i = 100;i<=200;i++){
+        if (i % 3 == 0 && i % 4 != 0){
+            printf("%d\n",i);
+        }
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
 7. Write a C program to print the individual digits of a 6-digit number. 
 8. Write a C program to find the sum of the individual digits of a N digit number and check whether it is odd or even. 
 9. Write a C program to print Armstrong numbers from 100 to 999.
