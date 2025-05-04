@@ -140,15 +140,72 @@ int main(){
 
 Ans : 
 ```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
 
+int main() {
+    int number, digit, temp, sum = 0;
 
+    clrscr(); //remove if not using turboc++
 
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    temp = number;
+    
+    while (temp > 0) {
+        digit = temp % 10;  
+        sum += digit;       
+        temp /= 10;         
+    }
+    
+    printf("Sum of the digits of %d is: %d\n", number, sum);
+    
+    if (sum % 2 == 0) {
+        printf("The sum is even.\n");
+    } else {
+        printf("The sum is odd.\n");
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
 ```
 
-9. Write a C program to print Armstrong numbers from 100 to 999.
-10. Write a C program to test whether a given number is a palindrome nuniber. Explain the working of the program. 
+9. Write a C program to print Armstrong numbers from 100 to 999.<br>
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int number, original, digit, sum;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Armstrong numbers between 100 and 999 are:\n");
+
+    for (number = 100; number <= 999; number++) {
+        original = number;
+        sum = 0;
+        while (original > 0) {
+            digit = original % 10;
+            sum += digit * digit * digit;
+            original /= 10;
+        }
+        if (sum == number) {
+            printf("%d\n", number);
+        }
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
+
+11. Write a C program to test whether a given number is a palindrome nuniber. Explain the working of the program. 
 (An integer is said to be a palindrome if it doesn must change when the order of digits in the integer is reversed. For example 321454123, 536635 are palindromes) 
-11. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. <br>
+12. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. <br>
 Ans :
 ```c
 #include <conio.h>
