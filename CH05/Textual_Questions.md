@@ -238,7 +238,6 @@ int main(){
 }
 ```
 <p>
-
     In the following code we declare the number, reverse = 0, temp and lastdigit then we ask the user to enter the number then we proceed by assigning temp = number. Inside the while loop
     we assign lastdigit = number % 10 , meaning the number is divided by 10 ans we take the remainder as the lastdigit then reverse = reverse * 10 + lastdigit add the last digit when reverse is multiplied by 10
     the we make the number smaller by dividing it by 10 .Then we check if the reverse number is same as the user given number if same we give result as the number is palindrome number, if not same then not            palindrome number. 
