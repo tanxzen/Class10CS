@@ -235,12 +235,12 @@ Ans :
 
 ```
 
-(A number is said to be a perfect number if the sum of its factors is equal to the given number. For example, 6 is a perfect number (factors of 6 are 12 and 3: adding the factors we get 1+2+3=6). 
-16. Write a C program which will print the factorial of all numbers from 1 to 15.
-17. The numbers in the sequence 1 1 2 3 5 8 are called fibonacci numbers. Write a program in C using a `do-while` loop to calculate and print the first 50 Fibonacci numbers.
+(A number is said to be a perfect number if the sum of its factors is equal to the given number. For example, 6 is a perfect number (factors of 6 are 12 and 3: adding the factors we get 1+2+3=6).  <br>
+16. Write a C program which will print the factorial of all numbers from 1 to 15. <br>
+17. The numbers in the sequence 1 1 2 3 5 8 are called fibonacci numbers. Write a program in C using a `do-while` loop to calculate and print the first 50 Fibonacci numbers. <br>
 18. Write a C program to evaluate the series <br>
 $1 + \frac{1}{3} + \frac{1}{5} + \ldots$
-up to 15 terms.
+up to 15 terms. <br>
 19. Write a C program to generate and print the pyramid of numbers as follows. <br>
 <pre>
                          1 
