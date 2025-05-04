@@ -322,20 +322,116 @@ int main() {
 
 ```
 
-15. Write a C program to check if the given number is a perfect number. <br>
+15. Write a C program to check if the given number is a perfect number.
+(A number is said to be a perfect number if the sum of its factors is equal to the given number. For example, 6 is a perfect number (factors of 6 are 12 and 3: adding the factors we get 1+2+3=6).  <br>
+<br>
 
 Ans : 
 ```c
 #include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int number, i, sum = 0;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+    
+    for (i = 1; i <= number / 2; i++) {
+        if (number % i == 0) {
+            sum += i;
+        }
+    }
+
+    if (sum == number) {
+        printf("%d is a perfect number.\n", number);
+    } else {
+        printf("%d is not a perfect number.\n", number);
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+16. Write a C program which will print the factorial of all numbers from 1 to 15. <br>
+
+Ans :
+
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int i, fac;
+    
+    clrscr(); //remove if not using turboc++
+    
+    for (i = 1; i <= 15; i++) {
+        fac = 1; 
+        for (int j = 1; j <= i; j++) {
+            fac *= j;
+        }
+        printf("Factorial of %d is: %d\n", i, fac);
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
 
 ```
 
-(A number is said to be a perfect number if the sum of its factors is equal to the given number. For example, 6 is a perfect number (factors of 6 are 12 and 3: adding the factors we get 1+2+3=6).  <br>
-16. Write a C program which will print the factorial of all numbers from 1 to 15. <br>
 17. The numbers in the sequence 1 1 2 3 5 8 are called fibonacci numbers. Write a program in C using a `do-while` loop to calculate and print the first 50 Fibonacci numbers. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    long int i = 2, a = 0, b = 1,c=0;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("%ld %ld ",a,b);
+    do {
+        c = a+b;
+        printf("%ld ",c);
+        a = b;
+        b = c;
+        i++;
+    }
+    while(i<50);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
 18. Write a C program to evaluate the series <br>
 $1 + \frac{1}{3} + \frac{1}{5} + \ldots$
 up to 15 terms. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int i, denominator;
+    double sum = 0.0;
+    
+    clrscr(); //remove if not using turboc++
+
+    for (i = 0; i < 15; i++) {
+        denominator = 2 * i + 1;  // 1, 3, 5, 7, 9, ...
+        sum += 1.0 / denominator;
+    }
+    printf("Sum of the series up to 15 terms is: %.6f\n", sum);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
+
 19. Write a C program to generate and print the pyramid of numbers as follows. <br>
 <pre>
                          1 
@@ -344,6 +440,37 @@ up to 15 terms. <br>
              4       4       4       4                                      
          5       5       5       5       5                    
 </pre>
+<br>
+
+Ans :
+
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int i, j;
+
+    clrscr(); //remove if not using turboc++
+    
+    for (i = 1; i <= 5; i++) {
+        // Print leading spaces for centering
+        for (j = 1; j <= 5 - i; j++) {
+            printf(" ");  // ONE space for each padding slot
+        }
+
+        // Print numbers with TWO spaces between for symmetry
+        for (j = 1; j <= i; j++) {
+            printf("%d ", i);  // Print the number with a space
+        }
+
+        printf("\n");
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
 18. Write a C program to generate the following:
 <pre>
         1 2 3 4 5 6 7
@@ -353,6 +480,43 @@ up to 15 terms. <br>
 </pre>
 Explain the working of the program. <br>
 
+Ans : 
+
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int i, j, spaces, numbers;
+
+    // Start with 7 numbers in the first row
+    numbers = 7;
+
+    clrscr(); //remove if not using turboc++
+
+    // Loop until numbers reach 0
+    for (i = 0; numbers > 0; i++) {
+        // Print leading spaces (2 per row index)
+        for (spaces = 0; spaces < i; spaces++) {
+            printf("  ");  // 2 spaces per level
+        }
+
+        // Print numbers from 1 to 'numbers'
+        for (j = 1; j <= numbers; j++) {
+            printf("%d ", j);
+        }
+
+        printf("\n");
+
+        // Decrease the number of numbers by 2 for next row
+        numbers -= 2;
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
+
 19. Write a C program to print multiplication tables for 6 upto 20 numbers. 
 20. Write a C program to convert an octal number into a decimal number. 
 21. Write a C program to convert a decimal number into its equivalent octal number. 
@@ -360,7 +524,9 @@ Explain the working of the program. <br>
 23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission. 
 24. Explain the loop control structures used in C language.
 25. Differentiate `while` loop and `do-while` loop.
+
 # SECTION B: SHORT QUESTIONS 
+
 1. Give differences between `while` and `do-while` statement.
 2. Write a C program to find the sum of numbers between 1 and n.
 3. Write a C program to find the square root of a given number. 
