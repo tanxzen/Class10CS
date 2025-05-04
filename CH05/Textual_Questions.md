@@ -203,8 +203,47 @@ int main() {
 ```
 
 
-11. Write a C program to test whether a given number is a palindrome nuniber. Explain the working of the program. 
-(An integer is said to be a palindrome if it doesn must change when the order of digits in the integer is reversed. For example 321454123, 536635 are palindromes) 
+11. Write a C program to test whether a given number is a palindrome number. Explain the working of the program. 
+(An integer is said to be a palindrome if it doesn must change when the order of digits in the integer is reversed. For example 321454123, 536635 are palindromes)<br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    int number, temp,reverse=0, lastDigit;
+
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter number : ");
+    scanf("%d",&number);
+    
+    temp = number;
+    
+    while(temp>0){
+        lastDigit = temp % 10; 
+        reverse = reverse*10 + lastDigit;
+        temp = temp / 10;
+    }
+    
+    if (reverse == number){
+        printf("%d is a palindrome number\n",number);
+    }
+    else{
+        printf("%d is not a palindrome number\n",number);
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+<p>
+
+    In the following code we declare the number, reverse = 0, temp and lastdigit then we ask the user to enter the number then we proceed by assigning temp = number. Inside the while loop
+    we assign lastdigit = number % 10 , meaning the number is divided by 10 ans we take the remainder as the lastdigit then reverse = reverse * 10 + lastdigit add the last digit when reverse is multiplied by 10
+    the we make the number smaller by dividing it by 10 .Then we check if the reverse number is same as the user given number if same we give result as the number is palindrome number, if not same then not            palindrome number. 
+</p>
+
 12. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. <br>
 Ans :
 ```c
