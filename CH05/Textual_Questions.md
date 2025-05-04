@@ -243,7 +243,7 @@ int main(){
     the we make the number smaller by dividing it by 10 .Then we check if the reverse number is same as the user given number if same we give result as the number is palindrome number, if not same then not            palindrome number. 
 </p>
 
-12. Write a C program to accept an integer number between 1 and 9. Write the value of the mumber in words. <br>
+12. Write a C program to accept an integer number between 1 and 9. Write the value of the number in words. <br>
 Ans :
 ```c
 #include <conio.h>
