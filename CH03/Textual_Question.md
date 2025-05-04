@@ -309,12 +309,14 @@ int main() {
 
 19. What are the advantages of `getche()` over `scanf()`?
 
-20. Obtain the output of the following statements in C. The variables `count`, `amt` and `city` have the following values.
-`int count =1275:
+20. Obtain the output of the following statements in C. The variables `count`, `amt` and `city` have the following values.<br>
+```
+int count =1275; 
 float amt =-235.74;
 char city [10] = "Chennai";
-(a) printf("%d\f", count, amt);
-(b) printf("%-10d%-15s", count, city);`
+```
+`(a) printf("%d\f", count, amt);`<br>
+`(b) printf("%-10d%-15s", count, city);`
 
 21. How can precision be specified in `printf` function?
 
