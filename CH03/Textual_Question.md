@@ -1,9 +1,9 @@
-## Textual Question 
+# SECTION A: REVIEW QUESTIONS AND EXERCISES
 
   ---
 
-   `Q1. Write a C program to find the sum and average of three given numbers .` <br>
-   Ans :
+Q1. Write a C program to find the sum and average of three given numbers . <br>
+Ans:
    ```c
 #include <conio.h> // for turboc++ compilers , remove if you are not using turboc++
 #include <stdio.h>
@@ -29,8 +29,8 @@ int main() {
 }
    ```
    
-  `Q2. Write a C program to convert temperature in °C to °F using the relation °F = 1.8°C + 32.`<br>
-  Ans : 
+Q2. Write a C program to convert temperature in °C to °F using the relation °F = 1.8°C + 32.<br>
+Ans : 
 ```c
 #include <conio.h>
 
@@ -51,8 +51,8 @@ int main() {
 }
 ```
   
-   `Q3. Write a C program to find the area and circumference of a circle of radius r.`<br>
-   Ans : 
+Q3. Write a C program to find the area and circumference of a circle of radius r.<br>
+Ans : 
    ```c
 #include <conio.h>
 
@@ -72,8 +72,8 @@ int main() {
   return 0;
 }
    ```
-   `Q4. Write a C program to find the value of y using the relation y = x^2 + 2x - 1.` <br>
- Ans :
+Q4. Write a C program to find the value of y using the relation $y = x^2 + 2x - 1$. <br>
+Ans :
    ```c
 
 #include <conio.h> //remove if not using turboc++;
@@ -96,8 +96,8 @@ int main() {
   return 0;
 }
    ```
-   `Q5. Write a C program to find the ASCII character of a given integer.`<br>
- Ans : 
+Q5. Write a C program to find the ASCII character of a given integer.<br>
+Ans : 
  ```c
 #include <conio.h> //remove if not using turboc++
 #include <stdio.h>
@@ -120,8 +120,15 @@ int main() {
 }
 
 ```
-   `Q6. Write a C program to calculate simple interest using formula I = PNR/100.`<br>
- Ans : 
+Q6. Explain `scanf()` and `printf()` functions in C. <br>
+
+Q7. Explain the various character input/output functions in C. <br>
+
+Q8. Mention the various conversion specifications for data I/O in C. <br>
+
+Q9. Write a C program to calculate simple interest using formula $I = \frac{PNR}{100}$.<br>
+where P - Principal amount, N - Number of years, R - Rate of interest <br>
+Ans : 
 ```c
 
 #include <conio.h> // remove if not using turboc++
@@ -150,7 +157,11 @@ int main() {
 }
 ```
  
-   `Q7. Write a C program to swap (exchange) the values of a variables A and B without using temporary variable. [Hint : A = A + B ; B = A - B ; A = A - B]`<br>
+Q10. Write a C program to swap (exchange) the values of a variables A and B without using a temporary variable. <br>
+[**Hint**: The following assignments are used to swap the values: <br>
+A = A + B <br>
+B = A - B <br>
+A = A - B]<br>
 Ans : 
 ```c
 #include <conio.h> // remove if not using turboc++
@@ -180,8 +191,8 @@ int main() {
 }
 ```
 
-   `Q8. Earth takes a period of revolution of 31558150 seconds. Write a C program to convert this into number of days, hours and minutes.`<br>
- Ans :
+Q11. Earth takes a period of revolution of 31558150 seconds. Write a C program to convert this into number of days, hours and minutes.<br>
+Ans :
 ```c
 
 #include <conio.h> //remove if not using turboc++
@@ -207,9 +218,13 @@ int main() {
 }
 ```
  
-   `Q9. Write a C program to calculate the cut-off mark of a student using the formula CM = M/2 + P/2 - C/2 + E where CM = Cut-off Mark , M = Marks in mathematics out of 200 , P = Mark in Physics out of 200 ,C = Marks in Chemestry out of 200 , E = Marks in entrance examination out of 100.`<br>
-
-   Ans : 
+Q12. Write a C program to calculate the cut-off mark of a student using the formula $CM = \frac{M}{2} + \frac{P}{2} = \frac{C}{2} + E$ <br>
+where CM = Cut-off mark <br>
+      M = Marks in mathematics out of 200 <br>
+      P = Mark in Physics out of 200 <br>
+      C = Marks in Chemistry out of 200 <br>
+      E = Marks in entrance examination out of 100.<br>
+Ans : 
 ```c
 
 #include <conio.h> //remove if not using turboc++
@@ -243,4 +258,66 @@ int main() {
 ```
 
    ---
-  
+
+# SECTION B: SHORT QUESTIONS
+
+---
+
+1. What is the purpose of `scanf()` function? How it is used within a C program?
+
+2. What is the use of "`\n`"?
+
+3. Assuming i=3, give the output for <br>
+`printf("\n %d %d %d\n", i, ++i, i++);`
+
+4. Explain the significance of the following control specifiers:
+
+(a) **%c**
+(b) **%0**
+(c) **%x**
+(d) **%d**
+
+5. What is a header file in C? List any two header files.
+
+6. The line from which a program execution begins is________.
+
+7. The sign `#` of the compiler directive must appear at the __________ of a line.
+
+8. Write four different C statements each adding 1 to integer variable x.
+
+9. How do you generate an alarm/beep using `printf`?
+
+10. What is the difference between `getchar()` and `getche()`?
+
+11. What is an escape sequence? What is its purpose?
+
+12. Explain the need for the following: <br>
+`#include <stdio.h>` <br>
+`#include <math.h>` <br>
+
+13. Explain with examples the syntax of `scanf()` and `printf()` functions.
+
+14. What is the difference between C character and C string?
+
+15. Name any four functions available in `stdio.h`.
+
+16. The file name `stdio.h` is an abbreviation for ________ file.
+
+17. What is the difference between `'a'` and `"a"` in C?
+
+18. How can the minimum field width for a data item be specified using the `printf()` function?
+
+19. What are the advantages of `getche()` over `scanf()`?
+
+20. Obtain the output of the following statements in C. The variables `count`, `amt` and `city` have the following values.
+`int count =1275:
+float amt =-235.74;
+char city [10] = "Chennai";
+(a) printf("%d\f", count, amt);
+(b) printf("%-10d%-15s", count, city);`
+
+21. How can precision be specified in `printf` function?
+
+22. A C program contains the following variable declaration:
+`int i = 12345, j = 0xbcd9, k077777;`
+What will be the output of the `printf()` function?
