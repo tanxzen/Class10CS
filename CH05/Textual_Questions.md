@@ -579,7 +579,36 @@ int main() {
 }
 ```
 
-21. Write a C program to convert a decimal number into its equivalent octal number. 
+21. Write a C program to convert a decimal number into its equivalent octal number. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int decimal, octal = 0, remainder, place = 1;
+    
+    clrscr(); //remove if not using turboc++
+
+    printf("Enter a decimal number: ");
+    scanf("%d", &decimal);
+
+    int temp = decimal;
+
+    while (temp != 0) {
+        remainder = temp % 8;
+        octal = octal + remainder * place;
+        place = place * 10;
+        temp = temp / 8;
+    }
+
+    printf("Octal equivalent of decimal %d is: %d\n", decimal, octal);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
 22. Explain `for` loop and nested `for` loop with suitable examples.
 23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission. 
 24. Explain the loop control structures used in C language.
@@ -588,17 +617,64 @@ int main() {
 # SECTION B: SHORT QUESTIONS 
 
 1. Give differences between `while` and `do-while` statement.
-2. Write a C program to find the sum of numbers between 1 and n.
-3. Write a C program to find the square root of a given number. 
-4. The loop in a `do-while` structure is executed ________ once. 
-5. The _______ statement causes the loop to be terminated. 
-6. The continue statement is used to transfer the control to the ______ of the loop.
+2. Write a C program to find the sum of numbers between 1 and n. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main(){
+    int n, sum=0;
+    
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter number : ");
+    scanf("%d",&n);
+    
+    for (int i = 0; i<=n;i++){
+        sum = sum + i;
+    }
+    printf("Sum of number between 1 and %d is : %d\n",n,sum);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
+3. Write a C program to find the square root of a given number. <br>
+
+Ans : 
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int n;
+    float root;
+
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter number : ");
+    scanf("%d",&n);
+    
+    root = sqrt(n);
+    
+    printf("Square root of %d is : %.2f\n",n,root);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
+4. The loop in a `do-while` structure is executed <ins>at least</ins> once. 
+5. The <ins>exit</ins> statement causes the loop to be terminated. 
+6. The continue statement is used to transfer the control to the <ins>break</ins> of the loop.
 7. Distinguish between the break and continue statements in C. 
 8. What are the differences between break and exit() function.
 9. What happens if the condition in a `while` loop is initially false? 
 10. What is the use of break statement? 
 11. What is the use of continue statement? 
-12. exit(0) in a C program represents ________
+12. exit(0) in a C program represents <ins>termination of a program</ins>
 13. List a few unconditional control statements in C.
 14. Give an alternative for multiple if statements in C.
 15. What is the output for the following program?
