@@ -517,8 +517,68 @@ int main() {
 
 ```
 
-19. Write a C program to print multiplication tables for 6 upto 20 numbers. 
-20. Write a C program to convert an octal number into a decimal number. 
+19. Write a C program to print multiplication tables for 6 upto 20 numbers. <br>
+
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+
+int main() {
+    int i;
+    int number = 6;
+
+    clrscr(); //remove if not using turboc++
+
+    printf("Multiplication Table for %d up to 20 numbers:\n", number);
+
+    for (i = 1; i <= 20; i++) {
+        printf("%d x %2d = %3d\n", number, i, number * i);
+    }
+    getch(); //remove if not using turboc++
+    return 0;
+}
+
+```
+
+20. Write a C program to convert an octal number into a decimal number.<br>
+
+Ans :
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int octal, decimal = 0, i = 0, digit;
+    
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter an octal number: ");
+    scanf("%d", &octal);
+
+    int temp = octal;
+
+    while (temp != 0) {
+        digit = temp % 10;
+
+        // Check if digit is valid for octal (0 to 7)
+        if (digit < 0 || digit > 7) {
+            printf("Invalid octal digit: %d\n", digit);
+            return 1;
+        }
+
+        decimal += digit * pow(8, i);
+        temp /= 10;
+        i++;
+    }
+
+    printf("Decimal equivalent of octal %d is: %d\n", octal, decimal);
+    getch(); //remove if not using turboc++
+    return 0;
+}
+```
+
 21. Write a C program to convert a decimal number into its equivalent octal number. 
 22. Explain `for` loop and nested `for` loop with suitable examples.
 23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission. 
