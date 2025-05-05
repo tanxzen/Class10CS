@@ -291,12 +291,18 @@ int main() {
 
 ---
 
-1. What is the purpose of `scanf()` function? How it is used within a C program?
+1. What is the purpose of `scanf()` function? How it is used within a C program?<br>
 
-2. What is the use of "`\n`"?
+Ans : `scanf()` function is used to take user input in a program. It can be used along with the format specifier and address of the variable.
+
+2. What is the use of "`\n`"?<br>
+
+Ans : `\n` is used to move to new line in the program.
 
 3. Assuming i=3, give the output for <br>
-`printf("\n %d %d %d\n", i, ++i, i++);`
+`printf("\n %d %d %d\n", i, ++i, i++);`<br>
+
+Ans : 3 4 4
 
 4. Explain the significance of the following control specifiers:
 
