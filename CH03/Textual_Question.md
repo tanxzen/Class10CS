@@ -122,6 +122,9 @@ int main() {
 ```
 Q6. Explain `scanf()` and `printf()` functions in C. <br>
 
+Ans : Printf function is used to print/display values of variables using the standard output device(monitor).It can also be use to print any character of our choice in the monitor. Whereas, 
+Scanf function is used to read/input values of variables using the standard input device (keyboard).It is used in a program to take input from the user or where there is necessary for user interaction. 
+
 Q7. Explain the various character input/output functions in C. <br>
 
 Q8. Mention the various conversion specifications for data I/O in C. <br>
