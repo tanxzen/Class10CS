@@ -129,20 +129,31 @@ Scanf function is used to read/input values of variables using the standard inpu
 
 Q7. Explain the various character input/output functions in C. <br>
 
-Ans : getchat() function : It is used to read one character at a time from the standard input device(keyboard).<br>
+Ans : 
+```
+      getchat() function : It is used to read one character at a time from the standard input device(keyboard).<br>
       putchar() function : It is ued to display one character at a time on the monitor screen.
       getch() function : It is used to read a character from the keyboard and it does not expect the enter key press.
       putch() function : It is used to display a character on the monitor.
       gets() function : It is used to read a string of characters including white space.
-      
+```      
 
 Q8. Mention the various conversion specifications for data I/O in C. <br>
 
-Ans : int : %d : represents a decimal integer value <br>
+Ans :
+```
+int :     : %d : represents a decimal integer value <br>
           : %u : represents an unsigned integer value.
           : %o : represents an unsigned octal value.
-          : %x : represents an unsigned hexadecimal value.        
+          : %x : represents an unsigned hexadecimal value.
 
+float/double :
+          : %f : represents a floating point value.
+          : %e : represents a floating point value in a decimal or exponential form.
+
+char :    : %c : represents a single character value.
+          : %s : represents a string of value of characters.    
+```
 Q9. Write a C program to calculate simple interest using formula $I = \frac{PNR}{100}$.<br>
 where P - Principal amount, N - Number of years, R - Rate of interest <br>
 Ans : 
