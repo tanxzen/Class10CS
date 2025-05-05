@@ -53,25 +53,27 @@ int main() {
   
 Q3. Write a C program to find the area and circumference of a circle of radius r.<br>
 Ans : 
-   ```c
-#include <conio.h>
-
-int main() {
-  float cel, far;
-
-  clrscr(); // remove if not using turboc++
-
-  printf("Enter Celsius : ");
-  scanf("%f", &cel);
-
-  far = 1.8 * cel + 32;
-
-  printf("Farenheit : %6.2f°F\n", far);
-  getch(); // remove if not using turboc++
-
-  return 0;
+```c
+#include <conio.h> //remove if not using turboc++
+#include <stdio.h>
+int main(){
+    
+    float r, area, circumference;
+    
+    clrscr(); //remove if not using turboc++
+    
+    printf("Enter Radius of the Circle : ");
+    scanf("%f",&r);
+    
+    area = 22.0/7.0 * r * r; 
+    circumference = 2 * 22.0/7.0 * r;
+    
+    printf("Area of circle : %.2f\n",area);
+    printf("Circumference of Circle : %.2f\n",circumference);
+    getch(); //remove if not using turboc++
+    return 0;
 }
-   ```
+```
 Q4. Write a C program to find the value of y using the relation $y = x^2 + 2x - 1$. <br>
 Ans :
    ```c
@@ -135,6 +137,11 @@ Ans : getchat() function : It is used to read one character at a time from the s
       
 
 Q8. Mention the various conversion specifications for data I/O in C. <br>
+
+Ans : int : %d : represents a decimal integer value <br>
+          : %u : represents an unsigned integer value.
+          : %o : represents an unsigned octal value.
+          : %x : represents an unsigned hexadecimal value.        
 
 Q9. Write a C program to calculate simple interest using formula $I = \frac{PNR}{100}$.<br>
 where P - Principal amount, N - Number of years, R - Rate of interest <br>
