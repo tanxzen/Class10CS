@@ -619,9 +619,45 @@ int main() {
 }
 ```
 
-22. Explain `for` loop and nested `for` loop with suitable examples.
-23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission. 
-24. Explain the loop control structures used in C language.
+22. Explain `for` loop and nested `for` loop with suitable examples.<br>
+
+Ans : 
+
+23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission.<br>
+
+Ans : 
+
+24. Explain the loop control structures used in C language.<br>
+
+Ans :
+1. The syntax of for statement is :
+```c
+for (expression 1; expression 2; expression 3)
+{
+    statement;
+}
+```
+The three expression in the for loop are all optional. Generally, the expression 1 is an initialization statement. The expression 2 is the controlling expression and expression 3 is to modify the value of the loop variant(the variable responsible for terminating the loop).
+
+2. The syntax of while loop is :
+   ```
+   while(condition)
+   {
+        statements;
+   }
+   ```
+   The statement is executed repeatedly until the value of the controlling expression remains true.
+
+3. The syntax of do-while loop is :
+   ```
+   do
+   {
+        statements;
+   }
+   while(expression);
+   ```
+   The only difference between while and do-while is that is do-while the set of statement inside the block is executed atleast once even though the expression is false. Whereas, in while the set of statement in the block need not to execute at all. 
+
 25. Differentiate `while` loop and `do-while` loop.
 
 # SECTION B: SHORT QUESTIONS 
