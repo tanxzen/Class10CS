@@ -723,7 +723,7 @@ int main(){
 5. The <ins>exit</ins> statement causes the loop to be terminated. 
 6. The continue statement is used to transfer the control to the <ins>break</ins> of the loop.
 7. Distinguish between the break and continue statements in C. <br>
-8. What are the differences between break and exit() function.
+8. What are the differences between break and exit() function.<br>
 9. What happens if the condition in a `while` loop is initially false?<br>
 
 Ans : If the condition in a while loop is initially false, the loop will not execute, and the block of statements inside the loop will be skipped.
@@ -732,5 +732,8 @@ Ans : If the condition in a while loop is initially false, the loop will not exe
 11. What is the use of continue statement? 
 12. exit(0) in a C program represents <ins>termination of a program</ins>
 13. List a few unconditional control statements in C.
-14. Give an alternative for multiple if statements in C.
+14. Give an alternative for multiple if statements in C.<br>
+
+Ans : An alternative for multiple if statements in C is the switch statement
+
 15. What is the output for the following program?
