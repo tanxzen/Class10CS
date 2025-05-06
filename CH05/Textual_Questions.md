@@ -658,11 +658,18 @@ The three expression in the for loop are all optional. Generally, the expression
    ```
    The only difference between while and do-while is that is do-while the set of statement inside the block is executed atleast once even though the expression is false. Whereas, in while the set of statement in the block need not to execute at all. 
 
-25. Differentiate `while` loop and `do-while` loop.
+25. Differentiate `while` loop and `do-while` loop.<br>
+
+Ans :  The only difference between while and do-while is that is do-while the set of statement inside the block is executed atleast once even though the expression is false. Whereas, in while the set of statement in the block need not to execute at all. 
+
 
 # SECTION B: SHORT QUESTIONS 
 
-1. Give differences between `while` and `do-while` statement.
+1. Give differences between `while` and `do-while` statement.<br>
+
+Ans :  The only difference between while and do-while is that is do-while the set of statement inside the block is executed atleast once even though the expression is false. Whereas, in while the set of statement in the block need not to execute at all. 
+
+
 2. Write a C program to find the sum of numbers between 1 and n. <br>
 
 Ans : 
@@ -715,9 +722,12 @@ int main(){
 4. The loop in a `do-while` structure is executed <ins>at least</ins> once. 
 5. The <ins>exit</ins> statement causes the loop to be terminated. 
 6. The continue statement is used to transfer the control to the <ins>break</ins> of the loop.
-7. Distinguish between the break and continue statements in C. 
+7. Distinguish between the break and continue statements in C. <br>
 8. What are the differences between break and exit() function.
-9. What happens if the condition in a `while` loop is initially false? 
+9. What happens if the condition in a `while` loop is initially false?<br>
+
+Ans : If the condition in a while loop is initially false, the loop will not execute, and the block of statements inside the loop will be skipped.
+
 10. What is the use of break statement? 
 11. What is the use of continue statement? 
 12. exit(0) in a C program represents <ins>termination of a program</ins>
