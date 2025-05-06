@@ -350,7 +350,9 @@ float amt =-235.74;
 char city [10] = "Chennai";
 ```
 `(a) printf("%d\f", count, amt);`<br>
-`(b) printf("%-10d%-15s", count, city);`
+`(b) printf("%-10d%-15s", count, city);`<br>
+
+Ans : 
 
 21. How can precision be specified in `printf` function?
 
