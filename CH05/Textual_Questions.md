@@ -1,5 +1,15 @@
 # SECTION A: REVIEW QUESTIONS AND EXERCISES 
-1. Explain with an example a `for` loop used in C.
+1. Explain with an example a `for` loop used in C.<br>
+
+Ans : The syntax of for statement is :
+```c
+for (expression 1; expression 2; expression 3)
+{
+    statement;
+}
+```
+The three expression in the for loop are all optional. Generally, the expression 1 is an initialization statement. The expression 2 is the controlling expression and expression 3 is to modify the value of the loop variant(the variable responsible for terminating the loop).
+
 2. Write a C program to find the sum of natural numbers from 1 to `n`.<br>
 
 Ans : 
