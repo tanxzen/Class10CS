@@ -625,7 +625,8 @@ Ans :
 
 23. Summarize the syntactic rules associated with the `for` statement in C language. Can any of the three expressions in the `for` statement be omitted? If so, what are the consequences of each omission.<br>
 
-Ans : 
+Ans :The three expression in the for loop are all optional. Generally, the expression 1 is an initialization statement, if omitted it would work as initialization can be done before the loop. The expression 2 is the controlling expression, if omitted it would be counted as true condition and the loop will executed infintely and expression 3 is to modify the value of the loop variant(the variable responsible for terminating the loop), if omitted the loop will stuck on the condtion and will not update the value of the varient and will result in unexpected error.If the expression are omitted then it would result in an infinte loop meaning it would loop infinitely without any condition.
+
 
 24. Explain the loop control structures used in C language.<br>
 
