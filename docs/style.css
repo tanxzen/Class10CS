@@ -1,77 +1,108 @@
+/* General Body Styling */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
+  background-color: #1e1e2e; /* Base */
+  color: #cdd6f4; /* Text */
 }
 
+/* Header Styling */
 header {
-  background: #1f2937;
-  color: white;
-  padding: 2rem;
+  background: #181825; /* Mantle */
+  color: #f5e0dc; /* Rosewater */
+  padding: 3rem;
   text-align: center;
 }
 
+/* Header Title Styling */
 h1 {
   margin: 0;
-  font-size: 2.5rem;
-  min-height: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #f5e0dc; /* Rosewater */
 }
 
+/* Paragraph Styling */
 p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-main {
-  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #cdd6f4; /* Text */
   max-width: 800px;
   margin: 0 auto;
-  background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;
+}
+
+/* Main Content Section */
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background: #313244; /* Surface 0 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   margin-top: -40px;
+  color: #cdd6f4; /* Text */
 }
 
+/* Section Styling */
 section {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
+/* Styling Chapter Links List */
 .link-list a {
   display: block;
-  color: #2563eb;
+  color: #74c7ec; /* Sapphire */
   text-decoration: none;
-  margin: 0.5rem 0;
+  margin: 0.75rem 0;
+  font-size: 1.2rem;
+  transition: color 0.3s ease-in-out;
 }
 
 .link-list a:hover {
   text-decoration: underline;
+  color: #f9e2af; /* Yellow */
 }
 
+/* GitHub Link Styling */
+.github-link {
+  color: #a6e3a1; /* Green */
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: #fab387; /* Peach */
+  text-decoration: underline;
+}
+
+/* Footer Styling */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  color: #666;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #cdd6f4; /* Text */
 }
 
+/* Note Box Styling */
 .note-box {
-  background-color: #fff7e6;
-  border-left: 6px solid #f59e0b;
-  padding: 1rem 1.25rem;
+  background-color: #45475a; /* Surface 1 */
+  border-left: 6px solid #f9e2af; /* Yellow */
+  padding: 1.5rem;
   margin: 2rem 0;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  color: #5c4700;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #cdd6f4; /* Text */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Typewriter Cursor Effect */
 #typewriter::after {
   content: '|';
   animation: blink 0.8s steps(1) infinite;
-  color: white; /* or black depending on background */
+  color: #f5e0dc; /* Rosewater */
 }
 
+/* Blinking Animation for Cursor */
 @keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -81,12 +112,13 @@ footer {
   }
 }
 
+/* Edit Button Styling */
 .edit-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #24292e;
-  color: #ffffff;
+  background-color: #f38ba8; /* Red */
+  color: #1e1e2e; /* Dark for contrast */
   padding: 10px 16px;
   border-radius: 6px;
   text-decoration: none;
@@ -96,9 +128,11 @@ footer {
   transition: background-color 0.2s ease;
   margin-top: 2rem;
 }
+
 .edit-button:hover {
-  background-color: #444c56;
+  background-color: #f5c2e7; /* Pink */
 }
+
 .edit-icon {
   vertical-align: middle;
 }
