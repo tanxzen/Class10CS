@@ -1,4 +1,4 @@
-const text = "Class 10 CS – Study Guide";
+const text = "Class 10 CS Study Guide";
 const target = document.getElementById("typewriter");
 
 let index = 0;
@@ -14,19 +14,18 @@ function typeWriterLoop() {
       setTimeout(() => {
         isDeleting = true;
         typeWriterLoop();
-      }, 2000); // pause before deleting
+      }, 3000); // pause before deleting
     }
   } else {
     target.textContent = text.substring(0, index - 1);
     index--;
     if (index > 0) {
-      setTimeout(typeWriterLoop, 50); // deleting speed
+      setTimeout(typeWriterLoop, 100); // deleting speed
     } else {
       isDeleting = false;
-      setTimeout(typeWriterLoop, 500); // pause before typing again
+      setTimeout(typeWriterLoop, 1000); // pause before typing again
     }
   }
 }
 
 window.onload = typeWriterLoop;
-
