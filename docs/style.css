@@ -65,6 +65,7 @@ footer {
   color: #5c4700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
+
 #typewriter::after {
   content: '|';
   animation: blink 0.8s steps(1) infinite;
@@ -80,3 +81,24 @@ footer {
   }
 }
 
+.edit-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #24292e;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  margin-top: 2rem;
+}
+.edit-button:hover {
+  background-color: #444c56;
+}
+.edit-icon {
+  vertical-align: middle;
+}
