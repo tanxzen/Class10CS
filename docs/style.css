@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: #1f2937;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  min-height: 3rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-top: -40px;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.link-list a {
+  display: block;
+  color: #2563eb;
+  text-decoration: none;
+  margin: 0.5rem 0;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.note-box {
+  background-color: #fff7e6;
+  border-left: 6px solid #f59e0b;
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #5c4700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+#typewriter::after {
+  content: '|';
+  animation: blink 0.8s steps(1) infinite;
+  color: white; /* or black depending on background */
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
