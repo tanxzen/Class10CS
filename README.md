@@ -29,29 +29,29 @@ You may use this guide for educational purposes, but please note that the conten
 
 ---
 
-## [`CH01 : Algorithm For Problem Solving`](https://github.com/tanxzen/Class10CS/tree/main/CH01)
+## [`CH01 : Algorithm For Problem Solving`](https://github.com/TanshenH/Class10CS/tree/main/CH01)
 - Some common and important algorithms
 
-## [`CH02 : Introduction to C Language`](https://github.com/tanxzen/Class10CS/tree/main/CH02)
+## [`CH02 : Introduction to C Language`](https://github.com/TanshenH/Class10CS/tree/main/CH02)
 - What is C?
 - Variable, Constant, Library, Preprocessor Directives 
 - How to write a C program, Structure of a C program
 - Data Types
 - Different Operators
 
-## [`CH03 : Input/Output Functions and Statements`](https://github.com/tanxzen/Class10CS/tree/main/CH03)
+## [`CH03 : Input/Output Functions and Statements`](https://github.com/TanshenH/Class10CS/tree/main/CH03)
 - Use of `printf`, `scanf` and other functions
 - Escape sequences
 - Format specifiers
 - Textbook questions
 
-## [`CH04 : Control Statement in C`](https://github.com/tanxzen/Class10CS/tree/main/CH04)
+## [`CH04 : Control Statement in C`](https://github.com/TanshenH/Class10CS/tree/main/CH04)
 - If-else Statement
 - Nested If-else Statement
 - Switch Statement
 - Textual Questions
 
-## [`CH05 : Loop Control Structures in C`](https://github.com/tanxzen/Class10CS/tree/main/CH05)
+## [`CH05 : Loop Control Structures in C`](https://github.com/TanshenH/Class10CS/tree/main/CH05)
 - For Loop
 - While loop
 - Do-While Loop
