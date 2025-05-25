@@ -70,11 +70,11 @@ main()
 
 <Sub programs - function blocks>
 ```
-1.The header files or preprocessor directives gives instructions to the compiler to include compiler options(#include),macro substitution(#define) to substitude a constant for an identifier and conditional(#ifdef) directives.
-2. The main statement block, function block and other blocks used in C program are enclosed in braces {}.
-3. Variables declared outside main() are called global variables, and they can be used in the main program block and sub program block.
-4. Variables declared inside main() are called local variables, and they are used only in the block in which they are declared.Sub programs/functions can also have local variables.
-5. Any C program has coding in the form of letters and symbols.Normally documentation to the program is made by adding remarks or comment lines enclosed  in /* and */ whenever necessary.
+1.The header files or preprocessor directives gives instructions to the compiler to include compiler options(#include),macro substitution(#define) to substitude a constant for an identifier and conditional(#ifdef) directives.<br>
+2. The main statement block, function block and other blocks used in C program are enclosed in braces {}.<br>
+3. Variables declared outside main() are called global variables, and they can be used in the main program block and sub program block.<br>
+4. Variables declared inside main() are called local variables, and they are used only in the block in which they are declared.Sub programs/functions can also have local variables.<br>
+5. Any C program has coding in the form of letters and symbols.Normally documentation to the program is made by adding remarks or comment lines enclosed  in /* and */ whenever necessary.<br>
 
 7. Explain the different data types in C.
 8. Discuss increment and decrement operators available on C and the rules associated with them.
