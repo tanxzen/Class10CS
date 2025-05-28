@@ -76,11 +76,35 @@ main()
 4. Variables declared inside main() are called local variables, and they are used only in the block in which they are declared.Sub programs/functions can also have local variables.<br>
 5. Any C program has coding in the form of letters and symbols.Normally documentation to the program is made by adding remarks or comment lines enclosed  in /* and */ whenever necessary.<br>
 
-7. Explain the different data types in C.
-8. Discuss increment and decrement operators available on C and the rules associated with them.
-9. Explain arithmetic and logical operators in C with suitable examples.
-10. Explain bitwise logical operators available in C. Discuss the order of evaluation.
-11. List the different types of operators in C. Discus the following with examples: (a) conditional operators (b) relational operators.
+7. Explain the different data types in C.<br>
+Ans :<br>
+
+i. `int` : *refers to interger. It can hold a signed or unsigned whole number within specific range.*
+  
+ii. `char` : *refers to characte. It can hold one letter/symbol. In fact, char in C language is associated with integers refers to a letter/symbol as per ASCII which has assigned integer value for all letters/symbol used in programming.*
+  
+iii. `float` : refers to floating point or real number. It can hold a real numeber like 3.174813 or 4.53e6 with six decimal digits in decimal or exponential form.,
+
+iv. `double` : also refers to floating or real number. It can hold a real number in double precision. A double precision number uses 12 decimal digit like 3.42134421232 or 4.2324452423e12.
+
+
+8. Discuss increment and decrement operators available on C and the rules associated with them.<br>
+Ans : Increment operator(++) is used to increase the value of an integer or char variable by 1.Decrement operator(--) is used to reduce the value of an integer or char by 1.
+      m++ and m-- are referring the post-fix increment and decrement operation, and ++m and --m are referrring the prefix increment and decrement operation.Post-fix increment first assign the value of the variable
+      then increment it. Whereas, the prefix increment first increase the value and then assign the value of variable.
+
+9. Explain arithmetic and logical operators in C with suitable examples.<br>
+
+Ans : Arithmetic operators are used to perform arithmetic operations while assigning a value to a variable.<br>
+      example : m += 10, this is evaluated as m = m + 10 , it increase the value of m then assigns the new value of m to m.<br>
+      Logical operators are used to connect more relational operations to form a complex expression called logical expression.A value obtained by evaluating a logical expression is always logical, i.e either true or false.<br>
+      example : (5 > 2) && (5<7) = True , this check the both condition if 5 is greater than 2 and 5 is less than 7 if both are true then the result is also true.<br>
+
+10. Explain bitwise logical operators available in C. Discuss the order of evaluation.<br>
+
+Ans : 
+
+11. List the different types of operators in C. Discus the following with examples: (a) conditional operators (b) relational operators.<br>
 # SHORT QUESTIONS 
 1. C language has been developed by _________.
 2. Like decimal number system, octal and hexadecimal system can also be used in C language. (True/False) 
