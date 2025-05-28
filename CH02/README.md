@@ -623,10 +623,6 @@ Hello world
 
 ---
 
-<p align="center">
-  💌 suggestions are always welcome.
-</p>
-
 
 
 
