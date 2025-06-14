@@ -1,0 +1,381 @@
+<h1 id="ch03-inputoutput-functions-and-statements">CH03 : Input/Output
+Functions and statements</h1>
+<p><code>stdio.h stands for standard input-output header , we will be learning to use the functions present in this header file.</code></p>
+<hr />
+<details>
+<summary>
+escape sequences
+</summary>
+<h1 id="section"></h1>
+<p><code>Escape sequence are control characters used to move the cursor and print characters such as ?,",\ and so on.</code></p>
+<p><br></p>
+<p>Some escape sequence are :</p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 44%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Escape Sequence</th>
+<th>Description</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>\n</code></td>
+<td>Newline (line feed)</td>
+<td>Moves the cursor to the beginning of the next line.</td>
+</tr>
+<tr class="even">
+<td><code>\t</code></td>
+<td>Horizontal tab</td>
+<td>Moves the cursor to the next tab stop.</td>
+</tr>
+<tr class="odd">
+<td><code>\b</code></td>
+<td>Backspace</td>
+<td>Moves the cursor back one position.</td>
+</tr>
+<tr class="even">
+<td><code>\r</code></td>
+<td>Carriage return</td>
+<td>Moves the cursor to the beginning of the current line.</td>
+</tr>
+<tr class="odd">
+<td><code>\f</code></td>
+<td>Form feed (page break)</td>
+<td>Moves the cursor to the beginning of the next page.</td>
+</tr>
+<tr class="even">
+<td><code>\0</code></td>
+<td>Null Character</td>
+<td>Represents the null character, which is the character with the ASCII
+value of 0. It is used to mark the end of a string and can be used for
+various other purposes, such as string manipulation and memory
+management.</td>
+</tr>
+<tr class="odd">
+<td><code>\v</code></td>
+<td>Vertical tab</td>
+<td>Moves the cursor down to the next vertical tab stop.</td>
+</tr>
+<tr class="even">
+<td><code>\a</code></td>
+<td>Alert (bell)</td>
+<td>Produces an audible alert (usually a beep).</td>
+</tr>
+<tr class="odd">
+<td><code>\\</code></td>
+<td>Backslash</td>
+<td>Prints a backslash character.</td>
+</tr>
+<tr class="even">
+<td><code>\?</code></td>
+<td>Question mark</td>
+<td>Prints a question mark.</td>
+</tr>
+<tr class="odd">
+<td><code>\'</code></td>
+<td>Single quote</td>
+<td>Prints a single quote.</td>
+</tr>
+<tr class="even">
+<td><code>\"</code></td>
+<td>Double quote</td>
+<td>Prints a double quote.</td>
+</tr>
+<tr class="odd">
+<td><code>\ooo</code></td>
+<td>Octal escape sequence (where <code>ooo</code> is an octal
+number)</td>
+<td>Prints the character represented by the octal number.</td>
+</tr>
+<tr class="even">
+<td><code>\xhh</code></td>
+<td>Hexadecimal escape sequence (where <code>hh</code> is a hex
+number)</td>
+<td>Prints the character represented by the hexadecimal number.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<details>
+<summary>
+format specifiers
+</summary>
+<hr />
+<p><code>Format specifier are used to specify the format of a variable or other while using input or output functions</code>
+<br></p>
+<p>Some format specifier are : <br></p>
+<table>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 44%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Format Specifier</th>
+<th>Description</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>%d</code> or <code>%i</code></td>
+<td>Signed integer</td>
+<td>Prints or reads a signed integer value.</td>
+</tr>
+<tr class="even">
+<td><code>%u</code></td>
+<td>Unsigned integer</td>
+<td>Prints or reads an unsigned integer value.</td>
+</tr>
+<tr class="odd">
+<td><code>%f</code></td>
+<td>Floating-point number</td>
+<td>Prints or reads a floating-point number.</td>
+</tr>
+<tr class="even">
+<td><code>%e</code> or <code>%E</code></td>
+<td>Floating-point number in scientific notation</td>
+<td>Prints or reads a floating-point number in scientific notation.</td>
+</tr>
+<tr class="odd">
+<td><code>%g</code> or <code>%G</code></td>
+<td>Floating-point number in the more compact of <code>%f</code> or
+<code>%e</code></td>
+<td>Prints or reads a floating-point number in the more compact of
+<code>%f</code> or <code>%e</code>.</td>
+</tr>
+<tr class="even">
+<td><code>%c</code></td>
+<td>Single character</td>
+<td>Prints or reads a single character.</td>
+</tr>
+<tr class="odd">
+<td><code>%s</code></td>
+<td>String</td>
+<td>Prints or reads a string.</td>
+</tr>
+<tr class="even">
+<td><code>%p</code></td>
+<td>Pointer</td>
+<td>Prints the address of a pointer.</td>
+</tr>
+<tr class="odd">
+<td><code>%x</code> or <code>%X</code></td>
+<td>Hexadecimal integer</td>
+<td>Prints or reads a hexadecimal integer value.</td>
+</tr>
+<tr class="even">
+<td><code>%o</code></td>
+<td>Octal integer</td>
+<td>Prints or reads an octal integer value.</td>
+</tr>
+<tr class="odd">
+<td><code>%%</code></td>
+<td>Literal percent sign</td>
+<td>Prints a literal percent sign.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr />
+<h2 id="printf-function">printf() function</h2>
+<p>The <code>printf()</code> function is used in C programming to
+<strong>print or display information on the screen</strong>
+(monitor).</p>
+<h3 id="what-it-does">What it Does:</h3>
+<p>It shows the values of variables or text messages on the screen.</p>
+<h3 id="syntax">Syntax:</h3>
+<p><code>printf("format string", variable1, variable2, ..., variableN);</code></p>
+<p>“format string”: Tells the computer how to display the values (like
+%d for integer, %f for float, etc.).</p>
+<p>variable1, variable2, etc.: These are the variables whose values you
+want to display.</p>
+<p>Examples:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> s <span class="op">=</span> <span class="fl">2.8</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> k <span class="op">=</span> <span class="dv">5</span><span class="op">,</span> kfact <span class="op">=</span> <span class="dv">120</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> s<span class="op">);</span>                          <span class="co">// Output: 2.800000</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">sum = %6.2f&quot;</span><span class="op">,</span> s<span class="op">);</span>               <span class="co">// Output: sum =  2.80</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">%d factorial is %d&quot;</span><span class="op">,</span> k<span class="op">,</span> kfact<span class="op">);</span> <span class="co">// Output: 5 factorial is 120</span></span></code></pre></div>
+<h2 id="scanf-function">scanf() function</h2>
+<p>The <code>scanf()</code> function is used to <strong>get input from
+the user through the keyboard</strong>.</p>
+<h3 id="what-it-does-1">What it Does:</h3>
+<p>It allows the user to <strong>enter values</strong>, which are stored
+into variables.</p>
+<h3 id="syntax-1">Syntax:</h3>
+<p><code>scanf("format string", &amp;variable1, &amp;variable2, ..., &amp;variableN);</code></p>
+<p>“format string”: Tells the computer what type of data to expect (%d
+for int, %f for float, etc.).</p>
+<p>&amp;variable: The &amp; symbol means “address of” the variable. It
+tells the computer where to store the value entered by the user.</p>
+<p>Examples:</p>
+<pre><code>int a, b;
+float x;
+char gender;
+char sname[20];
+
+
+scanf(&quot;%d %d&quot;, &amp;a, &amp;b);    // User enters two integers
+scanf(&quot;%f&quot;, &amp;x);           // User enters a float number
+scanf(&quot;%c&quot;, &amp;gender);      // User enters a character
+scanf(&quot;%s&quot;, sname);        // User enters a string (one word)</code></pre>
+<h2 id="more-functions">MORE FUNCTIONS :</h2>
+<p>This guide covers common I/O functions in C from <code>stdio.h</code>
+and <code>conio.h</code>, with syntax and explanations.</p>
+<hr />
+<h3 id="standard-io-functions-stdio.h">Standard I/O Functions
+(<code>&lt;stdio.h&gt;</code>)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 50%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Syntax</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>getchar()</code></td>
+<td><code>char c = getchar();</code></td>
+<td>Can take input of a character by reading <strong>one
+character</strong> from the keyboard when the user presses Enter. The
+character is stored in the variable (e.g., <code>c</code>).</td>
+</tr>
+<tr class="even">
+<td><code>putchar()</code></td>
+<td><code>putchar(c);</code></td>
+<td>Prints a <strong>single character</strong> to the screen. The
+character <code>c</code> must be provided.</td>
+</tr>
+<tr class="odd">
+<td><code>gets()</code></td>
+<td><code>gets(buffer);</code></td>
+<td>Can take input of the user by reading a <strong>whole line of
+text</strong> (until Enter) from the keyboard and stores it in the
+variable <code>buffer</code>.</td>
+</tr>
+<tr class="even">
+<td><code>puts()</code></td>
+<td><code>puts(string);</code></td>
+<td>Prints the <strong>string</strong> to the screen and automatically
+moves the cursor to the next line.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="console-io-functions-conio.h---non-standard">Console I/O
+Functions (<code>&lt;conio.h&gt;</code> - Non-standard)</h3>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 50%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>Syntax</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>getch()</code></td>
+<td><code>char c = getch();</code></td>
+<td>Reads a <strong>single character</strong> from the keyboard
+<strong>without waiting for Enter</strong>. The character is <strong>not
+shown on the screen</strong> as it’s typed (useful for passwords).</td>
+</tr>
+<tr class="even">
+<td><code>getche()</code></td>
+<td><code>char c = getche();</code></td>
+<td>Same as <code>getch()</code>, <strong>but echoes/print the
+character</strong> on the screen as the user types it.</td>
+</tr>
+<tr class="odd">
+<td><code>putch()</code></td>
+<td><code>putch(c);</code></td>
+<td>Prints a <strong>single character</strong> to the screen, just like
+<code>putchar()</code>, but it’s from <code>&lt;conio.h&gt;</code>.</td>
+</tr>
+<tr class="even">
+<td><code>clrscr()</code></td>
+<td><code>clrscr();</code></td>
+<td>Clears the console screen. Only works in <strong>old
+compilers</strong> like Turbo C/C++, not supported in modern IDEs like
+Code::Blocks or GCC.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="summary-table">Summary Table</h3>
+<table>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 64%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Function</th>
+<th>What It Does</th>
+<th>Header File</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>getchar()</code></td>
+<td>Reads one char from user</td>
+<td><code>stdio.h</code></td>
+</tr>
+<tr class="even">
+<td><code>putchar()</code></td>
+<td>Outputs one char to screen</td>
+<td><code>stdio.h</code></td>
+</tr>
+<tr class="odd">
+<td><code>gets()</code></td>
+<td>Reads a line of text</td>
+<td><code>stdio.h</code></td>
+</tr>
+<tr class="even">
+<td><code>puts()</code></td>
+<td>Prints a string with newline</td>
+<td><code>stdio.h</code></td>
+</tr>
+<tr class="odd">
+<td><code>getch()</code></td>
+<td>Reads char instantly without showing it</td>
+<td><code>conio.h</code></td>
+</tr>
+<tr class="even">
+<td><code>getche()</code></td>
+<td>Reads char instantly and shows it on screen</td>
+<td><code>conio.h</code></td>
+</tr>
+<tr class="odd">
+<td><code>putch()</code></td>
+<td>Outputs one char (same as <code>putchar()</code>)</td>
+<td><code>conio.h</code></td>
+</tr>
+<tr class="even">
+<td><code>clrscr()</code></td>
+<td>Clears screen (console window)</td>
+<td><code>conio.h</code></td>
+</tr>
+</tbody>
+</table>
+<hr />

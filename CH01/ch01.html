@@ -1,0 +1,218 @@
+<h1 id="ch01-algorithm-for-problem-solving">CH01 : Algorithm for Problem
+Solving</h1>
+<h3 id="more-algorithm-are-coming-soon">MORE ALGORITHM ARE COMING SOON
+…</h3>
+<p><code>RECOMMANDED TO READ THE Algorithm.txt AS IT HAS EXPLAINATION WITH SOME DETAILS</code></p>
+<h2 id="overview">Overview</h2>
+<ul>
+<li><p><code>Swapping two values</code> : <em>use another variable to
+store the value of a variable1 then replace the value of the variable 1
+with value of variable 2 then replace the value of the variable 2 with
+value of variable 3.</em></p></li>
+<li><p><code>Biggest Number between 2 number</code> : <em>use another
+variable big , if value of variable1 &gt; variable2 then big = variable1
+else big = variable2</em></p></li>
+<li><p><code>Farenheit (°F) to Celsuis (°C)</code> : <em>use a variable
+ces = 5/9 (°F - 32) , where °F is the given farenheit …
+<br><code>Formula : 5/9 (°F - 32)</code></em></p></li>
+<li><p><code>Sum of n natural number</code> : <em>use i=0, sum=0 and we
+will use while loop untill i is not equal to n and inside the loop we
+will add sum and i and i + 1</em> example :<br> <em>while i != n <br>
+sum = sum + i <br> i = i + 1</em></p></li>
+<li><p><code>FACTORIAL of n term OR Product of n natural number</code> :
+<em>use i=0, pro=1 and we will use while loop untill i is not equal to n
+and inside the loop we will multiply pro and i and i + 1</em>
+<br>example :<br> <em>while i != n <br> pro = pro </em> i <br> i = i +
+1*</p></li>
+<li><p><code>Reverse digit of a given number</code> : <em>use two
+variable lastdigit and reverse , let n = 123 now we assign lastdigit = n
+% 10 , % give remainder of a division now we will loop through a while
+loop , while n is greater than 0 we will assign reverse = reverse </em>
+10 + lastdigit then we will again assign lastdigit = n % 10 and lastly
+we reduce n by dividing it by 10<em><br> example :<br>
+</em>lastdigit=n%10<br>while n&gt;0<br>reverse = reverse * 10 +
+lastdigit<br>n = n/10*</p></li>
+<li><p><code>Swapping number without another variable</code></p>
+<p>Let a and b be the two numbers then we will write an expression like
+<br> a = a+b <br> b = a-b <br> a = a-b<br></p>
+<p>so lets assume the a=1, b=2 then we have a = 1+2 =3 <br> b = 3-2
+=1<br> a = 3-1 =2<br></p></li>
+</ul>
+<h3 id="advance-algorithm">Advance Algorithm :</h3>
+<ol type="1">
+<li>Finding element in an array : Take a array
+<code>arr[9] = {1,2,3,4,5,6,7,8,9,10}</code> which contains 10 elements
+(remember that array index start from 0) and we want to find an element
+lets say <code>6</code> then we will initialize a variable with the
+element we want say <code>searchElement = 6</code> and we loop through
+the array to check if the array at index <code>i</code>(we are using for
+loop like <code>for(int i=0;i&lt;=9;i++)</code>)then in the block we
+check if arr[i] is matching to the <code>searchElement</code> if yes, we
+print the index of <code>i</code>.</li>
+</ol>
+<p>Sample Code.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> arr<span class="op">[</span><span class="dv">9</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">7</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">9</span><span class="op">,</span><span class="dv">10</span><span class="op">};</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> searchElement <span class="op">=</span> <span class="dv">6</span><span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;=</span><span class="dv">9</span><span class="op">;</span>i<span class="op">++){</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span><span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">==</span> searchElement<span class="op">){</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Found %d at index %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>searchElement<span class="op">,</span>i<span class="op">);</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Output :</p>
+<pre><code>Found 6 at index 5 </code></pre>
+<p>Note : the counting of index should start from 0.</p>
+<ol start="2" type="1">
+<li>Sorting array (Bubble sort Alogrithm)</li>
+</ol>
+<blockquote>
+<p>sizeof() operator is used to get the size of any datatype , variable
+.</p>
+<p>example : sizeof(int) &gt;&gt;output&gt;&gt; 4</p>
+<p>Reseach more or a quick view on
+https://www.geeksforgeeks.org/sizeof-operator-c/</p>
+</blockquote>
+<p>Sample code :</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> arr<span class="op">[</span><span class="dv">9</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">9</span><span class="op">,</span><span class="dv">10</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">1</span><span class="op">,</span><span class="dv">7</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">6</span><span class="op">};</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> size <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>arr<span class="op">)/</span><span class="kw">sizeof</span><span class="op">(</span><span class="dt">int</span><span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> temp<span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>size <span class="op">-</span> <span class="dv">1</span><span class="op">;</span>i<span class="op">++){</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span><span class="op">(</span><span class="dt">int</span> j<span class="op">=</span><span class="dv">0</span><span class="op">;</span>j<span class="op">&lt;</span>size <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span><span class="op">;</span>j<span class="op">++){</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>arr<span class="op">[</span>j<span class="op">]</span> <span class="op">&gt;</span> arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">){</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        temp <span class="op">=</span> arr<span class="op">[</span>j<span class="op">];</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">];</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> temp<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">{</span><span class="dt">int</span> k <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>k<span class="op">&lt;</span>size<span class="op">;</span>k<span class="op">++}{</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;%d &quot;</span><span class="op">,</span>arr<span class="op">[</span>k<span class="op">]);</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>Output :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span> <span class="dv">10</span></span></code></pre></div>
+<p>Using the same array as used in the <code>point 1</code> with random
+numbers , ‘arr[9] = {9,10,3,2,1,7,5,8,4,6}’ and to sort we need to use
+nested loop and we will be using for loop and we need to get the size of
+array so we use the sizeof(arr return the sizeof array) then we divide
+the result of sizeof(arr) by sizeof(int)(the datatype of the array) this
+will return the sizeof the int meaning the total size of int array is
+divide by the size of 1 element present then this will return the number
+of element present inside the array then we store the value in a
+variable call <code>size</code>.Then we intialize a temporary variable
+say, <code>temp</code> and we loop the counter variable is
+<code>i</code> through the array with for loop unitl
+<code>size - 1</code> because the last value will already be the
+sorted(meaning it already done).Then we add a nested for loop with the
+loop counter as <code>j</code> to loop until
+<code>size - i - 1 (i is the first for loop counter variable)</code> we
+use this size - i - 1 because it skips the already sorted values. Then
+we add a condition
+<code>if (arr[j] &gt; arr[j+1]) (we use the '&gt;' greater than symbol to organise according to accending order you can also use the '&lt;' less than symbol to sort decending value)</code>
+we are checking if the current index value is greater then the next
+index value , if yes we execute the statement to switch the we put the
+value of current arr to temp <code>temp = arr[j]</code>, then we change
+the value of current array to the next array value
+<code>arr[j] = arr[j+1]</code> and lastly we change the value of next
+array to the current array value <code>arr[j+1] = temp</code>.</p>
+<hr />
+
+
+<section>
+    <div class="details">
+        <p>* COMMON AND IMPORTANT ALGORITHM *
+
+  1. Swapping two values :
+      
+      i). We have two number , number1 = 1 , number2 = 2 
+
+     ii). We will make another third variable like number3 and give any value of 
+          two variable like number3=number1 or simply number3=1 
+
+    iii). Now we make number1 = number2 then number2 = number3 , so whats going on ?
+          we are making number1 equal to number2 , say number2 was 2 now number1 is also 2,
+          then we are making number2 also equal to number3 , say number3 was 1 then number2 also 1 
+     
+
+      Before Swap :
+        number1 = 1 
+        number2 = 2
+
+      Middle of Swapping : 
+        number3 = number1  
+        number1 = number2 
+        number2 = number3 
+
+      After Swap :
+        number1 = 2 
+        number2 = 1 
+
+  2. Fahrenheit(°F) to Celsius (°C) 
+    
+      i). We are given 5°F to convert it into °C (Celsius)
+      ii). We make a variable cel then we write equal to the formula i.e 
+          5/9(°F - 32) , read as 5 divided by 9 bracket given Fahrenheit minus 32 bracket close
+          like cel = 5/9 (5 - 32) 
+      
+        Before :
+          Fahrenheit = 5°F
+        Processing :
+          cel = 5/9 (5 - 32)
+              = 0.555 x -27 
+              = -15 (approx)
+        After : 
+          Celsius = -15°C
+
+  3. Biggest number between 2 number 
+      i). We are given 2 numbers , number1 = 10 , number2 = 15 . We have to find the biggest between them 
+      ii). we will take another variable big and use if statement like if number 1 is greater then number2 then 
+          big is number1 else big is number2 
+           
+           if number1 > number2 then 
+                big = number1 
+            else 
+               big = number2 
+            
+            Before : 
+              number1 = 10
+              number2 = 15 
+            Processing :
+              If number1 > number2 , NO  
+              big = number2 
+            After :
+            big = number2 = 15
+
+
+  4. Sum of natural number upto n 
+    
+      n is the inputed value of user it may be 3,7,10,1 or any 
+
+      i). We are given n = 7 then we have to find the sum from 1 to 7 like 1+2+3+4+5+6+7 = 28 
+      ii). we will make new variable i = 0  , sum = 0 and while i not equal to n we will i+1 and sum + 1 until i is not equal to n 
+
+        while i != n 
+          sum = sum + i 
+          i = i + 1 
+
+
+  5. Product of natural number upto n OR FACTORAIL of nth term  
+    We are given n = 5 then we will need to produce the result of 1x2x3x4x5 = 120 
+    Same as 4 . just replace the sum with product = product * i 
+
+  6. Reverse the digit of a given number 
+
+    We are given n = 123 we have to reverse the digit to n = 321 
+
+    1. We take n = 123 then we make new variable such as lastdigit and reverse 
+    2. We assign lastdigit = n % 10 , % modulo is an operator use to give the remainder of the division 
+       like 3/2 remainder = 1 , reverse = 0 ;
+    3. we will keep a while loop until n is greater than 0 then we will assign reverse is equal to reverse x 10 + lastdigit 
+       and lastdigit is equal to n % 10 and we will reduce n by dividing it by 10 like n = n/10 
+
+       while n>0 
+        reverse = reverse * 10 + lastdigit 
+        lastdigit = n % 10 
+        n = n / 10 </p>
+    </div>
+</section>

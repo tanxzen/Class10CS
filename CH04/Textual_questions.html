@@ -1,0 +1,616 @@
+<h1 id="section-a-review-questions-and-exercises">SECTION A: REVIEW
+QUESTIONS AND EXERCISES</h1>
+<ol type="1">
+<li>Explain the various <strong>if</strong> structures available in
+C.</li>
+</ol>
+<p>Ans :</p>
+<pre><code>The various if structures are :
+i. Simple if statement  : the if statement is used for the selection of one statement based on condition.
+   The if statement will start with the evaluation of the given expression.
+   The syntax of if statement is :
+        if (condition)
+          {
+            Statement
+          }
+
+ii. If-else statement : if-else statement is used if the condition is true, the statement associated with the if part will be executed. If the condtion
+    is false, the statement associated with the else part will be executed.
+    The syntax of if-else is :
+    if (condition)
+    {
+        True block
+    }
+    else 
+    {
+        False Block
+    }
+
+iii. Nested if-else statement : An if statement may have another if statement in a true block and false block. These compound statement are called nested if statement.
+     The syntax of nested if-else statemnt is :
+      if (condition 1)
+{
+  if (condition 2)
+    {
+        --------------
+        &lt;true block 1&gt;
+        --------------
+    }
+   else
+    {
+        -------------
+        &lt;false block 1&gt;
+        -------------
+    }
+}
+else
+{
+  if (condition 3)
+    {
+      --------------
+      &lt;true block 2&gt;
+      --------------
+    }
+  else
+    {
+      ---------------
+      &lt;false block 2&gt;
+      ---------------
+    }
+}
+  </code></pre>
+<ol start="2" type="1">
+<li>Write notes on (i) conditional statement (ii)
+<strong>switch</strong> statement</li>
+</ol>
+<p>Ans :</p>
+<pre><code>i. Conditional Statement : Conditional Statement are used to execute/transfer the control from one part of the program to another depending on a condition.
+   There are two types of conditional statement used in C language : 
+      a. if-else statement. 
+      b. switch statement.
+ii. Switch Statement : The switch statement are substitude for a long if-else statement. Switch statment is used to
+    execute a block of statement depending on the value of a variable or expression.</code></pre>
+<ol start="3" type="1">
+<li>Discuss the difference between <strong>if…else</strong> and
+<strong>switch</strong> structures.<br></li>
+</ol>
+<p>Ans : | If-else | Switch | | ——- | —— | | i. if else statement uses
+condition to execute a block of statement. | i. Switch statement uses a
+single expression or value of a variable to execute a block of statement
+| | ii. It’s keywords are if, else and else if | ii. It’s keywords are
+switch, case and default | | iii. It can contain multiple condition
+using logical operators | Each case can contain only one value |</p>
+<ol start="4" type="1">
+<li>Explain with example the if statement and nested if statement in
+C.<br></li>
+</ol>
+<p>Ans :</p>
+<pre><code>i. If statement : if statement is used to execute a statement block or a single statement depending on the value of a condition
+   Example :
+         int mark = 50;
+         if (mark &lt; 40){
+            printf(&quot;Failed\n&quot;);
+         }
+         else {
+            printf(&quot;Passed&quot;)
+         }
+   In the following code the else part will be executed because mark is more than 40.
+
+ii. Nested if-else statement : An if statement may have another if statement in the &lt;true block&gt; and &lt;false block&gt;.This compound statement is called nested if statement.
+    Example :
+      int mark = 95;
+      if (mark &gt; 40 ) {
+         if (mark &gt; 90)
+               printf(&quot;Grade : A&quot;);
+            else {
+                  printf(&quot;Grade : B&quot;);
+               }
+      }
+      else {
+         printf(&quot;Grade : F&quot;);
+      }
+      In the following code the grade will be printed as A because the grade is greater than 40 and 90.</code></pre>
+<ol start="5" type="1">
+<li>Write a C program to find the smallest of given two
+numbers.<br></li>
+</ol>
+<p>Ans :</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++ compiler</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>   <span class="dt">int</span> a<span class="op">,</span> b<span class="op">,</span> small<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>   clrscr<span class="op">()</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter two numbers : &quot;</span><span class="op">);</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%d %d&quot;</span><span class="op">,&amp;</span>a<span class="op">,&amp;</span>b<span class="op">);</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>a<span class="op">&lt;</span>b<span class="op">){</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>   small <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>   small <span class="op">=</span> b<span class="op">;</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Smallest number : %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>small<span class="op">);</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">()</span> <span class="co">// remove if not using turboc++</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="6" type="1">
+<li>Write a C program to find the smallest of given three numbers. <br>
+Ans :</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> a<span class="op">,</span> b<span class="op">,</span> c<span class="op">,</span> small<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>   clrscr<span class="op">()</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter three numbers : &quot;</span><span class="op">);</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%d %d %d&quot;</span><span class="op">,&amp;</span>a<span class="op">,&amp;</span>b<span class="op">,&amp;</span>c<span class="op">);</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>a<span class="op">&lt;</span>b<span class="op">){</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="op">(</span>a<span class="op">&lt;</span>c<span class="op">){</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            small <span class="op">=</span> a<span class="op">;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>         <span class="op">}</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>         small <span class="op">=</span> c<span class="op">;</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>         <span class="op">}</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> <span class="op">(</span>b<span class="op">&lt;</span>c<span class="op">){</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            small <span class="op">=</span> b<span class="op">;</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>      <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>            small <span class="op">=</span> c<span class="op">;</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>         <span class="op">}</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Smallest number : %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>small<span class="op">);</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">()</span> <span class="co">// remove if not using turboc++</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="7" type="1">
+<li>Write a C program to find the average of best three marks from the
+given four test marks.</li>
+</ol>
+<p>[Hint: Find the smallest of given four test marks. Subtract it from
+the sum of four test marks. You will now get the sum of best three
+marks. Take the average</p>
+<p>i.e., average = <span
+class="math inline">(<em>T</em>1+<em>T</em>2+<em>T</em>3+<em>T</em>4−<em>s</em><em>m</em><em>a</em><em>l</em><em>l</em><em>e</em><em>s</em><em>t</em>)/3</span>
+<br></p>
+<p>Ans :</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++ compiler</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>   <span class="dt">int</span> t1<span class="op">,</span> t2<span class="op">,</span> t3<span class="op">,</span> t4<span class="op">,</span> smallNum<span class="op">;</span> </span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>   <span class="dt">float</span> avr<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>   clrscr<span class="op">()</span> <span class="op">;</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter the four marks : &quot;</span><span class="op">);</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%d %d %d %d&quot;</span><span class="op">,&amp;</span>t1<span class="op">,</span> <span class="op">&amp;</span>t2<span class="op">,</span> <span class="op">&amp;</span>t3<span class="op">,</span> <span class="op">&amp;</span>t4<span class="op">);</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>   smallNum <span class="op">=</span> t1 <span class="op">;</span> <span class="co">// setting the small number is t1</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>t2 <span class="op">&lt;</span> smallNum<span class="op">){</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      smallNum <span class="op">=</span> t2<span class="op">;</span> <span class="co">// if t2 was less than smallNum then the value of smallNum is set to the value of t2</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>t3 <span class="op">&lt;</span> smallNum<span class="op">){</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      smallNum <span class="op">=</span> t3<span class="op">;</span> <span class="co">// if t3 was less than smallNum then the value of smallNum is set to the value of t3</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>t4 <span class="op">&lt;</span> smallNum<span class="op">){</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>      smallNum <span class="op">=</span> t4<span class="op">;</span> <span class="co">// if t4 was less than smallNum then the value of smallNum is set to the value of t4</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>   avr <span class="op">=</span> <span class="op">(</span>t1 <span class="op">+</span> t2 <span class="op">+</span> t3 <span class="op">+</span> t4 <span class="op">-</span> smallNum<span class="op">)</span> <span class="op">/</span> <span class="fl">3.0</span> <span class="op">;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Average of best three marks : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>avr<span class="op">);</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="8" type="1">
+<li>Write a C program that will read the value of x and evaluate the
+function <br> y(x) = x² + 2x - 10 if x &lt; 10 <br> = |x| if x &lt; 0
+using a <strong>if</strong> statement.<br></li>
+</ol>
+<p>Ans :</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;math.h&gt;</span><span class="pp"> </span><span class="co">// for absolute value of x or for fabs() func </span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>   <span class="dt">float</span> x<span class="op">,</span> y<span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>   clrscr<span class="op">()</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter value of x : &quot;</span><span class="op">);</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,&amp;</span>x<span class="op">);</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;</span><span class="dv">10</span><span class="op">){</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      y <span class="op">=</span> x<span class="op">*</span>x <span class="op">+</span> <span class="dv">2</span><span class="op">*</span>x <span class="op">-</span> <span class="dv">10</span><span class="op">;</span> <span class="co">// set the value of y to the value of this expression if x is less than 10;  </span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>x<span class="op">&lt;</span><span class="dv">0</span><span class="op">){</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      y <span class="op">=</span> fabs<span class="op">(</span>x<span class="op">);</span> <span class="co">// set the absolute value of x to y if x is less than 0 meaning negative numbers;</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Value of y : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>y<span class="op">);</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="9" type="1">
+<li>A company pays salary to an employee at the normal hourly rate, if
+the number of hours worked does not exceed 40. If the number of hours
+worked exceeds 40, the salary for the excess number of hours is
+calculated as 1.5 times the normal hourly rate. Write a C program to
+implement this to calculate the salary.<br></li>
+</ol>
+<p>Ans :</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> hourRate<span class="op">,</span> workHours<span class="op">,</span> totalSalary<span class="op">;</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter work hours: &quot;</span><span class="op">);</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>workHours<span class="op">);</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter the normal hourly rate: &quot;</span><span class="op">);</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>hourRate<span class="op">);</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>workHours <span class="op">&lt;=</span> <span class="dv">40</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        totalSalary <span class="op">=</span> workHours <span class="op">*</span> hourRate<span class="op">;</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>        totalSalary <span class="op">=</span> <span class="op">(</span><span class="dv">40</span> <span class="op">*</span> hourRate<span class="op">)</span> <span class="op">+</span> <span class="op">(</span>workHours <span class="op">-</span> <span class="dv">40</span><span class="op">)</span> <span class="op">*</span> hourRate <span class="op">*</span> <span class="fl">1.5</span><span class="op">;</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Calculated Salary: %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> totalSalary<span class="op">);</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    getch<span class="op">();</span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="10" type="1">
+<li>Write a C program to read the marks scored by a student in an
+examination and print the percentage of marks along with the grade
+obtained using the following conditions.</li>
+</ol>
+<ol type="1">
+<li>percentage &gt;=75 and percentage &lt;=100, “DISTINCTION”</li>
+</ol>
+<ol start="2" type="i">
+<li><p>percentage &gt;= 60 and percentage &lt;75, “FIRST CLASS”</p></li>
+<li><p>percentage &gt;=50 and percentage &lt;60, “SECOND CLASS”</p></li>
+<li><p>If the marks obtained by the student in any subject is &lt;50,
+“FAIL”.<br></p></li>
+</ol>
+<p>Ans :</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>   <span class="dt">int</span> mark <span class="op">;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>   <span class="dt">float</span> fullmark<span class="op">,</span> per<span class="op">;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>   clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>   </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter mark : &quot;</span><span class="op">);</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%d&quot;</span><span class="op">,&amp;</span>mark<span class="op">);</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Enter full mark : &quot;</span><span class="op">);</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>   scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,&amp;</span>fullmark<span class="op">);</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>   per <span class="op">=</span> mark<span class="op">/</span>fullmark <span class="op">*</span> <span class="fl">100.0</span> <span class="op">;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>   <span class="cf">if</span> <span class="op">(</span>per <span class="op">&gt;=</span> <span class="dv">50</span> <span class="op">){</span> <span class="co">// if per is geater than 50 then the next if statements is executed</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>       <span class="cf">if</span> <span class="op">(</span>per <span class="op">&gt;=</span> <span class="dv">60</span><span class="op">){</span> <span class="co">//if per is greater than 75 then the next if statement is executed</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>           <span class="cf">if</span> <span class="op">(</span>per <span class="op">&gt;=</span> <span class="dv">75</span> <span class="op">&amp;&amp;</span> per <span class="op">&lt;=</span> <span class="dv">100</span><span class="op">){</span> <span class="co">//if per is greater than 75 and less than 100 it prints distinction</span></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>               printf<span class="op">(</span><span class="st">&quot;DISTINCTION</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>           <span class="op">}</span></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>           <span class="cf">else</span> <span class="op">{</span> </span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>               printf<span class="op">(</span><span class="st">&quot;FIRST CLASS</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span> <span class="co">// if per is less than 75 its prints first class</span></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>           <span class="op">}</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>       <span class="op">}</span></span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>       <span class="cf">else</span><span class="op">{</span> </span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>         printf<span class="op">(</span><span class="st">&quot;SECOND CLASS</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span> <span class="co">// if per is less then 60 prints second class</span></span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a>       <span class="op">}</span></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>   <span class="op">}</span></span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;FAIL</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span> <span class="co">// if per is less than 50 it prints fail</span></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="11" type="1">
+<li>A company gives festival discount on purchase of their products in
+the following percentages:</li>
+</ol>
+<ol type="i">
+<li><p>if purchase amount &lt; 1000 then 5% discount</p></li>
+<li><p>if purchase amount &gt;= 1000 but &lt;3000 then 10%
+discount</p></li>
+<li><p>if purchase amount &gt;= 3000 but &lt;5000 then 12%
+discount</p></li>
+<li><p>if purchase amount &gt; 5000 then 15% discount.</p></li>
+</ol>
+<p>Write a C program using nested if statement to compute the amount to
+be paid by the customer after discount.<br></p>
+<p>Ans:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> amount<span class="op">,</span> totalAmount<span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter amount: &quot;</span><span class="op">);</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>amount<span class="op">);</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">5000</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">3000</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">1000</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                totalAmount <span class="op">=</span> amount <span class="op">-</span> <span class="op">(</span>amount <span class="op">*</span> <span class="dv">5</span> <span class="op">/</span> <span class="fl">100.0</span><span class="op">);</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>                totalAmount <span class="op">=</span> amount <span class="op">-</span> <span class="op">(</span>amount <span class="op">*</span> <span class="dv">10</span> <span class="op">/</span> <span class="fl">100.0</span><span class="op">);</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>            totalAmount <span class="op">=</span> amount <span class="op">-</span> <span class="op">(</span>amount <span class="op">*</span> <span class="dv">12</span> <span class="op">/</span> <span class="fl">100.0</span><span class="op">);</span></span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>        totalAmount <span class="op">=</span> amount <span class="op">-</span> <span class="op">(</span>amount <span class="op">*</span> <span class="dv">15</span> <span class="op">/</span> <span class="fl">100.0</span><span class="op">);</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Final Price: %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> totalAmount<span class="op">);</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="12" type="1">
+<li>Write a C program to calculate the commission of a salesman
+considering three regions X, Y and Z depending on the sales amount as
+follows.</li>
+</ol>
+<ol type="i">
+<li><strong>For area code X</strong></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sales amount</th>
+<th style="text-align: left;">Commission</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;1000</td>
+<td style="text-align: left;">10%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;5000</td>
+<td style="text-align: left;">12%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;=5000</td>
+<td style="text-align: left;">15%</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="i">
+<li><strong>For area code Y</strong></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">&lt;1500</th>
+<th style="text-align: left;">10%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;7000</td>
+<td style="text-align: left;">12%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;= 7000</td>
+<td style="text-align: left;">15%</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="i">
+<li><strong>For area code Z</strong></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">&lt;1200</th>
+<th style="text-align: left;">10%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;6500</td>
+<td style="text-align: left;">12%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;=6500</td>
+<td style="text-align: left;">15%</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>Ans :</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">char</span> region <span class="op">;</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> amount<span class="op">,</span> commission <span class="op">;</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter Region (x,y,z) : &quot;</span><span class="op">);</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%c&quot;</span><span class="op">,&amp;</span>region<span class="op">);</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter Sale Amount : $ &quot;</span><span class="op">);</span></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,&amp;</span>amount<span class="op">);</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>region <span class="op">==</span> <span class="ch">&#39;x&#39;</span> <span class="op">||</span> region <span class="op">==</span> <span class="ch">&#39;X&#39;</span><span class="op">){</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">5000</span><span class="op">){</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">1000</span><span class="op">){</span></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">10</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">12</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>            commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">15</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span> </span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>region <span class="op">==</span> <span class="ch">&#39;y&#39;</span> <span class="op">||</span> region <span class="op">==</span> <span class="ch">&#39;Y&#39;</span><span class="op">){</span></span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">7000</span><span class="op">){</span></span>
+<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">1500</span><span class="op">){</span></span>
+<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">10</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">12</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a>            commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">15</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span> </span>
+<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>region <span class="op">==</span> <span class="ch">&#39;z&#39;</span> <span class="op">||</span> region <span class="op">==</span> <span class="ch">&#39;Z&#39;</span><span class="op">){</span></span>
+<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">6500</span><span class="op">){</span></span>
+<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">1200</span><span class="op">){</span></span>
+<span id="cb11-51"><a href="#cb11-51" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">10</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-52"><a href="#cb11-52" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a>                commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">12</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a>            commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">15</span><span class="op">/</span><span class="fl">100.0</span><span class="op">;</span> </span>
+<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>   printf<span class="op">(</span><span class="st">&quot;Calculated Commission : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>commission<span class="op">);</span></span>
+<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>   getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a>   <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<ol start="13" type="1">
+<li>The commission on a salesman’s total SALES is as follows:</li>
+</ol>
+<p>SALES &lt; Rs.100 -no commission Rs.100 &lt;= SALES &lt; Rs.1000
+-commission 10% of SALES. SALES &gt;= Rs.1,000 -commission Rs. 100+8% of
+SALES above Rs. 1000</p>
+<p>Write a program that reads SALES and prints the salesman’s
+commission.<br></p>
+<p>Ans :</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> amount<span class="op">,</span> commission <span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter sales amount : &quot;</span><span class="op">);</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,&amp;</span>amount<span class="op">);</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">1000</span><span class="op">){</span></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>amount <span class="op">&lt;</span> <span class="dv">100</span><span class="op">){</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>            commission <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>            commission <span class="op">=</span> amount <span class="op">*</span> <span class="dv">10</span> <span class="op">/</span> <span class="fl">100.0</span><span class="op">;</span></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span><span class="op">{</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>        commission <span class="op">=</span> <span class="dv">100</span> <span class="op">+</span> <span class="op">(</span>amount <span class="op">-</span> <span class="dv">1000</span><span class="op">)*</span><span class="fl">8.0</span><span class="op">/</span><span class="dv">100</span><span class="op">;</span> </span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Commission : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>commission<span class="op">);</span></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>    getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<h1 id="section-b-short-questions">SECTION B: SHORT QUESTIONS</h1>
+<ol type="1">
+<li>Give the general syntax of <strong>if-else</strong> statement in
+C.<br></li>
+</ol>
+<p>Ans:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>condition<span class="op">)</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        True block</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span> </span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        False Block</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+<ol start="2" type="1">
+<li>Give the general syntax of <strong>switch</strong> statement in
+C.<br></li>
+</ol>
+<p>Ans:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span> <span class="op">(</span> <span class="op">&lt;</span>expression<span class="op">&gt;)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label <span class="dv">1</span><span class="op">&gt;:</span> <span class="op">{</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block <span class="dv">1</span><span class="op">&gt;</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label <span class="dv">2</span><span class="op">&gt;:</span> <span class="op">{</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block <span class="dv">1</span><span class="op">&gt;</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label n<span class="op">&gt;:</span> <span class="op">{</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block n<span class="op">&gt;</span></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a><span class="cf">default</span><span class="op">:</span>        <span class="op">{</span></span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span><span class="cf">default</span> statement block<span class="op">&gt;</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<ol start="3" type="1">
+<li><p>A <strong>break</strong> statement is used to exit from a
+<ins>switch statement</ins></p></li>
+<li><p>What is the purpose of a <strong>switch</strong> statement?<br>
+Ans : To execute a block of statement depending on the value of a
+variable or expression.</p></li>
+<li><p>In what ways does a switch statement differ from an
+<strong>if</strong> statement?<br> Ans : It has case statement which is
+easier to use when their are multiple values.</p></li>
+<li><p>Using what other statement can you avoid multiple nested
+<strong>if</strong> conditions?<br> Ans : By using switch
+statement.</p></li>
+</ol>
