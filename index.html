@@ -21,6 +21,9 @@
         --light: #f8fafc;
         --gray: #94a3b8;
         --sidebar-width: 280px;
+        --warning: #fef08a;
+        --warning-border: #facc15;
+        --warning-text: #854d0e;
       }
 
       * {
@@ -284,6 +287,32 @@
         border-bottom: 2px solid #e2e8f0;
       }
 
+      /* Note/Warning Box */
+      .note-box {
+        background-color: var(--warning);
+        border-left: 4px solid var(--warning-border);
+        color: var(--warning-text);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .note-box i {
+        color: var(--warning-border);
+        margin-top: 0.2rem;
+      }
+
+      .note-content {
+        flex: 1;
+      }
+
+      .note-box strong {
+        font-weight: 600;
+      }
+
       @media (max-width: 768px) {
         .sidebar {
           transform: translateX(-100%);
@@ -316,7 +345,7 @@
         <a href="#c-programming"><i class="fas fa-c"></i> C Programming</a>
         <a href="#html"><i class="fab fa-html5"></i> HTML</a>
       </nav>
-      
+
       <div class="github-link">
         <a href="https://github.com/TanshenH/Class10CS" target="_blank">
           <i class="fab fa-github"></i> View on GitHub
@@ -334,15 +363,18 @@
       <div class="content-card" id="about">
         <h2><i class="fas fa-info-circle"></i> About This Project</h2>
         <p>
-          This comprehensive guide contains a collection of questions, answers,
-          and algorithms from the Class 10 Computer Science textbook prescribed
-          by the Manipur Board of Secondary Education.
+          This Project is a guide on Class 10 Computer Science textbook
+          prescribed by the Manipur Board of Secondary Education.
         </p>
-        <p>
-          Organized into clear sections for C Programming and HTML, each chapter
-          includes detailed explanations, code examples, and visual flowcharts
-          to help students master computer science concepts.
-        </p>
+
+        <div class="note-box">
+          <i class="fas fa-exclamation-circle"></i>
+          <div class="note-content">
+            <strong>NOTE:</strong> This may be used as a reference but it may be
+            outdated later in future and the content of the book may changed.
+          </div>
+        </div>
+
         <p>
           <a href="https://github.com/TanshenH/Class10CS" target="_blank">
             <i class="fab fa-github"></i> View this project on GitHub
