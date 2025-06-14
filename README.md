@@ -6,7 +6,7 @@
 ### 📱 _Website Version_
 
 <h3><i>Focused on C language and application-based questions</i></h3>  
-<h4><i>🌐 View it online: [https://TanshenH.github.io/Class10CS](https://TanshenH.github.io/Class10CS)</i></h4>
+<h4><i>🌐 View it online: https://TanshenH.github.io/Class10CS</i></h4>
 
 <br>
 
