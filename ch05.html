@@ -1,178 +1,474 @@
-<h1 id="ch05-loop-control-structures-in-c">CH05 : Loop Control
-Structures in C</h1>
-<p>
-Loops control structures are used to execute and repeat a block of
-statements depending on the value of a condition.
-</p>
-<h3 id="types-of-loops"><code>Types of Loops</code> :</h3>
-<ul>
-<li><p><code>For Loop</code></p></li>
-<li><p><code>While Loop</code></p></li>
-<li><p><code>Do - While Loop</code></p></li>
-</ul>
-<hr />
-<details>
-<summary>
-For Loop
-</summary>
-<h3 id="for-loop">For Loop</h3>
-<p>
-A <code>for</code> loop is used to execute and repeat a block of
-statements depending on a condition.
-</p>
-<p><strong>syntax</strong> :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(&lt;</span>initial value<span class="op">&gt;;</span> <span class="op">(&lt;</span>condition<span class="op">&gt;);</span> <span class="op">&lt;</span>increment<span class="op">&gt;)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-----------------</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>statement block<span class="op">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">-----------------</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>
-Where <code>initial value</code> is the assignment expression which
-initializes the value of a variable. <code>condition</code> is a
-relational or logical expression which will have the value
-<code>true</code> or <code>false</code>. <code>increment</code> is the
-increment value of the variable which will be added every time.
-</p>
-<h3 id="example">Example :</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> i<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;=</span><span class="dv">5</span> <span class="op">;</span> i<span class="op">++){</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;This will execute 5 times ! </span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<ul>
-<li>The statement inside the for loop will execute upto 5 times because
-the initialize value <code>i</code>, is set to <code>0</code> , so if
-<code>i &lt; 5</code> then will run for 4 times but there is
-<code>=</code> sign making it <code>i&lt;=5</code> meaning it will
-execute until <code>i</code> becomes <code>5</code>.</li>
-</ul>
-</details>
-<details>
-<summary>
-Nested For Loop
-</summary>
-<p>When a for loop is place inside another for loop it is called nested
-for loop.</p>
-<p><strong>Example</strong> :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="op">(</span><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span> <span class="op">;</span> i<span class="op">&lt;</span><span class="dv">10</span><span class="op">;</span> i<span class="op">++){</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span><span class="op">(</span><span class="dt">int</span> j <span class="op">=</span> <span class="dv">0</span> <span class="op">;</span> j<span class="op">&lt;</span><span class="dv">20</span> <span class="op">;</span> j<span class="op">++){</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        printf<span class="op">(</span><span class="st">&quot;Nested For Loop</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-</details>
-<details>
-<summary>
-While Loop
-</summary>
-<p>
-A while loop is used to execute and repeat a block of statements
-depending on a condtion.
-</p>
-<p><strong>syntax</strong>:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span><span class="op">(&lt;</span>condition<span class="op">&gt;)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-----------------</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>statement block<span class="op">&gt;</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">-----------------</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>
-Where <code>condition</code> is a relational or logical expression which
-will have the value <code>true</code> or <code>false</code>.
-</p>
-<h3 id="example-1">Example :</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(</span>i<span class="op">&lt;=</span><span class="dv">10</span><span class="op">){</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;%d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>i<span class="op">);</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  i<span class="op">++;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>
-In the following code the initial value of the i is 0 but when we use
-while statement the while condition will be true because the value of i,
-which is 0 is less than 10 so it will continue until the value of i
-reached 10 and giving the result of printing 0 to 10.
-</p>
-</details>
-<details>
-<summary>
-Do-While Loop
-</summary>
-<p>
-A do-while statement is also used to execute and repeat a block of
-statements depending on a condition.
-</p>
-<p><strong>syntax</strong>:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">-----------------</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>statement block<span class="op">&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">----------------</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="op">(&lt;</span>condition<span class="op">&gt;)</span></span></code></pre></div>
-<p>
-Where <code>conditon</code> is a relational or logical expression which
-will have the value <code>true</code> and <code>false</code>.
-</p>
-<p>When this statement is executed the computer will execute the
-statement block irrespective of the value of the condition. At the end
-of statement block, the condition is evaluated. If the value of the
-condition is <code>true</code> the statement block is executed again and
-is repeated until the condition is <code>false</code>.</p>
-</details>
-<details>
-<summary>
-Goto Statement
-</summary>
-<p>
-The <code>goto</code> statement is an unconditional transfer of control
-statement. It is used to transfer the control from one part to another.
-</p>
-<p><strong>syntax</strong>:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">goto</span> label <span class="op">;</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="op">------------</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">------------</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>label<span class="op">:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="op">------------</span></span></code></pre></div>
-<p>
-Where <code>label</code> is the statement label which is available
-anywhere in the program . Its the identifier which is used to mark the
-beginning of the another part of the program which will be transfer by
-the <code>goto</code> statement.
-</p>
-</details>
-<details>
-<summary>
-Break statement
-</summary>
-<p>
-The break statement is use to transfer the control to the end of a
-statement block in a loop.
-</p>
-<p><strong>syntax</strong>:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="cf">break</span><span class="op">;</span></span></code></pre></div>
-<p>
-Break is frequently used in the <code>case</code> block of
-<code>switch</code> statement.
-</p>
-<h3 id="example-2">Example :</h3>
-<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> ch <span class="op">=</span> <span class="ch">&#39;a&#39;</span><span class="op">;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span><span class="op">(</span>ch<span class="op">){</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="ch">&#39;a&#39;</span> <span class="op">:</span> printf<span class="op">(</span><span class="st">&quot;a is for apple&quot;</span><span class="op">);</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>             <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="ch">&#39;b&#39;</span> <span class="op">:</span> printf<span class="op">(</span><span class="st">&quot;b is for ball&quot;</span><span class="op">);</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>             <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="ch">&#39;c&#39;</span> <span class="op">:</span> printf<span class="op">(</span><span class="st">&quot;c is for cat&quot;</span><span class="op">);</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>             <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">case</span> <span class="ch">&#39;d&#39;</span> <span class="op">:</span> printf<span class="op">(</span><span class="st">&quot;d is for dog&quot;</span><span class="op">);</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>             <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">default</span> <span class="op">:</span> printf<span class="op">(</span><span class="st">&quot;Invalid input ! please enter a,b,c and d only.&quot;</span><span class="op">;</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>             <span class="cf">break</span><span class="op">;</span> </span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>
-In the given example <code>break</code> statement is used after every
-end of the case because if break statement is not present , then if any
-of the condition is match it will execute all the case meaning it will
-activate all case and cause error in the program.
-</p>
-</details>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 10 CS - Loop Control Structures in C</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=100&amp;id=40670&amp;format=png&amp;color=000000"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --sidebar-width: 280px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+      }
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover,
+      .sidebar-nav a.active {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 3rem;
+        max-width: 1200px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
+      code {
+        background-color: #e2e8f0;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-family: monospace;
+        color: #1e293b;
+      }
+
+      pre {
+        background-color: #1e293b;
+        color: #e2e8f0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: inherit;
+      }
+
+      details {
+        margin-bottom: 1.5rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        padding: 1rem;
+      }
+
+      summary {
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--primary);
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 1.5rem 0;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-book"></i> Class 10 CS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#types-of-loops"><i class="fas fa-redo"></i> Loop Types</a>
+        <a href="#for-loop"><i class="fas fa-code"></i> For Loop</a>
+        <a href="#while-loop"><i class="fas fa-sync"></i> While Loop</a>
+        <a href="#do-while"><i class="fas fa-history"></i> Do-While</a>
+        <a href="#goto"><i class="fas fa-arrow-right"></i> Goto</a>
+        <a href="#break"><i class="fas fa-stop"></i> Break</a>
+      </nav>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-redo"></i> CH05: Loop Control Structures in C</h1>
+      </div>
+
+      <div class="content-card">
+        <p>
+          Loops control structures are used to execute and repeat a block of
+          statements depending on the value of a condition.
+        </p>
+      </div>
+
+      <div class="content-card" id="types-of-loops">
+        <h2><i class="fas fa-list"></i> Types of Loops</h2>
+        <ul>
+          <li><code>For Loop</code></li>
+          <li><code>While Loop</code></li>
+          <li><code>Do - While Loop</code></li>
+        </ul>
+        <hr />
+      </div>
+
+      <div class="content-card" id="for-loop">
+        <details open>
+          <summary><i class="fas fa-code"></i> For Loop</summary>
+          <h3>For Loop</h3>
+          <p>
+            A <code>for</code> loop is used to execute and repeat a block of
+            statements depending on a condition.
+          </p>
+          <p><strong>syntax</strong> :</p>
+          <pre><code>for (&lt;initial value&gt;; (&lt;condition&gt;); &lt;increment&gt;)
+{
+  -----------------
+  &lt;statement block&gt;
+  -----------------
+}</code></pre>
+          <p>
+            Where <code>initial value</code> is the assignment expression which
+            initializes the value of a variable. <code>condition</code> is a
+            relational or logical expression which will have the value
+            <code>true</code> or <code>false</code>. <code>increment</code> is
+            the increment value of the variable which will be added every time.
+          </p>
+          <h3>Example :</h3>
+          <pre><code>int i;
+
+for (i = 0; i<=5 ; i++){
+  printf("This will execute 5 times ! \n");
+}</code></pre>
+          <ul>
+            <li>
+              The statement inside the for loop will execute upto 5 times
+              because the initialize value <code>i</code>, is set to
+              <code>0</code> , so if <code>i &lt; 5</code> then will run for 4
+              times but there is <code>=</code> sign making it
+              <code>i&lt;=5</code> meaning it will execute until
+              <code>i</code> becomes <code>5</code>.
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary><i class="fas fa-code-branch"></i> Nested For Loop</summary>
+          <p>
+            When a for loop is place inside another for loop it is called nested
+            for loop.
+          </p>
+          <p><strong>Example</strong> :</p>
+          <pre><code>for (int i = 0 ; i<10; i++){
+    for(int j = 0 ; j<20 ; j++){
+        printf("Nested For Loop\n");
+    }
+}</code></pre>
+        </details>
+      </div>
+
+      <div class="content-card" id="while-loop">
+        <details>
+          <summary><i class="fas fa-sync"></i> While Loop</summary>
+          <p>
+            A while loop is used to execute and repeat a block of statements
+            depending on a condtion.
+          </p>
+          <p><strong>syntax</strong>:</p>
+          <pre><code>while(&lt;condition&gt;)
+{
+  -----------------
+  &lt;statement block&gt;
+  -----------------
+}</code></pre>
+          <p>
+            Where <code>condition</code> is a relational or logical expression
+            which will have the value <code>true</code> or <code>false</code>.
+          </p>
+          <h3>Example :</h3>
+          <pre><code>int i = 0;
+
+while (i<=10){
+  printf("%d\n",i);
+  i++;
+}</code></pre>
+          <p>
+            In the following code the initial value of the i is 0 but when we
+            use while statement the while condition will be true because the
+            value of i, which is 0 is less than 10 so it will continue until the
+            value of i reached 10 and giving the result of printing 0 to 10.
+          </p>
+        </details>
+      </div>
+
+      <div class="content-card" id="do-while">
+        <details>
+          <summary><i class="fas fa-history"></i> Do-While Loop</summary>
+          <p>
+            A do-while statement is also used to execute and repeat a block of
+            statements depending on a condition.
+          </p>
+          <p><strong>syntax</strong>:</p>
+          <pre><code>do
+{
+  -----------------
+  &lt;statement block&gt;
+  ----------------
+}
+while (&lt;condition&gt;)</code></pre>
+          <p>
+            Where <code>conditon</code> is a relational or logical expression
+            which will have the value <code>true</code> and <code>false</code>.
+          </p>
+          <p>
+            When this statement is executed the computer will execute the
+            statement block irrespective of the value of the condition. At the
+            end of statement block, the condition is evaluated. If the value of
+            the condition is <code>true</code> the statement block is executed
+            again and is repeated until the condition is <code>false</code>.
+          </p>
+        </details>
+      </div>
+
+      <div class="content-card" id="goto">
+        <details>
+          <summary><i class="fas fa-arrow-right"></i> Goto Statement</summary>
+          <p>
+            The <code>goto</code> statement is an unconditional transfer of
+            control statement. It is used to transfer the control from one part
+            to another.
+          </p>
+          <p><strong>syntax</strong>:</p>
+          <pre><code>goto label ;
+------------
+------------
+label:
+------------</code></pre>
+          <p>
+            Where <code>label</code> is the statement label which is available
+            anywhere in the program . Its the identifier which is used to mark
+            the beginning of the another part of the program which will be
+            transfer by the <code>goto</code> statement.
+          </p>
+        </details>
+      </div>
+
+      <div class="content-card" id="break">
+        <details>
+          <summary><i class="fas fa-stop"></i> Break statement</summary>
+          <p>
+            The break statement is use to transfer the control to the end of a
+            statement block in a loop.
+          </p>
+          <p><strong>syntax</strong>:</p>
+          <pre><code>break;</code></pre>
+          <p>
+            Break is frequently used in the <code>case</code> block of
+            <code>switch</code> statement.
+          </p>
+          <h3>Example :</h3>
+          <pre><code>char ch = 'a';
+
+switch(ch){
+  case 'a' : printf("a is for apple");
+             break;
+  case 'b' : printf("b is for ball");
+             break;
+  case 'c' : printf("c is for cat");
+             break;
+  case 'd' : printf("d is for dog");
+             break;
+  default : printf("Invalid input ! please enter a,b,c and d only.";
+             break; 
+}</code></pre>
+          <p>
+            In the given example <code>break</code> statement is used after
+            every end of the case because if break statement is not present ,
+            then if any of the condition is match it will execute all the case
+            meaning it will activate all case and cause error in the program.
+          </p>
+        </details>
+      </div>
+    </main>
+
+    <script>
+      // Mobile menu toggle functionality would go here
+      // You can add it later if needed for mobile responsiveness
+
+      // Simple active link highlighting
+      document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".sidebar-nav a")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

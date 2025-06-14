@@ -1,381 +1,1162 @@
-<h1 id="ch03-inputoutput-functions-and-statements">CH03 : Input/Output
-Functions and statements</h1>
-<p><code>stdio.h stands for standard input-output header , we will be learning to use the functions present in this header file.</code></p>
-<hr />
-<details>
-<summary>
-escape sequences
-</summary>
-<h1 id="section"></h1>
-<p><code>Escape sequence are control characters used to move the cursor and print characters such as ?,",\ and so on.</code></p>
-<p><br></p>
-<p>Some escape sequence are :</p>
-<table>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 44%" />
-<col style="width: 44%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Escape Sequence</th>
-<th>Description</th>
-<th>Function</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>\n</code></td>
-<td>Newline (line feed)</td>
-<td>Moves the cursor to the beginning of the next line.</td>
-</tr>
-<tr class="even">
-<td><code>\t</code></td>
-<td>Horizontal tab</td>
-<td>Moves the cursor to the next tab stop.</td>
-</tr>
-<tr class="odd">
-<td><code>\b</code></td>
-<td>Backspace</td>
-<td>Moves the cursor back one position.</td>
-</tr>
-<tr class="even">
-<td><code>\r</code></td>
-<td>Carriage return</td>
-<td>Moves the cursor to the beginning of the current line.</td>
-</tr>
-<tr class="odd">
-<td><code>\f</code></td>
-<td>Form feed (page break)</td>
-<td>Moves the cursor to the beginning of the next page.</td>
-</tr>
-<tr class="even">
-<td><code>\0</code></td>
-<td>Null Character</td>
-<td>Represents the null character, which is the character with the ASCII
-value of 0. It is used to mark the end of a string and can be used for
-various other purposes, such as string manipulation and memory
-management.</td>
-</tr>
-<tr class="odd">
-<td><code>\v</code></td>
-<td>Vertical tab</td>
-<td>Moves the cursor down to the next vertical tab stop.</td>
-</tr>
-<tr class="even">
-<td><code>\a</code></td>
-<td>Alert (bell)</td>
-<td>Produces an audible alert (usually a beep).</td>
-</tr>
-<tr class="odd">
-<td><code>\\</code></td>
-<td>Backslash</td>
-<td>Prints a backslash character.</td>
-</tr>
-<tr class="even">
-<td><code>\?</code></td>
-<td>Question mark</td>
-<td>Prints a question mark.</td>
-</tr>
-<tr class="odd">
-<td><code>\'</code></td>
-<td>Single quote</td>
-<td>Prints a single quote.</td>
-</tr>
-<tr class="even">
-<td><code>\"</code></td>
-<td>Double quote</td>
-<td>Prints a double quote.</td>
-</tr>
-<tr class="odd">
-<td><code>\ooo</code></td>
-<td>Octal escape sequence (where <code>ooo</code> is an octal
-number)</td>
-<td>Prints the character represented by the octal number.</td>
-</tr>
-<tr class="even">
-<td><code>\xhh</code></td>
-<td>Hexadecimal escape sequence (where <code>hh</code> is a hex
-number)</td>
-<td>Prints the character represented by the hexadecimal number.</td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary>
-format specifiers
-</summary>
-<hr />
-<p><code>Format specifier are used to specify the format of a variable or other while using input or output functions</code>
-<br></p>
-<p>Some format specifier are : <br></p>
-<table>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 44%" />
-<col style="width: 44%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Format Specifier</th>
-<th>Description</th>
-<th>Function</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>%d</code> or <code>%i</code></td>
-<td>Signed integer</td>
-<td>Prints or reads a signed integer value.</td>
-</tr>
-<tr class="even">
-<td><code>%u</code></td>
-<td>Unsigned integer</td>
-<td>Prints or reads an unsigned integer value.</td>
-</tr>
-<tr class="odd">
-<td><code>%f</code></td>
-<td>Floating-point number</td>
-<td>Prints or reads a floating-point number.</td>
-</tr>
-<tr class="even">
-<td><code>%e</code> or <code>%E</code></td>
-<td>Floating-point number in scientific notation</td>
-<td>Prints or reads a floating-point number in scientific notation.</td>
-</tr>
-<tr class="odd">
-<td><code>%g</code> or <code>%G</code></td>
-<td>Floating-point number in the more compact of <code>%f</code> or
-<code>%e</code></td>
-<td>Prints or reads a floating-point number in the more compact of
-<code>%f</code> or <code>%e</code>.</td>
-</tr>
-<tr class="even">
-<td><code>%c</code></td>
-<td>Single character</td>
-<td>Prints or reads a single character.</td>
-</tr>
-<tr class="odd">
-<td><code>%s</code></td>
-<td>String</td>
-<td>Prints or reads a string.</td>
-</tr>
-<tr class="even">
-<td><code>%p</code></td>
-<td>Pointer</td>
-<td>Prints the address of a pointer.</td>
-</tr>
-<tr class="odd">
-<td><code>%x</code> or <code>%X</code></td>
-<td>Hexadecimal integer</td>
-<td>Prints or reads a hexadecimal integer value.</td>
-</tr>
-<tr class="even">
-<td><code>%o</code></td>
-<td>Octal integer</td>
-<td>Prints or reads an octal integer value.</td>
-</tr>
-<tr class="odd">
-<td><code>%%</code></td>
-<td>Literal percent sign</td>
-<td>Prints a literal percent sign.</td>
-</tr>
-</tbody>
-</table>
-</details>
-<hr />
-<h2 id="printf-function">printf() function</h2>
-<p>The <code>printf()</code> function is used in C programming to
-<strong>print or display information on the screen</strong>
-(monitor).</p>
-<h3 id="what-it-does">What it Does:</h3>
-<p>It shows the values of variables or text messages on the screen.</p>
-<h3 id="syntax">Syntax:</h3>
-<p><code>printf("format string", variable1, variable2, ..., variableN);</code></p>
-<p>“format string”: Tells the computer how to display the values (like
-%d for integer, %f for float, etc.).</p>
-<p>variable1, variable2, etc.: These are the variables whose values you
-want to display.</p>
-<p>Examples:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> s <span class="op">=</span> <span class="fl">2.8</span><span class="op">;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> k <span class="op">=</span> <span class="dv">5</span><span class="op">,</span> kfact <span class="op">=</span> <span class="dv">120</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> s<span class="op">);</span>                          <span class="co">// Output: 2.800000</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">sum = %6.2f&quot;</span><span class="op">,</span> s<span class="op">);</span>               <span class="co">// Output: sum =  2.80</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>printf<span class="op">(</span><span class="st">&quot;</span><span class="sc">\n</span><span class="st">%d factorial is %d&quot;</span><span class="op">,</span> k<span class="op">,</span> kfact<span class="op">);</span> <span class="co">// Output: 5 factorial is 120</span></span></code></pre></div>
-<h2 id="scanf-function">scanf() function</h2>
-<p>The <code>scanf()</code> function is used to <strong>get input from
-the user through the keyboard</strong>.</p>
-<h3 id="what-it-does-1">What it Does:</h3>
-<p>It allows the user to <strong>enter values</strong>, which are stored
-into variables.</p>
-<h3 id="syntax-1">Syntax:</h3>
-<p><code>scanf("format string", &amp;variable1, &amp;variable2, ..., &amp;variableN);</code></p>
-<p>“format string”: Tells the computer what type of data to expect (%d
-for int, %f for float, etc.).</p>
-<p>&amp;variable: The &amp; symbol means “address of” the variable. It
-tells the computer where to store the value entered by the user.</p>
-<p>Examples:</p>
-<pre><code>int a, b;
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 03: Input/Output Functions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sidebar-header i {
+        color: var(--primary);
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a.active {
+        background-color: #eff6ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      .sidebar-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: var(--primary-dark);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul,
+      ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #334155;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: #c026d3;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      blockquote {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-style: italic;
+        color: #334155;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.25rem;
+        margin-top: 0.1rem;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        color: var(--primary-dark);
+      }
+
+      .alert-warning {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        color: #92400e;
+      }
+
+      .alert-success {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        color: #065f46;
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .algorithm-card h4 i {
+        color: var(--primary);
+      }
+
+      .algorithm-steps {
+        margin-left: 1.5rem;
+      }
+
+      .algorithm-steps li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .algorithm-steps li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+      }
+
+      /* Tables */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      th {
+        background-color: #f1f5f9;
+        font-weight: 600;
+        color: var(--primary-dark);
+      }
+
+      tr:hover {
+        background-color: #f8fafc;
+      }
+
+      /* Details/summary */
+      details {
+        margin: 1.5rem 0;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      details[open] {
+        border-color: var(--primary);
+      }
+
+      summary {
+        padding: 1rem;
+        background-color: #f1f5f9;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--primary-dark);
+      }
+
+      details[open] summary {
+        background-color: #eff6ff;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      details > div {
+        padding: 1rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 1.5rem 0;
+      }
+
+      /* Toggle sidebar on mobile */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar,
+      body.dark-mode .content-card,
+      body.dark-mode .algorithm-card {
+        background-color: #1e293b;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode .sidebar-nav a.active {
+        background-color: #334155;
+      }
+
+      body.dark-mode code:not(pre code) {
+        background-color: #334155;
+        color: #f0abfc;
+      }
+
+      body.dark-mode pre {
+        background-color: #0f172a;
+      }
+
+      body.dark-mode h1,
+      body.dark-mode h2,
+      body.dark-mode h3,
+      body.dark-mode h4 {
+        color: #93c5fd;
+      }
+
+      body.dark-mode p,
+      body.dark-mode li {
+        color: #cbd5e1;
+      }
+
+      body.dark-mode .alert-info {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .alert-warning {
+        background-color: #78350f;
+        color: #fcd34d;
+      }
+
+      body.dark-mode .alert-success {
+        background-color: #064e3b;
+        color: #a7f3d0;
+      }
+
+      body.dark-mode blockquote {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode table th {
+        background-color: #1e293b;
+        color: #93c5fd;
+      }
+
+      body.dark-mode table tr:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode details summary {
+        background-color: #1e293b;
+        color: #93c5fd;
+      }
+
+      body.dark-mode details[open] summary {
+        background-color: #1e3a8a;
+      }
+
+      body.dark-mode hr {
+        border-color: #334155;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-card {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted var(--gray);
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--dark);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.875rem;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-terminal"></i>Input/Output Functions</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#ch03-inputoutput-functions-and-statements" class="active"
+          ><i class="fas fa-book-open"></i> Introduction</a
+        >
+        <a href="#escape-sequences"
+          ><i class="fas fa-code"></i> Escape Sequences</a
+        >
+        <a href="#format-specifiers"
+          ><i class="fas fa-percent"></i> Format Specifiers</a
+        >
+        <a href="#printf-function"
+          ><i class="fas fa-print"></i> printf() Function</a
+        >
+        <a href="#scanf-function"
+          ><i class="fas fa-keyboard"></i> scanf() Function</a
+        >
+        <a href="#more-functions"
+          ><i class="fas fa-functions"></i> More I/O Functions</a
+        >
+      </nav>
+      <div class="sidebar-footer">
+        <p>Chapter 03</p>
+        <style>
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <p>
+          <a href="https://github.com/TanshenH" target="_blank"
+            >© 2025 TanshenH</a
+          >
+        </p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1>
+          <i class="fas fa-terminal"></i> CH03: Input/Output Functions and
+          statements
+        </h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Note:</strong> <code>stdio.h</code> stands for standard
+            input-output header. We will be learning to use the functions
+            present in this header file.
+          </div>
+        </div>
+
+        <hr />
+
+        <details id="escape-sequences">
+          <summary><i class="fas fa-code"></i> Escape Sequences</summary>
+          <div>
+            <p>
+              <code
+                >Escape sequences are control characters used to move the cursor
+                and print characters such as ?, ", \ and so on.</code
+              >
+            </p>
+            <p><br /></p>
+            <p>Some escape sequences are:</p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Escape Sequence</th>
+                  <th>Description</th>
+                  <th>Function</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>\n</code></td>
+                  <td>Newline (line feed)</td>
+                  <td>Moves the cursor to the beginning of the next line.</td>
+                </tr>
+                <tr>
+                  <td><code>\t</code></td>
+                  <td>Horizontal tab</td>
+                  <td>Moves the cursor to the next tab stop.</td>
+                </tr>
+                <tr>
+                  <td><code>\b</code></td>
+                  <td>Backspace</td>
+                  <td>Moves the cursor back one position.</td>
+                </tr>
+                <tr>
+                  <td><code>\r</code></td>
+                  <td>Carriage return</td>
+                  <td>
+                    Moves the cursor to the beginning of the current line.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>\f</code></td>
+                  <td>Form feed (page break)</td>
+                  <td>Moves the cursor to the beginning of the next page.</td>
+                </tr>
+                <tr>
+                  <td><code>\0</code></td>
+                  <td>Null Character</td>
+                  <td>
+                    Represents the null character, which is the character with
+                    the ASCII value of 0. It is used to mark the end of a
+                    string.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>\v</code></td>
+                  <td>Vertical tab</td>
+                  <td>Moves the cursor down to the next vertical tab stop.</td>
+                </tr>
+                <tr>
+                  <td><code>\a</code></td>
+                  <td>Alert (bell)</td>
+                  <td>Produces an audible alert (usually a beep).</td>
+                </tr>
+                <tr>
+                  <td><code>\\</code></td>
+                  <td>Backslash</td>
+                  <td>Prints a backslash character.</td>
+                </tr>
+                <tr>
+                  <td><code>\?</code></td>
+                  <td>Question mark</td>
+                  <td>Prints a question mark.</td>
+                </tr>
+                <tr>
+                  <td><code>\'</code></td>
+                  <td>Single quote</td>
+                  <td>Prints a single quote.</td>
+                </tr>
+                <tr>
+                  <td><code>\"</code></td>
+                  <td>Double quote</td>
+                  <td>Prints a double quote.</td>
+                </tr>
+                <tr>
+                  <td><code>\ooo</code></td>
+                  <td>Octal escape sequence</td>
+                  <td>Prints the character represented by the octal number.</td>
+                </tr>
+                <tr>
+                  <td><code>\xhh</code></td>
+                  <td>Hexadecimal escape sequence</td>
+                  <td>
+                    Prints the character represented by the hexadecimal number.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details id="format-specifiers">
+          <summary><i class="fas fa-percent"></i> Format Specifiers</summary>
+          <div>
+            <hr />
+            <p>
+              <code
+                >Format specifiers are used to specify the format of a variable
+                or other while using input or output functions</code
+              >
+            </p>
+            <p><br /></p>
+            <p>Some format specifiers are: <br /></p>
+            <table>
+              <thead>
+                <tr>
+                  <th>Format Specifier</th>
+                  <th>Description</th>
+                  <th>Function</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>%d</code> or <code>%i</code></td>
+                  <td>Signed integer</td>
+                  <td>Prints or reads a signed integer value.</td>
+                </tr>
+                <tr>
+                  <td><code>%u</code></td>
+                  <td>Unsigned integer</td>
+                  <td>Prints or reads an unsigned integer value.</td>
+                </tr>
+                <tr>
+                  <td><code>%f</code></td>
+                  <td>Floating-point number</td>
+                  <td>Prints or reads a floating-point number.</td>
+                </tr>
+                <tr>
+                  <td><code>%e</code> or <code>%E</code></td>
+                  <td>Scientific notation</td>
+                  <td>
+                    Prints or reads a floating-point number in scientific
+                    notation.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>%g</code> or <code>%G</code></td>
+                  <td>Compact float</td>
+                  <td>
+                    Prints or reads a floating-point number in the more compact
+                    of %f or %e.
+                  </td>
+                </tr>
+                <tr>
+                  <td><code>%c</code></td>
+                  <td>Single character</td>
+                  <td>Prints or reads a single character.</td>
+                </tr>
+                <tr>
+                  <td><code>%s</code></td>
+                  <td>String</td>
+                  <td>Prints or reads a string.</td>
+                </tr>
+                <tr>
+                  <td><code>%p</code></td>
+                  <td>Pointer</td>
+                  <td>Prints the address of a pointer.</td>
+                </tr>
+                <tr>
+                  <td><code>%x</code> or <code>%X</code></td>
+                  <td>Hexadecimal integer</td>
+                  <td>Prints or reads a hexadecimal integer value.</td>
+                </tr>
+                <tr>
+                  <td><code>%o</code></td>
+                  <td>Octal integer</td>
+                  <td>Prints or reads an octal integer value.</td>
+                </tr>
+                <tr>
+                  <td><code>%%</code></td>
+                  <td>Percent sign</td>
+                  <td>Prints a literal percent sign.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <hr />
+
+        <h2 id="printf-function">printf() function</h2>
+        <p>
+          The <code>printf()</code> function is used in C programming to
+          <strong>print or display information on the screen</strong> (monitor).
+        </p>
+
+        <h3 id="what-it-does">What it Does:</h3>
+        <p>It shows the values of variables or text messages on the screen.</p>
+
+        <h3 id="syntax">Syntax:</h3>
+        <p>
+          <code
+            >printf("format string", variable1, variable2, ...,
+            variableN);</code
+          >
+        </p>
+        <p>
+          "format string": Tells the computer how to display the values (like %d
+          for integer, %f for float, etc.).
+        </p>
+        <p>
+          variable1, variable2, etc.: These are the variables whose values you
+          want to display.
+        </p>
+
+        <h3>Examples:</h3>
+        <pre><code>float s = 2.8;
+int k = 5, kfact = 120;
+
+printf("%f", s);                          // Output: 2.800000
+printf("\nsum = %6.2f", s);               // Output: sum =  2.80
+printf("\n%d factorial is %d", k, kfact); // Output: 5 factorial is 120</code></pre>
+
+        <h2 id="scanf-function">scanf() function</h2>
+        <p>
+          The <code>scanf()</code> function is used to
+          <strong>get input from the user through the keyboard</strong>.
+        </p>
+
+        <h3 id="what-it-does-1">What it Does:</h3>
+        <p>
+          It allows the user to <strong>enter values</strong>, which are stored
+          into variables.
+        </p>
+
+        <h3 id="syntax-1">Syntax:</h3>
+        <p>
+          <code
+            >scanf("format string", &amp;variable1, &amp;variable2, ...,
+            &amp;variableN);</code
+          >
+        </p>
+        <p>
+          "format string": Tells the computer what type of data to expect (%d
+          for int, %f for float, etc.).
+        </p>
+        <p>
+          &amp;variable: The &amp; symbol means "address of" the variable. It
+          tells the computer where to store the value entered by the user.
+        </p>
+
+        <h3>Examples:</h3>
+        <pre><code>int a, b;
 float x;
 char gender;
 char sname[20];
 
+scanf("%d %d", &amp;a, &amp;b);    // User enters two integers
+scanf("%f", &amp;x);           // User enters a float number
+scanf("%c", &amp;gender);      // User enters a character
+scanf("%s", sname);        // User enters a string (one word)</code></pre>
 
-scanf(&quot;%d %d&quot;, &amp;a, &amp;b);    // User enters two integers
-scanf(&quot;%f&quot;, &amp;x);           // User enters a float number
-scanf(&quot;%c&quot;, &amp;gender);      // User enters a character
-scanf(&quot;%s&quot;, sname);        // User enters a string (one word)</code></pre>
-<h2 id="more-functions">MORE FUNCTIONS :</h2>
-<p>This guide covers common I/O functions in C from <code>stdio.h</code>
-and <code>conio.h</code>, with syntax and explanations.</p>
-<hr />
-<h3 id="standard-io-functions-stdio.h">Standard I/O Functions
-(<code>&lt;stdio.h&gt;</code>)</h3>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 50%" />
-<col style="width: 24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>Syntax</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>getchar()</code></td>
-<td><code>char c = getchar();</code></td>
-<td>Can take input of a character by reading <strong>one
-character</strong> from the keyboard when the user presses Enter. The
-character is stored in the variable (e.g., <code>c</code>).</td>
-</tr>
-<tr class="even">
-<td><code>putchar()</code></td>
-<td><code>putchar(c);</code></td>
-<td>Prints a <strong>single character</strong> to the screen. The
-character <code>c</code> must be provided.</td>
-</tr>
-<tr class="odd">
-<td><code>gets()</code></td>
-<td><code>gets(buffer);</code></td>
-<td>Can take input of the user by reading a <strong>whole line of
-text</strong> (until Enter) from the keyboard and stores it in the
-variable <code>buffer</code>.</td>
-</tr>
-<tr class="even">
-<td><code>puts()</code></td>
-<td><code>puts(string);</code></td>
-<td>Prints the <strong>string</strong> to the screen and automatically
-moves the cursor to the next line.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="console-io-functions-conio.h---non-standard">Console I/O
-Functions (<code>&lt;conio.h&gt;</code> - Non-standard)</h3>
-<table>
-<colgroup>
-<col style="width: 25%" />
-<col style="width: 50%" />
-<col style="width: 24%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>Syntax</th>
-<th>Explanation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>getch()</code></td>
-<td><code>char c = getch();</code></td>
-<td>Reads a <strong>single character</strong> from the keyboard
-<strong>without waiting for Enter</strong>. The character is <strong>not
-shown on the screen</strong> as it’s typed (useful for passwords).</td>
-</tr>
-<tr class="even">
-<td><code>getche()</code></td>
-<td><code>char c = getche();</code></td>
-<td>Same as <code>getch()</code>, <strong>but echoes/print the
-character</strong> on the screen as the user types it.</td>
-</tr>
-<tr class="odd">
-<td><code>putch()</code></td>
-<td><code>putch(c);</code></td>
-<td>Prints a <strong>single character</strong> to the screen, just like
-<code>putchar()</code>, but it’s from <code>&lt;conio.h&gt;</code>.</td>
-</tr>
-<tr class="even">
-<td><code>clrscr()</code></td>
-<td><code>clrscr();</code></td>
-<td>Clears the console screen. Only works in <strong>old
-compilers</strong> like Turbo C/C++, not supported in modern IDEs like
-Code::Blocks or GCC.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h3 id="summary-table">Summary Table</h3>
-<table>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 64%" />
-<col style="width: 19%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Function</th>
-<th>What It Does</th>
-<th>Header File</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>getchar()</code></td>
-<td>Reads one char from user</td>
-<td><code>stdio.h</code></td>
-</tr>
-<tr class="even">
-<td><code>putchar()</code></td>
-<td>Outputs one char to screen</td>
-<td><code>stdio.h</code></td>
-</tr>
-<tr class="odd">
-<td><code>gets()</code></td>
-<td>Reads a line of text</td>
-<td><code>stdio.h</code></td>
-</tr>
-<tr class="even">
-<td><code>puts()</code></td>
-<td>Prints a string with newline</td>
-<td><code>stdio.h</code></td>
-</tr>
-<tr class="odd">
-<td><code>getch()</code></td>
-<td>Reads char instantly without showing it</td>
-<td><code>conio.h</code></td>
-</tr>
-<tr class="even">
-<td><code>getche()</code></td>
-<td>Reads char instantly and shows it on screen</td>
-<td><code>conio.h</code></td>
-</tr>
-<tr class="odd">
-<td><code>putch()</code></td>
-<td>Outputs one char (same as <code>putchar()</code>)</td>
-<td><code>conio.h</code></td>
-</tr>
-<tr class="even">
-<td><code>clrscr()</code></td>
-<td>Clears screen (console window)</td>
-<td><code>conio.h</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
+        <h2 id="more-functions">MORE FUNCTIONS</h2>
+        <p>
+          This guide covers common I/O functions in C from
+          <code>stdio.h</code> and <code>conio.h</code>, with syntax and
+          explanations.
+        </p>
+        <hr />
+
+        <h3 id="standard-io-functions-stdio.h">
+          Standard I/O Functions (<code>&lt;stdio.h&gt;</code>)
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Syntax</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>getchar()</code></td>
+              <td><code>char c = getchar();</code></td>
+              <td>
+                Can take input of a character by reading
+                <strong>one character</strong> from the keyboard when the user
+                presses Enter. The character is stored in the variable (e.g.,
+                <code>c</code>).
+              </td>
+            </tr>
+            <tr>
+              <td><code>putchar()</code></td>
+              <td><code>putchar(c);</code></td>
+              <td>
+                Prints a <strong>single character</strong> to the screen. The
+                character <code>c</code> must be provided.
+              </td>
+            </tr>
+            <tr>
+              <td><code>gets()</code></td>
+              <td><code>gets(buffer);</code></td>
+              <td>
+                Can take input of the user by reading a
+                <strong>whole line of text</strong> (until Enter) from the
+                keyboard and stores it in the variable <code>buffer</code>.
+              </td>
+            </tr>
+            <tr>
+              <td><code>puts()</code></td>
+              <td><code>puts(string);</code></td>
+              <td>
+                Prints the <strong>string</strong> to the screen and
+                automatically moves the cursor to the next line.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <h3 id="console-io-functions-conio.h---non-standard">
+          Console I/O Functions (<code>&lt;conio.h&gt;</code> - Non-standard)
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Syntax</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>getch()</code></td>
+              <td><code>char c = getch();</code></td>
+              <td>
+                Reads a <strong>single character</strong> from the keyboard
+                <strong>without waiting for Enter</strong>. The character is
+                <strong>not shown on the screen</strong> as it's typed (useful
+                for passwords).
+              </td>
+            </tr>
+            <tr>
+              <td><code>getche()</code></td>
+              <td><code>char c = getche();</code></td>
+              <td>
+                Same as <code>getch()</code>,
+                <strong>but echoes/print the character</strong> on the screen as
+                the user types it.
+              </td>
+            </tr>
+            <tr>
+              <td><code>putch()</code></td>
+              <td><code>putch(c);</code></td>
+              <td>
+                Prints a <strong>single character</strong> to the screen, just
+                like <code>putchar()</code>, but it's from
+                <code>&lt;conio.h&gt;</code>.
+              </td>
+            </tr>
+            <tr>
+              <td><code>clrscr()</code></td>
+              <td><code>clrscr();</code></td>
+              <td>
+                Clears the console screen. Only works in
+                <strong>old compilers</strong> like Turbo C/C++, not supported
+                in modern IDEs like Code::Blocks or GCC.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr />
+
+        <h3 id="summary-table">Summary Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>What It Does</th>
+              <th>Header File</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>getchar()</code></td>
+              <td>Reads one char from user</td>
+              <td><code>stdio.h</code></td>
+            </tr>
+            <tr>
+              <td><code>putchar()</code></td>
+              <td>Outputs one char to screen</td>
+              <td><code>stdio.h</code></td>
+            </tr>
+            <tr>
+              <td><code>gets()</code></td>
+              <td>Reads a line of text</td>
+              <td><code>stdio.h</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      // Toggle sidebar on mobile
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Print functionality
+      const printBtn = document.getElementById("printBtn");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+
+      // Download functionality
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "io-functions-guide.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, details, h2, h3",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

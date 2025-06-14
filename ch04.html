@@ -1,121 +1,835 @@
-<h1 id="ch04-control-statement-in-c">CH04 : Control Statement in C</h1>
-<h3
-id="two-types-of-control-statement"><code>Two types of Control Statement</code>
-:</h3>
-<ul>
-<li>if-else statement</li>
-<li>switch statement</li>
-</ul>
-<p><br></p>
-<details>
-<summary>
-If-else statement
-</summary>
-<h3 id="if-else"><code>If-else</code> :</h3>
-<p>
-If-else statement is used to execute a statement block or a single
-statement depending on the value of a condition.
-</p>
-<p><strong>syntax</strong> :</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>condition<span class="op">)</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">------------</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>true block<span class="op">&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">------------</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">-------------</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>false block<span class="op">&gt;</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="op">-------------</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Where <code>conditon</code> is a logical expression which will have
-the value of true or false.</p>
-</details>
-<details>
-<summary>
-Nested if-else statement
-</summary>
-<h3 id="nested-if-else-statement">nested if-else statement</h3>
-<p>
-<p>An if statement may have another if statement in the
-<code>true block</code> and <code>false block</code>.This compound
-statement is called nested if statement.</p>
-</p>
-<p><strong>syntax</strong> :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>condition <span class="dv">1</span><span class="op">)</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>condition <span class="dv">2</span><span class="op">)</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="op">--------------</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>true block <span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="op">--------------</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>   <span class="cf">else</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">-------------</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="op">&lt;</span>false block <span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">-------------</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> <span class="op">(</span>condition <span class="dv">3</span><span class="op">)</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="op">--------------</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      <span class="op">&lt;</span>true block <span class="dv">2</span><span class="op">&gt;</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="op">--------------</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>      <span class="op">---------------</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>      <span class="op">&lt;</span>false block <span class="dv">2</span><span class="op">&gt;</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>      <span class="op">---------------</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-</details>
-<details>
-<summary>
-Switch Statement
-</summary>
-<h3 id="switch-statement">switch statement</h3>
-<p>
-switch statement is used to create a block of statements depending on
-the value of a variable or an expression.
-</p>
-<p><strong>syntax</strong> :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span> <span class="op">(</span> <span class="op">&lt;</span>expression<span class="op">&gt;)</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label <span class="dv">1</span><span class="op">&gt;:</span> <span class="op">{</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block <span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label <span class="dv">2</span><span class="op">&gt;:</span> <span class="op">{</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block <span class="dv">1</span><span class="op">&gt;</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">case</span> <span class="op">&lt;</span>label n<span class="op">&gt;:</span> <span class="op">{</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span>statement block n<span class="op">&gt;</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="cf">default</span><span class="op">:</span>        <span class="op">{</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>                  <span class="op">&lt;</span><span class="cf">default</span> statement block<span class="op">&gt;</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>                  <span class="op">-------------</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>                  <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>where <code>&lt;expression&gt;</code> refers to any <code>int</code>
-or <code>char</code> expression or variable. <br>
-<code>&lt;label 1&gt;</code>,
-<code>&lt;label 2&gt;</code>…<code>&lt;label n&gt;</code> are values
-which will match with the value of the expression. <br>
-<strong>break</strong> is a statement which will transfer the control to
-the end of <strong>switch</strong> statement.</p>
-</details>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 04: Control Statements in C</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sidebar-header i {
+        color: var(--primary);
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a.active {
+        background-color: #eff6ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      .sidebar-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: var(--primary-dark);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul,
+      ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #334155;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: #c026d3;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      blockquote {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-style: italic;
+        color: #334155;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.25rem;
+        margin-top: 0.1rem;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        color: var(--primary-dark);
+      }
+
+      .alert-warning {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        color: #92400e;
+      }
+
+      .alert-success {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        color: #065f46;
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .algorithm-card h4 i {
+        color: var(--primary);
+      }
+
+      /* Details/summary */
+      details {
+        margin: 1.5rem 0;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      details[open] {
+        border-color: var(--primary);
+      }
+
+      summary {
+        padding: 1rem;
+        background-color: #f1f5f9;
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--primary-dark);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      details[open] summary {
+        background-color: #eff6ff;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      details > div {
+        padding: 1rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e2e8f0;
+        margin: 1.5rem 0;
+      }
+
+      /* Toggle sidebar on mobile */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar,
+      body.dark-mode .content-card,
+      body.dark-mode .algorithm-card {
+        background-color: #1e293b;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode .sidebar-nav a.active {
+        background-color: #334155;
+      }
+
+      body.dark-mode code:not(pre code) {
+        background-color: #334155;
+        color: #f0abfc;
+      }
+
+      body.dark-mode pre {
+        background-color: #0f172a;
+      }
+
+      body.dark-mode h1,
+      body.dark-mode h2,
+      body.dark-mode h3,
+      body.dark-mode h4 {
+        color: #93c5fd;
+      }
+
+      body.dark-mode p,
+      body.dark-mode li {
+        color: #cbd5e1;
+      }
+
+      body.dark-mode .alert-info {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .alert-warning {
+        background-color: #78350f;
+        color: #fcd34d;
+      }
+
+      body.dark-mode .alert-success {
+        background-color: #064e3b;
+        color: #a7f3d0;
+      }
+
+      body.dark-mode blockquote {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode details summary {
+        background-color: #1e293b;
+        color: #93c5fd;
+      }
+
+      body.dark-mode details[open] summary {
+        background-color: #1e3a8a;
+      }
+
+      body.dark-mode hr {
+        border-color: #334155;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-card {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted var(--gray);
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--dark);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.875rem;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-code-branch"></i>Control Statements</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#ch04-control-statement-in-c" class="active"
+          ><i class="fas fa-book-open"></i> Introduction</a
+        >
+        <a href="#if-else-statement"
+          ><i class="fas fa-code"></i> If-else Statement</a
+        >
+        <a href="#nested-if-else-statement"
+          ><i class="fas fa-sitemap"></i> Nested If-else</a
+        >
+        <a href="#switch-statement"
+          ><i class="fas fa-random"></i> Switch Statement</a
+        >
+      </nav>
+      <div class="sidebar-footer">
+        <p>Chapter 04</p>
+        <style>
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <p>
+          <a href="https://github.com/TanshenH" target="_blank"
+            >© 2025 TanshenH</a
+          >
+        </p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-code-branch"></i> CH04: Control Statement in C</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Control Statements</strong> are used to control the flow of
+            execution in a program based on certain conditions or values.
+          </div>
+        </div>
+
+        <h3 id="two-types-of-control-statement">
+          <code>Two types of Control Statement</code>:
+        </h3>
+        <ul>
+          <li>if-else statement</li>
+          <li>switch statement</li>
+        </ul>
+        <p><br /></p>
+
+        <details id="if-else-statement">
+          <summary><i class="fas fa-code"></i> If-else statement</summary>
+          <div>
+            <h3 id="if-else"><code>If-else</code> :</h3>
+            <p>
+              If-else statement is used to execute a statement block or a single
+              statement depending on the value of a condition.
+            </p>
+
+            <h4>Syntax :</h4>
+            <pre><code>if (condition)
+{
+  ------------
+  &lt;true block&gt;
+  ------------
+}
+else
+{
+  -------------
+  &lt;false block&gt;
+  -------------
+}</code></pre>
+            <p>
+              Where <code>condition</code> is a logical expression which will
+              have the value of true or false.
+            </p>
+          </div>
+        </details>
+
+        <details id="nested-if-else-statement">
+          <summary>
+            <i class="fas fa-sitemap"></i> Nested if-else statement
+          </summary>
+          <div>
+            <h3 id="nested-if-else-statement">Nested if-else statement</h3>
+            <p>
+              An if statement may have another if statement in the
+              <code>true block</code> and <code>false block</code>. This
+              compound statement is called nested if statement.
+            </p>
+
+            <h4>Syntax :</h4>
+            <pre><code>if (condition 1)
+{
+  if (condition 2)
+    {
+        --------------
+        &lt;true block 1&gt;
+        --------------
+    }
+   else
+    {
+        -------------
+        &lt;false block 1&gt;
+        -------------
+    }
+}
+else
+{
+  if (condition 3)
+    {
+      --------------
+      &lt;true block 2&gt;
+      --------------
+    }
+  else
+    {
+      ---------------
+      &lt;false block 2&gt;
+      ---------------
+    }
+}</code></pre>
+          </div>
+        </details>
+
+        <details id="switch-statement">
+          <summary><i class="fas fa-random"></i> Switch Statement</summary>
+          <div>
+            <h3 id="switch-statement">Switch statement</h3>
+            <p>
+              Switch statement is used to create a block of statements depending
+              on the value of a variable or an expression.
+            </p>
+
+            <h4>Syntax :</h4>
+            <pre><code>switch ( &lt;expression&gt;)
+{
+case &lt;label 1&gt;: {
+                  -------------
+                  &lt;statement block 1&gt;
+                  -------------
+                  break;
+                }
+case &lt;label 2&gt;: {
+                  -------------
+                  &lt;statement block 1&gt;
+                  -------------
+                  break;
+                }
+case &lt;label n&gt;: {
+                  -------------
+                  &lt;statement block n&gt;
+                  -------------
+                  break;
+                }
+default:        {
+                  -------------
+                  &lt;default statement block&gt;
+                  -------------
+                  break;
+                }
+}</code></pre>
+            <p>
+              where <code>&lt;expression&gt;</code> refers to any
+              <code>int</code> or <code>char</code> expression or variable.
+            </p>
+            <p>
+              <code>&lt;label 1&gt;</code>, <code>&lt;label 2&gt;</code>...<code
+                >&lt;label n&gt;</code
+              >
+              are values which will match with the value of the expression.
+            </p>
+            <p>
+              <strong>break</strong> is a statement which will transfer the
+              control to the end of <strong>switch</strong> statement.
+            </p>
+          </div>
+        </details>
+      </div>
+    </main>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      // Toggle sidebar on mobile
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Print functionality
+      const printBtn = document.getElementById("printBtn");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+
+      // Download functionality
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "control-statements.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, details, h1, h2, h3",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

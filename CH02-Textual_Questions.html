@@ -1,212 +1,582 @@
-<h1 id="review-questions-and-exercises">REVIEW QUESTIONS AND
-EXERCISES</h1>
-<ol type="1">
-<li><p>What is a constant? Explain the constants in C. <br> Ans : Any
-unchanged value in a program during the program execution is called
-constant.<br> In C language, constant are divided into two types Numeric
-and String or character :<br></p>
-<ol type="1">
-<li>Numeric Constant :<br> i.Integer constant : an integer constant is a
-signed or unsigned whole number.<br> eg. -23,12,+240.<br> ii.Real or
-Floating point constant : Any signed or unsigned number with fractional
-part is called real or floation point constant.<br> eg. -23.41,
-+234.21,3.14<br></li>
-</ol>
-<p>2.String or character constant : <br> i.Single character string
-constant : any letter or character enclosed in single apostrophe is
-called single character string constant.<br> eg. ‘a’,’<span
-class="math inline">$','+'.&lt;br&gt;  ii.String og characters constant
-: any string of characters consisting of letters, digits and symbols
-enclosed in double quotes is called string of characters
-constant.&lt;br&gt;  eg. "Some Names", "India
-+91","$</span>$Money”.</p></li>
-<li><p>What is a variable? How are the variables declared in C?<br> Ans
-: A variable is an identifier or a name which is used to refer to a
-value and this value varies or changes during the program
-execution.Variabe used in a C program are declared with appropriate
-datatypes along with their name.</p></li>
-<li><p>What is an expression? What are the operators in C? <br></p></li>
-</ol>
-<p>Ans : An expression consists of variable and constants seperated by
-operators.</p>
-<ol start="4" type="1">
-<li>What is a library function? Mention its use. <br></li>
-</ol>
-<p>Ans : Library functions are the build in program that are available
-with the compiler.It is used to perform standard mathematical
-operations. <br> eg. sqrt(),fabs(), log(),etc.</p>
-<ol start="5" type="1">
-<li>Convert the following mathematical expressions into C expressions.
-<br></li>
-</ol>
-<ol type="i">
-<li><span class="math inline">$\frac{a+b}{c+d}$</span> <br></li>
-<li><span class="math inline">$\frac{ab}{c^2+d}g$</span> <br></li>
-<li><span class="math inline">$\sqrt{1+x}\frac{\log\
-\cos2x\}{1+|y|}$</span> <br></li>
-<li><span
-class="math inline"><em>z</em> = <em>e</em><sup><em>x</em></sup> + log  <em>y</em> + <em>p</em><em>q</em><em>r</em>(<em>s</em>−<em>t</em>)</span>
-<br></li>
-<li><span class="math inline">$T =\sin(a)\ cos(b) -
-|g-h|+\sqrt{ab}$</span> <br></li>
-<li><span class="math inline">$z\frac{\alpha+\beta}{\sin\ x^o} +
-\frac{a^b+c^d}{a+b}$</span> <br></li>
-<li><span class="math inline">$y = \sin\ \omega \pi\
-\cos\frac{\omega\pi}{t}$</span> <br></li>
-</ol>
-<p>Ans :</p>
-<pre><code>i. (a + b) / (c + d)
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 2 - Textual Questions | Class 10 CS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      h1 i {
+        color: var(--primary);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      p,
+      li {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ol,
+      ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+      }
+
+      code,
+      pre {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+      }
+
+      pre {
+        padding: 1rem;
+        overflow-x: auto;
+        margin: 1rem 0;
+        border-left: 4px solid var(--primary);
+      }
+
+      .answer {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      .answer p:first-child {
+        margin-top: 0;
+      }
+
+      .answer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 1rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-secondary {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+      }
+
+      .btn-secondary:hover {
+        background-color: #e67e22;
+      }
+
+      .button-group {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 2rem;
+      }
+
+      .short-question {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 1rem;
+        }
+        .button-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <i class="fas fa-question-circle"></i> Chapter 2 - Textual Questions
+      </h1>
+
+      <h2>Review Questions and Exercises</h2>
+
+      <ol type="1">
+        <li>
+          <p>What is a constant? Explain the constants in C.</p>
+          <div class="answer">
+            <p>
+              Any unchanged value in a program during the program execution is
+              called constant.
+            </p>
+            <p>
+              In C language, constants are divided into two types Numeric and
+              String or character:
+            </p>
+            <ol type="1">
+              <li>
+                <strong>Numeric Constant:</strong><br />
+                i. Integer constant: an integer constant is a signed or unsigned
+                whole number.<br />
+                eg. -23, 12, +240.<br />
+                ii. Real or Floating point constant: Any signed or unsigned
+                number with fractional part is called real or floating point
+                constant.<br />
+                eg. -23.41, +234.21, 3.14
+              </li>
+              <li>
+                <strong>String or character constant:</strong><br />
+                i. Single character string constant: any letter or character
+                enclosed in single apostrophe is called single character string
+                constant.<br />
+                eg. 'a', '$', '+'<br />
+                ii. String of characters constant: any string of characters
+                consisting of letters, digits and symbols enclosed in double
+                quotes is called string of characters constant.<br />
+                eg. "Some Names", "India +91", "$$Money"
+              </li>
+            </ol>
+          </div>
+        </li>
+
+        <li>
+          <p>What is a variable? How are the variables declared in C?</p>
+          <div class="answer">
+            <p>
+              A variable is an identifier or a name which is used to refer to a
+              value and this value varies or changes during the program
+              execution. Variables used in a C program are declared with
+              appropriate datatypes along with their name.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>What is an expression? What are the operators in C?</p>
+          <div class="answer">
+            <p>
+              An expression consists of variable and constants separated by
+              operators.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>What is a library function? Mention its use.</p>
+          <div class="answer">
+            <p>
+              Library functions are the built-in programs that are available
+              with the compiler. It is used to perform standard mathematical
+              operations.
+            </p>
+            <p>eg. sqrt(), fabs(), log(), etc.</p>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            Convert the following mathematical expressions into C expressions.
+          </p>
+          <ol type="i">
+            <li>$\frac{a+b}{c+d}$</li>
+            <li>$\frac{ab}{c^2+d}g$</li>
+            <li>$\sqrt{1+x}\frac{\log\ \cos2x}{1+|y|}$</li>
+            <li>$z = e^x + \log y + pqr(s-t)$</li>
+            <li>$T =\sin(a)\ cos(b) - |g-h|+\sqrt{ab}$</li>
+            <li>$z\frac{\alpha+\beta}{\sin\ x^o} + \frac{a^b+c^d}{a+b}$</li>
+            <li>$y = \sin\ \omega \pi\ \cos\frac{\omega\pi}{t}$</li>
+          </ol>
+          <div class="answer">
+            <pre><code>i. (a + b) / (c + d)
 ii. (a * b) / (pow(c, 2) + d) * g
 iii. sqrt(1 + x) * (log(cos(2 * x)) / (1 + fabs(y)))
 iv. z = exp(x) + log(y) + p * q * r * (s - t);
 v. T = sin(a) * cos(b) - fabs(g - h) + sqrt(a * b);
 vi. z * (alpha + beta) / sin(x * M_PI / 180) + (pow(a, b) + pow(c, d)) / (a + b)
-vii. y = sin(omega * M_PI) * cos((omega * M_PI) / t); </code></pre>
-<ol start="6" type="1">
-<li>Explain the program structure in C language.<br></li>
-</ol>
-<p>Ans :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Header files<span class="op">&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Global declaration of variables<span class="op">&gt;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>main<span class="op">()</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>Local declaration of variables<span class="op">&gt;</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">--------------</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>Statements<span class="op">&gt;</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">--------------</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Sub programs <span class="op">-</span> function blocks<span class="op">&gt;</span></span></code></pre></div>
-<p>1.The header files or preprocessor directives gives instructions to
-the compiler to include compiler options(#include),macro
-substitution(#define) to substitude a constant for an identifier and
-conditional(#ifdef) directives.<br> 2. The main statement block,
-function block and other blocks used in C program are enclosed in braces
-{}.<br> 3. Variables declared outside main() are called global
-variables, and they can be used in the main program block and sub
-program block.<br> 4. Variables declared inside main() are called local
-variables, and they are used only in the block in which they are
-declared.Sub programs/functions can also have local variables.<br> 5.
-Any C program has coding in the form of letters and symbols.Normally
-documentation to the program is made by adding remarks or comment lines
-enclosed in /* and */ whenever necessary.<br></p>
-<ol start="7" type="1">
-<li>Explain the different data types in C.<br> Ans :<br></li>
-</ol>
-<ol type="i">
-<li><p><code>int</code> : <em>refers to interger. It can hold a signed
-or unsigned whole number within specific range.</em></p></li>
-<li><p><code>char</code> : <em>refers to characte. It can hold one
-letter/symbol. In fact, char in C language is associated with integers
-refers to a letter/symbol as per ASCII which has assigned integer value
-for all letters/symbol used in programming.</em></p></li>
-<li><p><code>float</code> : refers to floating point or real number. It
-can hold a real numeber like 3.174813 or 4.53e6 with six decimal digits
-in decimal or exponential form.,</p></li>
-<li><p><code>double</code> : also refers to floating or real number. It
-can hold a real number in double precision. A double precision number
-uses 12 decimal digit like 3.42134421232 or 4.2324452423e12.</p></li>
-</ol>
-<ol start="8" type="1">
-<li><p>Discuss increment and decrement operators available on C and the
-rules associated with them.<br> Ans : Increment operator(++) is used to
-increase the value of an integer or char variable by 1.Decrement
-operator(–) is used to reduce the value of an integer or char by 1. m++
-and m– are referring the post-fix increment and decrement operation, and
-++m and –m are referrring the prefix increment and decrement
-operation.Post-fix increment first assign the value of the variable then
-increment it. Whereas, the prefix increment first increase the value and
-then assign the value of variable.</p></li>
-<li><p>Explain arithmetic and logical operators in C with suitable
-examples.<br></p></li>
-</ol>
-<p>Ans : Arithmetic operators are used to perform arithmetic operations
-while assigning a value to a variable.<br> example : m += 10, this is
-evaluated as m = m + 10 , it increase the value of m then assigns the
-new value of m to m.<br> Logical operators are used to connect more
-relational operations to form a complex expression called logical
-expression.A value obtained by evaluating a logical expression is always
-logical, i.e either true or false.<br> example : (5 &gt; 2) &amp;&amp;
-(5&lt;7) = True , this check the both condition if 5 is greater than 2
-and 5 is less than 7 if both are true then the result is also
-true.<br></p>
-<ol start="10" type="1">
-<li>Explain bitwise logical operators available in C. Discuss the order
-of evaluation.<br></li>
-</ol>
-<p>Ans :</p>
-<ol start="11" type="1">
-<li>List the different types of operators in C. Discus the following
-with examples: (a) conditional operators (b) relational operators.<br> #
-SHORT QUESTIONS</li>
-<li>C language has been developed by _________.</li>
-<li>Like decimal number system, octal and hexadecimal system can also be
-used in C language. (True/False)</li>
-<li>An octal mumber is preceded by ________ and a hexadecimal number in
-preceded by _________.</li>
-<li>An identifier/variable can begin with <code>_</code>(underscore).
-(True/False)</li>
-<li>Mention the basic data types used in C language.</li>
-<li>A variable declared as <code>long int</code> occupies _________
-bytes of memory.</li>
-<li>If ‘a’ is an integer variable, then a=5/2 will return value
-__________.</li>
-<li>Bitwise operators are for manipulation of ______________ in bit
-level.</li>
-<li>Define nibble and byte.</li>
-<li>Explain terniary operator.</li>
-<li>What is the purpose of type declaration in C?</li>
-<li>What are library functions? Mention any four library functions in C
-(functions available in math.h)?</li>
-<li>What are the logical operators available in C?</li>
-<li>How does x++ differ from ++x?</li>
-<li>__________ is the operator which represents the bitwise OR
-operator.</li>
-<li>What is an identifier?</li>
-<li>A variable in C can be declared as float (real) if it is within the
-range _________ to ___________.</li>
-<li>The relational operation that are commonly used in C
-are,__________,___________,_________,___________,___________,_________.</li>
-<li>In C language a comment starts with the symbol _________ and ends
-with ___________.</li>
-<li>Discuss the increment operator in C.</li>
-<li>Discuss the decrement operator in C.</li>
-<li>What are the bit operators used in C.</li>
-<li>Determine the value of the following logical expression for a=5,
-b=10, c=-6.
-<ol type="i">
-<li>a == c ¦¦ b &gt; a</li>
-<li>b &gt; c &amp;&amp; &lt; 0 a &gt; 0</li>
-</ol></li>
-<li>Which of the following identifiers are invalid.
-<ol type="i">
-<li>total</li>
-<li>average_value</li>
-<li>6month</li>
-<li>cd 200</li>
-<li>_sum</li>
-<li>rate$</li>
-</ol></li>
-<li>For 9%4 the output is _________.</li>
-<li>i += 1 can also be written as _____________.</li>
-<li>__________ is the operator which represents bitwise exclusive
-OR.</li>
-<li>How does the type <code>float</code> differ from <code>double</code>
-in C language?</li>
-<li>What is an operator? What is an operand?</li>
-<li>Explain with an example the usage of shorthand assignment
-operator.</li>
-<li>Mention the applications of C language.</li>
-<li>What do you mean by case-sensitive? Is C a case-sensitive
-language?</li>
-<li>___________ data items are real data items that provide greater
-precision than is normally provided by the real data items.</li>
-<li>Give the declaration for the string “COMPUTER” in C.</li>
-</ol>
+vii. y = sin(omega * M_PI) * cos((omega * M_PI) / t);</code></pre>
+          </div>
+        </li>
+
+        <li>
+          <p>Explain the program structure in C language.</p>
+          <div class="answer">
+            <pre><code>&lt;Header files&gt;
+
+&lt;Global declaration of variables&gt;
+
+main()
+{
+  &lt;Local declaration of variables&gt;
+  --------------
+  &lt;Statements&gt;
+  --------------
+}
+
+&lt;Sub programs - function blocks&gt;</code></pre>
+            <p>
+              1. The header files or preprocessor directives gives instructions
+              to the compiler to include compiler options (#include), macro
+              substitution (#define) to substitute a constant for an identifier
+              and conditional (#ifdef) directives.
+            </p>
+            <p>
+              2. The main statement block, function block and other blocks used
+              in C program are enclosed in braces {}.
+            </p>
+            <p>
+              3. Variables declared outside main() are called global variables,
+              and they can be used in the main program block and sub program
+              block.
+            </p>
+            <p>
+              4. Variables declared inside main() are called local variables,
+              and they are used only in the block in which they are declared.
+              Sub programs/functions can also have local variables.
+            </p>
+            <p>
+              5. Any C program has coding in the form of letters and symbols.
+              Normally documentation to the program is made by adding remarks or
+              comment lines enclosed in /* and */ whenever necessary.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>Explain the different data types in C.</p>
+          <div class="answer">
+            <ol type="i">
+              <li>
+                <code>int</code>:
+                <em
+                  >refers to integer. It can hold a signed or unsigned whole
+                  number within specific range.</em
+                >
+              </li>
+              <li>
+                <code>char</code>:
+                <em
+                  >refers to character. It can hold one letter/symbol. In fact,
+                  char in C language is associated with integers refers to a
+                  letter/symbol as per ASCII which has assigned integer value
+                  for all letters/symbol used in programming.</em
+                >
+              </li>
+              <li>
+                <code>float</code>: refers to floating point or real number. It
+                can hold a real number like 3.174813 or 4.53e6 with six decimal
+                digits in decimal or exponential form.
+              </li>
+              <li>
+                <code>double</code>: also refers to floating or real number. It
+                can hold a real number in double precision. A double precision
+                number uses 12 decimal digit like 3.42134421232 or
+                4.2324452423e12.
+              </li>
+            </ol>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            Discuss increment and decrement operators available on C and the
+            rules associated with them.
+          </p>
+          <div class="answer">
+            <p>
+              Increment operator(++) is used to increase the value of an integer
+              or char variable by 1. Decrement operator(--) is used to reduce
+              the value of an integer or char by 1. m++ and m-- are referring
+              the post-fix increment and decrement operation, and ++m and --m
+              are referring the prefix increment and decrement operation.
+            </p>
+            <p>
+              Post-fix increment first assign the value of the variable then
+              increment it. Whereas, the prefix increment first increase the
+              value and then assign the value of variable.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            Explain arithmetic and logical operators in C with suitable
+            examples.
+          </p>
+          <div class="answer">
+            <p>
+              Arithmetic operators are used to perform arithmetic operations
+              while assigning a value to a variable.
+            </p>
+            <p>
+              example: m += 10, this is evaluated as m = m + 10, it increase the
+              value of m then assigns the new value of m to m.
+            </p>
+            <p>
+              Logical operators are used to connect more relational operations
+              to form a complex expression called logical expression. A value
+              obtained by evaluating a logical expression is always logical, i.e
+              either true or false.
+            </p>
+            <p>
+              example: (5 > 2) && (5<7) = True, this check the both condition if
+              5 is greater than 2 and 5 is less than 7 if both are true then the
+              result is also true.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            Explain bitwise logical operators available in C. Discuss the order
+            of evaluation.
+          </p>
+          <div class="answer">
+            <p>
+              Bitwise operators work on individual bits (0s and 1s) of integer
+              values. They perform operations at the binary level.
+            </p>
+            <p>Common bitwise operators:</p>
+            <ul>
+              <li><code>&</code> (AND): 1 if both bits are 1</li>
+              <li><code>|</code> (OR): 1 if at least one bit is 1</li>
+              <li><code>^</code> (XOR): 1 if only one of the bits is 1</li>
+              <li><code>~</code> (NOT): Flips all bits</li>
+              <li><code><<</code> (Left Shift): Shifts bits left</li>
+              <li><code>>></code> (Right Shift): Shifts bits right</li>
+            </ul>
+            <p>
+              The order of evaluation follows operator precedence rules, with
+              parentheses having the highest precedence.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <p>
+            List the different types of operators in C. Discuss the following
+            with examples: (a) conditional operators (b) relational operators.
+          </p>
+          <div class="answer">
+            <p>Types of operators in C:</p>
+            <ol type="a">
+              <li>
+                <strong>Conditional (ternary) operator:</strong>
+                <code>(condition) ? expr1 : expr2</code><br />
+                Example: <code>max = (a > b) ? a : b;</code>
+              </li>
+              <li>
+                <strong>Relational operators:</strong>
+                <code>>, <, >=, <=, ==, !=</code><br />
+                Example: <code>if (age >= 18) { printf("Adult"); }</code>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ol>
+
+      <h2>Short Questions</h2>
+
+      <ol start="12" type="1">
+        <li class="short-question">
+          C language has been developed by _________.
+        </li>
+        <li class="short-question">
+          Like decimal number system, octal and hexadecimal system can also be
+          used in C language. (True/False)
+        </li>
+        <li class="short-question">
+          An octal number is preceded by ________ and a hexadecimal number is
+          preceded by _________.
+        </li>
+        <li class="short-question">
+          An identifier/variable can begin with <code>_</code>(underscore).
+          (True/False)
+        </li>
+        <li class="short-question">
+          Mention the basic data types used in C language.
+        </li>
+        <li class="short-question">
+          A variable declared as <code>long int</code> occupies _________ bytes
+          of memory.
+        </li>
+        <li class="short-question">
+          If 'a' is an integer variable, then a=5/2 will return value
+          __________.
+        </li>
+        <li class="short-question">
+          Bitwise operators are for manipulation of ______________ in bit level.
+        </li>
+        <li class="short-question">Define nibble and byte.</li>
+        <li class="short-question">Explain ternary operator.</li>
+        <li class="short-question">
+          What is the purpose of type declaration in C?
+        </li>
+        <li class="short-question">
+          What are library functions? Mention any four library functions in C
+          (functions available in math.h)?
+        </li>
+        <li class="short-question">
+          What are the logical operators available in C?
+        </li>
+        <li class="short-question">How does x++ differ from ++x?</li>
+        <li class="short-question">
+          __________ is the operator which represents the bitwise OR operator.
+        </li>
+        <li class="short-question">What is an identifier?</li>
+        <li class="short-question">
+          A variable in C can be declared as float (real) if it is within the
+          range _________ to ___________.
+        </li>
+        <li class="short-question">
+          The relational operation that are commonly used in C
+          are,__________,___________,_________,___________,___________,_________.
+        </li>
+        <li class="short-question">
+          In C language a comment starts with the symbol _________ and ends with
+          ___________.
+        </li>
+        <li class="short-question">Discuss the increment operator in C.</li>
+        <li class="short-question">Discuss the decrement operator in C.</li>
+        <li class="short-question">What are the bit operators used in C.</li>
+        <li class="short-question">
+          Determine the value of the following logical expression for a=5, b=10,
+          c=-6.
+          <ol type="i">
+            <li>a == c || b > a</li>
+            <li>b > c && a > 0</li>
+          </ol>
+        </li>
+        <li class="short-question">
+          Which of the following identifiers are invalid.
+          <ol type="i">
+            <li>total</li>
+            <li>average_value</li>
+            <li>6month</li>
+            <li>cd 200</li>
+            <li>_sum</li>
+            <li>rate$</li>
+          </ol>
+        </li>
+        <li class="short-question">For 9%4 the output is _________.</li>
+        <li class="short-question">
+          i += 1 can also be written as _____________.
+        </li>
+        <li class="short-question">
+          __________ is the operator which represents bitwise exclusive OR.
+        </li>
+        <li class="short-question">
+          How does the type <code>float</code> differ from
+          <code>double</code> in C language?
+        </li>
+        <li class="short-question">What is an operator? What is an operand?</li>
+        <li class="short-question">
+          Explain with an example the usage of shorthand assignment operator.
+        </li>
+        <li class="short-question">Mention the applications of C language.</li>
+        <li class="short-question">
+          What do you mean by case-sensitive? Is C a case-sensitive language?
+        </li>
+        <li class="short-question">
+          ___________ data items are real data items that provide greater
+          precision than is normally provided by the real data items.
+        </li>
+        <li class="short-question">
+          Give the declaration for the string "COMPUTER" in C.
+        </li>
+      </ol>
+
+      <div class="button-group">
+        <a href="ch02.html" class="btn btn-primary">
+          <i class="fas fa-book"></i> View Chapter Content
+        </a>
+        <a href="index.html" class="btn btn-secondary">
+          <i class="fas fa-home"></i> Back to Home
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

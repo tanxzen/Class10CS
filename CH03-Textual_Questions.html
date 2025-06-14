@@ -1,295 +1,1294 @@
-<h1 id="section-a-review-questions-and-exercises">SECTION A: REVIEW
-QUESTIONS AND EXERCISES</h1>
-<hr />
-<p>Q1. Write a C program to find the sum and average of three given
-numbers . <br> Ans: ```c #include &lt;conio.h&gt; // for turboc++
-compilers , remove if you are not using turboc++ #include
-&lt;stdio.h&gt;</p>
-<p>int main() {</p>
-<p>int num1, num2, num3, sum = 0; float average = 0;</p>
-<p>clrscr(); // remove if you are not using turboc++</p>
-<p>printf(“Enter 3 numbers :”); scanf(“%d %d %d”, &amp;num1, &amp;num2,
-&amp;num3);</p>
-<p>sum = num1 + num2 + num3; average = (num1 + num2 + num3) / 3.0;</p>
-<p>printf(“Sum : %d : %6.2f”, sum, average); getch() // remove if you
-are not using turboc++</p>
-<pre><code>  return 0;</code></pre>
-<p>} ```</p>
-<p>Q2. Write a C program to convert temperature in °C to °F using the
-relation °F = 1.8°C + 32.<br> Ans :</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> cel<span class="op">,</span> far<span class="op">;</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  clrscr<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter Celsius : &quot;</span><span class="op">);</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>cel<span class="op">);</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  far <span class="op">=</span> <span class="fl">1.8</span> <span class="op">*</span> cel <span class="op">+</span> <span class="dv">32</span><span class="op">;</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Farenheit : %6.2f°F</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> far<span class="op">);</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  getch<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Q3. Write a C program to find the area and circumference of a circle
-of radius r.<br> Ans :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">float</span> r<span class="op">,</span> area<span class="op">,</span> circumference<span class="op">;</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    clrscr<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Enter Radius of the Circle : &quot;</span><span class="op">);</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,&amp;</span>r<span class="op">);</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    area <span class="op">=</span> <span class="fl">22.0</span><span class="op">/</span><span class="fl">7.0</span> <span class="op">*</span> r <span class="op">*</span> r<span class="op">;</span> </span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    circumference <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="fl">22.0</span><span class="op">/</span><span class="fl">7.0</span> <span class="op">*</span> r<span class="op">;</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Area of circle : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>area<span class="op">);</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Circumference of Circle : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>circumference<span class="op">);</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    getch<span class="op">();</span> <span class="co">//remove if not using turboc++</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Q4. Write a C program to find the value of y using the relation <span
-class="math inline"><em>y</em> = <em>x</em><sup>2</sup> + 2<em>x</em> − 1</span>.
-<br> Ans : ```c</p>
-<p>#include &lt;conio.h&gt; //remove if not using turboc++; #include
-&lt;stdio.h&gt;</p>
-<p>int main() {</p>
-<p>float x, y;</p>
-<p>clrscr(); // remove if not using tubroc++;</p>
-<p>printf(“Enter the value of x :”); scanf(“%f”, &amp;x);</p>
-<p>y = x * x + 2 * x - 1;</p>
-<p>printf(“The value of y : %6.2f”, y);</p>
-<p>getch(); // remove if not using turboc++; return 0; }
-<code>Q5. Write a C program to find the ASCII character of a given integer.&lt;br&gt; Ans :</code>c
-#include &lt;conio.h&gt; //remove if not using turboc++ #include
-&lt;stdio.h&gt;</p>
-<p>int main() {</p>
-<p>int n;</p>
-<p>clrscr(); // remove if not using turboc++;</p>
-<p>printf(“Enter number :”); scanf(“%d”, &amp;n);</p>
-<p>printf(“Character : %c”,n); // we are converting the interger to
-charcter with the format // specifier %c which represent character ;</p>
-<p>getch(); // remove if not using turboc++; return 0; }</p>
-<pre><code>Q6. Explain `scanf()` and `printf()` functions in C. &lt;br&gt;
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 03: Textual Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
 
-Ans : Printf function is used to print/display values of variables using the standard output device(monitor).It can also be use to print any character of our choice in the monitor. Whereas, 
-Scanf function is used to read/input values of variables using the standard input device (keyboard).It is used in a program to take input from the user or where there is necessary for user interaction. 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-Q7. Explain the various character input/output functions in C. &lt;br&gt;
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
 
-Ans : </code></pre>
-<pre><code>  getchat() function : It is used to read one character at a time from the standard input device(keyboard).&lt;br&gt;
-  putchar() function : It is ued to display one character at a time on the monitor screen.
-  getch() function : It is used to read a character from the keyboard and it does not expect the enter key press.
-  putch() function : It is used to display a character on the monitor.
-  gets() function : It is used to read a string of characters including white space.</code></pre>
-<pre><code>
-Q8. Mention the various conversion specifications for data I/O in C. &lt;br&gt;
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
 
-Ans :</code></pre>
-<p>int : : %d : represents a decimal integer value <br> : %u :
-represents an unsigned integer value. : %o : represents an unsigned
-octal value. : %x : represents an unsigned hexadecimal value.</p>
-<p>float/double : : %f : represents a floating point value. : %e :
-represents a floating point value in a decimal or exponential form.</p>
-<p>char : : %c : represents a single character value. : %s : represents
-a string of value of characters.</p>
-<pre><code>Q9. Write a C program to calculate simple interest using formula $I = \frac{PNR}{100}$.&lt;br&gt;
-where P - Principal amount, N - Number of years, R - Rate of interest &lt;br&gt;
-Ans : 
-```c
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
 
-#include &lt;conio.h&gt; // remove if not using turboc++
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sidebar-header i {
+        color: var(--primary);
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a.active {
+        background-color: #eff6ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      .sidebar-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: var(--primary-dark);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul,
+      ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #334155;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: #c026d3;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      blockquote {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-style: italic;
+        color: #334155;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.25rem;
+        margin-top: 0.1rem;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        color: var(--primary-dark);
+      }
+
+      .alert-warning {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        color: #92400e;
+      }
+
+      .alert-success {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        color: #065f46;
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .algorithm-card h4 i {
+        color: var(--primary);
+      }
+
+      .algorithm-steps {
+        margin-left: 1.5rem;
+      }
+
+      .algorithm-steps li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .algorithm-steps li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+      }
+
+      /* Question cards */
+      .question-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--secondary);
+      }
+
+      .question-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .question-card h4 i {
+        color: var(--secondary);
+      }
+
+      .question-card .answer {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px dashed #e2e8f0;
+      }
+
+      /* Toggle sidebar on mobile */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar,
+      body.dark-mode .content-card,
+      body.dark-mode .algorithm-card,
+      body.dark-mode .question-card {
+        background-color: #1e293b;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode .sidebar-nav a.active {
+        background-color: #334155;
+      }
+
+      body.dark-mode code:not(pre code) {
+        background-color: #334155;
+        color: #f0abfc;
+      }
+
+      body.dark-mode pre {
+        background-color: #0f172a;
+      }
+
+      body.dark-mode h1,
+      body.dark-mode h2,
+      body.dark-mode h3,
+      body.dark-mode h4 {
+        color: #93c5fd;
+      }
+
+      body.dark-mode p,
+      body.dark-mode li {
+        color: #cbd5e1;
+      }
+
+      body.dark-mode .alert-info {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .alert-warning {
+        background-color: #78350f;
+        color: #fcd34d;
+      }
+
+      body.dark-mode .alert-success {
+        background-color: #064e3b;
+        color: #a7f3d0;
+      }
+
+      body.dark-mode blockquote {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .question-card .answer {
+        border-color: #334155;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-card {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted var(--gray);
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--dark);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.875rem;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-question-circle"></i>Textual Questions</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#section-a-review-questions-and-exercises" class="active"
+          ><i class="fas fa-list-ol"></i> Section A</a
+        >
+        <a href="#section-b-short-questions"
+          ><i class="fas fa-question"></i> Section B</a
+        >
+      </nav>
+      <div class="sidebar-footer">
+        <p>Chapter 03</p>
+        <style>
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <p>
+          <a href="https://github.com/TanshenH" target="_blank"
+            >© 2025 TanshenH</a
+          >
+        </p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-question-circle"></i> CH03: Textual Questions</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <h1 id="section-a-review-questions-and-exercises">
+          SECTION A: REVIEW QUESTIONS AND EXERCISES
+        </h1>
+        <hr />
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-code"></i> Q1. Write a C program to find the sum
+            and average of three given numbers.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; // for turboc++ compilers, remove if you are not using turboc++
 #include &lt;stdio.h&gt;
 
 int main() {
+  int num1, num2, num3, sum = 0;
+  float average = 0;
 
+  clrscr(); // remove if you are not using turboc++
+
+  printf("Enter 3 numbers :");
+  scanf("%d %d %d", &amp;num1, &amp;num2, &amp;num3);
+
+  sum = num1 + num2 + num3;
+  average = (num1 + num2 + num3) / 3.0;
+
+  printf("Sum : %d : %6.2f", sum, average);
+  getch(); // remove if you are not using turboc++
+
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-temperature-low"></i> Q2. Write a C program to
+            convert temperature in °C to °F using the relation °F = 1.8°C + 32.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt;
+#include &lt;stdio.h&gt;
+
+int main() {
+  float cel, far;
+
+  clrscr(); // remove if not using turboc++
+
+  printf("Enter Celsius : ");
+  scanf("%f", &amp;cel);
+
+  far = 1.8 * cel + 32;
+
+  printf("Farenheit : %6.2f°F\n", far);
+  getch(); // remove if not using turboc++
+
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-circle"></i> Q3. Write a C program to find the area
+            and circumference of a circle of radius r.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; //remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
+  float r, area, circumference;
+  
+  clrscr(); //remove if not using turboc++
+  
+  printf("Enter Radius of the Circle : ");
+  scanf("%f", &amp;r);
+  
+  area = 22.0/7.0 * r * r; 
+  circumference = 2 * 22.0/7.0 * r;
+  
+  printf("Area of circle : %.2f\n", area);
+  printf("Circumference of Circle : %.2f\n", circumference);
+  getch(); //remove if not using turboc++
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-square-root-alt"></i> Q4. Write a C program to find
+            the value of y using the relation y = x² + 2x − 1.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; //remove if not using turboc++;
+#include &lt;stdio.h&gt;
+
+int main() {
+  float x, y;
+
+  clrscr(); // remove if not using tubroc++;
+
+  printf("Enter the value of x :");
+  scanf("%f", &amp;x);
+
+  y = x * x + 2 * x - 1;
+
+  printf("The value of y : %6.2f", y);
+
+  getch(); // remove if not using turboc++;
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-font"></i> Q5. Write a C program to find the ASCII
+            character of a given integer.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; //remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
+  int n;
+
+  clrscr(); // remove if not using turboc++;
+
+  printf("Enter number :");
+  scanf("%d", &amp;n);
+
+  printf("Character : %c", n); // we are converting the interger to charcter with the format
+  // specifier %c which represent character ;
+
+  getch(); // remove if not using turboc++;
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-terminal"></i> Q6. Explain <code>scanf()</code> and
+            <code>printf()</code> functions in C.
+          </h4>
+          <div class="answer">
+            <p>
+              Printf function is used to print/display values of variables using
+              the standard output device(monitor). It can also be use to print
+              any character of our choice in the monitor. Whereas, Scanf
+              function is used to read/input values of variables using the
+              standard input device (keyboard). It is used in a program to take
+              input from the user or where there is necessary for user
+              interaction.
+            </p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-keyboard"></i> Q7. Explain the various character
+            input/output functions in C.
+          </h4>
+          <div class="answer">
+            <ul>
+              <li>
+                <code>getchar()</code> function: It is used to read one
+                character at a time from the standard input device(keyboard).
+              </li>
+              <li>
+                <code>putchar()</code> function: It is used to display one
+                character at a time on the monitor screen.
+              </li>
+              <li>
+                <code>getch()</code> function: It is used to read a character
+                from the keyboard and it does not expect the enter key press.
+              </li>
+              <li>
+                <code>putch()</code> function: It is used to display a character
+                on the monitor.
+              </li>
+              <li>
+                <code>gets()</code> function: It is used to read a string of
+                characters including white space.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-percent"></i> Q8. Mention the various conversion
+            specifications for data I/O in C.
+          </h4>
+          <div class="answer">
+            <p>
+              <strong>int:</strong><br />
+              %d : represents a decimal integer value<br />
+              %u : represents an unsigned integer value<br />
+              %o : represents an unsigned octal value<br />
+              %x : represents an unsigned hexadecimal value
+            </p>
+
+            <p>
+              <strong>float/double:</strong><br />
+              %f : represents a floating point value<br />
+              %e : represents a floating point value in a decimal or exponential
+              form
+            </p>
+
+            <p>
+              <strong>char:</strong><br />
+              %c : represents a single character value<br />
+              %s : represents a string of value of characters
+            </p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-calculator"></i> Q9. Write a C program to calculate
+            simple interest using formula I = PNR/100.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; // remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
   float P, N, R, I;
 
   clrscr(); // remove if not using turboc++
 
-  printf(&quot;Enter Pricipal : $ &quot;);
-  scanf(&quot;%f&quot;, &amp;P);
+  printf("Enter Pricipal : $ ");
+  scanf("%f", &amp;P);
 
-  printf(&quot;Enter Time : &quot;);
-  scanf(&quot;%f&quot;, &amp;N);
+  printf("Enter Time : ");
+  scanf("%f", &amp;N);
 
-  printf(&quot;Enter Rate : &quot;);
-  scanf(&quot;%f&quot;, &amp;R);
+  printf("Enter Rate : ");
+  scanf("%f", &amp;R);
 
   I = (P * N * R) / 100.0;
 
-  printf(&quot;Interest : $ %6.2f\n&quot;, I);
+  printf("Interest : $ %6.2f\n", I);
   getch(); // remove if not using turboc++
   return 0;
 }</code></pre>
-<p>Q10. Write a C program to swap (exchange) the values of a variables A
-and B without using a temporary variable. <br> [<strong>Hint</strong>:
-The following assignments are used to swap the values: <br> A = A + B
-<br> B = A - B <br> A = A - B]<br> Ans :</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">// remove if not using turboc++</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> A<span class="op">,</span> B<span class="op">;</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  clrscr<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter Value of A : &quot;</span><span class="op">);</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%d&quot;</span><span class="op">,</span> <span class="op">&amp;</span>A<span class="op">);</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter Value of B : &quot;</span><span class="op">);</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%d&quot;</span><span class="op">,</span> <span class="op">&amp;</span>B<span class="op">);</span></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  A <span class="op">=</span> A <span class="op">+</span> B<span class="op">;</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  B <span class="op">=</span> A <span class="op">-</span> B<span class="op">;</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>  A <span class="op">=</span> A <span class="op">-</span> B<span class="op">;</span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Value of A : %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> A<span class="op">);</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Value of B : %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> B<span class="op">);</span></span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>  getch<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Q11. Earth takes a period of revolution of 31558150 seconds. Write a
-C program to convert this into number of days, hours and minutes.<br>
-Ans :</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> sec <span class="op">=</span> <span class="dv">31558150</span><span class="op">;</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> days<span class="op">,</span> hours<span class="op">,</span> minutes<span class="op">;</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  clrscr<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  days <span class="op">=</span> sec <span class="op">/</span> <span class="fl">86400.0</span><span class="op">;</span> <span class="co">// 1 day = 86400 seconds</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  hours <span class="op">=</span> sec <span class="op">/</span> <span class="fl">3600.0</span><span class="op">;</span> <span class="co">// 1 hour = 3600 seconds</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>  minutes <span class="op">=</span> sec <span class="op">/</span> <span class="fl">60.0</span><span class="op">;</span> <span class="co">// 1 minutes = 60 seconds</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Numbers of days = %.2f days</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> days<span class="op">);</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Hours : %.2f hours</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> hours<span class="op">);</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Minutes : %.2f minutes</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> minutes<span class="op">);</span></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  getch<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Q12. Write a C program to calculate the cut-off mark of a student
-using the formula <span class="math inline">$CM = \frac{M}{2} +
-\frac{P}{2} = \frac{C}{2} + E$</span> <br> where CM = Cut-off mark <br>
-M = Marks in mathematics out of 200 <br> P = Mark in Physics out of 200
-<br> C = Marks in Chemistry out of 200 <br> E = Marks in entrance
-examination out of 100.<br> Ans :</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;conio.h&gt;</span><span class="pp"> </span><span class="co">//remove if not using turboc++</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">float</span> M<span class="op">,</span> P<span class="op">,</span> C<span class="op">,</span> E<span class="op">,</span> CM<span class="op">;</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  clrscr<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter mark in mathematics (out of 200): &quot;</span><span class="op">);</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>M<span class="op">);</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter mark in Physics (out of 200) : &quot;</span><span class="op">);</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>P<span class="op">);</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter mark in Chemestry (out of 200) : &quot;</span><span class="op">);</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>C<span class="op">);</span></span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Enter mark in Entrance Exam (out of 100) : &quot;</span><span class="op">);</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  scanf<span class="op">(</span><span class="st">&quot;%f&quot;</span><span class="op">,</span> <span class="op">&amp;</span>E<span class="op">);</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  CM <span class="op">=</span> <span class="op">(</span>M <span class="op">/</span> <span class="fl">2.0</span><span class="op">)</span> <span class="op">+</span> <span class="op">(</span>P <span class="op">/</span> <span class="fl">2.0</span><span class="op">)</span> <span class="op">-</span> <span class="op">(</span>C <span class="op">/</span> <span class="fl">2.0</span><span class="op">)</span> <span class="op">+</span> E<span class="op">;</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Cut-Off Mark : %.2f</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> CM<span class="op">);</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  getch<span class="op">();</span> <span class="co">// remove if not using turboc++</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<hr />
-<h1 id="section-b-short-questions">SECTION B: SHORT QUESTIONS</h1>
-<hr />
-<ol type="1">
-<li>What is the purpose of <code>scanf()</code> function? How it is used
-within a C program?<br></li>
-</ol>
-<p>Ans : <code>scanf()</code> function is used to take user input in a
-program. It can be used along with the format specifier and address of
-the variable.</p>
-<ol start="2" type="1">
-<li>What is the use of “<code>\n</code>”?<br></li>
-</ol>
-<p>Ans : <code>\n</code> is used to move to new line in the program.</p>
-<ol start="3" type="1">
-<li>Assuming i=3, give the output for <br>
-<code>printf("\n %d %d %d\n", i, ++i, i++);</code><br></li>
-</ol>
-<p>Ans : 3 4 4</p>
-<ol start="4" type="1">
-<li>Explain the significance of the following control specifiers:</li>
-</ol>
-<ol type="a">
-<li><strong>%c</strong></li>
-<li><strong>%0</strong></li>
-<li><strong>%x</strong></li>
-<li><strong>%d</strong></li>
-</ol>
-<ol start="5" type="1">
-<li><p>What is a header file in C? List any two header files.</p></li>
-<li><p>The line from which a program execution begins
-is________.</p></li>
-<li><p>The sign <code>#</code> of the compiler directive must appear at
-the __________ of a line.</p></li>
-<li><p>Write four different C statements each adding 1 to integer
-variable x.</p></li>
-<li><p>How do you generate an alarm/beep using
-<code>printf</code>?</p></li>
-<li><p>What is the difference between <code>getchar()</code> and
-<code>getche()</code>?</p></li>
-<li><p>What is an escape sequence? What is its purpose?</p></li>
-<li><p>Explain the need for the following: <br>
-<code>#include &lt;stdio.h&gt;</code> <br>
-<code>#include &lt;math.h&gt;</code> <br></p></li>
-<li><p>Explain with examples the syntax of <code>scanf()</code> and
-<code>printf()</code> functions.</p></li>
-<li><p>What is the difference between C character and C string?</p></li>
-<li><p>Name any four functions available in
-<code>stdio.h</code>.</p></li>
-<li><p>The file name <code>stdio.h</code> is an abbreviation for
-________ file.</p></li>
-<li><p>What is the difference between <code>'a'</code> and
-<code>"a"</code> in C?</p></li>
-<li><p>How can the minimum field width for a data item be specified
-using the <code>printf()</code> function?</p></li>
-<li><p>What are the advantages of <code>getche()</code> over
-<code>scanf()</code>?</p></li>
-<li><p>Obtain the output of the following statements in C. The variables
-<code>count</code>, <code>amt</code> and <code>city</code> have the
-following values.<br></p></li>
-</ol>
-<pre><code>int count =1275; 
-float amt =-235.74;
-char city [10] = &quot;Chennai&quot;;</code></pre>
-<p><code>(a) printf("%d\f", count, amt);</code><br>
-<code>(b) printf("%-10d%-15s", count, city);</code><br></p>
-<p>Ans :</p>
-<ol start="21" type="1">
-<li><p>How can precision be specified in <code>printf</code>
-function?</p></li>
-<li><p>A C program contains the following variable declaration:
-<code>int i = 12345, j = 0xbcd9, k077777;</code> What will be the output
-of the <code>printf()</code> function?</p></li>
-</ol>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-exchange-alt"></i> Q10. Write a C program to swap
+            (exchange) the values of a variables A and B without using a
+            temporary variable.
+          </h4>
+          <div class="answer">
+            <p>
+              <strong>Hint:</strong> The following assignments are used to swap
+              the values:<br />
+              A = A + B<br />
+              B = A - B<br />
+              A = A - B
+            </p>
+            <pre><code>#include &lt;conio.h&gt; // remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
+  int A, B;
+
+  clrscr(); // remove if not using turboc++
+
+  printf("Enter Value of A : ");
+  scanf("%d", &amp;A);
+
+  printf("Enter Value of B : ");
+  scanf("%d", &amp;B);
+
+  A = A + B;
+  B = A - B;
+  A = A - B;
+
+  printf("Value of A : %d\n", A);
+  printf("Value of B : %d\n", B);
+
+  getch(); // remove if not using turboc++
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-globe-americas"></i> Q11. Earth takes a period of
+            revolution of 31558150 seconds. Write a C program to convert this
+            into number of days, hours and minutes.
+          </h4>
+          <div class="answer">
+            <pre><code>#include &lt;conio.h&gt; //remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
+  int sec = 31558150;
+  float days, hours, minutes;
+
+  clrscr(); // remove if not using turboc++
+
+  days = sec / 86400.0; // 1 day = 86400 seconds
+  hours = sec / 3600.0; // 1 hour = 3600 seconds
+  minutes = sec / 60.0; // 1 minutes = 60 seconds
+
+  printf("Numbers of days = %.2f days\n", days);
+  printf("Hours : %.2f hours\n", hours);
+  printf("Minutes : %.2f minutes\n", minutes);
+
+  getch(); // remove if not using turboc++
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-user-graduate"></i> Q12. Write a C program to
+            calculate the cut-off mark of a student using the formula CM = M/2 +
+            P/2 - C/2 + E
+          </h4>
+          <div class="answer">
+            <p>
+              where:<br />
+              CM = Cut-off mark<br />
+              M = Marks in mathematics out of 200<br />
+              P = Mark in Physics out of 200<br />
+              C = Marks in Chemistry out of 200<br />
+              E = Marks in entrance examination out of 100.
+            </p>
+            <pre><code>#include &lt;conio.h&gt; //remove if not using turboc++
+#include &lt;stdio.h&gt;
+
+int main() {
+  float M, P, C, E, CM;
+
+  clrscr(); // remove if not using turboc++
+
+  printf("Enter mark in mathematics (out of 200): ");
+  scanf("%f", &amp;M);
+
+  printf("Enter mark in Physics (out of 200) : ");
+  scanf("%f", &amp;P);
+
+  printf("Enter mark in Chemestry (out of 200) : ");
+  scanf("%f", &amp;C);
+
+  printf("Enter mark in Entrance Exam (out of 100) : ");
+  scanf("%f", &amp;E);
+
+  CM = (M / 2.0) + (P / 2.0) - (C / 2.0) + E;
+
+  printf("Cut-Off Mark : %.2f\n", CM);
+
+  getch(); // remove if not using turboc++
+  return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <hr />
+        <h1 id="section-b-short-questions">SECTION B: SHORT QUESTIONS</h1>
+        <hr />
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 1. What is the purpose of
+            <code>scanf()</code> function? How it is used within a C program?
+          </h4>
+          <div class="answer">
+            <p>
+              <code>scanf()</code> function is used to take user input in a
+              program. It can be used along with the format specifier and
+              address of the variable.
+            </p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 2. What is the use of
+            "<code>\n</code>"?
+          </h4>
+          <div class="answer">
+            <p><code>\n</code> is used to move to new line in the program.</p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 3. Assuming i=3, give the output for
+            <code>printf("\n %d %d %d\n", i, ++i, i++);</code>
+          </h4>
+          <div class="answer">
+            <p>Ans : 3 4 4</p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 4. Explain the significance of the
+            following control specifiers:
+          </h4>
+          <div class="answer">
+            <ol type="a">
+              <li><strong>%c</strong></li>
+              <li><strong>%0</strong></li>
+              <li><strong>%x</strong></li>
+              <li><strong>%d</strong></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 5. What is a header file in C? List
+            any two header files.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 6. The line from which a program
+            execution begins is________.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 7. The sign <code>#</code> of the
+            compiler directive must appear at the __________ of a line.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 8. Write four different C statements
+            each adding 1 to integer variable x.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 9. How do you generate an alarm/beep
+            using <code>printf</code>?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 10. What is the difference between
+            <code>getchar()</code> and <code>getche()</code>?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 11. What is an escape sequence? What
+            is its purpose?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 12. Explain the need for the
+            following:<br />
+            <code>#include &lt;stdio.h&gt;</code><br />
+            <code>#include &lt;math.h&gt;</code>
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 13. Explain with examples the syntax
+            of <code>scanf()</code> and <code>printf()</code> functions.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 14. What is the difference between C
+            character and C string?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 15. Name any four functions
+            available in <code>stdio.h</code>.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 16. The file name
+            <code>stdio.h</code> is an abbreviation for ________ file.
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 17. What is the difference between
+            <code>'a'</code> and <code>"a"</code> in C?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 18. How can the minimum field width
+            for a data item be specified using the
+            <code>printf()</code> function?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 19. What are the advantages of
+            <code>getche()</code> over <code>scanf()</code>?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 20. Obtain the output of the
+            following statements in C. The variables <code>count</code>,
+            <code>amt</code> and <code>city</code> have the following values.
+          </h4>
+          <div class="answer">
+            <pre><code>int count = 1275; 
+float amt = -235.74;
+char city[10] = "Chennai";</code></pre>
+            <p>
+              <code>(a) printf("%d\f", count, amt);</code><br />
+              <code>(b) printf("%-10d%-15s", count, city);</code>
+            </p>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 21. How can precision be specified
+            in <code>printf</code> function?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+
+        <div class="question-card">
+          <h4>
+            <i class="fas fa-question"></i> 22. A C program contains the
+            following variable declaration:
+            <code>int i = 12345, j = 0xbcd9, k077777;</code> What will be the
+            output of the <code>printf()</code> function?
+          </h4>
+          <div class="answer">
+            <!-- Answer content here -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      // Toggle sidebar on mobile
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Print functionality
+      const printBtn = document.getElementById("printBtn");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+
+      // Download functionality
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "textual-questions.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, .question-card, h1, h2",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
