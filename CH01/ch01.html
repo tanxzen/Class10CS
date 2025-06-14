@@ -1,218 +1,906 @@
-<h1 id="ch01-algorithm-for-problem-solving">CH01 : Algorithm for Problem
-Solving</h1>
-<h3 id="more-algorithm-are-coming-soon">MORE ALGORITHM ARE COMING SOON
-…</h3>
-<p><code>RECOMMANDED TO READ THE Algorithm.txt AS IT HAS EXPLAINATION WITH SOME DETAILS</code></p>
-<h2 id="overview">Overview</h2>
-<ul>
-<li><p><code>Swapping two values</code> : <em>use another variable to
-store the value of a variable1 then replace the value of the variable 1
-with value of variable 2 then replace the value of the variable 2 with
-value of variable 3.</em></p></li>
-<li><p><code>Biggest Number between 2 number</code> : <em>use another
-variable big , if value of variable1 &gt; variable2 then big = variable1
-else big = variable2</em></p></li>
-<li><p><code>Farenheit (°F) to Celsuis (°C)</code> : <em>use a variable
-ces = 5/9 (°F - 32) , where °F is the given farenheit …
-<br><code>Formula : 5/9 (°F - 32)</code></em></p></li>
-<li><p><code>Sum of n natural number</code> : <em>use i=0, sum=0 and we
-will use while loop untill i is not equal to n and inside the loop we
-will add sum and i and i + 1</em> example :<br> <em>while i != n <br>
-sum = sum + i <br> i = i + 1</em></p></li>
-<li><p><code>FACTORIAL of n term OR Product of n natural number</code> :
-<em>use i=0, pro=1 and we will use while loop untill i is not equal to n
-and inside the loop we will multiply pro and i and i + 1</em>
-<br>example :<br> <em>while i != n <br> pro = pro </em> i <br> i = i +
-1*</p></li>
-<li><p><code>Reverse digit of a given number</code> : <em>use two
-variable lastdigit and reverse , let n = 123 now we assign lastdigit = n
-% 10 , % give remainder of a division now we will loop through a while
-loop , while n is greater than 0 we will assign reverse = reverse </em>
-10 + lastdigit then we will again assign lastdigit = n % 10 and lastly
-we reduce n by dividing it by 10<em><br> example :<br>
-</em>lastdigit=n%10<br>while n&gt;0<br>reverse = reverse * 10 +
-lastdigit<br>n = n/10*</p></li>
-<li><p><code>Swapping number without another variable</code></p>
-<p>Let a and b be the two numbers then we will write an expression like
-<br> a = a+b <br> b = a-b <br> a = a-b<br></p>
-<p>so lets assume the a=1, b=2 then we have a = 1+2 =3 <br> b = 3-2
-=1<br> a = 3-1 =2<br></p></li>
-</ul>
-<h3 id="advance-algorithm">Advance Algorithm :</h3>
-<ol type="1">
-<li>Finding element in an array : Take a array
-<code>arr[9] = {1,2,3,4,5,6,7,8,9,10}</code> which contains 10 elements
-(remember that array index start from 0) and we want to find an element
-lets say <code>6</code> then we will initialize a variable with the
-element we want say <code>searchElement = 6</code> and we loop through
-the array to check if the array at index <code>i</code>(we are using for
-loop like <code>for(int i=0;i&lt;=9;i++)</code>)then in the block we
-check if arr[i] is matching to the <code>searchElement</code> if yes, we
-print the index of <code>i</code>.</li>
-</ol>
-<p>Sample Code.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> arr<span class="op">[</span><span class="dv">9</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">1</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">6</span><span class="op">,</span><span class="dv">7</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">9</span><span class="op">,</span><span class="dv">10</span><span class="op">};</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> searchElement <span class="op">=</span> <span class="dv">6</span><span class="op">;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;=</span><span class="dv">9</span><span class="op">;</span>i<span class="op">++){</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span><span class="op">(</span>arr<span class="op">[</span>i<span class="op">]</span> <span class="op">==</span> searchElement<span class="op">){</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;Found %d at index %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span>searchElement<span class="op">,</span>i<span class="op">);</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Output :</p>
-<pre><code>Found 6 at index 5 </code></pre>
-<p>Note : the counting of index should start from 0.</p>
-<ol start="2" type="1">
-<li>Sorting array (Bubble sort Alogrithm)</li>
-</ol>
-<blockquote>
-<p>sizeof() operator is used to get the size of any datatype , variable
-.</p>
-<p>example : sizeof(int) &gt;&gt;output&gt;&gt; 4</p>
-<p>Reseach more or a quick view on
-https://www.geeksforgeeks.org/sizeof-operator-c/</p>
-</blockquote>
-<p>Sample code :</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> arr<span class="op">[</span><span class="dv">9</span><span class="op">]</span> <span class="op">=</span> <span class="op">{</span><span class="dv">9</span><span class="op">,</span><span class="dv">10</span><span class="op">,</span><span class="dv">3</span><span class="op">,</span><span class="dv">2</span><span class="op">,</span><span class="dv">1</span><span class="op">,</span><span class="dv">7</span><span class="op">,</span><span class="dv">5</span><span class="op">,</span><span class="dv">8</span><span class="op">,</span><span class="dv">4</span><span class="op">,</span><span class="dv">6</span><span class="op">};</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> size <span class="op">=</span> <span class="kw">sizeof</span><span class="op">(</span>arr<span class="op">)/</span><span class="kw">sizeof</span><span class="op">(</span><span class="dt">int</span><span class="op">);</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> temp<span class="op">;</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">(</span><span class="dt">int</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>size <span class="op">-</span> <span class="dv">1</span><span class="op">;</span>i<span class="op">++){</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span><span class="op">(</span><span class="dt">int</span> j<span class="op">=</span><span class="dv">0</span><span class="op">;</span>j<span class="op">&lt;</span>size <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span><span class="op">;</span>j<span class="op">++){</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span><span class="op">(</span>arr<span class="op">[</span>j<span class="op">]</span> <span class="op">&gt;</span> arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">){</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        temp <span class="op">=</span> arr<span class="op">[</span>j<span class="op">];</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>j<span class="op">]</span> <span class="op">=</span> arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">];</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        arr<span class="op">[</span>j<span class="op">+</span><span class="dv">1</span><span class="op">]</span> <span class="op">=</span> temp<span class="op">;</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span><span class="op">{</span><span class="dt">int</span> k <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>k<span class="op">&lt;</span>size<span class="op">;</span>k<span class="op">++}{</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;%d &quot;</span><span class="op">,</span>arr<span class="op">[</span>k<span class="op">]);</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p>Output :</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="dv">2</span> <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span> <span class="dv">6</span> <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span> <span class="dv">10</span></span></code></pre></div>
-<p>Using the same array as used in the <code>point 1</code> with random
-numbers , ‘arr[9] = {9,10,3,2,1,7,5,8,4,6}’ and to sort we need to use
-nested loop and we will be using for loop and we need to get the size of
-array so we use the sizeof(arr return the sizeof array) then we divide
-the result of sizeof(arr) by sizeof(int)(the datatype of the array) this
-will return the sizeof the int meaning the total size of int array is
-divide by the size of 1 element present then this will return the number
-of element present inside the array then we store the value in a
-variable call <code>size</code>.Then we intialize a temporary variable
-say, <code>temp</code> and we loop the counter variable is
-<code>i</code> through the array with for loop unitl
-<code>size - 1</code> because the last value will already be the
-sorted(meaning it already done).Then we add a nested for loop with the
-loop counter as <code>j</code> to loop until
-<code>size - i - 1 (i is the first for loop counter variable)</code> we
-use this size - i - 1 because it skips the already sorted values. Then
-we add a condition
-<code>if (arr[j] &gt; arr[j+1]) (we use the '&gt;' greater than symbol to organise according to accending order you can also use the '&lt;' less than symbol to sort decending value)</code>
-we are checking if the current index value is greater then the next
-index value , if yes we execute the statement to switch the we put the
-value of current arr to temp <code>temp = arr[j]</code>, then we change
-the value of current array to the next array value
-<code>arr[j] = arr[j+1]</code> and lastly we change the value of next
-array to the current array value <code>arr[j+1] = temp</code>.</p>
-<hr />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter01</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
 
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<section>
-    <div class="details">
-        <p>* COMMON AND IMPORTANT ALGORITHM *
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
 
-  1. Swapping two values :
-      
-      i). We have two number , number1 = 1 , number2 = 2 
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
 
-     ii). We will make another third variable like number3 and give any value of 
-          two variable like number3=number1 or simply number3=1 
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
 
-    iii). Now we make number1 = number2 then number2 = number3 , so whats going on ?
-          we are making number1 equal to number2 , say number2 was 2 now number1 is also 2,
-          then we are making number2 also equal to number3 , say number3 was 1 then number2 also 1 
-     
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
-      Before Swap :
-        number1 = 1 
-        number2 = 2
+      .sidebar-header i {
+        color: var(--primary);
+      }
 
-      Middle of Swapping : 
-        number3 = number1  
-        number1 = number2 
-        number2 = number3 
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
 
-      After Swap :
-        number1 = 2 
-        number2 = 1 
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
 
-  2. Fahrenheit(°F) to Celsius (°C) 
-    
-      i). We are given 5°F to convert it into °C (Celsius)
-      ii). We make a variable cel then we write equal to the formula i.e 
-          5/9(°F - 32) , read as 5 divided by 9 bracket given Fahrenheit minus 32 bracket close
-          like cel = 5/9 (5 - 32) 
-      
-        Before :
-          Fahrenheit = 5°F
-        Processing :
-          cel = 5/9 (5 - 32)
-              = 0.555 x -27 
-              = -15 (approx)
-        After : 
-          Celsius = -15°C
+      .sidebar-nav a:hover {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
 
-  3. Biggest number between 2 number 
-      i). We are given 2 numbers , number1 = 10 , number2 = 15 . We have to find the biggest between them 
-      ii). we will take another variable big and use if statement like if number 1 is greater then number2 then 
-          big is number1 else big is number2 
-           
-           if number1 > number2 then 
-                big = number1 
-            else 
-               big = number2 
-            
-            Before : 
-              number1 = 10
-              number2 = 15 
-            Processing :
-              If number1 > number2 , NO  
-              big = number2 
-            After :
-            big = number2 = 15
+      .sidebar-nav a.active {
+        background-color: #eff6ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
 
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
 
-  4. Sum of natural number upto n 
-    
-      n is the inputed value of user it may be 3,7,10,1 or any 
+      .sidebar-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
 
-      i). We are given n = 7 then we have to find the sum from 1 to 7 like 1+2+3+4+5+6+7 = 28 
-      ii). we will make new variable i = 0  , sum = 0 and while i not equal to n we will i+1 and sum + 1 until i is not equal to n 
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
 
-        while i != n 
-          sum = sum + i 
-          i = i + 1 
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
 
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
 
-  5. Product of natural number upto n OR FACTORAIL of nth term  
-    We are given n = 5 then we will need to produce the result of 1x2x3x4x5 = 120 
-    Same as 4 . just replace the sum with product = product * i 
+      .header-actions {
+        display: flex;
+        gap: 1rem;
+      }
 
-  6. Reverse the digit of a given number 
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
 
-    We are given n = 123 we have to reverse the digit to n = 321 
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
 
-    1. We take n = 123 then we make new variable such as lastdigit and reverse 
-    2. We assign lastdigit = n % 10 , % modulo is an operator use to give the remainder of the division 
-       like 3/2 remainder = 1 , reverse = 0 ;
-    3. we will keep a while loop until n is greater than 0 then we will assign reverse is equal to reverse x 10 + lastdigit 
-       and lastdigit is equal to n % 10 and we will reduce n by dividing it by 10 like n = n/10 
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
 
-       while n>0 
-        reverse = reverse * 10 + lastdigit 
-        lastdigit = n % 10 
-        n = n / 10 </p>
-    </div>
-</section>
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: var(--primary-dark);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul,
+      ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #334155;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: #c026d3;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      blockquote {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-style: italic;
+        color: #334155;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.25rem;
+        margin-top: 0.1rem;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        color: var(--primary-dark);
+      }
+
+      .alert-warning {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        color: #92400e;
+      }
+
+      .alert-success {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        color: #065f46;
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .algorithm-card h4 i {
+        color: var(--primary);
+      }
+
+      .algorithm-steps {
+        margin-left: 1.5rem;
+      }
+
+      .algorithm-steps li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .algorithm-steps li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+      }
+
+      /* Toggle sidebar on mobile */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar,
+      body.dark-mode .content-card,
+      body.dark-mode .algorithm-card {
+        background-color: #1e293b;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode .sidebar-nav a.active {
+        background-color: #334155;
+      }
+
+      body.dark-mode code:not(pre code) {
+        background-color: #334155;
+        color: #f0abfc;
+      }
+
+      body.dark-mode pre {
+        background-color: #0f172a;
+      }
+
+      body.dark-mode h1,
+      body.dark-mode h2,
+      body.dark-mode h3,
+      body.dark-mode h4 {
+        color: #93c5fd;
+      }
+
+      body.dark-mode p,
+      body.dark-mode li {
+        color: #cbd5e1;
+      }
+
+      body.dark-mode .alert-info {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .alert-warning {
+        background-color: #78350f;
+        color: #fcd34d;
+      }
+
+      body.dark-mode .alert-success {
+        background-color: #064e3b;
+        color: #a7f3d0;
+      }
+
+      body.dark-mode blockquote {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-card {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted var(--gray);
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--dark);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.875rem;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-project-diagram"></i>Algorithm for Problem Solving</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#overview" class="active"
+          ><i class="fas fa-book-open"></i> Overview</a
+        >
+        <a href="#swapping-values"
+          ><i class="fas fa-exchange-alt"></i> Swapping Values</a
+        >
+        <a href="#biggest-number"
+          ><i class="fas fa-greater-than"></i> Biggest Number</a
+        >
+        <a href="#temperature-conversion"
+          ><i class="fas fa-temperature-low"></i> Temperature Conversion</a
+        >
+        <a href="#sum-natural"
+          ><i class="fas fa-plus-circle"></i> Sum of Natural Numbers</a
+        >
+        <a href="#factorial"><i class="fas fa-exclamation"></i> Factorial</a>
+        <a href="#reverse-digits"><i class="fas fa-undo"></i> Reverse Digits</a>
+        <a href="#array-search"><i class="fas fa-search"></i> Array Search</a>
+        <a href="#bubble-sort"
+          ><i class="fas fa-sort-amount-up"></i> Bubble Sort</a
+        >
+      </nav>
+      <div class="sidebar-footer">
+        <p>Chapter 01</p>
+        <style>
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <p><a href="https://github.com/TanshenH" target="_blank">© 2023 TanshenH</a></p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-code"></i> Algorithm for Problem Solving</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Note:</strong> MORE ALGORITHMS ARE COMING SOON...<br />
+          </div>
+        </div>
+
+        <h2 id="overview">Overview</h2>
+        <p>
+          This document contains fundamental algorithms for problem solving in
+          programming. Each algorithm is explained with clear steps and example
+          code.
+        </p>
+
+        <div class="algorithm-card" id="swapping-values">
+          <h4><i class="fas fa-exchange-alt"></i> Swapping Two Values</h4>
+          <p>
+            Use another variable to store the value of variable1 then replace
+            the value of variable1 with value of variable2, then replace the
+            value of variable2 with value of the temporary variable.
+          </p>
+          <div class="algorithm-steps">
+            <ol>
+              <li>Create a temporary variable (temp)</li>
+              <li>Store value of variable1 in temp</li>
+              <li>Assign value of variable2 to variable1</li>
+              <li>Assign value of temp to variable2</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="algorithm-card" id="biggest-number">
+          <h4>
+            <i class="fas fa-greater-than"></i> Finding Biggest Number Between
+            Two Numbers
+          </h4>
+          <p>
+            Use a variable 'big' to store the larger value. Compare the two
+            numbers and assign the larger one to 'big'.
+          </p>
+          <pre><code>if (variable1 > variable2) {
+  big = variable1;
+} else {
+  big = variable2;
+}</code></pre>
+        </div>
+
+        <div class="algorithm-card" id="temperature-conversion">
+          <h4>
+            <i class="fas fa-temperature-low"></i> Fahrenheit (°F) to Celsius
+            (°C) Conversion
+          </h4>
+          <p>Use the formula: <code>cel = 5/9 * (fahrenheit - 32)</code></p>
+          <pre><code>float fahrenheit = 98.6;
+float celsius = (5.0 / 9.0) * (fahrenheit - 32);</code></pre>
+        </div>
+
+        <div class="algorithm-card" id="sum-natural">
+          <h4>
+            <i class="fas fa-plus-circle"></i> Sum of First n Natural Numbers
+          </h4>
+          <p>
+            Initialize sum to 0 and use a loop to accumulate the sum of numbers
+            from 1 to n.
+          </p>
+          <pre><code>int n = 10;
+int sum = 0;
+int i = 1;
+
+while (i <= n) {
+  sum += i;
+  i++;
+}</code></pre>
+        </div>
+
+        <div class="algorithm-card" id="factorial">
+          <h4>
+            <i class="fas fa-exclamation"></i> Factorial of n (Product of First
+            n Natural Numbers)
+          </h4>
+          <p>
+            Initialize product to 1 and use a loop to multiply numbers from 1 to
+            n.
+          </p>
+          <pre><code>int n = 5;
+int product = 1;
+int i = 1;
+
+while (i <= n) {
+  product *= i;
+  i++;
+}</code></pre>
+        </div>
+
+        <div class="algorithm-card" id="reverse-digits">
+          <h4><i class="fas fa-undo"></i> Reverse Digits of a Number</h4>
+          <p>
+            Use modulo operation to get last digit and build the reversed
+            number.
+          </p>
+          <pre><code>int n = 123;
+int reversed = 0;
+
+while (n > 0) {
+  int lastDigit = n % 10;
+  reversed = reversed * 10 + lastDigit;
+  n = n / 10;
+}</code></pre>
+        </div>
+
+        <div class="algorithm-card">
+          <h4>
+            <i class="fas fa-exchange-alt"></i> Swapping Numbers Without
+            Temporary Variable
+          </h4>
+          <pre><code>a = a + b;
+b = a - b;
+a = a - b;</code></pre>
+        </div>
+
+        <h2 id="advanced-algorithms">Advanced Algorithms</h2>
+
+        <div class="algorithm-card" id="array-search">
+          <h4><i class="fas fa-search"></i> Finding Element in an Array</h4>
+          <pre><code>int arr[10] = {1,2,3,4,5,6,7,8,9,10};
+int searchElement = 6;
+
+for(int i = 0; i <= 9; i++) {
+  if(arr[i] == searchElement) {
+    printf("Found %d at index %d\n", searchElement, i);
+  }
+}</code></pre>
+          <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i>
+            <div>
+              <strong>Output:</strong> Found 6 at index 5<br />
+              Note: Array indexing starts at 0.
+            </div>
+          </div>
+        </div>
+
+        <div class="algorithm-card" id="bubble-sort">
+          <h4><i class="fas fa-sort-amount-up"></i> Bubble Sort Algorithm</h4>
+          <blockquote>
+            <i class="fas fa-info-circle"></i> The sizeof() operator is used to
+            get the size of any datatype or variable.<br />
+            Example: sizeof(int) → output → 4<br />
+            Quick view:
+            <a
+              href="https://www.geeksforgeeks.org/sizeof-operator-c/"
+              style="color: var(--primary)"
+              >GeeksforGeeks</a
+            >
+          </blockquote>
+          <pre><code>int arr[10] = {9,10,3,2,1,7,5,8,4,6};
+int size = sizeof(arr)/sizeof(int);
+int temp;
+
+for(int i = 0; i < size - 1; i++) {
+  for(int j = 0; j < size - i - 1; j++) {
+    if(arr[j] > arr[j+1]) {
+      temp = arr[j];
+      arr[j] = arr[j+1];
+      arr[j+1] = temp;
+    }
+  }
+}
+
+for(int k = 0; k < size; k++) {
+  printf("%d ", arr[k]);
+}</code></pre>
+          <div class="alert alert-success">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Output:</strong> 1 2 3 4 5 6 7 8 9 10</div>
+          </div>
+        </div>
+
+        <div class="content-card">
+          <h3>Common and Important Algorithms</h3>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>1. Swapping Two Values</strong><br />
+              number1 = 1, number2 = 2<br />
+              number3 = number1<br />
+              number1 = number2<br />
+              number2 = number3<br />
+              <strong>After:</strong> number1 = 2, number2 = 1
+            </div>
+          </div>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>2. Fahrenheit to Celsius</strong><br />
+              Fahrenheit = 5°F<br />
+              cel = 5/9 (5 - 32) = -15°C (approx)
+            </div>
+          </div>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>3. Biggest Number Between Two Numbers</strong><br />
+              number1 = 10, number2 = 15<br />
+              if number1 > number2 then big = number1 else big = number2<br />
+              Result: big = 15
+            </div>
+          </div>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>4. Sum of Natural Numbers Up to n</strong><br />
+              n = 7<br />
+              while i != n<br />
+              sum = sum + i<br />
+              i = i + 1
+            </div>
+          </div>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>5. Factorial of n</strong><br />
+              n = 5<br />
+              while i != n<br />
+              product = product * i<br />
+              i = i + 1
+            </div>
+          </div>
+
+          <div class="alert alert-warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <div>
+              <strong>6. Reverse a Number</strong><br />
+              n = 123<br />
+              lastdigit = n % 10<br />
+              while n > 0:<br />
+              reverse = reverse * 10 + lastdigit<br />
+              n = n / 10
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      // Toggle sidebar on mobile
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Print functionality
+      const printBtn = document.getElementById("printBtn");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+
+      // Download functionality
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "algorithm-guide.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, .algorithm-card",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

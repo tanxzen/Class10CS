@@ -1,54 +1,362 @@
-<h1 id="review-questions-and-exercises">REVIEW QUESTIONS AND
-EXERCISES</h1>
-<ol type="1">
-<li>Write the algorithm and draw the flowchart to find the average of
-given 3 values.<br></li>
-</ol>
-<p>Ans :</p>
-<pre><code>1. Read n1,n2 and n3 , where n repesent number.
-2. avr = n1+n2+n3 / 3
-3. print avr  </code></pre>
-<p>FLOWCHART : <br></p>
-<pre class="mermaid"><code>flowchart TD
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algorithm Explorer - Textual Questions</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover,
+      .sidebar-nav a.active {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a.active {
+        font-weight: 500;
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      /* Buttons */
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        color: #e2e8f0;
+        font-size: 0.9rem;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      /* Mobile menu */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile menu button -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-project-diagram"></i> Textual Questions</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#review-questions" class=""
+          ><i class="fas fa-book-open"></i> Review Questions</a
+        >
+        <a href="#short-questions"
+          ><i class="fas fa-question-circle"></i> Short Questions</a
+        >
+        <!-- Add more sections as needed -->
+      </nav>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-question"></i> Textual Questions and Exercises</h1>
+        <div>
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <h2 id="review-questions">REVIEW QUESTIONS AND EXERCISES</h2>
+
+        <div class="algorithm-card">
+          <h3>1. Average of Three Values</h3>
+          <p>
+            Write the algorithm and draw the flowchart to find the average of
+            given 3 values.
+          </p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>1. Read n1, n2 and n3, where n represents number
+2. avr = (n1 + n2 + n3) / 3
+3. print avr</code></pre>
+          <p><strong>Flowchart:</strong></p>
+          <pre><code>flowchart TD
   A([Start]) --&gt; B[Read n1,n2 and n3]
-  B --&gt; C[avr = n1+n2+n3 / 3]
+  B --&gt; C[avr = (n1+n2+n3)/3]
   C --&gt; D[Print avr]
   D --&gt; E([Stop])</code></pre>
-<ol start="2" type="1">
-<li>Write the algorithm and draw the flowchart to find the area and
-circumference of a circle of radius r.</li>
-</ol>
-<p>[<strong>Hint</strong>: Area= πr²; Circumference = 2πr]<br></p>
-<p>Ans :</p>
-<pre><code>1. Read r
-2. Area = 22/7 \* r\*r , Circumference = 2\*22/7\*r
+        </div>
+
+        <div class="algorithm-card">
+          <h3>2. Circle Area and Circumference</h3>
+          <p>
+            Write the algorithm and draw the flowchart to find the area and
+            circumference of a circle of radius r.
+          </p>
+          <p><strong>Hint:</strong> Area= πr²; Circumference = 2πr</p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>1. Read r
+2. Area = 22/7 * r*r, Circumference = 2*22/7*r
 3. Print Area, Circumference</code></pre>
-<p>Flowchart :</p>
-<pre class="mermaid"><code>flowchart TD
+          <p><strong>Flowchart:</strong></p>
+          <pre><code>flowchart TD
   A([Start]) --&gt; B[Read r]
-  B --&gt; C[Area = 22/7\*r\*r, Circumference = 2\*22/7\*r]
+  B --&gt; C[Area = 22/7*r*r, Circumference = 2*22/7*r]
   C --&gt; D[Print Area, Circumference]
   D --&gt; E([Stop])</code></pre>
-<ol start="3" type="1">
-<li>Write the algorithm and draw the flowchart to convert the
-temperature given in °c to °f.</li>
-</ol>
-<p>[<strong>Hint</strong>: Use the relation °f= 1.8°c +32]<br></p>
-<p>Ans :</p>
-<pre><code>1. Read c
+        </div>
+
+        <div class="algorithm-card">
+          <h3>3. Temperature Conversion</h3>
+          <p>
+            Write the algorithm and draw the flowchart to convert the
+            temperature given in °C to °F.
+          </p>
+          <p><strong>Hint:</strong> Use the relation °F= 1.8°C +32</p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>1. Read c
 2. f = 1.8 * c + 32
-3. Print f </code></pre>
-<p>Flowchart :</p>
-<pre class="mermaid"><code>flowchart TD
+3. Print f</code></pre>
+          <p><strong>Flowchart:</strong></p>
+          <pre><code>flowchart TD
   A([Start]) --&gt; B[Read c]
-  B --&gt; C[f = 1.8 \* c + 32]
+  B --&gt; C[f = 1.8 * c + 32]
   C --&gt; D[Print f]
   D --&gt; E([Stop])</code></pre>
-<ol start="4" type="1">
-<li>Draw the flowchart to find the smallest of the given three numbers.
-<br> Ans :</li>
-</ol>
-<pre class="mermaid"><code>flowchart TD
+        </div>
+
+        <div class="algorithm-card">
+          <h3>4. Smallest of Three Numbers</h3>
+          <p>
+            Draw the flowchart to find the smallest of the given three numbers.
+          </p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>flowchart TD
   A(Start) --&gt; B[Input A, B, C]
   B --&gt; C{Is A &lt; B?}
   C -- Yes --&gt; D{Is A &lt; C?}
@@ -61,33 +369,37 @@ temperature given in °c to °f.</li>
   F --&gt; I
   H --&gt; I
   I --&gt; J(End)</code></pre>
-<ol start="5" type="1">
-<li>Draw the flowchart to solve the following series which is the
-summation of cosine series <br> <span class="math inline">$s = x -
-\frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots \infty$</span>
-neglecting the terms which are less that 10^-4 in magnitude. <br> Ans
-:</li>
-</ol>
-<pre class="mermaid"><code>flowchart TD
+        </div>
+
+        <div class="algorithm-card">
+          <h3>5. Cosine Series Summation</h3>
+          <p>
+            Draw the flowchart to solve the following series which is the
+            summation of cosine series:
+          </p>
+          <p>
+            s = x - x²/2! + x⁴/4! - x⁶/6! + ... ∞ (neglecting terms less than
+            10⁻⁴ in magnitude)
+          </p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>flowchart TD
     A[Start] --&gt; B[Input x]
     B --&gt; C[Set term = x, sum = x, n = 1]
     C --&gt; D{Is absolute value of term &gt;= 0.0001?}
-    D -- Yes --&gt; E[Compute next term using: -1^n \* x^2n / 2n!]
+    D -- Yes --&gt; E[Compute next term using: -1^n * x^2n / 2n!]
     E --&gt; F[Add term to sum]
     F --&gt; G[Increment n]
     G --&gt; D
     D -- No --&gt; H[Print sum]
     H --&gt; I[End]</code></pre>
-<p>[Hint: The method discussed in Example 8 can be used to solve this
-series with minor changes.]</p>
-<ol start="6" type="1">
-<li>Draw the flowchart to find the sum of natural numbers upto N.</li>
-</ol>
-<p>[Hint: The method discussed in Example 10 can be used to solve the
-series, i.e. <span
-class="math inline"><em>s</em> = 1 + 2 + 3 + 4 + ... + <em>N</em></span>.]
-<br> Ans :</p>
-<pre class="mermaid"><code>flowchart TD
+        </div>
+
+        <div class="algorithm-card">
+          <h3>6. Sum of Natural Numbers</h3>
+          <p>Draw the flowchart to find the sum of natural numbers up to N.</p>
+          <p><strong>Hint:</strong> s = 1 + 2 + 3 + 4 + ... + N</p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>flowchart TD
     A[Start] --&gt; B[Read N and set S = 0]
     B --&gt; C[Set i = 1]
     C --&gt; D{Is i &lt;= N?}
@@ -96,69 +408,174 @@ class="math inline"><em>s</em> = 1 + 2 + 3 + 4 + ... + <
     F --&gt; D
     D -- No --&gt; G[Display S]
     G --&gt; H[End]</code></pre>
-<ol start="7" type="1">
-<li>Draw a flowchart to solve the following series:</li>
-</ol>
-<p><span class="math display">$$s = 1 + \frac{1}{2!} + \frac{1}{3!} +
-\frac{1}{4!} + \cdots + \frac{1}{N!}$$</span><br></p>
-<p>Ans :</p>
-<pre class="mermaid"><code>flowchart TD
+        </div>
+
+        <div class="algorithm-card">
+          <h3>7. Factorial Series</h3>
+          <p>Draw a flowchart to solve the following series:</p>
+          <p>s = 1 + 1/2! + 1/3! + 1/4! + ... + 1/N!</p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>flowchart TD
     A[Start] --&gt; B[Read N, set S = 1 and i = 2]
     B --&gt; C{Is i &lt;= N?}
     C -- Yes --&gt; D[Set fact = 1]
     D --&gt; E[Set j = 1]
     E --&gt; F{Is j &lt;= i?}
-    F -- Yes --&gt; G[fact = fact \* j]
+    F -- Yes --&gt; G[fact = fact * j]
     G --&gt; H[j = j + 1]
     H --&gt; F
     F -- No --&gt; I[S = S + 1 / fact]
     I --&gt; J[i = i + 1]
     J --&gt; C
     C -- No --&gt; K[Display S]
-    K --&gt; L[End]
-</code></pre>
-<ol start="8" type="1">
-<li>Draw a flowchart to solve the following series: <br> <span
-class="math display">$$e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} +
-\frac{x^4}{4!} + \cdots$$</span> ∞ <br> Neglect the terms which are less
-than 10 in magnitude. <br></li>
-</ol>
-<p>Ans :</p>
-<pre class="mermaid"><code>flowchart TD
+    K --&gt; L[End]</code></pre>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>8. Exponential Series</h3>
+          <p>Draw a flowchart to solve the following series:</p>
+          <p>
+            eˣ = 1 + x + x²/2! + x³/3! + x⁴/4! + ... ∞ (neglect terms less than
+            10 in magnitude)
+          </p>
+          <p><strong>Answer:</strong></p>
+          <pre><code>flowchart TD
     A[Start] --&gt; B[Read x, set term = 1 and sum = 1, i = 1]
     B --&gt; C{Is term &gt;= 10?}
-    C -- Yes --&gt; D[term = term \* x / i]
+    C -- Yes --&gt; D[term = term * x / i]
     D --&gt; E[sum = sum + term]
     E --&gt; F[i = i + 1]
     F --&gt; C
     C -- No --&gt; G[Display sum]
     G --&gt; H[End]</code></pre>
-<h1 id="short-questions">SHORT QUESTIONS</h1>
-<ol type="1">
-<li>What is an algorithm?<br></li>
-</ol>
-<p>Ans : An algorithm presents step-by-step instructions required to
-solve any problem.<br></p>
-<ol start="2" type="1">
-<li>What is a flowchart?<br></li>
-</ol>
-<p>Ans : Flowchart is a symbolic or diagrammatic representation of an
-algorithm.<br></p>
-<ol start="3" type="1">
-<li><ins>
-<p>Procedural</p>
-</ins>
-<p>programming method is followed in C language.</p></li>
-<li><ins>
-<p>Object-Oriented</p>
-</ins>
-<p>programming method is followed in C++.</p></li>
-<li><p>Procedural programming method is commonly used for writing small
-programs which produce discrete results. (True/False) :
-<code>True</code></p></li>
-<li><p>Object-oriented programming method is commonly used to develop
-software packages to perform a task. (True/False) :
-<code>True</code></p></li>
-<li><p>Algorithms and flowcharts may be omitted after getting experience
-in writing program. (True/False) : <code>False</code></p></li>
-</ol>
+        </div>
+
+        <h2 id="short-questions">SHORT QUESTIONS</h2>
+
+        <div class="algorithm-card">
+          <h3>1. What is an algorithm?</h3>
+          <p>
+            <strong>Answer:</strong> An algorithm presents step-by-step
+            instructions required to solve any problem.
+          </p>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>2. What is a flowchart?</h3>
+          <p>
+            <strong>Answer:</strong> Flowchart is a symbolic or diagrammatic
+            representation of an algorithm.
+          </p>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>3. Procedural programming method is followed in C language.</h3>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>4. Object-Oriented programming method is followed in C++.</h3>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>
+            5. Procedural programming method is commonly used for writing small
+            programs which produce discrete results. (True/False)
+          </h3>
+          <p><strong>Answer:</strong> True</p>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>
+            6. Object-oriented programming method is commonly used to develop
+            software packages to perform a task. (True/False)
+          </h3>
+          <p><strong>Answer:</strong> True</p>
+        </div>
+
+        <div class="algorithm-card">
+          <h3>
+            7. Algorithms and flowcharts may be omitted after getting experience
+            in writing program. (True/False)
+          </h3>
+          <p><strong>Answer:</strong> False</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("sidebarToggle")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.toggle("open");
+        });
+
+      // Print functionality
+      document
+        .getElementById("printBtn")
+        .addEventListener("click", function () {
+          window.print();
+        });
+
+      // Download functionality
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          const content = document.documentElement.outerHTML;
+          const blob = new Blob([content], { type: "text/html" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "textual-questions.html";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, .algorithm-card",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
