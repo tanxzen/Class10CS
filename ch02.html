@@ -1,692 +1,1315 @@
-<blockquote>
-<p>[!IMPORTANT] All documentation will be on this readme no separate
-files</p>
-</blockquote>
-<h1 id="ch02-introduction-to-c-language">CH02 : Introduction to C
-language</h1>
-<p><code>C is a general-purpose programming language developed by Dennis Ritchie at Bell Labs in the early 1970s. Ritchie created C as a low-level language that could be used to write efficient and portable system software.</code></p>
-<h2 id="section"></h2>
-<details>
-<summary>
-Variable<br />
-</summary>
-<ul>
-<li><p><code>A variable is an identifier or a name which is used to refer a value and this value varies or changes during the program execution.</code><br>
-<em>example</em> : <em>name = tomba , surname = laisharam,
-age=25</em></p></li>
-<li><p><code>How to declare a variable in C ?</code></p>
-<ul>
-<li>We use a data type specifier along with the variable
-<ul>
-<li>e.g : <code>int age ;</code> , <em>int is a data type for interger
-and age is the name of variable</em></li>
-</ul></li>
-</ul></li>
-<li><p><code>Two types of Variable</code> :</p>
-<ul>
-<li><code>Global Variable</code> : <em>Variable which are declared
-outside the main function block, and they can be used in the main
-program block and sub program block like functions.</em></li>
-<li><code>Local Variable</code>: <em>Variable which are declared inside
-the main function block, and they are used only in the block in which
-they are declared. Sub programs or functions can also have local
-variable.</em></li>
-</ul></li>
-<li><p><code>Initialization and Assignment</code></p>
-<ul>
-<li><code>Initialization</code>: <em>When we declare a variable and give
-it a value at the same time, it’s called initialization.</em>
-<ul>
-<li><p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> age <span class="op">=</span> <span class="dv">32</span><span class="op">;</span></span></code></pre></div>
-<p>We declare an integer variable named <code>age</code> and assign it
-the value 32 at the same time.</p></li>
-</ul></li>
-<li><code>Assignment</code>: <em>When we give a new value to an already
-declared variable, it’s called assignment.</em>
-<ul>
-<li><p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">25</span><span class="op">;</span></span></code></pre></div>
-<p>The variable <code>age</code> was already initialized with the value
-32, and now we are updating it to 25.</p></li>
-<li><p>Assignment is not limited to changing values. If a variable was
-declared but not initialized, we can assign a value to it later.</p>
-<ul>
-<li><p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode c"><code class="sourceCode c"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> age<span class="op">;</span>     <span class="co">// Declaration without initialization</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">30</span><span class="op">;</span>    <span class="co">// Assignment after declaration</span></span></code></pre></div></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</details>
-<details>
-<summary>
-Constants
-</summary>
-<ul>
-<li><p><code>Constant : Any unchanged value in a program during program execution is called a constant .</code></p></li>
-<li><p><code>Different Types of Constant</code>:</p>
-<ul>
-<li><p><code>Numeric Constants</code> :</p>
-<ul>
-<li>1.<code>Interger Constant</code>: <em>An interger constant is a
-signed or unsigned whole number.</em>
-<ul>
-<li>e.g <code>-24, 52, 102</code></li>
-</ul></li>
-<li>2.<code>Real or Floating Point Constant</code> : <em>Any signed or
-unsigned number with fractional part is called real or floating point
-constant</em>
-<ul>
-<li>e.g <code>3.14, 0.234, 0.42e-32</code></li>
-</ul></li>
-</ul></li>
-<li><p><code>String or Character constant</code> :</p>
-<ul>
-<li>1.<code>Single character string constant</code> : <em>Any letter or
-character enclosed in single apostrophe is called single character sting
-constant</em>
-<ul>
-<li>e.g <code>'h', 'a' , '+'</code></li>
-</ul></li>
-<li>2.<code>String of characters constant</code> : <em>Any string of
-characters consisting of letters, digits, and symbols enclosed in double
-quotes is called string of characters constant</em>
-<ul>
-<li>e.g <code>"letters", "number02" , "person+name+$</code></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
-</details>
-<details>
-<summary>
-Library
-</summary>
-<ul>
-<li><p><code>Library</code> : <em>A library in C is a collection of
-pre-compiled functions and routines that can be used in programs to
-perform common tasks, such as input/output, string handling, or math
-operations.</em></p></li>
-<li><p><code>Common Librarys</code>:</p>
-<ul>
-<li><p><code>stdio.h</code> : <em>provides function and others assets
-for input/output</em></p></li>
-<li><p><code>conio.h</code> : <em>short for console input output , is a
-library used by some older compilers like TURBOC++ compiler, that
-provide functions like getch,clrscr,etc but it’s a outdated
-library</em></p></li>
-<li><p><code>math.h</code> : <em>provides mathematical funtions to
-perform mathematical calculations , funcitons include sqrt,
-pow,etc</em></p></li>
-<li><p><code>string.h</code> : <em>provide funtions for manipilating
-strings in c , functions include strcpy,strcmp,strlen ,etc</em></p></li>
-<li><p><code>stdlib.h</code> : <em>provides system related functions ,
-like system,malloc,calloc,free for dynaminc memory
-allocation</em></p></li>
-</ul></li>
-</ul>
-<blockquote>
-<p>Sometimes Programmers write their own librarys for their specific
-needs</p>
-</blockquote>
-</details>
-<details>
-<summary>
-Preprocessor Directives
-</summary>
-<ul>
-<li><p><code>Preprocessor directives in C are instructions that are processed by the C preprocessor before the actual compilation of the program begins. These directives begin with the symbol # and are used to include files, define constants or macros, and control the compilation process conditionally.</code></p></li>
-<li><p><code>Types of Preprocessor directives</code> :</p>
-<ul>
-<li><ol type="1">
-<li><code>File Inclusion</code> : <em>Used to include contents of
-another file , <code>syntax : #include &lt;file&gt;</code></em></li>
-</ol></li>
-<li><ol start="2" type="1">
-<li><code>Macro Definition</code> : <em>Used to define symbolic constant
-or macro , <code>example : #define MONTH 30</code></em></li>
-</ol></li>
-<li><a href="https://www.geeksforgeeks.org/cc-preprocessors/">more are
-available here</a></li>
-</ul></li>
-</ul>
-</details>
-<details>
-<summary>
-C Keywords
-</summary>
-<p><code>There are 32 available Keywords in C (version C98/C90)</code></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="dt">auto</span>        <span class="cf">break</span>       <span class="cf">case</span>        <span class="dt">char</span>        <span class="dt">const</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">continue</span>    <span class="cf">default</span>     <span class="cf">do</span>          <span class="dt">double</span>      <span class="cf">else</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">enum</span>        <span class="kw">extern</span>      <span class="dt">float</span>       <span class="cf">for</span>         <span class="cf">goto</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>          <span class="dt">int</span>         <span class="dt">long</span>        <span class="dt">register</span>    <span class="cf">return</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="dt">short</span>       <span class="dt">signed</span>      <span class="kw">sizeof</span>      <span class="dt">static</span>      <span class="kw">struct</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">switch</span>      <span class="kw">typedef</span>     <span class="kw">union</span>       <span class="dt">unsigned</span>    <span class="dt">void</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="dt">volatile</span>    <span class="cf">while</span></span></code></pre></div>
-</details>
-<h1 id="section-1"></h1>
-<h3 id="structure-of-c-program">Structure of C program :</h3>
-<div class="sourceCode" id="cb5"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Header files<span class="op">&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Global declaration of variables<span class="op">&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>main<span class="op">()</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>Local declaration of variables<span class="op">&gt;</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">--------------</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  <span class="op">&lt;</span>Statements<span class="op">&gt;</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="op">--------------</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Sub programs <span class="op">-</span> function blocks<span class="op">&gt;</span></span></code></pre></div>
-<ul>
-<li><em>The header files tell compiler to include required files to run
-the program, define maros substitution etc.</em></li>
-<li><em>Global declaration of variable declares the variable outside the
-main block meaning the declared variable can be use by any function or
-also by the main function.</em></li>
-<li><em>Local declaration of variable means that the variable is
-declared inside the main block and cannot be used in other sub
-blocks.</em></li>
-<li><em>The statements which are written inside the main function will
-only execute other statements which are written outside the main block
-will not be executed</em></li>
-<li><em>functions are just like another main block which will not be
-executed but which can be call in the main block to do certain actions,
-work, etc.</em></li>
-</ul>
-<h2 id="section-2"></h2>
-<h3 id="basic-data-types">Basic Data types :</h3>
-<ul>
-<li><p><code>int</code> : <em>refers to interger. It can hold a signed
-or unsigned whole number within specific range.</em></p></li>
-<li><p><code>char</code> : <em>refers to characte. It can hold one
-letter/symbol. In fact, char in C language is associated with integers
-refers to a letter/symbol as per ASCII which has assigned integer value
-for all letters/symbol used in programming.</em></p></li>
-<li><p><code>float</code> : refers to floating point or real number. It
-can hold a real numeber like 3.174813 or 4.53e6 with six decimal digits
-in decimal or exponential form.,</p></li>
-<li><p><code>double</code> : also refers to floating or real number. It
-can hold a real number in double precision. A double precision number
-uses 12 decimal digit like 3.42134421232 or 4.2324452423e12.</p></li>
-<li><p><a href="https://www.geeksforgeeks.org/data-types-in-c/">more are
-available here</a></p></li>
-</ul>
-<h2 id="section-3"></h2>
-<h3 id="operators">Operators</h3>
-<details>
-<summary>
-Arithmethic Operators
-</summary>
-<ul>
-<li><code>+ : addition</code> , <em>1 + 1 = 2</em></li>
-<li><code>- : substraction</code>, <em>2 - 1 = 1</em></li>
-<li><code>* : multiplication</code>, <em>2 </em> 3 = 6*</li>
-<li><code>/ : division</code>, <em>8 / 2 = 4</em></li>
-</ul>
-</details>
-<details>
-<summary>
-Relational Operator
-</summary>
-<ul>
-<li><p><code>&lt; : less than</code> : <em>5 &lt; 2 :
-FALSE</em></p></li>
-<li><p><code>&gt; : greater than</code> : <em>5 &gt; 2 :
-TRUE</em></p></li>
-<li><p><code>&lt;= : less than or equal to</code> : <em>5 &lt;= 2 :
-FALSE</em></p></li>
-<li><p><code>&gt;= : greater than or equal to</code> : <em>5 &gt;= 2 :
-TRUE</em></p></li>
-<li><p><code>== : equal to</code> : <em>5 == 2 : FALSE</em> or <em>5 ==
-5 : TRUE</em></p></li>
-<li><p><code>!= : not equal to</code> : <em>5 != 2 : TRUE</em></p></li>
-</ul>
-</details>
-<details>
-<summary>
-Logical operators
-</summary>
-<p>-<code>&amp;&amp; : AND</code> : Returns TRUE if all the given
-condition or statement are true , if any statement is false , it will
-always return FALSE <br> <em>e.g (5&lt;2) &amp;&amp; (5&gt;2) :
-FALSE</em></p>
-<p>-<code>|| : OR</code> : Return TRUE if any of the given condition or
-statement are true, if none of the condition is TRUE , it will always
-return FALSE <br> <em>e.g (5&lt;2) || (5&gt;3) : TRUE</em></p>
-<p>-<code>! : NOT</code> : Return TRUE if the condition is FALSE , if
-the condtion is TRUE , it will always return FALSE <br> <em>e.g
-!(5&lt;2) : TRUE</em></p>
-<p><code>TRUTH TABLE FOR AND(&amp;&amp;)</code></p>
-<table>
-<thead>
-<tr class="header">
-<th><code>OPERAND 1</code></th>
-<th><code>OPERAND 2</code></th>
-<th><code>RESULT</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>true</code></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-</tr>
-<tr class="even">
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-</tr>
-<tr class="odd">
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>false</code></td>
-</tr>
-<tr class="even">
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-</tr>
-</tbody>
-</table>
-<p><code>TRUTH TABLE FOR OR(||)</code></p>
-<table>
-<thead>
-<tr class="header">
-<th><code>OPERAND 1</code></th>
-<th><code>OPERAND 2</code></th>
-<th><code>RESULT</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>true</code></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-</tr>
-<tr class="even">
-<td><code>true</code></td>
-<td><code>false</code></td>
-<td><code>true</code></td>
-</tr>
-<tr class="odd">
-<td><code>false</code></td>
-<td><code>true</code></td>
-<td><code>true</code></td>
-</tr>
-<tr class="even">
-<td><code>false</code></td>
-<td><code>false</code></td>
-<td><code>false</code></td>
-</tr>
-</tbody>
-</table>
-<p><code>TRUTH TABLE FOR NOT(!)</code></p>
-<table>
-<thead>
-<tr class="header">
-<th><code>OPERAND</code></th>
-<th><code>RESULT</code></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>true</code></td>
-<td><code>false</code></td>
-</tr>
-<tr class="even">
-<td><code>false</code></td>
-<td><code>true</code></td>
-</tr>
-</tbody>
-</table>
-</details>
-<details>
-<summary>
-Increment and decrement
-</summary>
-<h3
-id="in-the-c-programming-language-increment-and-decrement-are-operators-that-are-used-to-increase-or-decrease-the-value-of-a-variable-by-1-respectively.">In
-the C programming language, increment and decrement are operators that
-are used to increase or decrease the value of a variable by 1,
-respectively.</h3>
-<h2 id="increment">Increment</h2>
-<p>The increment operator in C is represented by the <code>++</code>
-symbol. It can be used in two ways:</p>
-<ol type="1">
-<li><strong>Pre-increment</strong>: <code>++variable</code>
-<ul>
-<li>The value of the variable is incremented by 1 before it is used in
-the expression.</li>
-<li>Example: <code>x = ++y;</code> (first increments <code>y</code> by
-1, then assigns the new value of <code>y</code> to <code>x</code>)</li>
-</ul></li>
-<li><strong>Post-increment</strong>: <code>variable++</code>
-<ul>
-<li>The value of the variable is used in the expression first, and then
-it is incremented by 1.</li>
-<li>Example: <code>x = y++;</code> (first assigns the current value of
-<code>y</code> to <code>x</code>, then increments <code>y</code> by
-1)</li>
-</ul></li>
-</ol>
-<h2 id="decrement">Decrement</h2>
-<p>The decrement operator in C is represented by the <code>--</code>
-symbol. It can also be used in two ways:</p>
-<ol type="1">
-<li><strong>Pre-decrement</strong>: <code>--variable</code>
-<ul>
-<li>The value of the variable is decremented by 1 before it is used in
-the expression.</li>
-<li>Example: <code>x = --y;</code> (first decrements <code>y</code> by
-1, then assigns the new value of <code>y</code> to <code>x</code>)</li>
-</ul></li>
-<li><strong>Post-decrement</strong>: <code>variable--</code>
-<ul>
-<li>The value of the variable is used in the expression first, and then
-it is decremented by 1.</li>
-<li>Example: <code>x = y--;</code> (first assigns the current value of
-<code>y</code> to <code>x</code>, then decrements <code>y</code> by
-1)</li>
-</ul></li>
-</ol>
-<p>Here’s an example to illustrate the difference between
-pre-increment/decrement and post-increment/decrement:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> y <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Pre-increment</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">++</span>y<span class="op">;</span> <span class="co">// x = 11, y = 11</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Post-increment</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> y<span class="op">++;</span> <span class="co">// x = 11, y = 12</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">// Pre-decrement</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">--</span>y<span class="op">;</span> <span class="co">// x = 11, y = 11</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">// Post-decrement</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> y<span class="op">--;</span> <span class="co">// x = 12, y = 11</span></span></code></pre></div>
-</details>
-<details>
-<summary>
-Assigment
-</summary>
-<p>In C programming, assignment operators are used to assign values to
-variables. The most common assignment operator is the equal sign (=),
-but there are several compound assignment operators that combine an
-arithmetic operation with assignment. Here’s a brief explanation of some
-of these operators, along with examples in C code format.</p>
-<p>Simple Assignment (=) Assigns the value on the right to the variable
-on the left.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>  <span class="co">// x is now 10</span></span></code></pre></div>
-<p>Addition Assignment (+=) Adds the right operand to the left operand
-and assigns the result to the left operand.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">+=</span> <span class="dv">5</span><span class="op">;</span>  <span class="co">// x is now 15 (10 + 5)</span></span></code></pre></div>
-<p>Subtraction Assignment (-=) Subtracts the right operand from the left
-operand and assigns the result to the left operand.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">-=</span> <span class="dv">3</span><span class="op">;</span>  <span class="co">// x is now 7 (10 - 3)</span></span></code></pre></div>
-<p>Multiplication Assignment (*=) Multiplies the left operand by the
-right operand and assigns the result to the left operand.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">*=</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// x is now 20 (10 * 2)</span></span></code></pre></div>
-<p>Division Assignment (/=) Divides the left operand by the right
-operand and assigns the result to the left operand.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">/=</span> <span class="dv">2</span><span class="op">;</span>  <span class="co">// x is now 5 (10 / 2)</span></span></code></pre></div>
-<p>Modulus Assignment (%=) Takes the modulus using the left operand and
-the right operand and assigns the result to the left operand.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">%=</span> <span class="dv">3</span><span class="op">;</span>  <span class="co">// x is now 1 (10 % 3)</span></span></code></pre></div>
-<p>Bitwise AND Assignment (&amp;=) Performs a bitwise AND operation on
-the left operand and the right operand and assigns the result to the
-left operand.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="bn">0b1010</span><span class="op">;</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">&amp;=</span> <span class="bn">0b1100</span><span class="op">;</span>  <span class="co">// x is now 0b1000 (0b1010 &amp; 0b1100)</span></span></code></pre></div>
-<p>Bitwise OR Assignment (|=) Performs a bitwise OR operation on the
-left operand and the right operand and assigns the result to the left
-operand.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="bn">0b1010</span><span class="op">;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">|=</span> <span class="bn">0b0011</span><span class="op">;</span>  <span class="co">// x is now 0b1011 (0b1010 | 0b0011)</span></span></code></pre></div>
-<p>Bitwise XOR Assignment (^=) Performs a bitwise XOR operation on the
-left operand and the right operand and assigns the result to the left
-operand.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> x <span class="op">=</span> <span class="bn">0b1010</span><span class="op">;</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>x <span class="op">^=</span> <span class="bn">0b0101</span><span class="op">;</span>  <span class="co">// x is now 0b1111 (0b1010 ^ 0b0101)</span></span></code></pre></div>
-<p>These compound assignment operators provide a shorthand way to update
-the value of a variable based on its current value. They are widely used
-in C programming to make code more concise and readable.</p>
-</details>
-<details>
-<summary>
-Conditional Operators
-</summary>
-<p><br></p>
-<p>Conditional Operator or Ternary operator is used to check a condition
-and select a value of the condition depending on the value of the
-condition. It’s just a shorter version of if-else statement completed in
-one line.</p>
-<ul>
-<li><code>Ternary operator in c</code> : <em>syntax :</em>
-<code>(condition)? value 1 : value 2 ;</code>,</li>
-<li>If the condition is <em>TRUE</em> it will execute the
-<code>value 1</code> and if the condition is <em>FALSE</em> it will
-execute the <code>value 2</code>.</li>
-</ul>
-<p><br></p>
-<p><code>Comparision Ternary and if-else operator :</code></p>
-<p><br></p>
-<p><code>Ternary</code></p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">10</span> <span class="op">;</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> b <span class="op">=</span> <span class="dv">15</span> <span class="op">;</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> big<span class="op">;</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>big <span class="op">=</span> <span class="op">(</span>a<span class="op">&gt;</span>b<span class="op">)?</span> a <span class="op">:</span> b <span class="op">;</span> </span></code></pre></div>
-<p><br></p>
-<p><code>If-else</code></p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> a <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> b <span class="op">=</span> <span class="dv">15</span><span class="op">;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> big<span class="op">;</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">(</span>a<span class="op">&gt;</span>b<span class="op">){</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>big <span class="op">=</span> a<span class="op">;</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span> <span class="op">{</span></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>big <span class="op">=</span> b<span class="op">;</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-</details>
-<details>
-<summary>
-Bitwise Operator
-</summary>
-<blockquote>
-<p>Recommanded not to focus much on these as they are for advance
-programmers who manages data at bit level<br> Some Research on Binary
-numbers and Base 2 number system will help understand these better !</p>
-</blockquote>
-<h2 id="what-are-bitwise-operators">🔹 What Are Bitwise Operators?</h2>
-<p>Bitwise operators work on <strong>individual bits</strong> (0s and
-1s) of integer values.<br />
-They perform operations at the binary level.</p>
-<hr />
-<h2 id="why-use-bitwise-operators">🔹 Why Use Bitwise Operators?</h2>
-<p>They are useful for: - Low-level hardware programming - Efficient
-memory or flag manipulation - Performance optimization</p>
-<hr />
-<h2 id="bitwise-operators-in-c">🔹 Bitwise Operators in C</h2>
-<table>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 16%" />
-<col style="width: 71%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Operator</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>&amp;</code></td>
-<td>AND</td>
-<td>1 if <strong>both bits</strong> are 1</td>
-</tr>
-<tr class="even">
-<td><code>\|</code></td>
-<td>OR</td>
-<td>1 if <strong>at least one</strong> bit is 1</td>
-</tr>
-<tr class="odd">
-<td><code>^</code></td>
-<td>XOR</td>
-<td>1 if <strong>only one</strong> of the bits is 1</td>
-</tr>
-<tr class="even">
-<td><code>~</code></td>
-<td>NOT</td>
-<td><strong>Flips</strong> all bits (0 becomes 1, and 1 becomes 0)</td>
-</tr>
-<tr class="odd">
-<td><code>&lt;&lt;</code></td>
-<td>Left Shift</td>
-<td>Shifts bits <strong>left</strong>, fills 0s on the right</td>
-</tr>
-<tr class="even">
-<td><code>&gt;&gt;</code></td>
-<td>Right Shift</td>
-<td>Shifts bits <strong>right</strong>, removes bits from the end</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="example-in-c">🔹 Example in C</h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span> <span class="op">{</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> a <span class="op">=</span> <span class="dv">5</span><span class="op">;</span>   <span class="co">// Binary: 00000101</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">int</span> b <span class="op">=</span> <span class="dv">3</span><span class="op">;</span>   <span class="co">// Binary: 00000011</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;a &amp; b = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> a <span class="op">&amp;</span> b<span class="op">);</span>  <span class="co">// 00000001 -&gt; 1</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;a | b = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> a <span class="op">|</span> b<span class="op">);</span>  <span class="co">// 00000111 -&gt; 7</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;a ^ b = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> a <span class="op">^</span> b<span class="op">);</span>  <span class="co">// 00000110 -&gt; 6</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;~a = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> <span class="op">~</span>a<span class="op">);</span>        <span class="co">// In 8-bit: 11111010 -&gt; -6 (2&#39;s complement)</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;a &lt;&lt; 1 = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> a <span class="op">&lt;&lt;</span> <span class="dv">1</span><span class="op">);</span> <span class="co">// 00001010 -&gt; 10</span></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">&quot;a &gt;&gt; 1 = %d</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">,</span> a <span class="op">&gt;&gt;</span> <span class="dv">1</span><span class="op">);</span> <span class="co">// 00000010 -&gt; 2</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<hr />
-<h2 id="quick-bit-reference">🔹 Quick Bit Reference</h2>
-<pre class="text"><code>a = 5  = 00000101
-b = 3  = 00000011
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to C Programming</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --success: #10b981;
+        --warning: #f59e0b;
+        --danger: #ef4444;
+        --code-bg: #1e293b;
+        --sidebar-width: 280px;
+      }
 
-a &amp; b  = 00000001 = 1
-a | b  = 00000111 = 7
-a ^ b  = 00000110 = 6
-~a     = 11111010 = -6 (in 2&#39;s complement)
-a &lt;&lt; 1 = 00001010 = 10
-a &gt;&gt; 1 = 00000010 = 2</code></pre>
-<hr />
-</details>
-<hr />
-<h2 id="faq">FAQ :</h2>
-<details>
-<summary>
-Why do we need to include header files ?
-</summary>
-<h3 id="why-do-we-need-to-include-header-files">Why do we need to
-include header files ?</h3>
-<p><code>We include header file because they contain pre-define functions , macros which will help us write a program without making complex functions .</code></p>
-<p><em>We can also write a program without including a header file but
-we need to write our own functions like example we do not want to
-include the stdio.h header file but this header file give us the
-required functions for input/output like printf and scanf so if we do
-not include the stdio.h header file we need to make a custom funtion for
-printing and getting user input like printf and scanf by
-ourself</em></p>
-<h3 id="tldr">TL;DR</h3>
-<p><code>We include header file to use pre-define functions , macros so if we do not include them we need to make the funtions ourself</code></p>
-</details>
-<details>
-<summary>
-why int/void main() funtion ?
-</summary>
-<h3
-id="why-most-of-the-time-main-has-intvoid-next-to-it-like-intvoid-main">Why
-most of the time main() has int/void next to it like int/void main()
-?</h3>
-<blockquote>
-<p>using void is also discourage for large projects</p>
-</blockquote>
-<p><code>Main function is the only function which is executed by the program. So a funtion need a type right ? so we are specifying the type of our main funtion int meaning it was a integer return type and void means no return type and the OS also checks for return type to determine what happen to the program running ?</code></p>
-<ul>
-<li><em>For every funtion there should be a type and the types can be
-our choice wheather int/void it totally depends on us</em><br></li>
-<li><em>if we want to debug our code we specify the return type to
-<code>int</code> to main because when the main program executes
-successfully it return 0 and when it had error it return 1</em><br></li>
-<li><em>if we dont want to debug or bother with returns we specify
-<code>void</code> to main because when it executes it will not return
-anything</em><br></li>
-<li><em>the OS or the system check the program running so it check via
-the return type if return was 1 it knows the program has ran into an
-error and will notify you</em></li>
-</ul>
-<h3 id="tldr-1">TL;DR</h3>
-<p><code>We use int/void to main because main is also a funtion and every funtion needs its type to determine return type and we use int when we need to debug code because it returns 0 when it works and 1 when it gives error and we use void to specify no return type meaning nothing will return and bother and the os also check the program condition using return values</code>.</p>
-<hr />
-<h3
-id="after-this-did-i-just-sense-another-question-xd-if-not-i-will-try-to-list-it">🙃
-After this did i just sense another question XD ? if not 😳 i will try
-to list it</h3>
-<h3 id="q.-then-why-cant-we-use-char-main-or-float-main">Q. Then why
-can’t we use char main() or float main() ?</h3>
-<p><code>We can use char or float type with main but it is highly discourage because the OS or the system checking the program condition via the return value will not be able to understand char return and float return as said in the above that 0 and 1 are used for success and error and there are no know values for char and float return.</code></p>
-<h3 id="tldr-2">TL;DR</h3>
-<p><code>We can use char or float main but it is highly discourage as the OS will not know the return values because the OS does not have any idea what a char or float return means as it works on 0 and 1 for return</code></p>
-</details>
-<hr />
-<h3 id="examples">Examples :</h3>
-<p><code>Variable Declaration :</code></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co">// Declaring a variable </span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co">// we use a type specifier to declare a variable [ int , char , float , double] choose the required type</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> age <span class="op">=</span> <span class="dv">25</span> <span class="op">;</span> <span class="co">// int for age as it is interger ;</span></span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="dt">char</span> name<span class="op">[</span><span class="dv">20</span><span class="op">]</span> <span class="op">=</span> <span class="st">&quot;tomba&quot;</span> <span class="op">;</span> <span class="co">// we are using array it&#39;s just a collection of many char</span></span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="dt">float</span> pi <span class="op">=</span> <span class="fl">3.14</span> <span class="op">;</span> <span class="co">// we are using float for decimal numbers </span></span></code></pre></div>
-<p><code>Simple hello world structure :</code></p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode c"><code class="sourceCode c"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(){</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  printf<span class="op">(</span><span class="st">&quot;Hello world</span><span class="sc">\n</span><span class="st">&quot;</span><span class="op">);</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
-<p><code>Output</code> : ``` Hello world</p>
-<p>```</p>
-<ul>
-<li><em>here the code starts with the include &lt;stdio.h&gt; which
-inlcude the standart input/output header file which gives printf funtion
-and we use int main as the return type and we use printf function ,
-printf prints the words inside the double quotes and means move to new
-line and we give a return value 0 which tell the OS that the program ran
-sucessfully.</em></li>
-</ul>
-<hr />
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
+
+      /* Sidebar */
+      .sidebar {
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
+        transition: transform 0.3s ease;
+      }
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .sidebar-header i {
+        color: var(--primary);
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a.active {
+        background-color: #eff6ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      .sidebar-footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #e2e8f0;
+        font-size: 0.875rem;
+        color: var(--gray);
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 2rem;
+        max-width: 900px;
+      }
+
+      /* Header */
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .header h1 {
+        font-size: 1.75rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray);
+        color: var(--dark);
+      }
+
+      .btn-outline:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      /* Content styles */
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1, h2, h3, h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+        margin-top: 1.5rem;
+        color: var(--primary-dark);
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul, ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+        color: #334155;
+      }
+
+      code {
+        font-family: "Fira Code", monospace;
+        background-color: #f1f5f9;
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.25rem;
+        font-size: 0.9em;
+        color: #c026d3;
+      }
+
+      pre {
+        background-color: var(--code-bg);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin: 1.5rem 0;
+        overflow-x: auto;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+        color: #e2e8f0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      blockquote {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+        font-style: italic;
+        color: #334155;
+      }
+
+      .alert {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .alert i {
+        font-size: 1.25rem;
+        margin-top: 0.1rem;
+      }
+
+      .alert-info {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        color: var(--primary-dark);
+      }
+
+      .alert-warning {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        color: #92400e;
+      }
+
+      .alert-success {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        color: #065f46;
+      }
+
+      .algorithm-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .algorithm-card h4 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .algorithm-card h4 i {
+        color: var(--primary);
+      }
+
+      .algorithm-steps {
+        margin-left: 1.5rem;
+      }
+
+      .algorithm-steps li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .algorithm-steps li:before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+      }
+
+      /* Toggle sidebar on mobile */
+      .sidebar-toggle {
+        display: none;
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+        }
+        .sidebar-toggle {
+          display: flex;
+        }
+      }
+
+      /* Dark mode toggle */
+      .dark-mode-toggle {
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+        background-color: #0f172a;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar,
+      body.dark-mode .content-card,
+      body.dark-mode .algorithm-card {
+        background-color: #1e293b;
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a {
+        color: #e2e8f0;
+      }
+
+      body.dark-mode .sidebar-nav a:hover {
+        background-color: #334155;
+      }
+
+      body.dark-mode .sidebar-nav a.active {
+        background-color: #334155;
+      }
+
+      body.dark-mode code:not(pre code) {
+        background-color: #334155;
+        color: #f0abfc;
+      }
+
+      body.dark-mode pre {
+        background-color: #0f172a;
+      }
+
+      body.dark-mode h1,
+      body.dark-mode h2,
+      body.dark-mode h3,
+      body.dark-mode h4 {
+        color: #93c5fd;
+      }
+
+      body.dark-mode p,
+      body.dark-mode li {
+        color: #cbd5e1;
+      }
+
+      body.dark-mode .alert-info {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      body.dark-mode .alert-warning {
+        background-color: #78350f;
+        color: #fcd34d;
+      }
+
+      body.dark-mode .alert-success {
+        background-color: #064e3b;
+        color: #a7f3d0;
+      }
+
+      body.dark-mode blockquote {
+        background-color: #1e3a8a;
+        color: #bfdbfe;
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .content-card {
+        animation: fadeIn 0.3s ease-out forwards;
+      }
+
+      /* Tooltip */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted var(--gray);
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: var(--dark);
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.875rem;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /* Custom styles for C documentation */
+      .note-box {
+        background-color: #eff6ff;
+        border-left: 4px solid var(--primary);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      .note-box strong {
+        color: var(--primary);
+      }
+
+      .definition-box {
+        background-color: #ecfdf5;
+        border-left: 4px solid var(--success);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      .definition-box strong {
+        color: var(--success);
+      }
+
+      .warning-box {
+        background-color: #fffbeb;
+        border-left: 4px solid var(--warning);
+        padding: 1rem;
+        margin: 1.5rem 0;
+        border-radius: 0 0.5rem 0.5rem 0;
+      }
+
+      .warning-box strong {
+        color: #92400e;
+      }
+
+      .faq-item {
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 1.5rem;
+      }
+
+      .faq-item:last-child {
+        border-bottom: none;
+      }
+
+      .faq-question {
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .faq-question i {
+        color: var(--primary);
+      }
+
+      .faq-answer {
+        margin-left: 1.75rem;
+      }
+
+      .truth-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+      }
+
+      .truth-table th,
+      .truth-table td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .truth-table th {
+        background-color: #eff6ff;
+        color: var(--primary);
+      }
+
+      .truth-table tr:nth-child(even) {
+        background-color: #f8fafc;
+      }
+
+      body.dark-mode .truth-table th {
+        background-color: #1e3a8a;
+      }
+
+      body.dark-mode .truth-table tr:nth-child(even) {
+        background-color: #1e293b;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-code"></i> C Programming</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#overview" class="active"><i class="fas fa-book-open"></i> Overview</a>
+        <a href="#variables"><i class="fas fa-tag"></i> Variables</a>
+        <a href="#constants"><i class="fas fa-lock"></i> Constants</a>
+        <a href="#libraries"><i class="fas fa-book"></i> Libraries</a>
+        <a href="#preprocessor"><i class="fas fa-cog"></i> Preprocessor</a>
+        <a href="#keywords"><i class="fas fa-key"></i> Keywords</a>
+        <a href="#structure"><i class="fas fa-project-diagram"></i> Program Structure</a>
+        <a href="#data-types"><i class="fas fa-database"></i> Data Types</a>
+        <a href="#operators"><i class="fas fa-calculator"></i> Operators</a>
+        <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+        <a href="#examples"><i class="fas fa-code"></i> Examples</a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>Chapter 02</p>
+        <style>
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        </style>
+        <p><a href="https://github.com/TanshenH" target="_blank">© 2023 TanshenH</a></p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1><i class="fas fa-code"></i> Introduction to C Programming</h1>
+        <div class="header-actions">
+          <button class="btn btn-outline" id="printBtn">
+            <i class="fas fa-print"></i> Print
+          </button>
+          <button class="btn btn-primary" id="downloadBtn">
+            <i class="fas fa-download"></i> Download
+          </button>
+        </div>
+      </div>
+
+      <div class="content-card">
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle"></i>
+          <div>
+            <strong>Important:</strong> All documentation will be on this readme - no separate files
+          </div>
+        </div>
+
+        <h2 id="overview">Introduction to C Language</h2>
+        <p>
+          <code>C is a general-purpose programming language developed by Dennis Ritchie at Bell Labs in the early 1970s. Ritchie created C as a low-level language that could be used to write efficient and portable system software.</code>
+        </p>
+
+        <div id="variables">
+          <h3><i class="fas fa-tag"></i> Variables</h3>
+          <div class="definition-box">
+            <p><strong>Variable:</strong> A variable is an identifier or a name which is used to refer a value and this value varies or changes during the program execution.</p>
+            <p><em>Example:</em> <code>name = "tomba", surname = "laisharam", age = 25</code></p>
+          </div>
+
+          <h4>Declaring Variables</h4>
+          <p>We use a data type specifier along with the variable name:</p>
+          <pre><code>int age;  // int is a data type for integer and age is the name of variable</code></pre>
+
+          <h4>Types of Variables</h4>
+          <div class="algorithm-card">
+            <h4><i class="fas fa-globe"></i> Global Variable</h4>
+            <p>Variables which are declared outside the main function block, and they can be used in the main program block and sub program block like functions.</p>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-map-marker-alt"></i> Local Variable</h4>
+            <p>Variables which are declared inside the main function block, and they are used only in the block in which they are declared. Sub programs or functions can also have local variables.</p>
+          </div>
+
+          <h4>Initialization and Assignment</h4>
+          <div class="algorithm-card">
+            <h4><i class="fas fa-play"></i> Initialization</h4>
+            <p>When we declare a variable and give it a value at the same time, it's called initialization.</p>
+            <p><strong>Example:</strong></p>
+            <pre><code>int age = 32;  // Declaration and initialization</code></pre>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-equals"></i> Assignment</h4>
+            <p>When we give a new value to an already declared variable, it's called assignment.</p>
+            <p><strong>Example:</strong></p>
+            <pre><code>age = 25;  // Assigning a new value</code></pre>
+            <p>Assignment is not limited to changing values. If a variable was declared but not initialized, we can assign a value to it later.</p>
+            <pre><code>int age;     // Declaration without initialization
+age = 30;    // Assignment after declaration</code></pre>
+          </div>
+        </div>
+
+        <div id="constants">
+          <h3><i class="fas fa-lock"></i> Constants</h3>
+          <div class="definition-box">
+            <p><strong>Constant:</strong> Any unchanged value in a program during program execution is called a constant.</p>
+          </div>
+
+          <h4>Types of Constants</h4>
+          <div class="algorithm-card">
+            <h4><i class="fas fa-hashtag"></i> Numeric Constants</h4>
+            <ol>
+              <li>
+                <strong>Integer Constant:</strong> An integer constant is a signed or unsigned whole number.
+                <p><em>Example:</em> <code>-24, 52, 102</code></p>
+              </li>
+              <li>
+                <strong>Real or Floating Point Constant:</strong> Any signed or unsigned number with fractional part.
+                <p><em>Example:</em> <code>3.14, 0.234, 0.42e-32</code></p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-font"></i> String or Character Constants</h4>
+            <ol>
+              <li>
+                <strong>Single character string constant:</strong> Any letter or character enclosed in single quotes.
+                <p><em>Example:</em> <code>'h', 'a', '+'</code></p>
+              </li>
+              <li>
+                <strong>String of characters constant:</strong> Any string of characters consisting of letters, digits, and symbols enclosed in double quotes.
+                <p><em>Example:</em> <code>"letters", "number02", "person+name+$"</code></p>
+              </li>
+            </ol>
+          </div>
+        </div>
+
+        <div id="libraries">
+          <h3><i class="fas fa-book"></i> Libraries</h3>
+          <div class="definition-box">
+            <p><strong>Library:</strong> A library in C is a collection of pre-compiled functions and routines that can be used in programs to perform common tasks, such as input/output, string handling, or math operations.</p>
+          </div>
+
+          <h4>Common Libraries</h4>
+          <div class="algorithm-steps">
+            <ul>
+              <li>
+                <code>stdio.h</code>: Provides functions for input/output operations (e.g., printf, scanf)
+              </li>
+              <li>
+                <code>conio.h</code>: Console input/output (older compilers like Turbo C++)
+              </li>
+              <li>
+                <code>math.h</code>: Mathematical functions (e.g., sqrt, pow)
+              </li>
+              <li>
+                <code>string.h</code>: String manipulation functions (e.g., strcpy, strcmp)
+              </li>
+              <li>
+                <code>stdlib.h</code>: System-related functions (e.g., malloc, free)
+              </li>
+            </ul>
+          </div>
+
+          <blockquote>
+            <i class="fas fa-info-circle"></i> Sometimes programmers write their own libraries for their specific needs.
+          </blockquote>
+        </div>
+
+        <div id="preprocessor">
+          <h3><i class="fas fa-cog"></i> Preprocessor Directives</h3>
+          <div class="definition-box">
+            <p><strong>Preprocessor directives</strong> in C are instructions that are processed by the C preprocessor before the actual compilation of the program begins. These directives begin with the symbol <code>#</code> and are used to include files, define constants or macros, and control the compilation process conditionally.</p>
+          </div>
+
+          <h4>Types of Preprocessor Directives</h4>
+          <div class="algorithm-steps">
+            <ol>
+              <li>
+                <code>File Inclusion</code>: Used to include contents of another file
+                <p><em>Syntax:</em> <code>#include &lt;file&gt;</code></p>
+              </li>
+              <li>
+                <code>Macro Definition</code>: Used to define symbolic constant or macro
+                <p><em>Example:</em> <code>#define MONTH 30</code></p>
+              </li>
+            </ol>
+          </div>
+
+          <div class="note-box">
+            <p>More preprocessor directives are available at <a href="https://www.geeksforgeeks.org/cc-preprocessors/" target="_blank">GeeksforGeeks</a></p>
+          </div>
+        </div>
+
+        <div id="keywords">
+          <h3><i class="fas fa-key"></i> C Keywords</h3>
+          <p><code>There are 32 available Keywords in C (version C98/C90)</code></p>
+          <pre><code>auto        break       case        char        const
+continue    default     do          double      else
+enum        extern      float       for         goto
+if          int         long        register    return
+short       signed      sizeof      static      struct
+switch      typedef     union       unsigned    void
+volatile    while</code></pre>
+        </div>
+
+        <div id="structure">
+          <h3><i class="fas fa-project-diagram"></i> Structure of C Program</h3>
+          <pre><code>&lt;Header files&gt;
+
+&lt;Global declaration of variables&gt;
+
+main()
+{
+  &lt;Local declaration of variables&gt;
+  --------------
+  &lt;Statements&gt;
+  --------------
+}
+
+&lt;Sub programs - function blocks&gt;</code></pre>
+
+          <div class="algorithm-steps">
+            <ul>
+              <li>The header files tell compiler to include required files to run the program, define macros substitution etc.</li>
+              <li>Global declaration of variable declares the variable outside the main block meaning the declared variable can be use by any function or also by the main function.</li>
+              <li>Local declaration of variable means that the variable is declared inside the main block and cannot be used in other sub blocks.</li>
+              <li>The statements which are written inside the main function will only execute other statements which are written outside the main block will not be executed</li>
+              <li>Functions are just like another main block which will not be executed but which can be called in the main block to do certain actions, work, etc.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="data-types">
+          <h3><i class="fas fa-database"></i> Basic Data Types</h3>
+          <div class="algorithm-steps">
+            <ul>
+              <li>
+                <code>int</code>: Refers to integer. It can hold a signed or unsigned whole number within specific range.
+              </li>
+              <li>
+                <code>char</code>: Refers to character. It can hold one letter/symbol. In fact, char in C language is associated with integers refers to a letter/symbol as per ASCII which has assigned integer value for all letters/symbol used in programming.
+              </li>
+              <li>
+                <code>float</code>: Refers to floating point or real number. It can hold a real number like 3.174813 or 4.53e6 with six decimal digits in decimal or exponential form.
+              </li>
+              <li>
+                <code>double</code>: Also refers to floating or real number. It can hold a real number in double precision. A double precision number uses 12 decimal digit like 3.42134421232 or 4.2324452423e12.
+              </li>
+            </ul>
+          </div>
+
+          <div class="note-box">
+            <p>More data types are available at <a href="https://www.geeksforgeeks.org/data-types-in-c/" target="_blank">GeeksforGeeks</a></p>
+          </div>
+        </div>
+
+        <div id="operators">
+          <h3><i class="fas fa-calculator"></i> Operators</h3>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-plus-minus"></i> Arithmetic Operators</h4>
+            <ul>
+              <li><code>+ : addition</code>, <em>1 + 1 = 2</em></li>
+              <li><code>- : subtraction</code>, <em>2 - 1 = 1</em></li>
+              <li><code>* : multiplication</code>, <em>2 * 3 = 6</em></li>
+              <li><code>/ : division</code>, <em>8 / 2 = 4</em></li>
+            </ul>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-not-equal"></i> Relational Operators</h4>
+            <ul>
+              <li><code>&lt; : less than</code> : <em>5 &lt; 2 : FALSE</em></li>
+              <li><code>&gt; : greater than</code> : <em>5 &gt; 2 : TRUE</em></li>
+              <li><code>&lt;= : less than or equal to</code> : <em>5 &lt;= 2 : FALSE</em></li>
+              <li><code>&gt;= : greater than or equal to</code> : <em>5 &gt;= 2 : TRUE</em></li>
+              <li><code>== : equal to</code> : <em>5 == 2 : FALSE</em> or <em>5 == 5 : TRUE</em></li>
+              <li><code>!= : not equal to</code> : <em>5 != 2 : TRUE</em></li>
+            </ul>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-random"></i> Logical Operators</h4>
+            <p><code>&amp;&amp; : AND</code> : Returns TRUE if all the given condition or statement are true, if any statement is false, it will always return FALSE</p>
+            <p><em>Example:</em> <code>(5&lt;2) &amp;&amp; (5&gt;2) : FALSE</code></p>
+            
+            <p><code>|| : OR</code> : Return TRUE if any of the given condition or statement are true, if none of the condition is TRUE, it will always return FALSE</p>
+            <p><em>Example:</em> <code>(5&lt;2) || (5&gt;3) : TRUE</code></p>
+            
+            <p><code>! : NOT</code> : Return TRUE if the condition is FALSE, if the condition is TRUE, it will always return FALSE</p>
+            <p><em>Example:</em> <code>!(5&lt;2) : TRUE</code></p>
+
+            <h4>Truth Tables</h4>
+            <h5>AND (&amp;&amp;) Operator</h5>
+            <table class="truth-table">
+              <thead>
+                <tr>
+                  <th>OPERAND 1</th>
+                  <th>OPERAND 2</th>
+                  <th>RESULT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>true</td>
+                  <td>true</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td>true</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+                <tr>
+                  <td>false</td>
+                  <td>true</td>
+                  <td>false</td>
+                </tr>
+                <tr>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5>OR (||) Operator</h5>
+            <table class="truth-table">
+              <thead>
+                <tr>
+                  <th>OPERAND 1</th>
+                  <th>OPERAND 2</th>
+                  <th>RESULT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>true</td>
+                  <td>true</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td>true</td>
+                  <td>false</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td>false</td>
+                  <td>true</td>
+                  <td>true</td>
+                </tr>
+                <tr>
+                  <td>false</td>
+                  <td>false</td>
+                  <td>false</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h5>NOT (!) Operator</h5>
+            <table class="truth-table">
+              <thead>
+                <tr>
+                  <th>OPERAND</th>
+                  <th>RESULT</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>true</td>
+                  <td>false</td>
+                </tr>
+                <tr>
+                  <td>false</td>
+                  <td>true</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-plus-circle"></i> Increment and Decrement</h4>
+            <h5>Increment</h5>
+            <p>The increment operator in C is represented by the <code>++</code> symbol.</p>
+            <ol>
+              <li>
+                <strong>Pre-increment</strong>: <code>++variable</code>
+                <p>The value of the variable is incremented by 1 before it is used in the expression.</p>
+                <p><em>Example:</em> <code>x = ++y;</code> (first increments <code>y</code> by 1, then assigns the new value of <code>y</code> to <code>x</code>)</p>
+              </li>
+              <li>
+                <strong>Post-increment</strong>: <code>variable++</code>
+                <p>The value of the variable is used in the expression first, and then it is incremented by 1.</p>
+                <p><em>Example:</em> <code>x = y++;</code> (first assigns the current value of <code>y</code> to <code>x</code>, then increments <code>y</code> by 1)</p>
+              </li>
+            </ol>
+
+            <h5>Decrement</h5>
+            <p>The decrement operator in C is represented by the <code>--</code> symbol.</p>
+            <ol>
+              <li>
+                <strong>Pre-decrement</strong>: <code>--variable</code>
+                <p>The value of the variable is decremented by 1 before it is used in the expression.</p>
+                <p><em>Example:</em> <code>x = --y;</code> (first decrements <code>y</code> by 1, then assigns the new value of <code>y</code> to <code>x</code>)</p>
+              </li>
+              <li>
+                <strong>Post-decrement</strong>: <code>variable--</code>
+                <p>The value of the variable is used in the expression first, and then it is decremented by 1.</p>
+                <p><em>Example:</em> <code>x = y--;</code> (first assigns the current value of <code>y</code> to <code>x</code>, then decrements <code>y</code> by 1)</p>
+              </li>
+            </ol>
+
+            <h5>Example</h5>
+            <pre><code>int x = 5;
+int y = 10;
+
+// Pre-increment
+x = ++y;  // x = 11, y = 11
+
+// Post-increment
+x = y++;  // x = 11, y = 12
+
+// Pre-decrement
+x = --y;  // x = 11, y = 11
+
+// Post-decrement
+x = y--;  // x = 12, y = 11</code></pre>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-equals"></i> Assignment Operators</h4>
+            <p>In C programming, assignment operators are used to assign values to variables.</p>
+            
+            <h5>Simple Assignment (=)</h5>
+            <p>Assigns the value on the right to the variable on the left.</p>
+            <pre><code>int x = 10;  // x is now 10</code></pre>
+            
+            <h5>Addition Assignment (+=)</h5>
+            <p>Adds the right operand to the left operand and assigns the result to the left operand.</p>
+            <pre><code>int x = 10;
+x += 5;  // x is now 15 (10 + 5)</code></pre>
+            
+            <h5>Subtraction Assignment (-=)</h5>
+            <pre><code>int x = 10;
+x -= 3;  // x is now 7 (10 - 3)</code></pre>
+            
+            <h5>Multiplication Assignment (*=)</h5>
+            <pre><code>int x = 10;
+x *= 2;  // x is now 20 (10 * 2)</code></pre>
+            
+            <h5>Division Assignment (/=)</h5>
+            <pre><code>int x = 10;
+x /= 2;  // x is now 5 (10 / 2)</code></pre>
+            
+            <h5>Modulus Assignment (%=)</h5>
+            <pre><code>int x = 10;
+x %= 3;  // x is now 1 (10 % 3)</code></pre>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-question"></i> Conditional (Ternary) Operator</h4>
+            <p>Conditional Operator or Ternary operator is used to check a condition and select a value depending on the condition. It's a shorter version of if-else statement.</p>
+            <p><em>Syntax:</em> <code>(condition) ? value1 : value2;</code></p>
+            <p>If the condition is <em>TRUE</em> it will execute the <code>value1</code> and if the condition is <em>FALSE</em> it will execute the <code>value2</code>.</p>
+            
+            <h5>Comparison: Ternary vs If-Else</h5>
+            <p><strong>Ternary</strong></p>
+            <pre><code>int a = 10;
+int b = 15;
+int big;
+
+big = (a > b) ? a : b;</code></pre>
+            
+            <p><strong>If-Else</strong></p>
+            <pre><code>int a = 10;
+int b = 15;
+int big;
+
+if (a > b) {
+  big = a;
+} else {
+  big = b;
+}</code></pre>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-microchip"></i> Bitwise Operators</h4>
+            <blockquote>
+              <i class="fas fa-info-circle"></i> Recommended not to focus much on these as they are for advanced programmers who manages data at bit level.<br>
+              Some research on Binary numbers and Base 2 number system will help understand these better!
+            </blockquote>
+            
+            <h5>Bitwise Operators in C</h5>
+            <table class="truth-table">
+              <thead>
+                <tr>
+                  <th>Operator</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>&amp;</code></td>
+                  <td>AND</td>
+                  <td>1 if <strong>both bits</strong> are 1</td>
+                </tr>
+                <tr>
+                  <td><code>|</code></td>
+                  <td>OR</td>
+                  <td>1 if <strong>at least one</strong> bit is 1</td>
+                </tr>
+                <tr>
+                  <td><code>^</code></td>
+                  <td>XOR</td>
+                  <td>1 if <strong>only one</strong> of the bits is 1</td>
+                </tr>
+                <tr>
+                  <td><code>~</code></td>
+                  <td>NOT</td>
+                  <td><strong>Flips</strong> all bits (0 becomes 1, and 1 becomes 0)</td>
+                </tr>
+                <tr>
+                  <td><code>&lt;&lt;</code></td>
+                  <td>Left Shift</td>
+                  <td>Shifts bits <strong>left</strong>, fills 0s on the right</td>
+                </tr>
+                <tr>
+                  <td><code>&gt;&gt;</code></td>
+                  <td>Right Shift</td>
+                  <td>Shifts bits <strong>right</strong>, removes bits from the end</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            <h5>Example</h5>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+    int a = 5;   // Binary: 00000101
+    int b = 3;   // Binary: 00000011
+
+    printf("a & b = %d\n", a & b);  // 00000001 → 1
+    printf("a | b = %d\n", a | b);  // 00000111 → 7
+    printf("a ^ b = %d\n", a ^ b);  // 00000110 → 6
+    printf("~a = %d\n", ~a);        // In 8-bit: 11111010 → -6 (2's complement)
+    printf("a << 1 = %d\n", a << 1); // 00001010 → 10
+    printf("a >> 1 = %d\n", a >> 1); // 00000010 → 2
+
+    return 0;
+}</code></pre>
+          </div>
+        </div>
+
+        <div id="faq">
+          <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question"></i> Why do we need to include header files?
+            </div>
+            <div class="faq-answer">
+              <p><code>We include header files because they contain pre-defined functions, macros which will help us write a program without making complex functions.</code></p>
+              <p><em>We can also write a program without including a header file but we need to write our own functions. For example, if we don't include the stdio.h header file we need to make custom functions for printing and getting user input like printf and scanf ourselves.</em></p>
+              <h5>TL;DR</h5>
+              <p><code>We include header files to use pre-defined functions and macros. If we don't include them, we need to make the functions ourselves.</code></p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question"></i> Why int/void main() function?
+            </div>
+            <div class="faq-answer">
+              <blockquote>
+                <i class="fas fa-info-circle"></i> Using void is also discouraged for large projects.
+              </blockquote>
+              <p><code>Main function is the only function which is executed by the program. A function needs a type, so we specify the type of our main function. 'int' means it has an integer return type and 'void' means no return type. The OS also checks for return type to determine what happened to the program.</code></p>
+              <ul>
+                <li><em>For every function there should be a type and the types can be our choice whether int/void - it totally depends on us</em></li>
+                <li><em>If we want to debug our code we specify the return type to <code>int</code> for main because when the main program executes successfully it returns 0 and when it has an error it returns 1</em></li>
+                <li><em>If we don't want to debug or bother with returns we specify <code>void</code> to main because when it executes it will not return anything</em></li>
+                <li><em>The OS or the system checks the program running via the return type - if return was 1 it knows the program has run into an error and will notify you</em></li>
+              </ul>
+              <h5>TL;DR</h5>
+              <p><code>We use int/void for main because main is also a function and every function needs its type to determine return type. We use int when we need to debug code because it returns 0 when it works and 1 when it gives error. We use void to specify no return type meaning nothing will return and the OS also checks the program condition using return values.</code></p>
+              
+              <h5>Then why can't we use char main() or float main()?</h5>
+              <p><code>We can use char or float type with main but it is highly discouraged because the OS or the system checking the program condition via the return value will not be able to understand char return and float return as said in the above that 0 and 1 are used for success and error and there are no known values for char and float return.</code></p>
+              <h5>TL;DR</h5>
+              <p><code>We can use char or float main but it is highly discouraged as the OS will not know the return values because the OS does not have any idea what a char or float return means as it works on 0 and 1 for return.</code></p>
+            </div>
+          </div>
+        </div>
+
+        <div id="examples">
+          <h3><i class="fas fa-code"></i> Examples</h3>
+          
+          <div class="algorithm-card">
+            <h4><i class="fas fa-tag"></i> Variable Declaration</h4>
+            <pre><code>// Declaring a variable 
+// We use a type specifier to declare a variable [int, char, float, double] choose the required type
+
+int age = 25; // int for age as it is integer
+char name[20] = "tomba"; // We are using array - it's just a collection of many char
+float pi = 3.14; // We are using float for decimal numbers</code></pre>
+          </div>
+
+          <div class="algorithm-card">
+            <h4><i class="fas fa-hello"></i> Simple Hello World Structure</h4>
+            <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+  printf("Hello world\n");
+  return 0;
+}</code></pre>
+            <h5>Output</h5>
+            <pre><code>Hello world</code></pre>
+            <p><em>Here the code starts with the include &lt;stdio.h&gt; which includes the standard input/output header file that provides the printf function. We use int main as the return type and the printf function to print the words inside the double quotes. '\n' means move to new line and we give a return value 0 which tells the OS that the program ran successfully.</em></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+      <i class="fas fa-moon"></i>
+    </button>
+
+    <script>
+      // Toggle sidebar on mobile
+      const sidebarToggle = document.getElementById("sidebarToggle");
+      const sidebar = document.getElementById("sidebar");
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+      });
+
+      // Dark mode toggle
+      const darkModeToggle = document.getElementById("darkModeToggle");
+
+      darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+
+        if (document.body.classList.contains("dark-mode")) {
+          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+      });
+
+      // Print functionality
+      const printBtn = document.getElementById("printBtn");
+      printBtn.addEventListener("click", () => {
+        window.print();
+      });
+
+      // Download functionality
+      const downloadBtn = document.getElementById("downloadBtn");
+      downloadBtn.addEventListener("click", () => {
+        const content = document.documentElement.outerHTML;
+        const blob = new Blob([content], { type: "text/html" });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "c-programming-guide.html";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
+      });
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, .algorithm-card"
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
+        });
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

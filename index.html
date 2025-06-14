@@ -1,395 +1,517 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 10 CS Guide</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="https://img.icons8.com/?size=100&id=40670&format=png&color=000000">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --primary-dark: #1e40af;
-      --secondary: #f59e0b;
-      --dark: #1e293b;
-      --light: #f8fafc;
-      --gray: #94a3b8;
-      --sidebar-width: 280px;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class 10 CS Guide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/?size=100&id=40670&format=png&color=000000"
+    />
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-dark: #1e40af;
+        --secondary: #f59e0b;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --gray: #94a3b8;
+        --sidebar-width: 280px;
+      }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      background-color: #f1f5f9;
-      color: var(--dark);
-      display: flex;
-      min-height: 100vh;
-    }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          sans-serif;
+        line-height: 1.6;
+        background-color: #f1f5f9;
+        color: var(--dark);
+        display: flex;
+        min-height: 100vh;
+      }
 
-    /* Sidebar */
-    .sidebar {
-      width: var(--sidebar-width);
-      background: white;
-      box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-      padding: 2rem;
-      position: fixed;
-      height: 100vh;
-      overflow-y: auto;
-      z-index: 100;
-    }
-
-    .sidebar-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 2rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #e2e8f0;
-    }
-
-    .sidebar-header h2 {
-      font-size: 1.25rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .sidebar-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .sidebar-nav a {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.75rem 1rem;
-      border-radius: 0.5rem;
-      color: var(--dark);
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .sidebar-nav a:hover, .sidebar-nav a.active {
-      background-color: #f1f5f9;
-      color: var(--primary);
-    }
-
-    .sidebar-nav a i {
-      width: 1.25rem;
-      text-align: center;
-    }
-
-    /* Main content */
-    .main-content {
-      flex: 1;
-      margin-left: var(--sidebar-width);
-      padding: 3rem;
-      max-width: 1200px;
-    }
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .header h1 {
-      font-size: 2rem;
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .content-card {
-      background-color: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    h1, h2, h3, h4 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: #334155;
-    }
-
-    ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    li {
-      margin-bottom: 0.75rem;
-    }
-
-    a {
-      color: var(--primary);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    a:hover {
-      color: var(--primary-dark);
-      text-decoration: underline;
-    }
-
-    .chapter-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .chapter-card {
-      background-color: white;
-      border-radius: 0.75rem;
-      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-      padding: 1.5rem;
-      border-left: 4px solid var(--primary);
-      transition: transform 0.2s ease;
-    }
-
-    .chapter-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .chapter-card h3 {
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    .chapter-card h3 i {
-      color: var(--primary);
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.25rem;
-      border-radius: 0.5rem;
-      font-weight: 500;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-
-    .btn-primary {
-      background-color: var(--primary);
-      color: white;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--primary-dark);
-      text-decoration: none;
-    }
-
-    .section-title {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid #e2e8f0;
-    }
-
-    @media (max-width: 768px) {
+      /* Sidebar */
       .sidebar {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        width: var(--sidebar-width);
+        background: white;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        position: fixed;
+        height: 100vh;
+        overflow-y: auto;
+        z-index: 100;
       }
-      .sidebar.open {
-        transform: translateX(0);
+
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e2e8f0;
       }
+
+      .sidebar-header h2 {
+        font-size: 1.25rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .sidebar-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .sidebar-nav a {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .sidebar-nav a:hover,
+      .sidebar-nav a.active {
+        background-color: #f1f5f9;
+        color: var(--primary);
+      }
+
+      .sidebar-nav a i {
+        width: 1.25rem;
+        text-align: center;
+      }
+
+      /* Main content */
       .main-content {
-        margin-left: 0;
-        padding: 1.5rem;
+        flex: 1;
+        margin-left: var(--sidebar-width);
+        padding: 3rem;
+        max-width: 1200px;
       }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .content-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: #334155;
+      }
+
+      ul {
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.75rem;
+      }
+
+      a {
+        color: var(--primary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+      }
+
       .chapter-list {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
       }
-    }
-  </style>
-</head>
-<body>
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <h2><i class="fas fa-book"></i> Class 10 CS</h2>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
-      <a href="#about"><i class="fas fa-info-circle"></i> About</a>
-      <a href="#c-programming"><i class="fas fa-c"></i> C Programming</a>
-      <a href="#html"><i class="fab fa-html5"></i> HTML</a>
-    </nav>
-  </aside>
 
-  <main class="main-content">
-    <div class="header">
-      <h1><i class="fas fa-laptop-code"></i> CLASS 10 COMPUTER SCIENCE GUIDE</h1>
-    </div>
+      .chapter-card {
+        background-color: white;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        border-left: 4px solid var(--primary);
+        transition: transform 0.2s ease;
+      }
 
-    <div class="content-card" id="about">
-      <h2><i class="fas fa-info-circle"></i> About This Project</h2>
-      <p>
-        This comprehensive guide contains a collection of questions, answers, and algorithms from the 
-        Class 10 Computer Science textbook prescribed by the Manipur Board of Secondary Education.
-      </p>
-      <p>
-        Organized into clear sections for C Programming and HTML, each chapter includes detailed explanations, 
-        code examples, and visual flowcharts to help students master computer science concepts.
-      </p>
-    </div>
+      .chapter-card:hover {
+        transform: translateY(-5px);
+      }
 
-    <div id="c-programming">
-      <h2 class="section-title"><i class="fas fa-c"></i> C Programming Chapters</h2>
-      
-      <div class="chapter-list">
-        <div class="chapter-card">
-          <h3><i class="fas fa-project-diagram"></i>  1 - Algorithm For Problem Solving</h3>
-          <p>Learn fundamental algorithms and problem-solving techniques.</p>
-          <a href="ch01.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .chapter-card h3 {
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-code"></i>  2 - Introduction to C Language</h3>
-          <p>Basics of C programming language and its structure.</p>
-          <a href="ch02.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .chapter-card h3 i {
+        color: var(--primary);
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-keyboard"></i>  3 - I/O Functions and Statements</h3>
-          <p>Input/output operations and basic statements in C.</p>
-          <a href="ch03.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-random"></i>  4 - Control Statements in C</h3>
-          <p>Conditional statements and program flow control.</p>
-          <a href="ch04.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-redo"></i>  5 - Loop Control Structures</h3>
-          <p>Different types of loops and iteration in C programs.</p>
-          <a href="ch05.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+        text-decoration: none;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-layer-group"></i>  6 - Arrays and Subscripted Variables</h3>
-          <p>Working with arrays and indexed variables in C.</p>
-          <a href="ch06.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .btn-secondary {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-quote-right"></i>  7 - String Manipulations in C</h3>
-          <p>String handling and manipulation functions.</p>
-          <a href="ch07.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .btn-secondary:hover {
+        background-color: #e67e22;
+        text-decoration: none;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-cubes"></i>  8 - Functions in C</h3>
-          <p>Creating and using functions in C programs.</p>
-          <a href="ch08.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .button-group {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1rem;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-sitemap"></i>  9 - Structures and Unions</h3>
-          <p>Working with complex data types in C.</p>
-          <a href="ch09.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin: 2rem 0 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #e2e8f0;
+      }
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-bullseye"></i> CH10 - Pointers</h3>
-          <p>Understanding and using pointers in C.</p>
-          <a href="ch10.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
+      @media (max-width: 768px) {
+        .sidebar {
+          transform: translateX(-100%);
+          transition: transform 0.3s ease;
+        }
+        .sidebar.open {
+          transform: translateX(0);
+        }
+        .main-content {
+          margin-left: 0;
+          padding: 1.5rem;
+        }
+        .chapter-list {
+          grid-template-columns: 1fr;
+        }
+        .button-group {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2><i class="fas fa-book"></i> Class 10 CS</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#c-programming"><i class="fas fa-c"></i> C Programming</a>
+        <a href="#html"><i class="fab fa-html5"></i> HTML</a>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <div class="header">
+        <h1>
+          <i class="fas fa-laptop-code"></i> CLASS 10 COMPUTER SCIENCE GUIDE
+        </h1>
+      </div>
+
+      <div class="content-card" id="about">
+        <h2><i class="fas fa-info-circle"></i> About This Project</h2>
+        <p>
+          This comprehensive guide contains a collection of questions, answers,
+          and algorithms from the Class 10 Computer Science textbook prescribed
+          by the Manipur Board of Secondary Education.
+        </p>
+        <p>
+          Organized into clear sections for C Programming and HTML, each chapter
+          includes detailed explanations, code examples, and visual flowcharts
+          to help students master computer science concepts.
+        </p>
+      </div>
+
+      <div id="c-programming">
+        <h2 class="section-title">
+          <i class="fas fa-c"></i> C Programming Chapters
+        </h2>
+
+        <div class="chapter-list">
+          <div class="chapter-card">
+            <h3>
+              <i class="fas fa-project-diagram"></i> 1 - Algorithm For Problem
+              Solving
+            </h3>
+            <p>Learn fundamental algorithms and problem-solving techniques.</p>
+            <div class="button-group">
+              <a href="ch01.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH01-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-code"></i> 2 - Introduction to C Language</h3>
+            <p>Basics of C programming language and its structure.</p>
+            <div class="button-group">
+              <a href="ch02.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH02-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3>
+              <i class="fas fa-keyboard"></i> 3 - I/O Functions and Statements
+            </h3>
+            <p>Input/output operations and basic statements in C.</p>
+            <div class="button-group">
+              <a href="ch03.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH03-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-random"></i> 4 - Control Statements in C</h3>
+            <p>Conditional statements and program flow control.</p>
+            <div class="button-group">
+              <a href="ch04.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH04-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-redo"></i> 5 - Loop Control Structures</h3>
+            <p>Different types of loops and iteration in C programs.</p>
+            <div class="button-group">
+              <a href="ch05.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH05-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3>
+              <i class="fas fa-layer-group"></i> 6 - Arrays and Subscripted
+              Variables
+            </h3>
+            <p>Working with arrays and indexed variables in C.</p>
+            <div class="button-group">
+              <a href="ch06.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH06-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3>
+              <i class="fas fa-quote-right"></i> 7 - String Manipulations in C
+            </h3>
+            <p>String handling and manipulation functions.</p>
+            <div class="button-group">
+              <a href="ch07.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH07-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-cubes"></i> 8 - Functions in C</h3>
+            <p>Creating and using functions in C programs.</p>
+            <div class="button-group">
+              <a href="ch08.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH08-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-sitemap"></i> 9 - Structures and Unions</h3>
+            <p>Working with complex data types in C.</p>
+            <div class="button-group">
+              <a href="ch09.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH09-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3><i class="fas fa-bullseye"></i> CH10 - Pointers</h3>
+            <p>Understanding and using pointers in C.</p>
+            <div class="button-group">
+              <a href="ch10.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="CH10-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="html">
-      <h2 class="section-title"><i class="fab fa-html5"></i> HTML Chapters</h2>
-      
-      <div class="chapter-list">
-        <div class="chapter-card">
-          <h3><i class="fab fa-html5"></i> HTML01 - Introduction to HTML</h3>
-          <p>Fundamentals of HyperText Markup Language.</p>
-          <a href="html01.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
-        </div>
+      <div id="html">
+        <h2 class="section-title">
+          <i class="fab fa-html5"></i> HTML Chapters
+        </h2>
 
-        <div class="chapter-card">
-          <h3><i class="fas fa-paint-brush"></i> HTML02 - Web Designing Using HTML</h3>
-          <p>Creating web pages and layouts with HTML.</p>
-          <a href="html02.html" class="btn btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Chapter
-          </a>
+        <div class="chapter-list">
+          <div class="chapter-card">
+            <h3><i class="fab fa-html5"></i> HTML01 - Introduction to HTML</h3>
+            <p>Fundamentals of HyperText Markup Language.</p>
+            <div class="button-group">
+              <a href="html01.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="HTML01-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
+
+          <div class="chapter-card">
+            <h3>
+              <i class="fas fa-paint-brush"></i> HTML02 - Web Designing Using
+              HTML
+            </h3>
+            <p>Creating web pages and layouts with HTML.</p>
+            <div class="button-group">
+              <a href="html02.html" class="btn btn-primary">
+                <i class="fas fa-external-link-alt"></i> View Chapter
+              </a>
+              <a href="HTML02-Textual_Questions.html" class="btn btn-secondary">
+                <i class="fas fa-question-circle"></i> Textual Questions
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script>
-    // Mobile menu toggle functionality would go here
-    // You can add it later if needed for mobile responsiveness
-    
-    // Simple active link highlighting
-    document.querySelectorAll('.sidebar-nav a').forEach(link => {
-      link.addEventListener('click', function() {
-        document.querySelectorAll('.sidebar-nav a').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
+    <script>
+      // Mobile menu toggle functionality would go here
+      // You can add it later if needed for mobile responsiveness
+
+      // Simple active link highlighting
+      document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document
+            .querySelectorAll(".sidebar-nav a")
+            .forEach((l) => l.classList.remove("active"));
+          this.classList.add("active");
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
