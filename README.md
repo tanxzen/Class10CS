@@ -4,6 +4,7 @@
 
 # Class 10 Computer Science – Manipur Board  
 <h3><i>Focused on C language and application-based questions</i></h3>
+<h4><i>Visit the website at https://TanshenH.github.io/Class10CS</i></h4>
 
 [![Made with ❤️](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)](#)
 [![Stars](https://img.shields.io/github/stars/TanshenH/Class10CS?style=social)](https://github.com/TanshenH/Class10CS/stargazers)
