@@ -5,8 +5,8 @@
 # 📘 Class 10 Computer Science – Manipur Board  
 ### 📱 _Website Version_
 
-<i>Focused on C language and application-based questions</i>  
-<i>🌐 View it online: [https://TanshenH.github.io/Class10CS](https://TanshenH.github.io/Class10CS)</i>
+<h3><i>Focused on C language and application-based questions</i></h3>  
+<h4><i>🌐 View it online: [https://TanshenH.github.io/Class10CS](https://TanshenH.github.io/Class10CS)</i></h4>
 
 <br>
 
