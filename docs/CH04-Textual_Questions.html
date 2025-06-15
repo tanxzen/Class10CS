@@ -530,6 +530,66 @@
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
       }
+    
+      /* Fix algorithm code blocks for better readability */
+      .algorithm-card code,
+      .algorithm-card pre {
+        color: var(--algorithm-text) !important;
+        background-color: var(--algorithm-bg) !important;
+      }
+
+      /* Light theme algorithm code */
+      :root .algorithm-card code,
+      :root .algorithm-card pre {
+        color: #ecf0f1 !important;
+        background-color: #2c3e50 !important;
+      }
+
+      /* Dark theme algorithm code */
+      [data-theme="dark"] .algorithm-card code,
+      [data-theme="dark"] .algorithm-card pre {
+        color: #f1f5f9 !important;
+        background-color: #0f172a !important;
+      }
+
+      /* General code blocks outside algorithm cards */
+      code {
+        color: var(--code-text) !important;
+        background-color: var(--bg-secondary) !important;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: 'Courier New', monospace;
+      }
+
+      pre {
+        color: var(--code-text) !important;
+        background-color: var(--bg-secondary) !important;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+        font-family: 'Courier New', monospace;
+      }
+
+      /* Ensure algorithm cards have proper text colors */
+      .algorithm-card {
+        background: var(--algorithm-bg) !important;
+        color: var(--algorithm-text) !important;
+      }
+
+      .algorithm-card * {
+        color: var(--algorithm-text) !important;
+      }
+
+      .algorithm-card h3,
+      .algorithm-card h4,
+      .algorithm-card p,
+      .algorithm-card li,
+      .algorithm-card span,
+      .algorithm-card div,
+      .algorithm-card strong,
+      .algorithm-card b {
+        color: var(--algorithm-text) !important;
+      }
     </style>
   </head>
   <body>
