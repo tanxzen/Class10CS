@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-      :root {
+            :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -21,6 +21,91 @@
         --danger: #ef4444;
         --code-bg: #1e293b;
         --sidebar-width: 280px;
+        --warning-border: #facc15;
+        --warning-text: #854d0e;
+        
+        /* Light theme variables */
+        --bg-primary: #f1f5f9;
+        --bg-secondary: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --border-color: var(--border-color);
+        --shadow: rgba(0, 0, 0, 0.1);
+        --card-bg: #ffffff;
+        --sidebar-bg: #ffffff;
+        --algorithm-bg: #2c3e50;
+        --algorithm-text: #ecf0f1;
+        --flowchart-bg: #f1f5f9;
+        --alert-bg: #eff6ff;
+        --hint-bg: #fff3cd;
+        --hint-border: #ffeaa7;
+        --short-answer-bg: #e8f5e8;
+        --warning-bg: #fef08a;
+      }
+
+      [data-theme="dark"] {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --border-color: #334155;
+        --shadow: rgba(0, 0, 0, 0.3);
+        --card-bg: #1e293b;
+        --sidebar-bg: #1e293b;
+        --algorithm-bg: #0f172a;
+        --algorithm-text: #e2e8f0;
+        --flowchart-bg: #334155;
+        --alert-bg: #1e3a8a;
+        --hint-bg: #451a03;
+        --hint-border: #92400e;
+        --short-answer-bg: #14532d;
+        --warning-bg: #451a03;
+      }
+
+      /* Theme switcher styles */
+      .theme-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        padding: 8px;
+        box-shadow: 0 2px 10px var(--shadow);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        color: var(--text-secondary);
+      }
+
+      .theme-toggle:hover {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      .theme-toggle.active {
+        background: var(--primary);
+        color: white;
+      }
+
+      .theme-toggle i {
+        font-size: 16px;
       }
 
       * {
@@ -41,8 +126,8 @@
           Cantarell,
           sans-serif;
         line-height: 1.6;
-        background-color: #f1f5f9;
-        color: var(--dark);
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
         display: flex;
         min-height: 100vh;
       }
@@ -51,7 +136,7 @@
       .sidebar {
         width: var(--sidebar-width);
         background: white;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px var(--shadow);
         padding: 1.5rem;
         position: fixed;
         height: 100vh;
@@ -65,7 +150,7 @@
         align-items: center;
         margin-bottom: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid var(--border-color);
       }
 
       .sidebar-header h2 {
@@ -88,14 +173,14 @@
         gap: 0.75rem;
         padding: 0.75rem 1rem;
         border-radius: 0.5rem;
-        color: var(--dark);
+        color: var(--text-primary);
         text-decoration: none;
         transition: all 0.2s ease;
       }
 
       .sidebar-nav a:hover,
       .sidebar-nav a.active {
-        background-color: #f1f5f9;
+        background-color: var(--bg-primary);
         color: var(--primary);
       }
 
@@ -118,7 +203,7 @@
         align-items: center;
         margin-bottom: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid var(--border-color);
       }
 
       .header h1 {
@@ -154,14 +239,14 @@
       .btn-outline {
         background-color: transparent;
         border: 1px solid var(--gray);
-        color: var(--dark);
+        color: var(--text-primary);
       }
 
       /* Content styles */
       .content-card {
-        background-color: white;
+        background-color: var(--card-bg);
         border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px var(--shadow);
         padding: 2rem;
         margin-bottom: 2rem;
       }
@@ -213,9 +298,9 @@
       }
 
       .question-card {
-        background-color: white;
+        background-color: var(--card-bg);
         border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px var(--shadow);
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border-left: 4px solid var(--primary);
@@ -231,11 +316,11 @@
       td {
         padding: 0.75rem;
         text-align: left;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid var(--border-color);
       }
 
       th {
-        background-color: #f1f5f9;
+        background-color: var(--bg-primary);
         font-weight: 500;
       }
 
@@ -1057,6 +1142,61 @@ default:        {
             link.classList.add("active");
           }
         });
+      });
+    </script>
+      <script>
+      // Theme switching functionality
+      const themeToggle = {
+        init() {
+          this.createSwitcher();
+          this.loadTheme();
+          this.bindEvents();
+        },
+
+        createSwitcher() {
+          const switcher = document.createElement('div');
+          switcher.className = 'theme-switcher';
+          switcher.innerHTML = `
+            <button class="theme-toggle" data-theme="light">
+              <i class="fas fa-sun"></i>
+              <span>Light</span>
+            </button>
+            <button class="theme-toggle" data-theme="dark">
+              <i class="fas fa-moon"></i>
+              <span>Dark</span>
+            </button>
+          `;
+          document.body.appendChild(switcher);
+        },
+
+        loadTheme() {
+          const savedTheme = localStorage.getItem('theme') || 'light';
+          this.setTheme(savedTheme);
+        },
+
+        setTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('theme', theme);
+          
+          // Update active button
+          document.querySelectorAll('.theme-toggle').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.theme === theme);
+          });
+        },
+
+        bindEvents() {
+          document.addEventListener('click', (e) => {
+            if (e.target.closest('.theme-toggle')) {
+              const theme = e.target.closest('.theme-toggle').dataset.theme;
+              this.setTheme(theme);
+            }
+          });
+        }
+      };
+
+      // Initialize theme switcher when DOM is loaded
+      document.addEventListener('DOMContentLoaded', () => {
+        themeToggle.init();
       });
     </script>
   </body>
