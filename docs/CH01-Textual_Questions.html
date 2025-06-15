@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-                  :root {
+                        :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -23,12 +23,12 @@
         --warning-border: #facc15;
         --warning-text: #854d0e;
         
-        /* Light theme variables */
+        /* Light theme variables - improved readability */
         --bg-primary: #f1f5f9;
         --bg-secondary: #ffffff;
-        --text-primary: #1e293b;
-        --text-secondary: #64748b;
-        --text-muted: #94a3b8;
+        --text-primary: #334155;
+        --text-secondary: #475569;
+        --text-muted: #64748b;
         --border-color: #e2e8f0;
         --shadow: rgba(0, 0, 0, 0.1);
         --card-bg: #ffffff;
@@ -39,7 +39,7 @@
         --alert-bg: #eff6ff;
         --hint-bg: #fff3cd;
         --hint-border: #ffeaa7;
-        --hint-text: #856404;
+        --hint-text: #92400e;
         --short-answer-bg: #e8f5e8;
         --warning-bg: #fef08a;
         --code-text: #1e293b;
@@ -513,21 +513,32 @@
         }
       }
     
-      /* Enhanced typography for dark mode */
+      /* Enhanced typography for both themes */
       body {
-        color: var(--text-primary);
+        color: var(--text-primary) !important;
       }
 
       h1, h2, h3, h4, h5, h6 {
         color: var(--heading-color) !important;
+        font-weight: 600;
       }
 
-      p, li, td, th {
+      p, li, td, th, span, div {
         color: var(--text-primary) !important;
       }
 
+      /* Specific overrides for algorithm cards */
+      .algorithm-card {
+        background: var(--algorithm-bg) !important;
+        color: var(--algorithm-text) !important;
+      }
+
       .algorithm-card h3,
-      .algorithm-card h4 {
+      .algorithm-card h4,
+      .algorithm-card p,
+      .algorithm-card li,
+      .algorithm-card span,
+      .algorithm-card div {
         color: var(--algorithm-text) !important;
       }
 
@@ -540,13 +551,20 @@
       /* Links */
       a {
         color: var(--link-color) !important;
+        text-decoration: none;
       }
 
       a:hover {
         color: var(--link-hover) !important;
+        text-decoration: underline;
       }
 
-      /* Sidebar links */
+      /* Sidebar styling */
+      .sidebar {
+        background-color: var(--sidebar-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
       .sidebar a {
         color: var(--text-secondary) !important;
       }
@@ -554,21 +572,17 @@
       .sidebar a:hover,
       .sidebar a.active {
         color: var(--text-primary) !important;
+        background-color: var(--bg-primary) !important;
       }
 
-      /* Flowchart text */
+      /* Flowchart elements */
       .flowchart-start,
       .flowchart-end,
       .flowchart-step,
       .flowchart-box,
       .flowchart-decision {
         color: var(--text-primary) !important;
-      }
-
-      /* Algorithm cards */
-      .algorithm-card {
-        background: var(--algorithm-bg) !important;
-        color: var(--algorithm-text) !important;
+        border-color: var(--border-color) !important;
       }
 
       /* Hints and alerts */
@@ -579,6 +593,7 @@
       }
 
       .alert {
+        background-color: var(--alert-bg) !important;
         color: var(--text-primary) !important;
       }
 
@@ -591,21 +606,24 @@
       /* Strong/bold text */
       strong, b {
         color: var(--text-primary) !important;
-        font-weight: 600;
+        font-weight: 700;
       }
 
       /* Table styling */
       table {
         color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
       }
 
       th {
         background-color: var(--bg-secondary) !important;
         color: var(--text-primary) !important;
+        font-weight: 600;
       }
 
       td {
         border-color: var(--border-color) !important;
+        color: var(--text-primary) !important;
       }
 
       /* Navigation */
@@ -630,7 +648,29 @@
         border-color: var(--border-color) !important;
       }
 
-      /* Ensure all text is readable */
+      /* Main content area */
+      .main-content {
+        background-color: var(--bg-primary) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* Cards and containers */
+      .card, .container {
+        background-color: var(--card-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* Ensure all text is readable with smooth transitions */
+      * {
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
+      }
+
+      /* Override any remaining black text */
+      [style*="color: black"],
+      [style*="color: #000"],
+      [style*="color: #000000"] {
+        color: var(--text-primary) !important;
+      }
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
       }
