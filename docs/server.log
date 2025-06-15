@@ -15,4 +15,6 @@ Traceback (most recent call last):
     socketserver.TCPServer.server_bind(self)
   File "/openhands/micromamba/envs/10.2.56.141 - - [15/Jun/2025 15:48:48] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
 10.2.38.137 - - [15/Jun/2025 15:49:02] "GET / HTTP/1.1" 200 -
-e
+10.2.38.137 - - [15/Jun/2025 15:50:20] "GET / HTTP/1.1" 200 -
+10.2.38.137 - - [15/Jun/2025 15:51:24] "GET / HTTP/1.1" 200 -
+10.2.15.133 - - [15/Jun/2025 15:53:23] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -

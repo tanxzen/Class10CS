@@ -963,6 +963,58 @@
         background-color: #1e293b !important;
         border-color: #64748b !important;
       }
+    
+      /* FINAL ANSWER TEXT READABILITY FIX */
+      
+      /* Algorithm answer blocks - ensure white text on dark background */
+      .algorithm-card,
+      .algorithm-card *,
+      .algorithm-card p,
+      .algorithm-card div,
+      .algorithm-card span,
+      .algorithm-card code,
+      .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #2c3e50 !important;
+      }
+
+      /* Light theme - algorithm answers should have WHITE text on DARK background */
+      :root .algorithm-card,
+      :root .algorithm-card *,
+      :root .algorithm-card p,
+      :root .algorithm-card div,
+      :root .algorithm-card span,
+      :root .algorithm-card code,
+      :root .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #2c3e50 !important;
+      }
+
+      /* Dark theme - algorithm answers should have WHITE text on VERY DARK background */
+      [data-theme="dark"] .algorithm-card,
+      [data-theme="dark"] .algorithm-card *,
+      [data-theme="dark"] .algorithm-card p,
+      [data-theme="dark"] .algorithm-card div,
+      [data-theme="dark"] .algorithm-card span,
+      [data-theme="dark"] .algorithm-card code,
+      [data-theme="dark"] .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #0f172a !important;
+      }
+
+      /* Regular answer text (not in algorithm cards) */
+      .answer-text,
+      p:contains("Answer:") + *,
+      strong:contains("Answer:") + * {
+        color: var(--text-primary) !important;
+      }
+
+      /* Short answer sections */
+      .short-answer,
+      .short-answer * {
+        color: var(--text-primary) !important;
+        background-color: var(--short-answer-bg) !important;
+      }
     </style>
   </head>
   <body>
@@ -1318,6 +1370,58 @@
       [data-theme="dark"] .flowchart-decision {
         background-color: #1e293b !important;
         border-color: #64748b !important;
+      }
+    
+      /* FINAL ANSWER TEXT READABILITY FIX */
+      
+      /* Algorithm answer blocks - ensure white text on dark background */
+      .algorithm-card,
+      .algorithm-card *,
+      .algorithm-card p,
+      .algorithm-card div,
+      .algorithm-card span,
+      .algorithm-card code,
+      .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #2c3e50 !important;
+      }
+
+      /* Light theme - algorithm answers should have WHITE text on DARK background */
+      :root .algorithm-card,
+      :root .algorithm-card *,
+      :root .algorithm-card p,
+      :root .algorithm-card div,
+      :root .algorithm-card span,
+      :root .algorithm-card code,
+      :root .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #2c3e50 !important;
+      }
+
+      /* Dark theme - algorithm answers should have WHITE text on VERY DARK background */
+      [data-theme="dark"] .algorithm-card,
+      [data-theme="dark"] .algorithm-card *,
+      [data-theme="dark"] .algorithm-card p,
+      [data-theme="dark"] .algorithm-card div,
+      [data-theme="dark"] .algorithm-card span,
+      [data-theme="dark"] .algorithm-card code,
+      [data-theme="dark"] .algorithm-card pre {
+        color: #ffffff !important;
+        background-color: #0f172a !important;
+      }
+
+      /* Regular answer text (not in algorithm cards) */
+      .answer-text,
+      p:contains("Answer:") + *,
+      strong:contains("Answer:") + * {
+        color: var(--text-primary) !important;
+      }
+
+      /* Short answer sections */
+      .short-answer,
+      .short-answer * {
+        color: var(--text-primary) !important;
+        background-color: var(--short-answer-bg) !important;
       }
     </style>
         <p>
