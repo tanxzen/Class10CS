@@ -970,6 +970,55 @@
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
       }
+    
+      /* FLOWCHART TEXT VISIBILITY FIX */
+      
+      /* Light theme flowchart text - MUST BE DARK */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision,
+      :root .flowchart-branch {
+        color: #1e293b !important;
+      }
+
+      :root .flowchart-decision > div {
+        color: #1e293b !important;
+      }
+
+      /* Dark theme flowchart text - MUST BE LIGHT */
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision,
+      [data-theme="dark"] .flowchart-branch {
+        color: #f8fafc !important;
+      }
+
+      [data-theme="dark"] .flowchart-decision > div {
+        color: #f8fafc !important;
+      }
+
+      /* Ensure flowchart backgrounds are theme-appropriate */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision {
+        background-color: #ffffff !important;
+        border-color: #334155 !important;
+      }
+
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision {
+        background-color: #1e293b !important;
+        border-color: #64748b !important;
+      }
     </style>
   </head>
   <body>
@@ -1275,6 +1324,55 @@
       /* SMOOTH TRANSITIONS */
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
+      }
+    
+      /* FLOWCHART TEXT VISIBILITY FIX */
+      
+      /* Light theme flowchart text - MUST BE DARK */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision,
+      :root .flowchart-branch {
+        color: #1e293b !important;
+      }
+
+      :root .flowchart-decision > div {
+        color: #1e293b !important;
+      }
+
+      /* Dark theme flowchart text - MUST BE LIGHT */
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision,
+      [data-theme="dark"] .flowchart-branch {
+        color: #f8fafc !important;
+      }
+
+      [data-theme="dark"] .flowchart-decision > div {
+        color: #f8fafc !important;
+      }
+
+      /* Ensure flowchart backgrounds are theme-appropriate */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision {
+        background-color: #ffffff !important;
+        border-color: #334155 !important;
+      }
+
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision {
+        background-color: #1e293b !important;
+        border-color: #64748b !important;
       }
     </style>
         <p><a href="https://github.com/TanshenH" target="_blank">© 2025 TanshenH</a></p>

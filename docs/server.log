@@ -1,8 +1,18 @@
-127.0.0.1 - - [15/Jun/2025 15:24:06] "HEAD /index.html HTTP/1.1" 200 -
-10.2.47.145 - - [15/Jun/2025 15:24:12] "GET /index.html HTTP/1.1" 200 -
-10.2.47.145 - - [15/Jun/2025 15:24:35] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
-10.2.58.81 - - [15/Jun/2025 15:30:24] "GET / HTTP/1.1" 200 -
-10.2.56.141 - - [15/Jun/2025 15:31:50] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
-10.2.15.133 - - [15/Jun/2025 15:33:30] "GET / HTTP/1.1" 200 -
-10.2.15.133 - - [15/Jun/2025 15:34:55] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
-10.2.15.133 - - [15/Jun/2025 15:37:49] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/openhands/micromamba/envs/openhands/lib/python3.12/http/server.py", line 1314, in <module>
+    test(
+  File "/openhands/micromamba/envs/openhands/lib/python3.12/http/server.py", line 1261, in test
+    with ServerClass(addr, HandlerClass) as httpd:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/openhands/micromamba/envs/openhands/lib/python3.12/socketserver.py", line 457, in __init__
+    self.server_bind()
+  File "/openhands/micromamba/envs/openhands/lib/python3.12/http/server.py", line 1308, in server_bind
+    return super().server_bind()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/openhands/micromamba/envs/openhands/lib/python3.12/http/server.py", line 136, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/openhands/micromamba/envs/10.2.56.141 - - [15/Jun/2025 15:48:48] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
+10.2.38.137 - - [15/Jun/2025 15:49:02] "GET / HTTP/1.1" 200 -
+e

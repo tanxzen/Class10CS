@@ -1,14 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Algorithm Explorer - Textual Questions</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH01 - Textual Questions</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <style>
-                              :root {
+                        :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -124,399 +122,87 @@
         font-size: 16px;
       }
 
-      [data-theme="dark"] {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
-        --border-color: #334155;
-        --shadow: rgba(0, 0, 0, 0.3);
-        --card-bg: #1e293b;
-        --sidebar-bg: #1e293b;
-        --algorithm-bg: #0f172a;
-        --algorithm-text: #e2e8f0;
-        --flowchart-bg: #334155;
-        --alert-bg: #1e3a8a;
-        --hint-bg: #451a03;
-        --hint-border: #92400e;
-        --short-answer-bg: #14532d;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family:
-          "Inter",
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          Oxygen,
-          Ubuntu,
-          Cantarell,
-          sans-serif;
-        line-height: 1.6;
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
-        display: flex;
-        min-height: 100vh;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
-
-      /* Sidebar */
-      .sidebar {
-        width: var(--sidebar-width);
-        background: white;
-        box-shadow: 0 4px 6px -1px var(--shadow);
-        padding: 1.5rem;
-        position: fixed;
-        height: 100vh;
-        overflow-y: auto;
-        z-index: 100;
-        transition: transform 0.3s ease;
-      }
-
-      .sidebar-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .sidebar-header h2 {
-        font-size: 1.25rem;
-        color: var(--primary);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .sidebar-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .sidebar-nav a {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem 1rem;
-        border-radius: 0.5rem;
-        color: var(--text-primary);
-        text-decoration: none;
-        transition: all 0.2s ease;
-      }
-
-      .sidebar-nav a:hover,
-      .sidebar-nav a.active {
-        background-color: var(--bg-primary);
-        color: var(--primary);
-      }
-
-      .sidebar-nav a.active {
-        font-weight: 500;
-      }
-
-      /* Main content */
-      .main-content {
-        flex: 1;
-        margin-left: var(--sidebar-width);
-        padding: 2rem;
-        max-width: 900px;
-      }
-
-      /* Header */
-      .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .header h1 {
-        font-size: 1.75rem;
-        color: var(--primary);
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      /* Buttons */
-      .btn {
-        padding: 0.5rem 1rem;
-        border-radius: 0.5rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .btn-primary {
-        background-color: var(--primary);
-        color: white;
-      }
-
-      .btn-primary:hover {
-        background-color: var(--primary-dark);
-      }
-
-      .btn-outline {
-        background-color: transparent;
-        border: 1px solid var(--gray);
-        color: var(--text-primary);
-      }
-
-      /* Content styles */
-      .content-card {
-        background-color: var(--card-bg);
-        border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px var(--shadow);
-        padding: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      h1,
-      h2,
-      h3 {
-        color: var(--primary);
-        margin-bottom: 1rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-      }
-
-      h2 {
-        font-size: 1.5rem;
-        margin-top: 2rem;
-      }
-
-      h3 {
-        font-size: 1.25rem;
-        margin-top: 1.5rem;
-      }
-
-      pre {
-        background-color: var(--code-bg);
-        border-radius: 0.5rem;
-        padding: 1rem;
-        margin: 1.5rem 0;
-        overflow-x: auto;
-      }
-
-      pre code {
-        color: #e2e8f0;
-        font-size: 0.9rem;
-      }
-
-      .alert {
-        padding: 1rem;
-        border-radius: 0.5rem;
-        margin: 1.5rem 0;
-      }
-
-      .alert-info {
-        background-color: #eff6ff;
-        border-left: 4px solid var(--primary);
-      }
-
-      .algorithm-card {
-        background-color: var(--card-bg);
-        border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px var(--shadow);
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-        border-left: 4px solid var(--primary);
-      }
-
-      /* Flowchart styles */
-      .flowchart {
-        margin: 1.5rem 0;
-        position: relative;
-        font-family: monospace;
-      }
-
-      .flowchart-step {
-        position: relative;
-        margin-bottom: 30px;
-        padding-left: 40px;
-      }
-
-      .flowchart-step:last-child {
-        margin-bottom: 0;
-      }
-
-      .flowchart-step::before {
-        content: "";
-        position: absolute;
-        left: 15px;
-        top: 0;
-        bottom: -30px;
-        border-left: 2px solid var(--primary);
-      }
-
-      .flowchart-step:last-child::before {
-        display: none;
-      }
-
-      .flowchart-step::after {
-        content: "";
-        position: absolute;
-        left: 10px;
-        top: 15px;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--primary);
-      }
-
-      .flowchart-start,
-      .flowchart-end {
-        border-radius: 50%;
-        background: #f1f5f9;
-        border: 2px solid var(--primary);
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        left: 0;
-      }
-
-      .flowchart-start::before {
-        content: "S";
-        font-weight: bold;
-        color: var(--primary);
-      }
-
-      .flowchart-end::before {
-        content: "E";
-        font-weight: bold;
-        color: var(--primary);
-      }
-
-      .flowchart-box {
-        background: #f1f5f9;
-        border: 1px solid var(--primary);
-        border-radius: 5px;
-        padding: 8px 12px;
-        margin-left: 40px;
-        position: relative;
-      }
-
-      .flowchart-decision {
-        background: #f1f5f9;
-        border: 1px solid var(--primary);
-        width: 120px;
-        height: 60px;
-        transform: rotate(45deg);
-        margin-left: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-
-      .flowchart-decision-text {
-        transform: rotate(-45deg);
-        text-align: center;
-        width: 170px;
-      }
-
-      .flowchart-arrow {
-        position: absolute;
-        left: 15px;
-        top: 30px;
-        width: 25px;
-        height: 2px;
-        background: var(--primary);
-      }
-
-      .flowchart-arrow::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: -3px;
-        width: 0;
-        height: 0;
-        border-left: 6px solid var(--primary);
-        border-top: 4px solid transparent;
-        border-bottom: 4px solid transparent;
-      }
-
-      .flowchart-branch {
-        display: flex;
-        margin-left: 40px;
-      }
-
-      .flowchart-branch-path {
-        flex: 1;
-        position: relative;
-        padding-left: 20px;
-      }
-
-      .flowchart-branch-path::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        border-left: 2px solid var(--primary);
-      }
-
-      .flowchart-branch-label {
-        position: absolute;
-        left: 5px;
-        top: -20px;
-        font-size: 0.8rem;
-        color: var(--primary);
-      }
-
-      /* Mobile menu */
-      .sidebar-toggle {
-        display: none;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1000;
-        background: var(--primary);
-        color: white;
-        border: none;
-        border-radius: 0.5rem;
-        width: 2.5rem;
-        height: 2.5rem;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-      }
-
-      @media (max-width: 768px) {
-        .sidebar {
-          transform: translateX(-100%);
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
         }
-        .sidebar.open {
-          transform: translateX(0);
+        
+        .container {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px var(--shadow);
         }
-        .main-content {
-          margin-left: 0;
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
         }
-        .sidebar-toggle {
-          display: flex;
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
         }
-      }
+        
+        .question {
+            background-color: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .question h3 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+        
+        .algorithm {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 15px 0;
+        }
+        
+        .flowchart {
+            background-color: var(--card-bg);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .mermaid {
+            background-color: white !important;
+        }
+        
+        .answer {
+            font-weight: bold;
+            color: #27ae60;
+        }
+        
+        .hint {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .short-answer {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
     
       
       * {
@@ -792,572 +478,316 @@
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
       }
+    
+      /* FLOWCHART TEXT VISIBILITY FIX */
+      
+      /* Light theme flowchart text - MUST BE DARK */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision,
+      :root .flowchart-branch {
+        color: #1e293b !important;
+      }
+
+      :root .flowchart-decision > div {
+        color: #1e293b !important;
+      }
+
+      /* Dark theme flowchart text - MUST BE LIGHT */
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision,
+      [data-theme="dark"] .flowchart-branch {
+        color: #f8fafc !important;
+      }
+
+      [data-theme="dark"] .flowchart-decision > div {
+        color: #f8fafc !important;
+      }
+
+      /* Ensure flowchart backgrounds are theme-appropriate */
+      :root .flowchart-start,
+      :root .flowchart-end,
+      :root .flowchart-step,
+      :root .flowchart-box,
+      :root .flowchart-decision {
+        background-color: #ffffff !important;
+        border-color: #334155 !important;
+      }
+
+      [data-theme="dark"] .flowchart-start,
+      [data-theme="dark"] .flowchart-end,
+      [data-theme="dark"] .flowchart-step,
+      [data-theme="dark"] .flowchart-box,
+      [data-theme="dark"] .flowchart-decision {
+        background-color: #1e293b !important;
+        border-color: #64748b !important;
+      }
     </style>
-  </head>
-  <body>
-    <!-- Mobile menu button -->
-    <button class="sidebar-toggle" id="sidebarToggle">
-      <i class="fas fa-bars"></i>
-    </button>
+</head>
+<body>
+    <div class="container">
+        <h1>REVIEW QUESTIONS AND EXERCISES</h1>
 
-    <!-- Sidebar navigation -->
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <h2><i class="fas fa-project-diagram"></i> Textual Questions</h2>
-      </div>
-      <nav class="sidebar-nav">
-        <a href="#review-questions" class=""
-          ><i class="fas fa-book-open"></i> Review Questions</a
-        >
-        <a href="#short-questions"
-          ><i class="fas fa-question-circle"></i> Short Questions</a
-        >
-      </nav>
-    </aside>
-
-    <!-- Main content area -->
-    <main class="main-content">
-      <div class="header">
-        <h1><i class="fas fa-question"></i> Textual Questions and Exercises</h1>
-        <div>
-          <button class="btn btn-outline" id="printBtn">
-            <i class="fas fa-print"></i> Print
-          </button>
-          <button class="btn btn-primary" id="downloadBtn">
-            <i class="fas fa-download"></i> Download
-          </button>
-        </div>
-      </div>
-
-      <div class="content-card">
-        <h2 id="review-questions">REVIEW QUESTIONS AND EXERCISES</h2>
-
-        <div class="algorithm-card">
-          <h3>1. Average of Three Values</h3>
-          <p>
-            Write the algorithm and draw the flowchart to find the average of
-            given 3 values.
-          </p>
-          <p><strong>Answer:</strong></p>
-          <pre><code>1. Read n1, n2 and n3, where n represents number
+        <div class="question">
+            <h3>1. Write the algorithm and draw the flowchart to find the average of given 3 values.</h3>
+            
+            <p class="answer">Answer:</p>
+            <div class="algorithm">
+1. Read n1, n2 and n3, where n represents number
 2. avr = (n1 + n2 + n3) / 3
-3. print avr</code></pre>
-          <p><strong>Flowchart:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read n1, n2, n3</div>
-              <div class="flowchart-arrow"></div>
+3. print avr
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">avr = (n1 + n2 + n3) / 3</div>
-              <div class="flowchart-arrow"></div>
+            
+            <p><strong>FLOWCHART:</strong></p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+  A([Start]) --> B[Read n1, n2 and n3]
+  B --> C[avr = n1 + n2 + n3 / 3]
+  C --> D[Print avr]
+  D --> E([Stop])
+                </div>
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Print avr</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>2. Circle Area and Circumference</h3>
-          <p>
-            Write the algorithm and draw the flowchart to find the area and
-            circumference of a circle of radius r.
-          </p>
-          <p><strong>Hint:</strong> Area= πr²; Circumference = 2πr</p>
-          <p><strong>Answer:</strong></p>
-          <pre><code>1. Read r
+        <div class="question">
+            <h3>2. Write the algorithm and draw the flowchart to find the area and circumference of a circle of radius r.</h3>
+            
+            <div class="hint">
+                <strong>Hint:</strong> Area = πr²; Circumference = 2πr
+            </div>
+            
+            <p class="answer">Answer:</p>
+            <div class="algorithm">
+1. Read r
 2. Area = 22/7 * r*r, Circumference = 2*22/7*r
-3. Print Area, Circumference</code></pre>
-          <p><strong>Flowchart:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read r</div>
-              <div class="flowchart-arrow"></div>
+3. Print Area, Circumference
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">
-                Area = 22/7*r*r<br />Circumference = 2*22/7*r
-              </div>
-              <div class="flowchart-arrow"></div>
+            
+            <p><strong>Flowchart:</strong></p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+  A([Start]) --> B[Read r]
+  B --> C[Area = 22/7*r*r<br/>Circumference = 2*22/7*r]
+  C --> D[Print Area, Circumference]
+  D --> E([Stop])
+                </div>
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Print Area, Circumference</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>3. Temperature Conversion</h3>
-          <p>
-            Write the algorithm and draw the flowchart to convert the
-            temperature given in °C to °F.
-          </p>
-          <p><strong>Hint:</strong> Use the relation °F= 1.8°C +32</p>
-          <p><strong>Answer:</strong></p>
-          <pre><code>1. Read c
+        <div class="question">
+            <h3>3. Write the algorithm and draw the flowchart to convert the temperature given in °C to °F.</h3>
+            
+            <div class="hint">
+                <strong>Hint:</strong> Use the relation °F = 1.8°C + 32
+            </div>
+            
+            <p class="answer">Answer:</p>
+            <div class="algorithm">
+1. Read c
 2. f = 1.8 * c + 32
-3. Print f</code></pre>
-          <p><strong>Flowchart:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read c</div>
-              <div class="flowchart-arrow"></div>
+3. Print f
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">f = 1.8 * c + 32</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Print f</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-end"></div>
-          </div>
-        </div>
-
-        <div class="algorithm-card">
-          <h3>4. Smallest of Three Numbers</h3>
-          <p>
-            Draw the flowchart to find the smallest of the given three numbers.
-          </p>
-          <p><strong>Answer:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Input A, B, C</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-decision">
-                <div class="flowchart-decision-text">Is A < B?</div>
-              </div>
-              <div class="flowchart-branch">
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">Yes</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-decision">
-                      <div class="flowchart-decision-text">Is A < C?</div>
-                    </div>
-                    <div class="flowchart-branch">
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">Yes</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">Smallest = A</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">No</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">Smallest = C</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            
+            <p><strong>Flowchart:</strong></p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+  A([Start]) --> B[Read c]
+  B --> C[f = 1.8 * c + 32]
+  C --> D[Print f]
+  D --> E([Stop])
                 </div>
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">No</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-decision">
-                      <div class="flowchart-decision-text">Is B < C?</div>
-                    </div>
-                    <div class="flowchart-branch">
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">Yes</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">Smallest = B</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">No</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">Smallest = C</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>4. Draw the flowchart to find the smallest of the given three numbers.</h3>
+            
+            <p class="answer">Answer:</p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+  A([Start]) --> B[Input A, B, C]
+  B --> C{Is A < B?}
+  C -->|Yes| D{Is A < C?}
+  D -->|Yes| E[Smallest = A]
+  D -->|No| F[Smallest = C]
+  C -->|No| G{Is B < C?}
+  G -->|Yes| H[Smallest = B]
+  G -->|No| F
+  E --> I[Print Smallest]
+  F --> I
+  H --> I
+  I --> J([End])
                 </div>
-              </div>
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Print Smallest</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>5. Cosine Series Summation</h3>
-          <p>
-            Draw the flowchart to solve the following series which is the summation of cosine series:
-          </p>
-          <p>
-            <strong>s = x - x²/2! + x⁴/4! - x⁶/6! + ... ∞</strong>
-          </p>
-          <p>
-            Neglecting the terms which are less than 10⁻⁴ in magnitude.
-          </p>
-          <p><strong>Answer:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Input x</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Set term = x, sum = x, n = 1</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-decision">
-                <div class="flowchart-decision-text">Is |term| >= 0.0001?</div>
-              </div>
-              <div class="flowchart-branch">
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">Yes</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Compute next term:<br/>(-1)ⁿ × x²ⁿ / (2n)!</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Add term to sum</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Increment n</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
+        <div class="question">
+            <h3>5. Draw the flowchart to solve the following series which is the summation of cosine series</h3>
+            <p>s = x - x²/2! + x⁴/4! - x⁶/6! + ... ∞ neglecting the terms which are less than 10⁻⁴ in magnitude.</p>
+            
+            <p class="answer">Answer:</p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+    A([Start]) --> B[Input x]
+    B --> C[Set term = x, sum = x, n = 1]
+    C --> D{Is absolute value of term >= 0.0001?}
+    D -->|Yes| E[Compute next term using:<br/>-1^n * x^2n / 2n!]
+    E --> F[Add term to sum]
+    F --> G[Increment n]
+    G --> D
+    D -->|No| H[Print sum]
+    H --> I([End])
                 </div>
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">No</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Print sum</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
+            </div>
+            <div class="hint">
+                <strong>Hint:</strong> The method discussed in Example 8 can be used to solve this series with minor changes.
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>6. Draw the flowchart to find the sum of natural numbers up to N.</h3>
+            
+            <div class="hint">
+                <strong>Hint:</strong> The method discussed in Example 10 can be used to solve the series, i.e. s = 1 + 2 + 3 + 4 + ... + N.
+            </div>
+            
+            <p class="answer">Answer:</p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+    A([Start]) --> B[Read N and set S = 0]
+    B --> C[Set i = 1]
+    C --> D{Is i <= N?}
+    D -->|Yes| E[S = S + i]
+    E --> F[i = i + 1]
+    F --> D
+    D -->|No| G[Display S]
+    G --> H([End])
                 </div>
-              </div>
             </div>
-            <div class="flowchart-end"></div>
-          </div>
-          <div class="alert alert-info">
-            <strong>Hint:</strong> The method discussed in Example 8 can be used to solve this series with minor changes.
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>6. Sum of Natural Numbers</h3>
-          <p>
-            Draw the flowchart to find the sum of natural numbers up to N.
-          </p>
-          <p>
-            <strong>Hint:</strong> The method discussed in Example 10 can be used to solve the series, i.e. s = 1 + 2 + 3 + 4 + ... + N.
-          </p>
-          <p><strong>Answer:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read N and set S = 0</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Set i = 1</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-decision">
-                <div class="flowchart-decision-text">Is i <= N?</div>
-              </div>
-              <div class="flowchart-branch">
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">Yes</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">S = S + i</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">i = i + 1</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
+        <div class="question">
+            <h3>7. Draw a flowchart to solve the following series:</h3>
+            <p>s = 1 + 1/2! + 1/3! + 1/4! + ... + 1/N!</p>
+            
+            <p class="answer">Answer:</p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+    A([Start]) --> B[Read N, set S = 1 and i = 2]
+    B --> C{Is i <= N?}
+    C -->|Yes| D[Set fact = 1]
+    D --> E[Set j = 1]
+    E --> F{Is j <= i?}
+    F -->|Yes| G[fact = fact * j]
+    G --> H[j = j + 1]
+    H --> F
+    F -->|No| I[S = S + 1 / fact]
+    I --> J[i = i + 1]
+    J --> C
+    C -->|No| K[Display S]
+    K --> L([End])
                 </div>
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">No</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Display S</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>7. Factorial Series</h3>
-          <p>
-            Draw a flowchart to solve the following series:
-          </p>
-          <p>
-            <strong>s = 1 + 1/2! + 1/3! + 1/4! + ... + 1/N!</strong>
-          </p>
-          <p><strong>Answer:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read N, set S = 1 and i = 2</div>
-              <div class="flowchart-arrow"></div>
-            </div>
-            <div class="flowchart-step">
-              <div class="flowchart-decision">
-                <div class="flowchart-decision-text">Is i <= N?</div>
-              </div>
-              <div class="flowchart-branch">
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">Yes</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Set fact = 1</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Set j = 1</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-decision">
-                      <div class="flowchart-decision-text">Is j <= i?</div>
-                    </div>
-                    <div class="flowchart-branch">
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">Yes</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">fact = fact × j</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">j = j + 1</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                      <div class="flowchart-branch-path">
-                        <div class="flowchart-branch-label">No</div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">S = S + 1/fact</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                        <div class="flowchart-step">
-                          <div class="flowchart-box">i = i + 1</div>
-                          <div class="flowchart-arrow"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+        <div class="question">
+            <h3>8. Draw a flowchart to solve the following series:</h3>
+            <p>eˣ = 1 + x + x²/2! + x³/3! + x⁴/4! + ... ∞</p>
+            <p>Neglect the terms which are less than 10 in magnitude.</p>
+            
+            <p class="answer">Answer:</p>
+            <div class="flowchart">
+                <div class="mermaid">
+flowchart TD
+    A([Start]) --> B[Read x, set term = 1 and sum = 1, i = 1]
+    B --> C{Is term >= 10?}
+    C -->|Yes| D[term = term * x / i]
+    D --> E[sum = sum + term]
+    E --> F[i = i + 1]
+    F --> C
+    C -->|No| G[Display sum]
+    G --> H([End])
                 </div>
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">No</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Display S</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>8. Exponential Series (eˣ)</h3>
-          <p>
-            Draw a flowchart to solve the following series:
-          </p>
-          <p>
-            <strong>eˣ = 1 + x + x²/2! + x³/3! + x⁴/4! + ... ∞</strong>
-          </p>
-          <p>
-            Neglect the terms which are less than 10 in magnitude.
-          </p>
-          <p><strong>Answer:</strong></p>
-          <div class="flowchart">
-            <div class="flowchart-start"></div>
-            <div class="flowchart-step">
-              <div class="flowchart-box">Read x, set term = 1<br/>and sum = 1, i = 1</div>
-              <div class="flowchart-arrow"></div>
+        <h1>SHORT QUESTIONS</h1>
+
+        <div class="question">
+            <h3>1. What is an algorithm?</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> An algorithm presents step-by-step instructions required to solve any problem.
             </div>
-            <div class="flowchart-step">
-              <div class="flowchart-decision">
-                <div class="flowchart-decision-text">Is term >= 10?</div>
-              </div>
-              <div class="flowchart-branch">
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">Yes</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">term = term × x / i</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">sum = sum + term</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">i = i + 1</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                </div>
-                <div class="flowchart-branch-path">
-                  <div class="flowchart-branch-label">No</div>
-                  <div class="flowchart-step">
-                    <div class="flowchart-box">Display sum</div>
-                    <div class="flowchart-arrow"></div>
-                  </div>
-                </div>
-              </div>
+        </div>
+
+        <div class="question">
+            <h3>2. What is a flowchart?</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> Flowchart is a symbolic or diagrammatic representation of an algorithm.
             </div>
-            <div class="flowchart-end"></div>
-          </div>
         </div>
 
-        <h2 id="short-questions">SHORT QUESTIONS</h2>
-
-        <div class="algorithm-card">
-          <h3>1. What is an algorithm?</h3>
-          <p>
-            <strong>Answer:</strong> An algorithm presents step-by-step
-            instructions required to solve any problem.
-          </p>
+        <div class="question">
+            <h3>3. _______ programming method is followed in C language.</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> Procedural
+            </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>2. What is a flowchart?</h3>
-          <p>
-            <strong>Answer:</strong> Flowchart is a symbolic or diagrammatic
-            representation of an algorithm.
-          </p>
+        <div class="question">
+            <h3>4. _______ programming method is followed in C++.</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> Object-Oriented
+            </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>3. _______ programming method is followed in C language.</h3>
-          <p><strong>Answer:</strong> Procedural</p>
+        <div class="question">
+            <h3>5. Procedural programming method is commonly used for writing small programs which produce discrete results. (True/False)</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> True
+            </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>4. _______ programming method is followed in C++.</h3>
-          <p><strong>Answer:</strong> Object-Oriented</p>
+        <div class="question">
+            <h3>6. Object-oriented programming method is commonly used to develop software packages to perform a task. (True/False)</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> True
+            </div>
         </div>
 
-        <div class="algorithm-card">
-          <h3>
-            5. Procedural programming method is commonly used for writing small
-            programs which produce discrete results. (True/False)
-          </h3>
-          <p><strong>Answer:</strong> True</p>
+        <div class="question">
+            <h3>7. Algorithms and flowcharts may be omitted after getting experience in writing program. (True/False)</h3>
+            <div class="short-answer">
+                <strong>Answer:</strong> False
+            </div>
         </div>
-
-        <div class="algorithm-card">
-          <h3>
-            6. Object-oriented programming method is commonly used to develop
-            software packages to perform a task. (True/False)
-          </h3>
-          <p><strong>Answer:</strong> True</p>
-        </div>
-
-        <div class="algorithm-card">
-          <h3>
-            7. Algorithms and flowcharts may be omitted after getting experience
-            in writing program. (True/False)
-          </h3>
-          <p><strong>Answer:</strong> False</p>
-        </div>
-      </div>
-    </main>
+    </div>
 
     <script>
-      // Mobile menu toggle
-      document
-        .getElementById("sidebarToggle")
-        .addEventListener("click", function () {
-          document.getElementById("sidebar").classList.toggle("open");
+        // Initialize Mermaid
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
         });
-
-      // Print functionality
-      document
-        .getElementById("printBtn")
-        .addEventListener("click", function () {
-          window.print();
-        });
-
-      // Download functionality
-      document
-        .getElementById("downloadBtn")
-        .addEventListener("click", function () {
-          const content = document.documentElement.outerHTML;
-          const blob = new Blob([content], { type: "text/html" });
-          const url = URL.createObjectURL(blob);
-
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "textual-questions.html";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-        });
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-
-          // Update active nav item
-          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-            link.classList.remove("active");
-          });
-          this.classList.add("active");
-        });
-      });
-
-      // Highlight current section in sidebar
-      window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll(
-          ".content-card, .algorithm-card",
-        );
-        let currentSection = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (pageYOffset >= sectionTop - 100) {
-            currentSection =
-              section.getAttribute("id") ||
-              section.querySelector("[id]")?.getAttribute("id");
-          }
-        });
-
-        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${currentSection}`) {
-            link.classList.add("active");
-          }
-        });
-      });
     </script>
-      <script>
+    <script>
       // Theme switching functionality
       const themeToggle = {
         init() {
