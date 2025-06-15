@@ -1,3 +1,5 @@
 127.0.0.1 - - [15/Jun/2025 15:24:06] "HEAD /index.html HTTP/1.1" 200 -
 10.2.47.145 - - [15/Jun/2025 15:24:12] "GET /index.html HTTP/1.1" 200 -
 10.2.47.145 - - [15/Jun/2025 15:24:35] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -
+10.2.58.81 - - [15/Jun/2025 15:30:24] "GET / HTTP/1.1" 200 -
+10.2.56.141 - - [15/Jun/2025 15:31:50] "GET /CH01-Textual_Questions.html HTTP/1.1" 200 -

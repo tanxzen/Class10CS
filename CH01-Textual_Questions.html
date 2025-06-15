@@ -6,7 +6,7 @@
     <title>CH01 - Textual Questions</title>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <style>
-      :root {
+            :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -26,7 +26,8 @@
         --bg-secondary: #ffffff;
         --text-primary: #1e293b;
         --text-secondary: #64748b;
-        --border-color: var(--border-color);
+        --text-muted: #94a3b8;
+        --border-color: #e2e8f0;
         --shadow: rgba(0, 0, 0, 0.1);
         --card-bg: #ffffff;
         --sidebar-bg: #ffffff;
@@ -36,27 +37,38 @@
         --alert-bg: #eff6ff;
         --hint-bg: #fff3cd;
         --hint-border: #ffeaa7;
+        --hint-text: #856404;
         --short-answer-bg: #e8f5e8;
         --warning-bg: #fef08a;
+        --code-text: #1e293b;
+        --heading-color: #1e293b;
+        --link-color: #2563eb;
+        --link-hover: #1d4ed8;
       }
 
       [data-theme="dark"] {
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
-        --text-primary: #f1f5f9;
-        --text-secondary: #94a3b8;
+        --text-primary: #f8fafc;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
         --border-color: #334155;
         --shadow: rgba(0, 0, 0, 0.3);
         --card-bg: #1e293b;
         --sidebar-bg: #1e293b;
         --algorithm-bg: #0f172a;
-        --algorithm-text: #e2e8f0;
+        --algorithm-text: #f1f5f9;
         --flowchart-bg: #334155;
         --alert-bg: #1e3a8a;
-        --hint-bg: #451a03;
-        --hint-border: #92400e;
-        --short-answer-bg: #14532d;
-        --warning-bg: #451a03;
+        --hint-bg: #7c2d12;
+        --hint-border: #ea580c;
+        --hint-text: #fed7aa;
+        --short-answer-bg: #166534;
+        --warning-bg: #7c2d12;
+        --code-text: #e2e8f0;
+        --heading-color: #f1f5f9;
+        --link-color: #60a5fa;
+        --link-hover: #93c5fd;
       }
 
       /* Theme switcher styles */
@@ -186,6 +198,128 @@
             border-radius: 5px;
             margin: 10px 0;
         }
+    
+      /* Enhanced typography for dark mode */
+      body {
+        color: var(--text-primary);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--heading-color) !important;
+      }
+
+      p, li, td, th {
+        color: var(--text-primary) !important;
+      }
+
+      .algorithm-card h3,
+      .algorithm-card h4 {
+        color: var(--algorithm-text) !important;
+      }
+
+      /* Code blocks */
+      code, pre {
+        color: var(--code-text) !important;
+        background-color: var(--algorithm-bg) !important;
+      }
+
+      /* Links */
+      a {
+        color: var(--link-color) !important;
+      }
+
+      a:hover {
+        color: var(--link-hover) !important;
+      }
+
+      /* Sidebar links */
+      .sidebar a {
+        color: var(--text-secondary) !important;
+      }
+
+      .sidebar a:hover,
+      .sidebar a.active {
+        color: var(--text-primary) !important;
+      }
+
+      /* Flowchart text */
+      .flowchart-start,
+      .flowchart-end,
+      .flowchart-step,
+      .flowchart-box,
+      .flowchart-decision {
+        color: var(--text-primary) !important;
+      }
+
+      /* Algorithm cards */
+      .algorithm-card {
+        background: var(--algorithm-bg) !important;
+        color: var(--algorithm-text) !important;
+      }
+
+      /* Hints and alerts */
+      .hint {
+        background-color: var(--hint-bg) !important;
+        border-color: var(--hint-border) !important;
+        color: var(--hint-text) !important;
+      }
+
+      .alert {
+        color: var(--text-primary) !important;
+      }
+
+      /* Short answer sections */
+      .short-answer {
+        background-color: var(--short-answer-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* Strong/bold text */
+      strong, b {
+        color: var(--text-primary) !important;
+        font-weight: 600;
+      }
+
+      /* Table styling */
+      table {
+        color: var(--text-primary) !important;
+      }
+
+      th {
+        background-color: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+      }
+
+      td {
+        border-color: var(--border-color) !important;
+      }
+
+      /* Navigation */
+      .nav-link {
+        color: var(--text-secondary) !important;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--text-primary) !important;
+      }
+
+      /* Buttons */
+      .btn {
+        color: var(--text-primary) !important;
+      }
+
+      /* Form elements */
+      input, textarea, select {
+        background-color: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      /* Ensure all text is readable */
+      * {
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+      }
     </style>
 </head>
 <body>
