@@ -8,7 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-                        :root {
+                              :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -23,10 +23,10 @@
         --warning-border: #facc15;
         --warning-text: #854d0e;
         
-        /* Light theme variables - improved readability */
+        /* Light theme variables - PROPER DARK TEXT */
         --bg-primary: #f1f5f9;
         --bg-secondary: #ffffff;
-        --text-primary: #334155;
+        --text-primary: #1e293b;
         --text-secondary: #475569;
         --text-muted: #64748b;
         --border-color: #e2e8f0;
@@ -34,8 +34,10 @@
         --card-bg: #ffffff;
         --sidebar-bg: #ffffff;
         --algorithm-bg: #2c3e50;
-        --algorithm-text: #ecf0f1;
+        --algorithm-text: #ffffff;
         --flowchart-bg: #f1f5f9;
+        --flowchart-text: #1e293b;
+        --flowchart-border: #334155;
         --alert-bg: #eff6ff;
         --hint-bg: #fff3cd;
         --hint-border: #ffeaa7;
@@ -49,6 +51,7 @@
       }
 
       [data-theme="dark"] {
+        /* Dark theme variables - PROPER LIGHT TEXT */
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
         --text-primary: #f8fafc;
@@ -59,16 +62,18 @@
         --card-bg: #1e293b;
         --sidebar-bg: #1e293b;
         --algorithm-bg: #0f172a;
-        --algorithm-text: #f1f5f9;
+        --algorithm-text: #f8fafc;
         --flowchart-bg: #334155;
+        --flowchart-text: #f8fafc;
+        --flowchart-border: #64748b;
         --alert-bg: #1e3a8a;
         --hint-bg: #7c2d12;
         --hint-border: #ea580c;
         --hint-text: #fed7aa;
         --short-answer-bg: #166534;
         --warning-bg: #7c2d12;
-        --code-text: #e2e8f0;
-        --heading-color: #f1f5f9;
+        --code-text: #f8fafc;
+        --heading-color: #f8fafc;
         --link-color: #60a5fa;
         --link-hover: #93c5fd;
       }
@@ -513,154 +518,7 @@
         }
       }
     
-      /* Enhanced typography for both themes */
-      body {
-        color: var(--text-primary) !important;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        color: var(--heading-color) !important;
-        font-weight: 600;
-      }
-
-      p, li, td, th, span, div {
-        color: var(--text-primary) !important;
-      }
-
-      /* Specific overrides for algorithm cards */
-      .algorithm-card {
-        background: var(--algorithm-bg) !important;
-        color: var(--algorithm-text) !important;
-      }
-
-      .algorithm-card h3,
-      .algorithm-card h4,
-      .algorithm-card p,
-      .algorithm-card li,
-      .algorithm-card span,
-      .algorithm-card div {
-        color: var(--algorithm-text) !important;
-      }
-
-      /* Code blocks */
-      code, pre {
-        color: var(--code-text) !important;
-        background-color: var(--algorithm-bg) !important;
-      }
-
-      /* Links */
-      a {
-        color: var(--link-color) !important;
-        text-decoration: none;
-      }
-
-      a:hover {
-        color: var(--link-hover) !important;
-        text-decoration: underline;
-      }
-
-      /* Sidebar styling */
-      .sidebar {
-        background-color: var(--sidebar-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      .sidebar a {
-        color: var(--text-secondary) !important;
-      }
-
-      .sidebar a:hover,
-      .sidebar a.active {
-        color: var(--text-primary) !important;
-        background-color: var(--bg-primary) !important;
-      }
-
-      /* Flowchart elements */
-      .flowchart-start,
-      .flowchart-end,
-      .flowchart-step,
-      .flowchart-box,
-      .flowchart-decision {
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      /* Hints and alerts */
-      .hint {
-        background-color: var(--hint-bg) !important;
-        border-color: var(--hint-border) !important;
-        color: var(--hint-text) !important;
-      }
-
-      .alert {
-        background-color: var(--alert-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* Short answer sections */
-      .short-answer {
-        background-color: var(--short-answer-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* Strong/bold text */
-      strong, b {
-        color: var(--text-primary) !important;
-        font-weight: 700;
-      }
-
-      /* Table styling */
-      table {
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      th {
-        background-color: var(--bg-secondary) !important;
-        color: var(--text-primary) !important;
-        font-weight: 600;
-      }
-
-      td {
-        border-color: var(--border-color) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* Navigation */
-      .nav-link {
-        color: var(--text-secondary) !important;
-      }
-
-      .nav-link:hover,
-      .nav-link.active {
-        color: var(--text-primary) !important;
-      }
-
-      /* Buttons */
-      .btn {
-        color: var(--text-primary) !important;
-      }
-
-      /* Form elements */
-      input, textarea, select {
-        background-color: var(--bg-secondary) !important;
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      /* Main content area */
-      .main-content {
-        background-color: var(--bg-primary) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* Cards and containers */
-      .card, .container {
-        background-color: var(--card-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* Ensure all text is readable with smooth transitions */
+      
       * {
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
       }
@@ -675,46 +533,7 @@
         transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
       }
     
-      /* Fix algorithm code blocks for better readability */
-      .algorithm-card code,
-      .algorithm-card pre {
-        color: var(--algorithm-text) !important;
-        background-color: var(--algorithm-bg) !important;
-      }
-
-      /* Light theme algorithm code */
-      :root .algorithm-card code,
-      :root .algorithm-card pre {
-        color: #ecf0f1 !important;
-        background-color: #2c3e50 !important;
-      }
-
-      /* Dark theme algorithm code */
-      [data-theme="dark"] .algorithm-card code,
-      [data-theme="dark"] .algorithm-card pre {
-        color: #f1f5f9 !important;
-        background-color: #0f172a !important;
-      }
-
-      /* General code blocks outside algorithm cards */
-      code {
-        color: var(--code-text) !important;
-        background-color: var(--bg-secondary) !important;
-        padding: 2px 6px;
-        border-radius: 4px;
-        font-family: 'Courier New', monospace;
-      }
-
-      pre {
-        color: var(--code-text) !important;
-        background-color: var(--bg-secondary) !important;
-        padding: 12px;
-        border-radius: 6px;
-        overflow-x: auto;
-        font-family: 'Courier New', monospace;
-      }
-
-      /* Ensure algorithm cards have proper text colors */
+      
       .algorithm-card {
         background: var(--algorithm-bg) !important;
         color: var(--algorithm-text) !important;
@@ -733,6 +552,245 @@
       .algorithm-card strong,
       .algorithm-card b {
         color: var(--algorithm-text) !important;
+      }
+    
+      /* COMPREHENSIVE TYPOGRAPHY FIX INCLUDING FLOWCHARTS */
+      
+      /* Base body styling */
+      body {
+        color: var(--text-primary) !important;
+        background-color: var(--bg-primary) !important;
+        transition: all 0.3s ease !important;
+      }
+
+      /* ALL HEADINGS */
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--heading-color) !important;
+        font-weight: 600 !important;
+      }
+
+      /* ALL TEXT ELEMENTS */
+      p, li, td, th, span, div, label, strong, b, em, i {
+        color: var(--text-primary) !important;
+      }
+
+      /* ALGORITHM CARDS - SPECIAL HANDLING */
+      .algorithm-card {
+        background: var(--algorithm-bg) !important;
+        color: var(--algorithm-text) !important;
+      }
+
+      .algorithm-card *,
+      .algorithm-card h1,
+      .algorithm-card h2,
+      .algorithm-card h3,
+      .algorithm-card h4,
+      .algorithm-card h5,
+      .algorithm-card h6,
+      .algorithm-card p,
+      .algorithm-card li,
+      .algorithm-card span,
+      .algorithm-card div,
+      .algorithm-card strong,
+      .algorithm-card b,
+      .algorithm-card em,
+      .algorithm-card i {
+        color: var(--algorithm-text) !important;
+      }
+
+      /* CODE BLOCKS - CRITICAL FIX */
+      code, pre {
+        font-family: 'Courier New', 'Monaco', 'Menlo', monospace !important;
+        padding: 4px 8px !important;
+        border-radius: 4px !important;
+      }
+
+      /* Algorithm code blocks */
+      .algorithm-card code,
+      .algorithm-card pre {
+        color: var(--algorithm-text) !important;
+        background-color: var(--algorithm-bg) !important;
+      }
+
+      /* Regular code blocks */
+      code:not(.algorithm-card code),
+      pre:not(.algorithm-card pre) {
+        color: var(--code-text) !important;
+        background-color: var(--bg-secondary) !important;
+        border: 1px solid var(--border-color) !important;
+      }
+
+      /* FLOWCHART ELEMENTS - COMPREHENSIVE FIX */
+      .flowchart,
+      .flowchart-container {
+        background-color: var(--flowchart-bg) !important;
+        color: var(--flowchart-text) !important;
+      }
+
+      .flowchart-start,
+      .flowchart-end {
+        color: var(--flowchart-text) !important;
+        border: 2px solid var(--flowchart-border) !important;
+        background-color: var(--card-bg) !important;
+        border-radius: 50% !important;
+        width: 40px !important;
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: bold !important;
+      }
+
+      .flowchart-step,
+      .flowchart-box {
+        color: var(--flowchart-text) !important;
+        border: 2px solid var(--flowchart-border) !important;
+        background-color: var(--card-bg) !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        text-align: center !important;
+        font-weight: 500 !important;
+      }
+
+      .flowchart-decision {
+        color: var(--flowchart-text) !important;
+        border: 2px solid var(--flowchart-border) !important;
+        background-color: var(--card-bg) !important;
+        transform: rotate(45deg) !important;
+        width: 120px !important;
+        height: 120px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: 500 !important;
+      }
+
+      .flowchart-decision > div {
+        transform: rotate(-45deg) !important;
+        text-align: center !important;
+        color: var(--flowchart-text) !important;
+      }
+
+      .flowchart-branch {
+        color: var(--flowchart-text) !important;
+        font-weight: 600 !important;
+        font-size: 14px !important;
+      }
+
+      /* Flowchart arrows and lines */
+      .flowchart-arrow,
+      .flowchart-line {
+        border-color: var(--flowchart-border) !important;
+        background-color: var(--flowchart-border) !important;
+      }
+
+      /* LINKS */
+      a {
+        color: var(--link-color) !important;
+        text-decoration: none !important;
+      }
+
+      a:hover {
+        color: var(--link-hover) !important;
+        text-decoration: underline !important;
+      }
+
+      /* SIDEBAR */
+      .sidebar {
+        background-color: var(--sidebar-bg) !important;
+        color: var(--text-primary) !important;
+        border-right: 1px solid var(--border-color) !important;
+      }
+
+      .sidebar * {
+        color: var(--text-secondary) !important;
+      }
+
+      .sidebar a {
+        color: var(--text-secondary) !important;
+      }
+
+      .sidebar a:hover,
+      .sidebar a.active {
+        color: var(--text-primary) !important;
+        background-color: var(--bg-primary) !important;
+      }
+
+      /* CARDS AND CONTAINERS */
+      .card, .container, .main-content {
+        background-color: var(--card-bg) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      /* HINTS AND ALERTS */
+      .hint {
+        background-color: var(--hint-bg) !important;
+        border-color: var(--hint-border) !important;
+        color: var(--hint-text) !important;
+      }
+
+      .alert {
+        background-color: var(--alert-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* SHORT ANSWERS */
+      .short-answer {
+        background-color: var(--short-answer-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* TABLES */
+      table {
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      th {
+        background-color: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+        font-weight: 600 !important;
+      }
+
+      td {
+        border-color: var(--border-color) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* FORM ELEMENTS */
+      input, textarea, select, button {
+        background-color: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      /* NAVIGATION */
+      .nav-link {
+        color: var(--text-secondary) !important;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--text-primary) !important;
+      }
+
+      /* OVERRIDE ANY REMAINING ISSUES */
+      [style*="color: black"],
+      [style*="color: #000"],
+      [style*="color: #000000"] {
+        color: var(--text-primary) !important;
+      }
+
+      [style*="color: white"],
+      [style*="color: #fff"],
+      [style*="color: #ffffff"] {
+        color: var(--text-primary) !important;
+      }
+
+      /* SMOOTH TRANSITIONS */
+      * {
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
       }
     </style>
   </head>
