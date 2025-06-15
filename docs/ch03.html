@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-                              :root {
+                                    :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -24,7 +24,7 @@
         --warning-border: #facc15;
         --warning-text: #854d0e;
         
-        /* Light theme variables - PROPER DARK TEXT */
+        /* Light theme variables - ALL TEXT DARK */
         --bg-primary: #f1f5f9;
         --bg-secondary: #ffffff;
         --text-primary: #1e293b;
@@ -52,7 +52,7 @@
       }
 
       [data-theme="dark"] {
-        /* Dark theme variables - PROPER LIGHT TEXT */
+        /* Dark theme variables - ALL TEXT LIGHT */
         --bg-primary: #0f172a;
         --bg-secondary: #1e293b;
         --text-primary: #f8fafc;
@@ -77,6 +77,203 @@
         --heading-color: #f8fafc;
         --link-color: #60a5fa;
         --link-hover: #93c5fd;
+      }
+
+      /* Theme switcher styles */
+      .theme-switcher {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 25px;
+        padding: 8px;
+        box-shadow: 0 2px 10px var(--shadow);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .theme-toggle {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px 12px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        color: var(--text-secondary);
+      }
+
+      .theme-toggle:hover {
+        background: var(--bg-primary);
+        color: var(--text-primary);
+      }
+
+      .theme-toggle.active {
+        background: var(--primary);
+        color: white;
+      }
+
+      .theme-toggle i {
+        font-size: 16px;
+      }
+
+      /* PERFECT GLOBAL TEXT CONTROL */
+      
+      /* Base body and document */
+      body {
+        color: var(--text-primary) !important;
+        background-color: var(--bg-primary) !important;
+      }
+
+      /* ALL HEADINGS - EVERY SINGLE ONE */
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--heading-color) !important;
+      }
+
+      /* ALL TEXT ELEMENTS - COMPREHENSIVE */
+      p, span, div, li, td, th, label, strong, b, em, i, small, big, 
+      blockquote, cite, q, abbr, acronym, address, code, pre, kbd, 
+      samp, var, sub, sup, ins, del, dfn, mark, time, data, output,
+      figcaption, caption, legend, summary, details {
+        color: var(--text-primary) !important;
+      }
+
+      /* ALGORITHM CARDS - SPECIAL WHITE TEXT */
+      .algorithm-card,
+      .algorithm-card *,
+      .algorithm-card h1,
+      .algorithm-card h2,
+      .algorithm-card h3,
+      .algorithm-card h4,
+      .algorithm-card h5,
+      .algorithm-card h6,
+      .algorithm-card p,
+      .algorithm-card span,
+      .algorithm-card div,
+      .algorithm-card li,
+      .algorithm-card strong,
+      .algorithm-card b,
+      .algorithm-card em,
+      .algorithm-card i,
+      .algorithm-card code,
+      .algorithm-card pre {
+        color: var(--algorithm-text) !important;
+        background-color: var(--algorithm-bg) !important;
+      }
+
+      /* FLOWCHART ELEMENTS - THEME AWARE */
+      .flowchart,
+      .flowchart *,
+      .flowchart-container,
+      .flowchart-container *,
+      .flowchart-start,
+      .flowchart-end,
+      .flowchart-step,
+      .flowchart-box,
+      .flowchart-decision,
+      .flowchart-branch {
+        color: var(--flowchart-text) !important;
+        background-color: var(--card-bg) !important;
+        border-color: var(--flowchart-border) !important;
+      }
+
+      /* SVG and graphics text */
+      svg text,
+      svg tspan,
+      .flowchart svg text,
+      .flowchart svg tspan {
+        fill: var(--flowchart-text) !important;
+      }
+
+      /* LINKS */
+      a, a:visited {
+        color: var(--link-color) !important;
+      }
+
+      a:hover, a:focus {
+        color: var(--link-hover) !important;
+      }
+
+      /* CODE BLOCKS */
+      code, pre, kbd, samp {
+        color: var(--code-text) !important;
+        background-color: var(--bg-secondary) !important;
+      }
+
+      /* TABLES */
+      table, table * {
+        color: var(--text-primary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      th {
+        background-color: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* FORMS */
+      input, textarea, select, button, option {
+        color: var(--text-primary) !important;
+        background-color: var(--bg-secondary) !important;
+        border-color: var(--border-color) !important;
+      }
+
+      /* CARDS AND CONTAINERS */
+      .card, .container, .main-content, .content, .wrapper {
+        background-color: var(--card-bg) !important;
+        color: var(--text-primary) !important;
+      }
+
+      /* ANSWERS AND SPECIAL SECTIONS */
+      .answer, .answer * {
+        color: var(--text-primary) !important;
+        background-color: var(--alert-bg) !important;
+      }
+
+      .hint, .hint * {
+        color: var(--hint-text) !important;
+        background-color: var(--hint-bg) !important;
+      }
+
+      .short-answer, .short-answer * {
+        color: var(--text-primary) !important;
+        background-color: var(--short-answer-bg) !important;
+      }
+
+      /* NAVIGATION */
+      nav, nav *, .nav, .nav *, .navbar, .navbar * {
+        color: var(--text-primary) !important;
+      }
+
+      /* OVERRIDE ANY INLINE STYLES */
+      [style*="color: black"] { color: var(--text-primary) !important; }
+      [style*="color: #000"] { color: var(--text-primary) !important; }
+      [style*="color: #000000"] { color: var(--text-primary) !important; }
+      [style*="color: white"] { color: var(--text-primary) !important; }
+      [style*="color: #fff"] { color: var(--text-primary) !important; }
+      [style*="color: #ffffff"] { color: var(--text-primary) !important; }
+
+      /* UNIVERSAL TEXT OVERRIDE - NUCLEAR OPTION */
+      * {
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
+      }
+
+      /* Force all text to follow theme */
+      *:not(.algorithm-card):not(.algorithm-card *) {
+        color: var(--text-primary) !important;
+      }
+
+      /* Ensure algorithm cards stay white text */
+      .algorithm-card, .algorithm-card * {
+        color: var(--algorithm-text) !important;
       }
 
       /* Theme switcher styles */
@@ -1925,146 +2122,68 @@ scanf("%s", sname);        // User enters a string (one word)</code></pre>
       <i class="fas fa-moon"></i>
     </button>
 
+    
     <script>
-      // Toggle sidebar on mobile
-      const sidebarToggle = document.getElementById("sidebarToggle");
-      const sidebar = document.getElementById("sidebar");
-
-      sidebarToggle.addEventListener("click", () => {
-        sidebar.classList.toggle("open");
-      });
-
-      // Dark mode toggle
-      const darkModeToggle = document.getElementById("darkModeToggle");
-
-      darkModeToggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-          darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-          darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      // Theme switcher functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightToggle = document.querySelector('[data-theme-toggle="light"]');
+        const darkToggle = document.querySelector('[data-theme-toggle="dark"]');
+        
+        // Get saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateActiveToggle(savedTheme);
+        
+        // Light theme toggle
+        lightToggle.addEventListener('click', function() {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+          updateActiveToggle('light');
+        });
+        
+        // Dark theme toggle
+        darkToggle.addEventListener('click', function() {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          updateActiveToggle('dark');
+        });
+        
+        function updateActiveToggle(theme) {
+          lightToggle.classList.toggle('active', theme === 'light');
+          darkToggle.classList.toggle('active', theme === 'dark');
         }
-      });
-
-      // Print functionality
-      const printBtn = document.getElementById("printBtn");
-      printBtn.addEventListener("click", () => {
-        window.print();
-      });
-
-      // Download functionality
-      const downloadBtn = document.getElementById("downloadBtn");
-      downloadBtn.addEventListener("click", () => {
-        const content = document.documentElement.outerHTML;
-        const blob = new Blob([content], { type: "text/html" });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "io-functions-guide.html";
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      });
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-
-          document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",
-          });
-
-          // Update active nav item
-          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-            link.classList.remove("active");
-          });
-          this.classList.add("active");
-        });
-      });
-
-      // Highlight current section in sidebar
-      window.addEventListener("scroll", () => {
-        const sections = document.querySelectorAll(
-          ".content-card, details, h2, h3",
-        );
-        let currentSection = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (pageYOffset >= sectionTop - 100) {
-            currentSection =
-              section.getAttribute("id") ||
-              section.querySelector("[id]")?.getAttribute("id");
-          }
-        });
-
-        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${currentSection}`) {
-            link.classList.add("active");
-          }
-        });
       });
     </script>
-      <script>
-      // Theme switching functionality
-      const themeToggle = {
-        init() {
-          this.createSwitcher();
-          this.loadTheme();
-          this.bindEvents();
-        },
-
-        createSwitcher() {
-          const switcher = document.createElement('div');
-          switcher.className = 'theme-switcher';
-          switcher.innerHTML = `
-            <button class="theme-toggle" data-theme="light">
-              <i class="fas fa-sun"></i>
-              <span>Light</span>
-            </button>
-            <button class="theme-toggle" data-theme="dark">
-              <i class="fas fa-moon"></i>
-              <span>Dark</span>
-            </button>
-          `;
-          document.body.appendChild(switcher);
-        },
-
-        loadTheme() {
-          const savedTheme = localStorage.getItem('theme') || 'light';
-          this.setTheme(savedTheme);
-        },
-
-        setTheme(theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-          localStorage.setItem('theme', theme);
-          
-          // Update active button
-          document.querySelectorAll('.theme-toggle').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.theme === theme);
-          });
-        },
-
-        bindEvents() {
-          document.addEventListener('click', (e) => {
-            if (e.target.closest('.theme-toggle')) {
-              const theme = e.target.closest('.theme-toggle').dataset.theme;
-              this.setTheme(theme);
-            }
-          });
+      
+    <script>
+      // Theme switcher functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const lightToggle = document.querySelector('[data-theme-toggle="light"]');
+        const darkToggle = document.querySelector('[data-theme-toggle="dark"]');
+        
+        // Get saved theme or default to light
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateActiveToggle(savedTheme);
+        
+        // Light theme toggle
+        lightToggle.addEventListener('click', function() {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+          updateActiveToggle('light');
+        });
+        
+        // Dark theme toggle
+        darkToggle.addEventListener('click', function() {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+          updateActiveToggle('dark');
+        });
+        
+        function updateActiveToggle(theme) {
+          lightToggle.classList.toggle('active', theme === 'light');
+          darkToggle.classList.toggle('active', theme === 'dark');
         }
-      };
-
-      // Initialize theme switcher when DOM is loaded
-      document.addEventListener('DOMContentLoaded', () => {
-        themeToggle.init();
       });
     </script>
   </body>
