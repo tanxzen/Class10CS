@@ -9,7 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <style>
-                                    :root {
+      :root {
         --primary: #2563eb;
         --primary-dark: #1e40af;
         --secondary: #f59e0b;
@@ -21,305 +21,6 @@
         --danger: #ef4444;
         --code-bg: #1e293b;
         --sidebar-width: 280px;
-        --warning-border: #facc15;
-        --warning-text: #854d0e;
-        
-        /* Light theme variables - ALL TEXT DARK */
-        --bg-primary: #f1f5f9;
-        --bg-secondary: #ffffff;
-        --text-primary: #1e293b;
-        --text-secondary: #475569;
-        --text-muted: #64748b;
-        --border-color: #e2e8f0;
-        --shadow: rgba(0, 0, 0, 0.1);
-        --card-bg: #ffffff;
-        --sidebar-bg: #ffffff;
-        --algorithm-bg: #2c3e50;
-        --algorithm-text: #ffffff;
-        --flowchart-bg: #f1f5f9;
-        --flowchart-text: #1e293b;
-        --flowchart-border: #334155;
-        --alert-bg: #eff6ff;
-        --hint-bg: #fff3cd;
-        --hint-border: #ffeaa7;
-        --hint-text: #92400e;
-        --short-answer-bg: #e8f5e8;
-        --warning-bg: #fef08a;
-        --code-text: #1e293b;
-        --heading-color: #1e293b;
-        --link-color: #2563eb;
-        --link-hover: #1d4ed8;
-      }
-
-      [data-theme="dark"] {
-        /* Dark theme variables - ALL TEXT LIGHT */
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --text-primary: #f8fafc;
-        --text-secondary: #cbd5e1;
-        --text-muted: #94a3b8;
-        --border-color: #334155;
-        --shadow: rgba(0, 0, 0, 0.3);
-        --card-bg: #1e293b;
-        --sidebar-bg: #1e293b;
-        --algorithm-bg: #0f172a;
-        --algorithm-text: #f8fafc;
-        --flowchart-bg: #334155;
-        --flowchart-text: #f8fafc;
-        --flowchart-border: #64748b;
-        --alert-bg: #1e3a8a;
-        --hint-bg: #7c2d12;
-        --hint-border: #ea580c;
-        --hint-text: #fed7aa;
-        --short-answer-bg: #166534;
-        --warning-bg: #7c2d12;
-        --code-text: #f8fafc;
-        --heading-color: #f8fafc;
-        --link-color: #60a5fa;
-        --link-hover: #93c5fd;
-      }
-
-      /* Theme switcher styles */
-      .theme-switcher {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 25px;
-        padding: 8px;
-        box-shadow: 0 2px 10px var(--shadow);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px 12px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 14px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        color: var(--text-secondary);
-      }
-
-      .theme-toggle:hover {
-        background: var(--bg-primary);
-        color: var(--text-primary);
-      }
-
-      .theme-toggle.active {
-        background: var(--primary);
-        color: white;
-      }
-
-      .theme-toggle i {
-        font-size: 16px;
-      }
-
-      /* PERFECT GLOBAL TEXT CONTROL */
-      
-      /* Base body and document */
-      body {
-        color: var(--text-primary) !important;
-        background-color: var(--bg-primary) !important;
-      }
-
-      /* ALL HEADINGS - EVERY SINGLE ONE */
-      h1, h2, h3, h4, h5, h6 {
-        color: var(--heading-color) !important;
-      }
-
-      /* ALL TEXT ELEMENTS - COMPREHENSIVE */
-      p, span, div, li, td, th, label, strong, b, em, i, small, big, 
-      blockquote, cite, q, abbr, acronym, address, code, pre, kbd, 
-      samp, var, sub, sup, ins, del, dfn, mark, time, data, output,
-      figcaption, caption, legend, summary, details {
-        color: var(--text-primary) !important;
-      }
-
-      /* ALGORITHM CARDS - SPECIAL WHITE TEXT */
-      .algorithm-card,
-      .algorithm-card *,
-      .algorithm-card h1,
-      .algorithm-card h2,
-      .algorithm-card h3,
-      .algorithm-card h4,
-      .algorithm-card h5,
-      .algorithm-card h6,
-      .algorithm-card p,
-      .algorithm-card span,
-      .algorithm-card div,
-      .algorithm-card li,
-      .algorithm-card strong,
-      .algorithm-card b,
-      .algorithm-card em,
-      .algorithm-card i,
-      .algorithm-card code,
-      .algorithm-card pre {
-        color: var(--algorithm-text) !important;
-        background-color: var(--algorithm-bg) !important;
-      }
-
-      /* FLOWCHART ELEMENTS - THEME AWARE */
-      .flowchart,
-      .flowchart *,
-      .flowchart-container,
-      .flowchart-container *,
-      .flowchart-start,
-      .flowchart-end,
-      .flowchart-step,
-      .flowchart-box,
-      .flowchart-decision,
-      .flowchart-branch {
-        color: var(--flowchart-text) !important;
-        background-color: var(--card-bg) !important;
-        border-color: var(--flowchart-border) !important;
-      }
-
-      /* SVG and graphics text */
-      svg text,
-      svg tspan,
-      .flowchart svg text,
-      .flowchart svg tspan {
-        fill: var(--flowchart-text) !important;
-      }
-
-      /* LINKS */
-      a, a:visited {
-        color: var(--link-color) !important;
-      }
-
-      a:hover, a:focus {
-        color: var(--link-hover) !important;
-      }
-
-      /* CODE BLOCKS */
-      code, pre, kbd, samp {
-        color: var(--code-text) !important;
-        background-color: var(--bg-secondary) !important;
-      }
-
-      /* TABLES */
-      table, table * {
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      th {
-        background-color: var(--bg-secondary) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* FORMS */
-      input, textarea, select, button, option {
-        color: var(--text-primary) !important;
-        background-color: var(--bg-secondary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      /* CARDS AND CONTAINERS */
-      .card, .container, .main-content, .content, .wrapper {
-        background-color: var(--card-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* ANSWERS AND SPECIAL SECTIONS */
-      .answer, .answer * {
-        color: var(--text-primary) !important;
-        background-color: var(--alert-bg) !important;
-      }
-
-      .hint, .hint * {
-        color: var(--hint-text) !important;
-        background-color: var(--hint-bg) !important;
-      }
-
-      .short-answer, .short-answer * {
-        color: var(--text-primary) !important;
-        background-color: var(--short-answer-bg) !important;
-      }
-
-      /* NAVIGATION */
-      nav, nav *, .nav, .nav *, .navbar, .navbar * {
-        color: var(--text-primary) !important;
-      }
-
-      /* OVERRIDE ANY INLINE STYLES */
-      [style*="color: black"] { color: var(--text-primary) !important; }
-      [style*="color: #000"] { color: var(--text-primary) !important; }
-      [style*="color: #000000"] { color: var(--text-primary) !important; }
-      [style*="color: white"] { color: var(--text-primary) !important; }
-      [style*="color: #fff"] { color: var(--text-primary) !important; }
-      [style*="color: #ffffff"] { color: var(--text-primary) !important; }
-
-      /* UNIVERSAL TEXT OVERRIDE - NUCLEAR OPTION */
-      * {
-        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
-      }
-
-      /* Force all text to follow theme */
-      *:not(.algorithm-card):not(.algorithm-card *) {
-        color: var(--text-primary) !important;
-      }
-
-      /* Ensure algorithm cards stay white text */
-      .algorithm-card, .algorithm-card * {
-        color: var(--algorithm-text) !important;
-      }
-
-      /* Theme switcher styles */
-      .theme-switcher {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
-        background: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 25px;
-        padding: 8px;
-        box-shadow: 0 2px 10px var(--shadow);
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-      }
-
-      .theme-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 8px 12px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 14px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        color: var(--text-secondary);
-      }
-
-      .theme-toggle:hover {
-        background: var(--bg-primary);
-        color: var(--text-primary);
-      }
-
-      .theme-toggle.active {
-        background: var(--primary);
-        color: white;
-      }
-
-      .theme-toggle i {
-        font-size: 16px;
       }
 
       * {
@@ -340,8 +41,8 @@
           Cantarell,
           sans-serif;
         line-height: 1.6;
-        background-color: var(--bg-primary);
-        color: var(--text-primary);
+        background-color: #f1f5f9;
+        color: var(--dark);
         display: flex;
         min-height: 100vh;
       }
@@ -350,7 +51,7 @@
       .sidebar {
         width: var(--sidebar-width);
         background: white;
-        box-shadow: 0 4px 6px -1px var(--shadow);
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
         padding: 1.5rem;
         position: fixed;
         height: 100vh;
@@ -364,7 +65,7 @@
         align-items: center;
         margin-bottom: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #e2e8f0;
       }
 
       .sidebar-header h2 {
@@ -387,14 +88,14 @@
         gap: 0.75rem;
         padding: 0.75rem 1rem;
         border-radius: 0.5rem;
-        color: var(--text-primary);
+        color: var(--dark);
         text-decoration: none;
         transition: all 0.2s ease;
       }
 
       .sidebar-nav a:hover,
       .sidebar-nav a.active {
-        background-color: var(--bg-primary);
+        background-color: #f1f5f9;
         color: var(--primary);
       }
 
@@ -417,7 +118,7 @@
         align-items: center;
         margin-bottom: 2rem;
         padding-bottom: 1rem;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #e2e8f0;
       }
 
       .header h1 {
@@ -453,14 +154,14 @@
       .btn-outline {
         background-color: transparent;
         border: 1px solid var(--gray);
-        color: var(--text-primary);
+        color: var(--dark);
       }
 
       /* Content styles */
       .content-card {
-        background-color: var(--card-bg);
+        background-color: white;
         border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px var(--shadow);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         padding: 2rem;
         margin-bottom: 2rem;
       }
@@ -512,9 +213,9 @@
       }
 
       .question-card {
-        background-color: var(--card-bg);
+        background-color: white;
         border-radius: 0.75rem;
-        box-shadow: 0 4px 6px -1px var(--shadow);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         padding: 1.5rem;
         margin-bottom: 1.5rem;
         border-left: 4px solid var(--primary);
@@ -530,11 +231,11 @@
       td {
         padding: 0.75rem;
         text-align: left;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid #e2e8f0;
       }
 
       th {
-        background-color: var(--bg-primary);
+        background-color: #f1f5f9;
         font-weight: 500;
       }
 
@@ -569,382 +270,6 @@
         .sidebar-toggle {
           display: flex;
         }
-      }
-    
-      
-      * {
-        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
-      }
-
-      /* Override any remaining black text */
-      [style*="color: black"],
-      [style*="color: #000"],
-      [style*="color: #000000"] {
-        color: var(--text-primary) !important;
-      }
-      * {
-        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-      }
-    
-      
-      .algorithm-card {
-        background: var(--algorithm-bg) !important;
-        color: var(--algorithm-text) !important;
-      }
-
-      .algorithm-card * {
-        color: var(--algorithm-text) !important;
-      }
-
-      .algorithm-card h3,
-      .algorithm-card h4,
-      .algorithm-card p,
-      .algorithm-card li,
-      .algorithm-card span,
-      .algorithm-card div,
-      .algorithm-card strong,
-      .algorithm-card b {
-        color: var(--algorithm-text) !important;
-      }
-    
-      /* COMPREHENSIVE TYPOGRAPHY FIX INCLUDING FLOWCHARTS */
-      
-      /* Base body styling */
-      body {
-        color: var(--text-primary) !important;
-        background-color: var(--bg-primary) !important;
-        transition: all 0.3s ease !important;
-      }
-
-      /* ALL HEADINGS */
-      h1, h2, h3, h4, h5, h6 {
-        color: var(--heading-color) !important;
-        font-weight: 600 !important;
-      }
-
-      /* ALL TEXT ELEMENTS */
-      p, li, td, th, span, div, label, strong, b, em, i {
-        color: var(--text-primary) !important;
-      }
-
-      /* ALGORITHM CARDS - SPECIAL HANDLING */
-      .algorithm-card {
-        background: var(--algorithm-bg) !important;
-        color: var(--algorithm-text) !important;
-      }
-
-      .algorithm-card *,
-      .algorithm-card h1,
-      .algorithm-card h2,
-      .algorithm-card h3,
-      .algorithm-card h4,
-      .algorithm-card h5,
-      .algorithm-card h6,
-      .algorithm-card p,
-      .algorithm-card li,
-      .algorithm-card span,
-      .algorithm-card div,
-      .algorithm-card strong,
-      .algorithm-card b,
-      .algorithm-card em,
-      .algorithm-card i {
-        color: var(--algorithm-text) !important;
-      }
-
-      /* CODE BLOCKS - CRITICAL FIX */
-      code, pre {
-        font-family: 'Courier New', 'Monaco', 'Menlo', monospace !important;
-        padding: 4px 8px !important;
-        border-radius: 4px !important;
-      }
-
-      /* Algorithm code blocks */
-      .algorithm-card code,
-      .algorithm-card pre {
-        color: var(--algorithm-text) !important;
-        background-color: var(--algorithm-bg) !important;
-      }
-
-      /* Regular code blocks */
-      code:not(.algorithm-card code),
-      pre:not(.algorithm-card pre) {
-        color: var(--code-text) !important;
-        background-color: var(--bg-secondary) !important;
-        border: 1px solid var(--border-color) !important;
-      }
-
-      /* FLOWCHART ELEMENTS - COMPREHENSIVE FIX */
-      .flowchart,
-      .flowchart-container {
-        background-color: var(--flowchart-bg) !important;
-        color: var(--flowchart-text) !important;
-      }
-
-      .flowchart-start,
-      .flowchart-end {
-        color: var(--flowchart-text) !important;
-        border: 2px solid var(--flowchart-border) !important;
-        background-color: var(--card-bg) !important;
-        border-radius: 50% !important;
-        width: 40px !important;
-        height: 40px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-weight: bold !important;
-      }
-
-      .flowchart-step,
-      .flowchart-box {
-        color: var(--flowchart-text) !important;
-        border: 2px solid var(--flowchart-border) !important;
-        background-color: var(--card-bg) !important;
-        border-radius: 8px !important;
-        padding: 12px 16px !important;
-        text-align: center !important;
-        font-weight: 500 !important;
-      }
-
-      .flowchart-decision {
-        color: var(--flowchart-text) !important;
-        border: 2px solid var(--flowchart-border) !important;
-        background-color: var(--card-bg) !important;
-        transform: rotate(45deg) !important;
-        width: 120px !important;
-        height: 120px !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        font-weight: 500 !important;
-      }
-
-      .flowchart-decision > div {
-        transform: rotate(-45deg) !important;
-        text-align: center !important;
-        color: var(--flowchart-text) !important;
-      }
-
-      .flowchart-branch {
-        color: var(--flowchart-text) !important;
-        font-weight: 600 !important;
-        font-size: 14px !important;
-      }
-
-      /* Flowchart arrows and lines */
-      .flowchart-arrow,
-      .flowchart-line {
-        border-color: var(--flowchart-border) !important;
-        background-color: var(--flowchart-border) !important;
-      }
-
-      /* LINKS */
-      a {
-        color: var(--link-color) !important;
-        text-decoration: none !important;
-      }
-
-      a:hover {
-        color: var(--link-hover) !important;
-        text-decoration: underline !important;
-      }
-
-      /* SIDEBAR */
-      .sidebar {
-        background-color: var(--sidebar-bg) !important;
-        color: var(--text-primary) !important;
-        border-right: 1px solid var(--border-color) !important;
-      }
-
-      .sidebar * {
-        color: var(--text-secondary) !important;
-      }
-
-      .sidebar a {
-        color: var(--text-secondary) !important;
-      }
-
-      .sidebar a:hover,
-      .sidebar a.active {
-        color: var(--text-primary) !important;
-        background-color: var(--bg-primary) !important;
-      }
-
-      /* CARDS AND CONTAINERS */
-      .card, .container, .main-content {
-        background-color: var(--card-bg) !important;
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      /* HINTS AND ALERTS */
-      .hint {
-        background-color: var(--hint-bg) !important;
-        border-color: var(--hint-border) !important;
-        color: var(--hint-text) !important;
-      }
-
-      .alert {
-        background-color: var(--alert-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* SHORT ANSWERS */
-      .short-answer {
-        background-color: var(--short-answer-bg) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* TABLES */
-      table {
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      th {
-        background-color: var(--bg-secondary) !important;
-        color: var(--text-primary) !important;
-        font-weight: 600 !important;
-      }
-
-      td {
-        border-color: var(--border-color) !important;
-        color: var(--text-primary) !important;
-      }
-
-      /* FORM ELEMENTS */
-      input, textarea, select, button {
-        background-color: var(--bg-secondary) !important;
-        color: var(--text-primary) !important;
-        border-color: var(--border-color) !important;
-      }
-
-      /* NAVIGATION */
-      .nav-link {
-        color: var(--text-secondary) !important;
-      }
-
-      .nav-link:hover,
-      .nav-link.active {
-        color: var(--text-primary) !important;
-      }
-
-      /* OVERRIDE ANY REMAINING ISSUES */
-      [style*="color: black"],
-      [style*="color: #000"],
-      [style*="color: #000000"] {
-        color: var(--text-primary) !important;
-      }
-
-      [style*="color: white"],
-      [style*="color: #fff"],
-      [style*="color: #ffffff"] {
-        color: var(--text-primary) !important;
-      }
-
-      /* SMOOTH TRANSITIONS */
-      * {
-        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease !important;
-      }
-    
-      /* FLOWCHART TEXT VISIBILITY FIX */
-      
-      /* Light theme flowchart text - MUST BE DARK */
-      :root .flowchart-start,
-      :root .flowchart-end,
-      :root .flowchart-step,
-      :root .flowchart-box,
-      :root .flowchart-decision,
-      :root .flowchart-branch {
-        color: #1e293b !important;
-      }
-
-      :root .flowchart-decision > div {
-        color: #1e293b !important;
-      }
-
-      /* Dark theme flowchart text - MUST BE LIGHT */
-      [data-theme="dark"] .flowchart-start,
-      [data-theme="dark"] .flowchart-end,
-      [data-theme="dark"] .flowchart-step,
-      [data-theme="dark"] .flowchart-box,
-      [data-theme="dark"] .flowchart-decision,
-      [data-theme="dark"] .flowchart-branch {
-        color: #f8fafc !important;
-      }
-
-      [data-theme="dark"] .flowchart-decision > div {
-        color: #f8fafc !important;
-      }
-
-      /* Ensure flowchart backgrounds are theme-appropriate */
-      :root .flowchart-start,
-      :root .flowchart-end,
-      :root .flowchart-step,
-      :root .flowchart-box,
-      :root .flowchart-decision {
-        background-color: #ffffff !important;
-        border-color: #334155 !important;
-      }
-
-      [data-theme="dark"] .flowchart-start,
-      [data-theme="dark"] .flowchart-end,
-      [data-theme="dark"] .flowchart-step,
-      [data-theme="dark"] .flowchart-box,
-      [data-theme="dark"] .flowchart-decision {
-        background-color: #1e293b !important;
-        border-color: #64748b !important;
-      }
-    
-      /* FINAL ANSWER TEXT READABILITY FIX */
-      
-      /* Algorithm answer blocks - ensure white text on dark background */
-      .algorithm-card,
-      .algorithm-card *,
-      .algorithm-card p,
-      .algorithm-card div,
-      .algorithm-card span,
-      .algorithm-card code,
-      .algorithm-card pre {
-        color: #ffffff !important;
-        background-color: #2c3e50 !important;
-      }
-
-      /* Light theme - algorithm answers should have WHITE text on DARK background */
-      :root .algorithm-card,
-      :root .algorithm-card *,
-      :root .algorithm-card p,
-      :root .algorithm-card div,
-      :root .algorithm-card span,
-      :root .algorithm-card code,
-      :root .algorithm-card pre {
-        color: #ffffff !important;
-        background-color: #2c3e50 !important;
-      }
-
-      /* Dark theme - algorithm answers should have WHITE text on VERY DARK background */
-      [data-theme="dark"] .algorithm-card,
-      [data-theme="dark"] .algorithm-card *,
-      [data-theme="dark"] .algorithm-card p,
-      [data-theme="dark"] .algorithm-card div,
-      [data-theme="dark"] .algorithm-card span,
-      [data-theme="dark"] .algorithm-card code,
-      [data-theme="dark"] .algorithm-card pre {
-        color: #ffffff !important;
-        background-color: #0f172a !important;
-      }
-
-      /* Regular answer text (not in algorithm cards) */
-      .answer-text,
-      p:contains("Answer:") + *,
-      strong:contains("Answer:") + * {
-        color: var(--text-primary) !important;
-      }
-
-      /* Short answer sections */
-      .short-answer,
-      .short-answer * {
-        color: var(--text-primary) !important;
-        background-color: var(--short-answer-bg) !important;
       }
     </style>
   </head>
@@ -1659,68 +984,79 @@ default:        {
       </div>
     </main>
 
-    
     <script>
-      // Theme switcher functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const lightToggle = document.querySelector('[data-theme-toggle="light"]');
-        const darkToggle = document.querySelector('[data-theme-toggle="dark"]');
-        
-        // Get saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        updateActiveToggle(savedTheme);
-        
-        // Light theme toggle
-        lightToggle.addEventListener('click', function() {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-          updateActiveToggle('light');
+      // Mobile menu toggle
+      document
+        .getElementById("sidebarToggle")
+        .addEventListener("click", function () {
+          document.getElementById("sidebar").classList.toggle("open");
         });
-        
-        // Dark theme toggle
-        darkToggle.addEventListener('click', function() {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          updateActiveToggle('dark');
+
+      // Print functionality
+      document
+        .getElementById("printBtn")
+        .addEventListener("click", function () {
+          window.print();
         });
-        
-        function updateActiveToggle(theme) {
-          lightToggle.classList.toggle('active', theme === 'light');
-          darkToggle.classList.toggle('active', theme === 'dark');
-        }
+
+      // Download functionality
+      document
+        .getElementById("downloadBtn")
+        .addEventListener("click", function () {
+          const content = document.documentElement.outerHTML;
+          const blob = new Blob([content], { type: "text/html" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "c-conditionals-guide.html";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          URL.revokeObjectURL(url);
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Update active nav item
+          document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+            link.classList.remove("active");
+          });
+          this.classList.add("active");
+        });
       });
-    </script>
-      
-    <script>
-      // Theme switcher functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const lightToggle = document.querySelector('[data-theme-toggle="light"]');
-        const darkToggle = document.querySelector('[data-theme-toggle="dark"]');
-        
-        // Get saved theme or default to light
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        updateActiveToggle(savedTheme);
-        
-        // Light theme toggle
-        lightToggle.addEventListener('click', function() {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-          updateActiveToggle('light');
+
+      // Highlight current section in sidebar
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll(
+          ".content-card, .question-card",
+        );
+        let currentSection = "";
+
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+
+          if (pageYOffset >= sectionTop - 100) {
+            currentSection =
+              section.getAttribute("id") ||
+              section.querySelector("[id]")?.getAttribute("id");
+          }
         });
-        
-        // Dark theme toggle
-        darkToggle.addEventListener('click', function() {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-          updateActiveToggle('dark');
+
+        document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active");
+          }
         });
-        
-        function updateActiveToggle(theme) {
-          lightToggle.classList.toggle('active', theme === 'light');
-          darkToggle.classList.toggle('active', theme === 'dark');
-        }
       });
     </script>
   </body>
